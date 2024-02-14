@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://1egfkkafsgpl"]
+
+[ext_resource type="Script" path="res://scenes/location_script.gd" id="1_u6sgc"]
+
+[node name="Panel" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u6sgc")
+
+[node name="location_name" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.403
+anchor_top = 0.099
+anchor_right = 0.736
+anchor_bottom = 0.198
+offset_left = -0.256042
+offset_top = -0.152008
+offset_right = 0.12793
+offset_bottom = -0.304016
+
+[node name="location_picture" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.528
+anchor_top = 0.296
+anchor_right = 0.944
+anchor_bottom = 0.889
+offset_left = -544.256
+offset_top = 0.192001
+offset_right = -543.488
+offset_bottom = -0.0720215
+
+[node name="location_information" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.056
+anchor_top = 0.296
+anchor_right = 0.472
+anchor_bottom = 0.889
+offset_left = 543.488
+offset_top = 0.192001
+offset_right = 544.256
+offset_bottom = -0.0720215
