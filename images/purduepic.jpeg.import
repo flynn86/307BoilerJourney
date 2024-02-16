@@ -3,12 +3,12 @@
 importer="image"
 type="Image"
 uid="uid://dmq3j08dvg3x7"
-path="res://.godot/imported/purduepic.jpeg-3e6f70ea7248780e3e7036036953c574.image"
+path="res://.godot/imported/purduepic.jpeg-e9e6497a77e0a2200d07a8a06e87fc19.image"
 
 [deps]
 
-source_file="res://Images/purduepic.jpeg"
-dest_files=["res://.godot/imported/purduepic.jpeg-3e6f70ea7248780e3e7036036953c574.image"]
+source_file="res://images/purduepic.jpeg"
+dest_files=["res://.godot/imported/purduepic.jpeg-e9e6497a77e0a2200d07a8a06e87fc19.image"]
 
 [params]
 
