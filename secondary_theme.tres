@@ -1,0 +1,16 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://0im0ebgvs3as"]
+
+[ext_resource type="FontFile" uid="uid://djs6cu61f11ql" path="res://fonts/KOMIKAX_.ttf" id="1_eh0qx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2sd00"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+
+[resource]
+default_font = ExtResource("1_eh0qx")
+default_font_size = 12
+Panel/styles/panel = SubResource("StyleBoxFlat_2sd00")

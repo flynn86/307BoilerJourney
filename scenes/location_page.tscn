@@ -1,26 +1,41 @@
-[gd_scene load_steps=2 format=3 uid="uid://1egfkkafsgpl"]
+[gd_scene load_steps=6 format=3 uid="uid://1egfkkafsgpl"]
 
+[ext_resource type="Theme" uid="uid://0im0ebgvs3as" path="res://secondary_theme.tres" id="1_o8rie"]
 [ext_resource type="Script" path="res://scenes/location_script.gd" id="1_u6sgc"]
+[ext_resource type="FontFile" uid="uid://circdudo2rhld" path="res://fonts/Louis George Cafe.ttf" id="3_vhjev"]
 
-[node name="Panel" type="Panel"]
+[sub_resource type="Theme" id="Theme_lm78v"]
+
+[sub_resource type="Theme" id="Theme_7jcog"]
+default_font = ExtResource("3_vhjev")
+
+[node name="location_panel" type="Panel"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_o8rie")
 script = ExtResource("1_u6sgc")
 
 [node name="location_name" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.41
-anchor_top = 0.037
-anchor_right = 0.736
-anchor_bottom = 0.136
-offset_left = -8.32004
-offset_top = 0.0240002
-offset_right = 0.127991
-offset_bottom = -0.128014
+anchor_left = 0.111
+anchor_top = 0.049
+anchor_right = 0.806
+anchor_bottom = 0.16
+offset_left = 160.128
+offset_top = 0.247999
+offset_right = 159.488
+offset_bottom = 0.319992
+grow_horizontal = 2
+theme = SubResource("Theme_lm78v")
+theme_override_colors/default_color = Color(0.690196, 0.54902, 0, 1)
+theme_override_colors/font_selected_color = Color(0.690196, 0.54902, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.690196, 0.54902, 0, 1)
+theme_override_colors/font_outline_color = Color(0.690196, 0.54902, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
 
 [node name="location_picture" type="TextureRect" parent="."]
 layout_mode = 1
@@ -45,6 +60,9 @@ offset_left = -0.255981
 offset_top = 32.192
 offset_right = 0.511963
 offset_bottom = 63.68
+theme = SubResource("Theme_7jcog")
+theme_override_colors/default_color = Color(0.690196, 0.54902, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
 
 [node name="ReviewRequest" type="HTTPRequest" parent="."]
 
@@ -55,21 +73,23 @@ anchor_left = 0.271
 anchor_top = 0.173
 anchor_right = 0.486
 anchor_bottom = 0.247
-offset_left = -8.19202
-offset_top = -8.104
+offset_left = -8.19199
+offset_top = 23.896
 offset_right = 0.127991
-offset_bottom = -0.0559998
+offset_bottom = 31.944
 
 [node name="rating_desc" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.507
-anchor_top = 0.198
+anchor_top = 0.247
 anchor_right = 0.701
-anchor_bottom = 0.247
+anchor_bottom = 0.321
 offset_left = -0.0640259
-offset_top = -8.304
+offset_top = -16.056
 offset_right = 8.44794
-offset_bottom = 7.94402
+offset_bottom = -16.008
+theme_override_colors/default_color = Color(0.690196, 0.54902, 0, 1)
+theme_override_font_sizes/normal_font_size = 14
 
 [connection signal="request_completed" from="ReviewRequest" to="." method="_on_review_request_request_completed"]
