@@ -1,2 +1,15 @@
 # Godot 4+ specific ignores
 .godot/
+
+# Godot-specific ignores
+.import/
+*.import
+export.cfg
+export_presets.cfg
+*.translation  # Add this line to your .gitignore
+
+# Mono-specific ignores
+.mono/
+*.import
+data_*/
+mono_crash.*.json
