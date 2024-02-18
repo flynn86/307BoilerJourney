@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://1egfkkafsgpl"]
 
-[ext_resource type="Theme" uid="uid://0im0ebgvs3as" path="res://secondary_theme.tres" id="1_o8rie"]
+[ext_resource type="Theme" uid="uid://c1kv8oho47wpe" path="res://secondary_theme.tres" id="1_o8rie"]
 [ext_resource type="Script" path="res://scenes/location_script.gd" id="1_u6sgc"]
 [ext_resource type="FontFile" uid="uid://circdudo2rhld" path="res://fonts/Louis George Cafe.ttf" id="3_vhjev"]
 
@@ -21,14 +21,13 @@ script = ExtResource("1_u6sgc")
 [node name="location_name" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.111
+anchor_left = 0.25
 anchor_top = 0.049
-anchor_right = 0.806
+anchor_right = 0.944
 anchor_bottom = 0.16
-offset_left = 160.128
 offset_top = 0.247999
-offset_right = 159.488
-offset_bottom = 0.319992
+offset_right = 0.511963
+offset_bottom = 0.319984
 grow_horizontal = 2
 theme = SubResource("Theme_lm78v")
 theme_override_colors/default_color = Color(0.690196, 0.54902, 0, 1)
@@ -45,21 +44,21 @@ anchor_top = 0.296
 anchor_right = 0.479
 anchor_bottom = 0.889
 offset_left = -0.512001
-offset_top = -15.808
+offset_top = 0.192001
 offset_right = -7.80798
-offset_bottom = -16.072
+offset_bottom = -0.0720215
 
 [node name="location_information" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.528
-anchor_top = 0.296
+anchor_top = 0.346
 anchor_right = 0.944
-anchor_bottom = 0.84
+anchor_bottom = 0.938
 offset_left = -0.255981
-offset_top = 32.192
+offset_top = -0.208008
 offset_right = 0.511963
-offset_bottom = 63.68
+offset_bottom = 0.175964
 theme = SubResource("Theme_7jcog")
 theme_override_colors/default_color = Color(0.690196, 0.54902, 0, 1)
 theme_override_font_sizes/normal_font_size = 20
@@ -69,26 +68,26 @@ theme_override_font_sizes/normal_font_size = 20
 [node name="rating_picture" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.271
-anchor_top = 0.173
-anchor_right = 0.486
-anchor_bottom = 0.247
-offset_left = -8.19199
-offset_top = 23.896
-offset_right = 0.127991
-offset_bottom = 31.944
+anchor_left = 0.257
+anchor_top = 0.198
+anchor_right = 0.479
+anchor_bottom = 0.284
+offset_left = -0.0639954
+offset_top = -0.304016
+offset_right = 0.191956
+offset_bottom = -0.0320129
 
 [node name="rating_desc" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.507
-anchor_top = 0.247
-anchor_right = 0.701
-anchor_bottom = 0.321
+anchor_top = 0.222
+anchor_right = 0.708
+anchor_bottom = 0.296
 offset_left = -0.0640259
-offset_top = -16.056
-offset_right = 8.44794
-offset_bottom = -16.008
+offset_top = 0.143982
+offset_right = 0.383911
+offset_bottom = 0.192017
 theme_override_colors/default_color = Color(0.690196, 0.54902, 0, 1)
 theme_override_font_sizes/normal_font_size = 14
 

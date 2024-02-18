@@ -9,6 +9,8 @@ var name_to_place_id = {
 	"ELLT": "ChIJCaIHWLHiEogRdcn9QShJb4o",
 	"PHYS":  "ChIJAWzjuLLiEogRKTU5J1H2Qpc",
 	"WTHR":  "ChIJadYFELLiEogRtcTAIpFtifo",
+	"STEW": "ChIJMVeK5LHiEogRhSHpglGKgyc",
+	"HAMP": "ChIJrzuOKLPiEogR4cE1Pz-tOao",
 }
 
 func display_content(name: String) -> void:
@@ -26,6 +28,10 @@ func display_content(name: String) -> void:
 		name_label.text = "Purdue Physics Building"
 	elif (name == "WTHR"):
 		name_label.text = "Wetherill Hall of Chemistry"
+	elif (name == "STEW"):
+		name_label.text = "Stewart Center"
+	elif (name == "HAMP"):
+		name_label.text = "Hampton Hall"
 	else:
 		name_label.text = name
 	
@@ -142,5 +148,5 @@ func display_rating(rating: float) -> void:
 	rating_text.text = "%0.1f Stars" % rating
 
 func _ready():
-	display_content("ARMS")
+	display_content("HAMP")
 
