@@ -1,9 +1,10 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dfhx1ytk7y0ei"]
 
-[ext_resource type="Texture2D" uid="uid://bja5hihc6b7y7" path="res://map/terrain.png" id="1_7mio3"]
+[ext_resource type="Texture2D" path="res://map/terrain.png" id="1_qf2jx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dnewg"]
-texture = ExtResource("1_7mio3")
+texture = ExtResource("1_qf2jx")
+texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -7812,5 +7813,6 @@ texture = ExtResource("1_7mio3")
 1:30/0/physics_layer_0/angular_velocity = 0.0
 
 [resource]
+tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_dnewg")
