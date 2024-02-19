@@ -1,13 +1,13 @@
 [gd_scene load_steps=18 format=3 uid="uid://cq8qbhyfu4a4s"]
 
-[ext_resource type="Texture2D" uid="uid://dvu2rbmsgdqf2" path="res://scenes/map/Texture/TX Plant.png" id="1_cgwhf"]
-[ext_resource type="Texture2D" uid="uid://bi53q30vfsdo4" path="res://scenes/map/Texture/TX Props.png" id="2_7hl1s"]
-[ext_resource type="Texture2D" uid="uid://dh5t81stl7gjy" path="res://scenes/map/Texture/TX Shadow Plant.png" id="3_kq825"]
-[ext_resource type="Texture2D" uid="uid://qkqmxj4thxhk" path="res://scenes/map/Texture/TX Shadow.png" id="4_u5pk8"]
-[ext_resource type="Texture2D" uid="uid://c1m1poijhaudu" path="res://scenes/map/Texture/TX Struct.png" id="5_k3w5q"]
-[ext_resource type="Texture2D" uid="uid://xsthtvoy6o0g" path="res://scenes/map/Texture/TX Tileset Grass.png" id="6_8rvvq"]
-[ext_resource type="Texture2D" uid="uid://cl4g6qaac2o3e" path="res://scenes/map/Texture/TX Tileset Stone Ground.png" id="7_vfhlm"]
-[ext_resource type="Texture2D" uid="uid://ba6ot187qwo3y" path="res://scenes/map/Texture/TX Tileset Wall.png" id="8_i2jkd"]
+[ext_resource type="Texture2D" uid="uid://dvu2rbmsgdqf2" path="res://scenes/map/Building and terrain assets/Texture/TX Plant.png" id="1_cgwhf"]
+[ext_resource type="Texture2D" uid="uid://bi53q30vfsdo4" path="res://scenes/map/Building and terrain assets/Texture/TX Props.png" id="2_7hl1s"]
+[ext_resource type="Texture2D" uid="uid://dh5t81stl7gjy" path="res://scenes/map/Building and terrain assets/Texture/TX Shadow Plant.png" id="3_kq825"]
+[ext_resource type="Texture2D" uid="uid://qkqmxj4thxhk" path="res://scenes/map/Building and terrain assets/Texture/TX Shadow.png" id="4_u5pk8"]
+[ext_resource type="Texture2D" uid="uid://c1m1poijhaudu" path="res://scenes/map/Building and terrain assets/Texture/TX Struct.png" id="5_k3w5q"]
+[ext_resource type="Texture2D" uid="uid://xsthtvoy6o0g" path="res://scenes/map/Building and terrain assets/Texture/TX Tileset Grass.png" id="6_8rvvq"]
+[ext_resource type="Texture2D" uid="uid://cl4g6qaac2o3e" path="res://scenes/map/Building and terrain assets/Texture/TX Tileset Stone Ground.png" id="7_vfhlm"]
+[ext_resource type="Texture2D" uid="uid://ba6ot187qwo3y" path="res://scenes/map/Building and terrain assets/Texture/TX Tileset Wall.png" id="8_i2jkd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lvufx"]
 texture = ExtResource("1_cgwhf")

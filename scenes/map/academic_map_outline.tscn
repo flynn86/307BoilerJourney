@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c4tfpj53nh2go"]
 
-[ext_resource type="TileSet" uid="uid://dfhx1ytk7y0ei" path="res://scenes/map/new_tile_set.tres" id="1_01kao"]
+[ext_resource type="TileSet" uid="uid://dfhx1ytk7y0ei" path="res://scenes/map/Building and terrain assets/new_tile_set (2).tres" id="1_01kao"]
 
 [node name="AcademicCampus" type="Node2D"]
 
