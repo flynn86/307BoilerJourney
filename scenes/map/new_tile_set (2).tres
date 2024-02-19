@@ -1,9 +1,6 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dfhx1ytk7y0ei"]
-
-[ext_resource type="Texture2D" path="res://map/terrain.png" id="1_qf2jx"]
+[gd_resource type="TileSet" load_steps=2 format=3 uid="uid://dfhx1ytk7y0ei"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dnewg"]
-texture = ExtResource("1_qf2jx")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)

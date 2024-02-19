@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=7 format=3 uid="uid://dfhx1ytk7y0ei"]
 
-[ext_resource type="Texture2D" uid="uid://b7b4gp4122o66" path="res://scenes/map/terrain.png" id="1_ut2xu"]
+[ext_resource type="Texture2D" uid="uid://ca6ad30umc2vs" path="res://scenes/map/terrain.png" id="1_ut2xu"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_at4ve"]
 tile_data = PackedInt32Array(0, 1900546, 20, 65536, 1900546, 21, 131072, 1900546, 22, 1, 1966082, 20, 65537, 1966082, 21, 131073, 1966082, 22, 2, 1900546, 20, 65538, 1900546, 21, 131074, 1900546, 22)
