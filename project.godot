@@ -15,6 +15,11 @@ run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SaveUtils="*res://src/SaveUtils.gd"
+Attributes="*res://src/Attributes.gd"
+
 [display]
 
 window/size/mode=1
