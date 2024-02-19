@@ -2,6 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://c1kv8oho47wpe" path="res://secondary_theme.tres" id="1_o8rie"]
 [ext_resource type="Script" path="res://scenes/location_script.gd" id="1_u6sgc"]
+
 [ext_resource type="FontFile" uid="uid://d4ec2dv1fasjb" path="res://fonts/Louis George Cafe.ttf" id="3_vhjev"]
 
 [sub_resource type="Theme" id="Theme_lm78v"]
