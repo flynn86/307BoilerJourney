@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bw38c741am4hj"]
+
+[ext_resource type="FontFile" uid="uid://d0erv2yenkn0v" path="res://fonts/varsity_regular.ttf" id="1_qwogg"]
+
+[resource]
+default_font = ExtResource("1_qwogg")
+RichTextLabel/font_sizes/normal_font_size = 30
