@@ -38,30 +38,72 @@ anchor_top = 2.0
 anchor_right = -0.252
 anchor_bottom = 2.5
 offset_left = 834.56
-offset_top = -1176.0
+offset_top = -1168.0
 offset_right = 522.304
-offset_bottom = -1460.0
+offset_bottom = -1449.0
 grow_horizontal = 2
 theme = ExtResource("1_n6xp0")
 text = "Fraternities
 
 "
 
-[node name="sor_node" type="Label" parent="."]
+[node name="academic_node" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.655
 anchor_top = 2.0
 anchor_right = -0.252
 anchor_bottom = 2.5
-offset_left = 1146.56
-offset_top = -1176.0
-offset_right = 842.304
-offset_bottom = -1457.0
+offset_left = 1642.56
+offset_top = -1168.0
+offset_right = 1330.3
+offset_bottom = -1449.0
 grow_horizontal = 2
+theme = ExtResource("1_n6xp0")
+text = "Academics
+
+"
+
+[node name="sport_node" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.655
+anchor_top = 2.0
+anchor_right = -0.252
+anchor_bottom = 2.5
+offset_left = 1362.56
+offset_top = -1168.0
+offset_right = 962.304
+offset_bottom = -1449.0
+grow_horizontal = 2
+theme = ExtResource("1_n6xp0")
+text = "Sports
+
+"
+
+[node name="sor_node" type="Label" parent="."]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 128.0
+offset_right = 419.0
+offset_bottom = 171.0
 theme = ExtResource("1_n6xp0")
 text = "Sororities
 
 "
+
+[node name="sport_search" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 160.0
+offset_right = 677.0
+offset_bottom = 192.0
+
+[node name="sport_container" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 568.0
+offset_top = 208.0
+offset_right = 720.0
+offset_bottom = 624.0
 
 [connection signal="request_completed" from="ClubRequest" to="." method="_on_club_request_request_completed"]
