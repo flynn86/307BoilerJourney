@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bb68irp7tpd2r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_os2wi"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_07xh6"]
+
+[resource]
+RichTextLabel/styles/focus = SubResource("StyleBoxFlat_os2wi")
+RichTextLabel/styles/normal = SubResource("StyleBoxTexture_07xh6")

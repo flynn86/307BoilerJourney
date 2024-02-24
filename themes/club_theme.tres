@@ -1,7 +1,17 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bw38c741am4hj"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bw38c741am4hj"]
 
 [ext_resource type="FontFile" uid="uid://d0erv2yenkn0v" path="res://fonts/varsity_regular.ttf" id="1_qwogg"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_om0pf"]
+bg_color = Color(0, 0, 0, 1)
+
 [resource]
 default_font = ExtResource("1_qwogg")
+Button/colors/font_color = Color(0.709804, 0.65098, 0, 1)
+Button/colors/icon_hover_color = Color(0, 0, 0, 1)
+Button/colors/icon_normal_color = Color(0, 0, 0, 1)
+Button/colors/icon_pressed_color = Color(0, 0, 0, 1)
+Label/colors/font_color = Color(0.709804, 0.65098, 0, 1)
+Panel/styles/panel = SubResource("StyleBoxFlat_om0pf")
+RichTextLabel/colors/default_color = Color(0.709804, 0.65098, 0, 1)
 RichTextLabel/font_sizes/normal_font_size = 30
