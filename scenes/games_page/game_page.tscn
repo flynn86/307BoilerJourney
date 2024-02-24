@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhecpmwku78bj"]
+
+[ext_resource type="Theme" uid="uid://bw38c741am4hj" path="res://themes/club_theme.tres" id="1_k6vey"]
+[ext_resource type="Script" path="res://scenes/games_page/game_page.gd" id="2_usu7o"]
+
+[node name="GamePage" type="Panel"]
+custom_minimum_size = Vector2(10, 10)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_k6vey")
+script = ExtResource("2_usu7o")
+
+[node name="page_name" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.354
+anchor_top = 0.111
+anchor_right = 0.646
+anchor_bottom = 0.173
+offset_left = 0.191986
+offset_top = -7.92801
+offset_right = 0.807983
+offset_bottom = 6.896
+theme_override_font_sizes/font_size = 45
+text = "Upcoming Games"
+
+[node name="PMB_scroll" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.076
+anchor_top = 0.37
+anchor_right = 0.215
+anchor_bottom = 0.877
+offset_left = 0.447998
+offset_top = 0.23999
+offset_right = 0.319992
+offset_bottom = -0.296021
+
+[node name="PMB_container" type="VBoxContainer" parent="PMB_scroll"]
+layout_mode = 2
