@@ -1,10 +1,12 @@
 extends Panel
 
 var items = {}
+var total_items = {}
 var popup
 
 func _ready():
 	#OS.shell_open("https://boilerlink.purdue.edu/events")
+	$Popup.hide()
 	_get_club_info("sport_info")
 	_get_club_info("frat_info")
 	_get_club_info("sor_info")
@@ -21,22 +23,26 @@ func _get_club_info(file_name: String):
 		var text_content = file.get_as_text()
 		var lines = text_content.split("\n")
 		for line in lines:
-			var split_line = line.split(":")
-			if split_line.size() >= 2:
-				var name = split_line[0].strip_edges()
-				var description = split_line[1].strip_edges()
+			var colon_index = line.find(":")
+			if colon_index != -1:
+				var name = line.substr(0, colon_index).strip_edges()
+				var description = line.substr(colon_index + 1, line.length()).strip_edges()
 				items[name] = description
 		if file_name == "sport_info":
 			_generate_buttons("sport")
+			total_items.merge(items)
 			items = {}
 		elif file_name == "other_info":
 			_generate_buttons("academic")
+			total_items.merge(items)
 			items = {}
 		elif file_name == "sor_info":
 			_generate_buttons("sor")
+			total_items.merge(items)
 			items = {}
 		else:
 			_generate_buttons("frat")
+			total_items.merge(items)
 			items = {}
 
 func _generate_buttons(cont_name: String):
@@ -45,11 +51,12 @@ func _generate_buttons(cont_name: String):
 	for name in items.keys():
 		var button = Button.new()
 		button.text = name
-		button.connect("pressed", self._button_pressed)
+		button.connect("pressed",Callable(self,"_button_pressed").bind(button))
 		container.add_child(button)
 
-func _button_pressed():
-	print("hello")
+func _button_pressed(button):
+	$Popup/popup_text.text = total_items[button.text]
+	$Popup.show()
 
 func _on_academic_text_changed(new_text):
 	var container = get_node("academic_scroll/academic_container") as VBoxContainer
@@ -82,3 +89,6 @@ func _on_frat_text_changed(new_text):
 			button.show()
 		else:
 			button.hide()
+
+func _on_pressed():
+	$Popup.hide()
