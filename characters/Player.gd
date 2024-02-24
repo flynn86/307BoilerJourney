@@ -7,11 +7,33 @@ extends Node2D
 
 const composite_sprites = preload("res://characters/assets/CompositeSprites.gd")
 
+var curr_hair: int = 0
+var curr_eyes: int = 0
+var curr_body: int = 0
+var curr_outfit: int = 0
 
 func _ready():
-	bodySprite.texture = composite_sprites.body_spritesheet[0]
-	eyesSprite.texture = composite_sprites.eyes_spritesheet[0]
-	hairstylesSprite.texture = composite_sprites.hairstyles_spritesheet[0]
-	outfitSprite.texture = composite_sprites.outfit_spritesheet[0]
+	bodySprite.texture = composite_sprites.body_spritesheet[curr_body]
+	eyesSprite.texture = composite_sprites.eyes_spritesheet[curr_eyes]
+	hairstylesSprite.texture = composite_sprites.hairstyles_spritesheet[curr_hair]
+	outfitSprite.texture = composite_sprites.outfit_spritesheet[curr_outfit]
 	
-	
+
+
+func _on_change_hair_pressed():
+	curr_hair = (curr_hair + 1) % composite_sprites.hairstyles_spritesheet.size()
+	hairstylesSprite.texture = composite_sprites.hairstyles_spritesheet[curr_hair]
+
+
+func _on_change_body_pressed():
+	curr_body = (curr_body + 1) % composite_sprites.body_spritesheet.size()
+	bodySprite.texture = composite_sprites.body_spritesheet[curr_body]
+
+func _on_change_eyes_pressed():
+	curr_eyes = (curr_eyes + 1) % composite_sprites.eyes_spritesheet.size()
+	eyesSprite.texture = composite_sprites.eyes_spritesheet[curr_eyes]
+
+
+func _on_change_outfit_pressed():
+	curr_outfit = (curr_outfit + 1) % composite_sprites.outfit_spritesheet.size()
+	outfitSprite.texture = composite_sprites.outfit_spritesheet[curr_outfit]
