@@ -4,55 +4,64 @@
 [ext_resource type="Texture2D" uid="uid://c2r70y0lpk83y" path="res://characters/assets/Bodies/16x16/Body_02.png" id="1_wrlsq"]
 
 [node name="Player" type="Node2D"]
-position = Vector2(345, 249)
-scale = Vector2(10, 10)
+position = Vector2(211, 215)
+scale = Vector2(3, 3)
 script = ExtResource("1_susai")
 
 [node name="CompositeSprites" type="Node2D" parent="."]
+scale = Vector2(2, 2)
 
 [node name="Body" type="Sprite2D" parent="CompositeSprites"]
+scale = Vector2(2, 2)
 texture = ExtResource("1_wrlsq")
 hframes = 58
 vframes = 20
 
 [node name="Eyes" type="Sprite2D" parent="CompositeSprites"]
+scale = Vector2(2, 2)
 hframes = 58
 vframes = 20
 
 [node name="Hairstyles" type="Sprite2D" parent="CompositeSprites"]
+scale = Vector2(2, 2)
 hframes = 58
 vframes = 20
 
 [node name="Outfit" type="Sprite2D" parent="CompositeSprites"]
+scale = Vector2(2, 2)
 hframes = 58
 vframes = 20
 
 [node name="ChangeHair" type="Button" parent="."]
-offset_left = 8.0
-offset_top = 7.0
-offset_right = 16.0
-offset_bottom = 15.0
+offset_left = 26.0
+offset_top = 19.6667
+offset_right = 67.0
+offset_bottom = 50.6667
+text = "Hair"
 metadata/_edit_use_anchors_ = true
 
 [node name="ChangeEyes" type="Button" parent="."]
-offset_left = 21.4
-offset_top = -2.8
-offset_right = 29.4
-offset_bottom = 5.2
+offset_left = 76.3333
+offset_top = -15.0
+offset_right = 119.333
+offset_bottom = 16.0
+text = "Eyes"
 metadata/_edit_use_anchors_ = true
 
 [node name="ChangeOutfit" type="Button" parent="."]
-offset_left = 21.0
-offset_top = 6.6
-offset_right = 29.0
-offset_bottom = 14.6
+offset_left = 69.3333
+offset_top = 19.0
+offset_right = 123.333
+offset_bottom = 50.0
+text = "Outfit"
 metadata/_edit_use_anchors_ = true
 
 [node name="ChangeBody" type="Button" parent="."]
-offset_left = 7.8
-offset_top = -3.0
-offset_right = 15.8
-offset_bottom = 5.0
+offset_left = 24.6667
+offset_top = -16.0
+offset_right = 71.6667
+offset_bottom = 15.0
+text = "Body"
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="ChangeHair" to="." method="_on_change_hair_pressed"]
