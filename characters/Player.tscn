@@ -1,17 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://de5dxulsypy4g"]
+[gd_scene load_steps=2 format=3 uid="uid://cvjbfijhlka84"]
 
-[ext_resource type="Texture2D" uid="uid://c2r70y0lpk83y" path="res://characters/assets/Bodies/16x16/Body_02.png" id="2_mnuuq"]
+[ext_resource type="Texture2D" uid="uid://c2r70y0lpk83y" path="res://characters/assets/Bodies/16x16/Body_02.png" id="1_wrlsq"]
 
 [node name="Player" type="Node2D"]
-position = Vector2(289, 242)
-scale = Vector2(10, 10)
 
 [node name="CompositeSprites" type="Node2D" parent="."]
 
 [node name="Body" type="Sprite2D" parent="CompositeSprites"]
-texture = ExtResource("2_mnuuq")
+texture = ExtResource("1_wrlsq")
 hframes = 58
 vframes = 20
+frame = 232
 
 [node name="Eyes" type="Sprite2D" parent="CompositeSprites"]
 hframes = 58
