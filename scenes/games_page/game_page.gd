@@ -8,6 +8,9 @@ func _ready():
 	#OS.shell_open("https://boilerlink.purdue.edu/events")
 	#$Popup.hide()
 	_get_game_info("PMB_info")
+	_get_game_info("MF_info")
+	_get_game_info("WB_info")
+	_get_game_info("WV_info")
 	#$sport_bar.connect("text_changed", self._on_sport_text_changed)
 
 func _get_game_info(file_name: String):
@@ -28,16 +31,16 @@ func _get_game_info(file_name: String):
 			_generate_buttons("PMB")
 			total_items.merge(items)
 			items = {}
-		elif file_name == "other_info":
-			_generate_buttons("academic")
+		elif file_name == "WB_info":
+			_generate_buttons("WB")
 			total_items.merge(items)
 			items = {}
-		elif file_name == "sor_info":
-			_generate_buttons("sor")
+		elif file_name == "MF_info":
+			_generate_buttons("MF")
 			total_items.merge(items)
 			items = {}
 		else:
-			_generate_buttons("frat")
+			_generate_buttons("WV")
 			total_items.merge(items)
 			items = {}
 
