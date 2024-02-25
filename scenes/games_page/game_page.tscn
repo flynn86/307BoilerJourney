@@ -41,6 +41,18 @@ offset_bottom = 7.96799
 theme_override_font_sizes/font_size = 20
 text = "Men's BasketBall"
 
+[node name="PMB_bar" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.049
+anchor_top = 0.284
+anchor_right = 0.187
+anchor_bottom = 0.327
+offset_left = -0.448002
+offset_top = -0.0320129
+offset_right = 0.575989
+offset_bottom = 0.103989
+
 [node name="PMB_scroll" type="ScrollContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -69,6 +81,18 @@ offset_right = 11.4479
 offset_bottom = 7.74399
 theme_override_font_sizes/font_size = 20
 text = "Women's Basketball"
+
+[node name="WB_bar" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.292
+anchor_top = 0.296
+anchor_right = 0.454
+anchor_bottom = 0.333
+offset_left = -8.38403
+offset_top = -7.808
+offset_right = -3.00806
+offset_bottom = 0.216003
 
 [node name="WB_scroll" type="ScrollContainer" parent="."]
 layout_mode = 1
@@ -100,6 +124,18 @@ theme_override_font_sizes/font_size = 20
 text = "Men's Football
 "
 
+[node name="MF_bar" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.556
+anchor_top = 0.296
+anchor_right = 0.66
+anchor_bottom = 0.327
+offset_left = -0.512085
+offset_top = -7.808
+offset_right = -0.320007
+offset_bottom = 0.103989
+
 [node name="MF_scroll" type="ScrollContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -129,6 +165,18 @@ offset_bottom = 1.168
 theme_override_font_sizes/font_size = 20
 text = "Women's Volleyball"
 
+[node name="WV_bar" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.778
+anchor_top = 0.284
+anchor_right = 0.917
+anchor_bottom = 0.333
+offset_left = -0.256042
+offset_top = -0.0320129
+offset_right = -0.384033
+offset_bottom = 0.216003
+
 [node name="WV_scroll" type="ScrollContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -143,3 +191,30 @@ offset_bottom = -0.296021
 
 [node name="WV_container" type="VBoxContainer" parent="WV_scroll"]
 layout_mode = 2
+
+[node name="Popup" type="Popup" parent="."]
+position = Vector2i(400, 250)
+size = Vector2i(341, 131)
+visible = true
+
+[node name="popup_text" type="RichTextLabel" parent="Popup"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
+
+[node name="Button" type="Button" parent="Popup"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Close"
+
+[connection signal="pressed" from="Popup/Button" to="." method="_on_button_pressed"]

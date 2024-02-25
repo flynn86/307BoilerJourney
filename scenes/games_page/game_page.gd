@@ -6,12 +6,15 @@ var popup
 
 func _ready():
 	#OS.shell_open("https://boilerlink.purdue.edu/events")
-	#$Popup.hide()
+	$Popup.hide()
 	_get_game_info("PMB_info")
 	_get_game_info("MF_info")
 	_get_game_info("WB_info")
 	_get_game_info("WV_info")
-	#$sport_bar.connect("text_changed", self._on_sport_text_changed)
+	$PMB_bar.connect("text_changed", self._on_PMB_text_changed)
+	$WB_bar.connect("text_changed", self._on_WB_text_changed)
+	$MF_bar.connect("text_changed", self._on_MF_text_changed)
+	$WV_bar.connect("text_changed", self._on_WV_text_changed)
 
 func _get_game_info(file_name: String):
 	var text_path = "res://scenes/games_page/%s.txt" % file_name
@@ -57,37 +60,37 @@ func _button_pressed(button):
 	$Popup/popup_text.text = total_items[button.text]
 	$Popup.show()
 
-func _on_academic_text_changed(new_text):
-	var container = get_node("academic_scroll/academic_container") as VBoxContainer
+func _on_WV_text_changed(new_text):
+	var container = get_node("WV_scroll/WV_container") as VBoxContainer
 	for button in container.get_children():
 		if  new_text.is_empty() or new_text.to_lower() in button.text.to_lower():
 			button.show()
 		else:
 			button.hide()
 
-func _on_sport_text_changed(new_text):
-	var container = get_node("sport_scroll/sport_container") as VBoxContainer
+func _on_PMB_text_changed(new_text):
+	var container = get_node("PMB_scroll/PMB_container") as VBoxContainer
 	for button in container.get_children():
 		if new_text.is_empty() or new_text.to_lower() in button.text.to_lower():
 			button.show()
 		else:
 			button.hide()
 
-func _on_sor_text_changed(new_text):
-	var container = get_node("sor_scroll/sor_container") as VBoxContainer
+func _on_WB_text_changed(new_text):
+	var container = get_node("WB_scroll/WB_container") as VBoxContainer
 	for button in container.get_children():
 		if  new_text.is_empty() or new_text.to_lower() in button.text.to_lower():
 			button.show()
 		else:
 			button.hide()
 
-func _on_frat_text_changed(new_text):
-	var container = get_node("frat_scroll/frat_container") as VBoxContainer
+func _on_MF_text_changed(new_text):
+	var container = get_node("MF_scroll/MF_container") as VBoxContainer
 	for button in container.get_children():
 		if  new_text.is_empty() or new_text.to_lower() in button.text.to_lower():
 			button.show()
 		else:
 			button.hide()
 
-func _on_pressed():
+func _on_button_pressed():
 	$Popup.hide()
