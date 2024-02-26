@@ -33,38 +33,46 @@ hframes = 58
 vframes = 20
 
 [node name="ChangeHair" type="Button" parent="."]
-offset_left = 26.0
-offset_top = 19.6667
-offset_right = 67.0
-offset_bottom = 50.6667
+offset_left = 25.6667
+offset_top = 8.33333
+offset_right = 66.6667
+offset_bottom = 39.3333
 text = "Hair"
 metadata/_edit_use_anchors_ = true
 
 [node name="ChangeEyes" type="Button" parent="."]
 offset_left = 76.3333
-offset_top = -15.0
+offset_top = -26.0
 offset_right = 119.333
-offset_bottom = 16.0
+offset_bottom = 5.0
 text = "Eyes"
 metadata/_edit_use_anchors_ = true
 
 [node name="ChangeOutfit" type="Button" parent="."]
-offset_left = 69.3333
-offset_top = 19.0
-offset_right = 123.333
-offset_bottom = 50.0
+offset_left = 69.6667
+offset_top = 7.66667
+offset_right = 123.667
+offset_bottom = 38.6667
 text = "Outfit"
 metadata/_edit_use_anchors_ = true
 
 [node name="ChangeBody" type="Button" parent="."]
-offset_left = 24.6667
-offset_top = -16.0
-offset_right = 71.6667
-offset_bottom = 15.0
+offset_left = 24.3333
+offset_top = -27.3333
+offset_right = 71.3333
+offset_bottom = 3.66667
 text = "Body"
 metadata/_edit_use_anchors_ = true
+
+[node name="Random" type="Button" parent="."]
+offset_left = 34.0
+offset_top = 41.0
+offset_right = 107.0
+offset_bottom = 72.0
+text = "Random"
 
 [connection signal="pressed" from="ChangeHair" to="." method="_on_change_hair_pressed"]
 [connection signal="pressed" from="ChangeEyes" to="." method="_on_change_eyes_pressed"]
 [connection signal="pressed" from="ChangeOutfit" to="." method="_on_change_outfit_pressed"]
 [connection signal="pressed" from="ChangeBody" to="." method="_on_change_body_pressed"]
+[connection signal="pressed" from="Random" to="." method="_on_random_pressed"]

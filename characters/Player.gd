@@ -12,6 +12,8 @@ var curr_eyes: int = 0
 var curr_body: int = 0
 var curr_outfit: int = 0
 
+var rng = RandomNumberGenerator.new()
+
 func _ready():
 	bodySprite.texture = composite_sprites.body_spritesheet[curr_body]
 	eyesSprite.texture = composite_sprites.eyes_spritesheet[curr_eyes]
@@ -37,3 +39,15 @@ func _on_change_eyes_pressed():
 func _on_change_outfit_pressed():
 	curr_outfit = (curr_outfit + 1) % composite_sprites.outfit_spritesheet.size()
 	outfitSprite.texture = composite_sprites.outfit_spritesheet[curr_outfit]
+
+
+func _on_random_pressed():
+	curr_body = rng.randi_range(0, composite_sprites.body_spritesheet.size() - 1)
+	curr_eyes = rng.randi_range(0, composite_sprites.eyes_spritesheet.size() - 1)
+	curr_hair = rng.randi_range(0, composite_sprites.hairstyles_spritesheet.size() - 1)
+	curr_outfit = rng.randi_range(0, composite_sprites.outfit_spritesheet.size() - 1)
+	hairstylesSprite.texture = composite_sprites.hairstyles_spritesheet[curr_hair]
+	bodySprite.texture = composite_sprites.body_spritesheet[curr_body]
+	eyesSprite.texture = composite_sprites.eyes_spritesheet[curr_eyes]
+	outfitSprite.texture = composite_sprites.outfit_spritesheet[curr_outfit]
+
