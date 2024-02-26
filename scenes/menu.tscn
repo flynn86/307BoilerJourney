@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://5kywpj1xb840"]
+
+[ext_resource type="Script" path="res://scenes/menu.gd" id="1_t28md"]
+
+[sub_resource type="GDScript" id="GDScript_yyoyx"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_t28md")
+
+[node name="SaveProgressButton" type="Button" parent="."]
+offset_left = 312.0
+offset_top = 104.0
+offset_right = 828.0
+offset_bottom = 219.0
+text = "Save Progress"
+script = SubResource("GDScript_yyoyx")
+
+[node name="ViewProgressButton" type="Button" parent="."]
+offset_left = 313.0
+offset_top = 285.0
+offset_right = 829.0
+offset_bottom = 400.0
+text = "View Progress"
+
+[node name="BackToMapButton" type="Button" parent="."]
+offset_left = 313.0
+offset_top = 461.0
+offset_right = 829.0
+offset_bottom = 576.0
+text = "Back To Map"
+
+[connection signal="pressed" from="SaveProgressButton" to="." method="_on_save_progress_button_pressed"]
+[connection signal="pressed" from="ViewProgressButton" to="." method="_on_view_progress_button_pressed"]
+[connection signal="pressed" from="BackToMapButton" to="." method="_on_back_to_map_button_pressed"]
