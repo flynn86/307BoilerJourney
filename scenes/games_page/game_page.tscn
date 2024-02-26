@@ -1,0 +1,220 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhecpmwku78bj"]
+
+[ext_resource type="Theme" uid="uid://bw38c741am4hj" path="res://themes/club_theme.tres" id="1_k6vey"]
+[ext_resource type="Script" path="res://scenes/games_page/game_page.gd" id="2_usu7o"]
+
+[node name="GamePage" type="Panel"]
+custom_minimum_size = Vector2(10, 10)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_k6vey")
+script = ExtResource("2_usu7o")
+
+[node name="page_name" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.34
+anchor_top = 0.086
+anchor_right = 0.633
+anchor_bottom = 0.148
+offset_left = 0.320007
+offset_top = -7.728
+offset_right = -0.216003
+offset_bottom = 7.09601
+theme_override_font_sizes/font_size = 45
+text = "Upcoming Games"
+
+[node name="MB_title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.056
+anchor_top = 0.222
+anchor_right = 0.191
+anchor_bottom = 0.284
+offset_left = -8.512
+offset_top = 0.143982
+offset_right = -0.0320129
+offset_bottom = 7.96799
+theme_override_font_sizes/font_size = 20
+text = "Men's BasketBall"
+
+[node name="PMB_bar" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.049
+anchor_top = 0.284
+anchor_right = 0.187
+anchor_bottom = 0.327
+offset_left = -0.448002
+offset_top = -0.0320129
+offset_right = 0.575989
+offset_bottom = 0.103989
+
+[node name="PMB_scroll" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.042
+anchor_top = 0.37
+anchor_right = 0.208
+anchor_bottom = 0.877
+offset_left = -0.384003
+offset_top = 0.23999
+offset_right = 0.384003
+offset_bottom = -0.296021
+
+[node name="PMB_container" type="VBoxContainer" parent="PMB_scroll"]
+layout_mode = 2
+
+[node name="WB_title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.292
+anchor_top = 0.21
+anchor_right = 0.451
+anchor_bottom = 0.272
+offset_left = -8.38403
+offset_top = 7.92
+offset_right = 11.4479
+offset_bottom = 7.74399
+theme_override_font_sizes/font_size = 20
+text = "Women's Basketball"
+
+[node name="WB_bar" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.292
+anchor_top = 0.296
+anchor_right = 0.454
+anchor_bottom = 0.333
+offset_left = -8.38403
+offset_top = -7.808
+offset_right = -3.00806
+offset_bottom = 0.216003
+
+[node name="WB_scroll" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.285
+anchor_top = 0.37
+anchor_right = 0.461
+anchor_bottom = 0.877
+offset_left = -0.320038
+offset_top = 0.23999
+offset_right = -0.0720215
+offset_bottom = -0.296021
+
+[node name="WB_container" type="VBoxContainer" parent="WB_scroll"]
+layout_mode = 2
+
+[node name="MF_title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.542
+anchor_top = 0.222
+anchor_right = 0.681
+anchor_bottom = 0.284
+offset_left = 7.61597
+offset_top = 0.143982
+offset_right = 7.48792
+offset_bottom = -0.0320129
+theme_override_font_sizes/font_size = 20
+text = "Men's Football
+"
+
+[node name="MF_bar" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.556
+anchor_top = 0.296
+anchor_right = 0.66
+anchor_bottom = 0.327
+offset_left = -0.512085
+offset_top = -7.808
+offset_right = -0.320007
+offset_bottom = 0.103989
+
+[node name="MF_scroll" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.549
+anchor_top = 0.37
+anchor_right = 0.687
+anchor_bottom = 0.877
+offset_left = -0.447998
+offset_top = 0.23999
+offset_right = 0.575928
+offset_bottom = -0.296082
+
+[node name="MF_container" type="VBoxContainer" parent="MF_scroll"]
+layout_mode = 2
+
+[node name="WV_title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.771
+anchor_top = 0.222
+anchor_right = 0.937
+anchor_bottom = 0.259
+offset_left = -8.19202
+offset_top = 0.143982
+offset_right = -4.42407
+offset_bottom = 1.168
+theme_override_font_sizes/font_size = 20
+text = "Women's Volleyball"
+
+[node name="WV_bar" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.778
+anchor_top = 0.284
+anchor_right = 0.917
+anchor_bottom = 0.333
+offset_left = -0.256042
+offset_top = -0.0320129
+offset_right = -0.384033
+offset_bottom = 0.216003
+
+[node name="WV_scroll" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.778
+anchor_top = 0.383
+anchor_right = 0.931
+anchor_bottom = 0.877
+offset_left = -0.256042
+offset_top = -8.18401
+offset_right = -0.512085
+offset_bottom = -0.296021
+
+[node name="WV_container" type="VBoxContainer" parent="WV_scroll"]
+layout_mode = 2
+
+[node name="Popup" type="Popup" parent="."]
+position = Vector2i(400, 250)
+size = Vector2i(341, 131)
+visible = true
+
+[node name="popup_text" type="RichTextLabel" parent="Popup"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
+
+[node name="Button" type="Button" parent="Popup"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Close"
+
+[connection signal="pressed" from="Popup/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,32 @@
+Duke, Date: Aug 25 Location: Holloway Gymnasium, West Lafayette, IN Time: 7 PM
+Creighton, Date: Aug 26 Location: Holloway Gymnasium, West Lafayette, IN Time: 3:30 PM
+Loyola, Date: Aug 27 Location: Holloway Gymnasium, West Lafayette, IN Time: 3 PM
+Kansas, Date: Aug 31 Location: Lawrence, KS Time: 7:30 PM
+Marquette, Date: Sep 1 Location: Lawrence, KS Time: 4 PM
+SMU, Date: Sep 8 Location: Holloway Gymnasium, West Lafayette, IN Time: 7 PM
+Kentucky, Date: Sep 9 Location: Holloway Gymnasium, West Lafayette, IN Time: 7 PM
+UCF, Date: Sep 14 Location: Holloway Gymnasium, West Lafayette, IN Time: 8 PM
+USC, Date: Sep 15 Location: Holloway Gymnasium, West Lafayette, IN Time: 8 PM
+Maryland, Date: Sep 22 Location: College Park, MD Time: 7 PM
+Rutgers, Date: Sep 24 Location: Piscataway, NJ Time: 1 PM
+Nebraska, Date: Sep 29 Location: Holloway Gymnasium, West Lafayette, IN Time: 7 PM
+Northwestern, Date: Oct 1 Location: Holloway Gymnasium, West Lafayette, IN Time: 2 PM
+Illinois, Date: Oct 4 Location: Holloway Gymnasium, West Lafayette, IN Time: 6 PM
+Iowa, Date: Oct 7 Location: Holloway Gymnasium, West Lafayette, IN Time: 7 PM
+Indiana, Date: Oct 11 Location: Bloomington, IN Time: 6 PM
+Ohio State, Date: Oct 15 Location: Columbus, OH Time: 1 PM
+Indiana, Date: Oct 18 Location: Holloway Gymnasium, West Lafayette, IN Time: 7 PM
+Penn State, Date: Oct 22 Location: University Park, PA Time: 1 PM
+Minnesota, Date: Oct 26 Location: Holloway Gymnasium, West Lafayette, IN Time: 7 PM
+Illinois, Date: Oct 28 Location: Champaign, IL Time: 7 PM
+Wisconsin, Date: Nov 1 Location: Madison, WI Time: 7 PM
+Penn State, Date: Nov 5 Location: Holloway Gymnasium, West Lafayette, IN Time: 1 PM
+Minnesota, Date: Nov 10 Location: Minneapolis, MN Time: 7 PM
+Michigan State, Date: Nov 12 Location: Holloway Gymnasium, West Lafayette, IN Time: 1 PM
+Wisconsin, Date: Nov 17 Location: Holloway Gymnasium, West Lafayette, IN Time: 7 PM
+Maryland, Date: Nov 18 Location: Holloway Gymnasium, West Lafayette, IN Time: 7 PM
+Michigan, Date: Nov 24 Location: Ann Arbor, MI Time: 6:30 PM
+Michigan State, Date: Nov 25 Location: East Lansing, MI Time: 6 PM
+Fairfield, Date: Nov 30 Location: Holloway Gymnasium, West Lafayette, IN Time: 7 PM
+Marquette, Date: Dec 1 Location: Holloway Gymnasium, West Lafayette, IN Time: 7 PM
+Oregon, Date: Dec 7 Location: Madison, WI Time: 9:30 PM

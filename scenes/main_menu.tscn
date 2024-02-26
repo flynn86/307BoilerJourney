@@ -1,23 +1,32 @@
 [gd_scene load_steps=2 format=3 uid="uid://dph7rnxp2ud37"]
 
-[ext_resource type="Script" path="res://src/main_menu.gd" id="1_l8hk8"]
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_l8hk8"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_l8hk8")
 
 [node name="StartNewGame" type="Button" parent="."]
-offset_left = 105.0
-offset_top = 35.0
-offset_right = 299.0
-offset_bottom = 128.0
+offset_left = 176.0
+offset_top = 157.0
+offset_right = 370.0
+offset_bottom = 250.0
 text = "Start New Game"
 
 [node name="LoadGame" type="Button" parent="."]
-offset_left = 99.0
-offset_top = 215.0
-offset_right = 293.0
-offset_bottom = 308.0
+offset_left = 176.0
+offset_top = 318.0
+offset_right = 370.0
+offset_bottom = 411.0
 text = "Load Game"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 139.0
+offset_top = 63.0
+offset_right = 412.0
+offset_bottom = 147.0
+text = "Welcome to BoilerJourney!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="StartNewGame" to="." method="_on_start_new_game_pressed"]
 [connection signal="pressed" from="LoadGame" to="." method="_on_load_game_pressed"]
