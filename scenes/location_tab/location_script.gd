@@ -148,5 +148,5 @@ func display_rating(rating: float) -> void:
 	rating_text.text = "%0.1f Stars" % rating
 
 func _ready():
-	display_content("HAMP")
+	display_content("ELLT")
 
