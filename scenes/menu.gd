@@ -9,4 +9,4 @@ func _on_view_progress_button_pressed():
 
 
 func _on_back_to_map_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/housing_map.tscn")
+	get_tree().change_scene_to_file("res://scenes/map/housing_map.tscn")
