@@ -24,6 +24,8 @@ func initialize_game():
 		"location" : Attributes.Location.ACADEMIC,
 		"collectibles" : 0
 	}
+	var string_data = JSON.stringify(save_data)
+	file.store_line(string_data)
 	file.close()
 
 func load():

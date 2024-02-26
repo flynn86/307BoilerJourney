@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://04w4p6rnu7y2"]
+[gd_scene load_steps=3 format=3 uid="uid://04w4p6rnu7y2"]
 
-[ext_resource type="Script" path="res://scenes/progress_page.gd" id="1_rpcx8"]
+[ext_resource type="Script" path="res://scenes/progress_page_stats.gd" id="1_rpcx8"]
+[ext_resource type="Script" path="res://scenes/progress_page.gd" id="2_1dahq"]
 
 [node name="progress_page" type="Node2D"]
 
@@ -47,6 +48,6 @@ offset_top = 409.0
 offset_right = 829.0
 offset_bottom = 524.0
 text = "Back To Menu"
-script = ExtResource("1_rpcx8")
+script = ExtResource("2_1dahq")
 
-[connection signal="pressed" from="BackToMenuButton" to="CanvasLayer/Label" method="_on_back_to_menu_button_pressed"]
+[connection signal="pressed" from="BackToMenuButton" to="BackToMenuButton" method="_on_pressed"]
