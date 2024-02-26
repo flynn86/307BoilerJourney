@@ -1,14 +1,14 @@
 [gd_resource type="TileSet" load_steps=29 format=3 uid="uid://dfhx1ytk7y0ei"]
 
-[ext_resource type="Texture2D" path="res://scenes/map/Building and terrain assets/victorian-streets.png" id="1_6oomi"]
+[ext_resource type="Texture2D" uid="uid://com48ikiowiub" path="res://scenes/map/Building and terrain assets/victorian-streets.png" id="1_6oomi"]
 [ext_resource type="Texture2D" uid="uid://cr7pd6lrhibb7" path="res://scenes/map/Building and terrain assets/terrain.png" id="1_ut2xu"]
 [ext_resource type="Texture2D" uid="uid://gfccx05n7rxv" path="res://scenes/map/Building and terrain assets/victorian-tenement.png" id="1_wufg6"]
 [ext_resource type="Texture2D" uid="uid://dn2mx6prie7bn" path="res://scenes/map/Building and terrain assets/victorian-windows-doors.png" id="3_r7yo1"]
 [ext_resource type="Texture2D" uid="uid://cyyvw0os3bufy" path="res://scenes/map/Building and terrain assets/victorian-accessories.png" id="4_pc5be"]
 [ext_resource type="Texture2D" uid="uid://cvstvlwpigcrn" path="res://scenes/map/Building and terrain assets/roofs.png" id="5_cbe21"]
-[ext_resource type="Texture2D" path="res://scenes/map/Building and terrain assets/victorian-market.png" id="6_31dvq"]
-[ext_resource type="Texture2D" path="res://scenes/map/Building and terrain assets/victorian-garden.png" id="7_8isak"]
-[ext_resource type="Texture2D" path="res://scenes/map/Building and terrain assets/trees-green.png" id="8_vrmlh"]
+[ext_resource type="Texture2D" uid="uid://6x5m0rfm44w3" path="res://scenes/map/Building and terrain assets/victorian-market.png" id="6_31dvq"]
+[ext_resource type="Texture2D" uid="uid://bmb07qchykecm" path="res://scenes/map/Building and terrain assets/victorian-garden.png" id="7_8isak"]
+[ext_resource type="Texture2D" uid="uid://cj505sggjwh0d" path="res://scenes/map/Building and terrain assets/trees-green.png" id="8_vrmlh"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_at4ve"]
 tile_data = PackedInt32Array(0, 1900546, 20, 65536, 1900546, 21, 131072, 1900546, 22, 1, 1966082, 20, 65537, 1966082, 21, 131073, 1966082, 22, 2, 1900546, 20, 65538, 1900546, 21, 131074, 1900546, 22)
