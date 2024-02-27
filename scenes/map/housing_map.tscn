@@ -1,13 +1,13 @@
 [gd_scene load_steps=18 format=3 uid="uid://dmle7liyfagl2"]
 
-[ext_resource type="Texture2D" uid="uid://bt8m7vtujk4cp" path="res://scenes/map/Building and terrain assets/Texture/TX Plant.png" id="1_osrpa"]
-[ext_resource type="Texture2D" uid="uid://r8lqf5pybvm3" path="res://scenes/map/Building and terrain assets/trees-green.png" id="2_pvr1s"]
-[ext_resource type="Texture2D" uid="uid://fdpeu4ekefm" path="res://scenes/map/Building and terrain assets/victorian-accessories.png" id="3_uwxia"]
-[ext_resource type="Texture2D" uid="uid://dj1jejq8hxi37" path="res://scenes/map/Building and terrain assets/victorian-tenement.png" id="4_bw1bn"]
-[ext_resource type="Texture2D" uid="uid://2paso7m2qn34" path="res://scenes/map/Building and terrain assets/victorian-windows-doors.png" id="5_h065r"]
-[ext_resource type="Texture2D" uid="uid://cq2kgu4knfslm" path="res://scenes/map/Building and terrain assets/roofs.png" id="6_htyct"]
-[ext_resource type="Texture2D" uid="uid://sq3ccge2jkth" path="res://scenes/map/Building and terrain assets/terrain.png" id="7_l3lw1"]
-[ext_resource type="Texture2D" uid="uid://c3qvj6vhysy6o" path="res://scenes/map/Building and terrain assets/roads2W.png" id="8_aeuxb"]
+[ext_resource type="Texture2D" uid="uid://cqxmf3rphdw2u" path="res://scenes/map/Building and terrain assets/Texture/TX Plant.png" id="1_osrpa"]
+[ext_resource type="Texture2D" uid="uid://cj505sggjwh0d" path="res://scenes/map/Building and terrain assets/trees-green.png" id="2_pvr1s"]
+[ext_resource type="Texture2D" uid="uid://cyyvw0os3bufy" path="res://scenes/map/Building and terrain assets/victorian-accessories.png" id="3_uwxia"]
+[ext_resource type="Texture2D" uid="uid://gfccx05n7rxv" path="res://scenes/map/Building and terrain assets/victorian-tenement.png" id="4_bw1bn"]
+[ext_resource type="Texture2D" uid="uid://dn2mx6prie7bn" path="res://scenes/map/Building and terrain assets/victorian-windows-doors.png" id="5_h065r"]
+[ext_resource type="Texture2D" uid="uid://cvstvlwpigcrn" path="res://scenes/map/Building and terrain assets/roofs.png" id="6_htyct"]
+[ext_resource type="Texture2D" uid="uid://cr7pd6lrhibb7" path="res://scenes/map/Building and terrain assets/terrain.png" id="7_l3lw1"]
+[ext_resource type="Texture2D" uid="uid://uhbpvf55c8p1" path="res://scenes/map/Building and terrain assets/roads2W.png" id="8_aeuxb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7r5fb"]
 texture = ExtResource("1_osrpa")
