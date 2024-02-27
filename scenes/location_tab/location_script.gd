@@ -2,6 +2,7 @@ extends Panel
 
 const API_KEY = "AIzaSyBL6GUlNHADw9doUkqDTruMpd_isSYmX4k"
 const GOOGLE_PLACES_URL = "https://maps.googleapis.com/maps/api/place/details/json"
+signal panel_closed
 
 var name_to_place_id = {
 	"WALC": "ChIJBwU-Qjf9EogRcxMcZBGjqzY",  
@@ -148,5 +149,12 @@ func display_rating(rating: float) -> void:
 	rating_text.text = "%0.1f Stars" % rating
 
 func _ready():
-	display_content("ELLT")
+	pass
+
+func initialize_with_name(name: String):
+	display_content(name)
+
+func close_panel():
+	emit_signal("panel_closed")
+	queue_free()
 
