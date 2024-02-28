@@ -92,3 +92,6 @@ func _on_frat_text_changed(new_text):
 
 func _on_pressed():
 	$Popup.hide()
+
+func _on_close_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/PMU_page/pmu_panel.tscn")

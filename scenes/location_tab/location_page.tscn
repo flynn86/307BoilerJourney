@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://1egfkkafsgpl"]
+[gd_scene load_steps=6 format=3 uid="uid://4drn8f2le5iv"]
 
-[ext_resource type="Theme" uid="uid://c1kv8oho47wpe" path="res://themes/location_theme.tres" id="1_o8rie"]
+[ext_resource type="Theme" uid="uid://c1kv8oho47wpe" path="res://secondary_theme.tres" id="1_o8rie"]
 [ext_resource type="Script" path="res://scenes/location_tab/location_script.gd" id="1_u6sgc"]
 [ext_resource type="FontFile" uid="uid://circdudo2rhld" path="res://fonts/Louis George Cafe.ttf" id="3_vhjev"]
 
@@ -21,13 +21,14 @@ script = ExtResource("1_u6sgc")
 [node name="location_name" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.25
+anchor_left = 0.326
 anchor_top = 0.049
-anchor_right = 0.944
-anchor_bottom = 0.16
-offset_top = 0.247999
-offset_right = 0.511963
-offset_bottom = 0.319984
+anchor_right = 0.889
+anchor_bottom = 0.173
+offset_left = 0.447998
+offset_top = 8.248
+offset_right = -0.128052
+offset_bottom = -0.104004
 grow_horizontal = 2
 theme = SubResource("Theme_lm78v")
 theme_override_colors/default_color = Color(0.690196, 0.54902, 0, 1)
@@ -91,4 +92,15 @@ offset_bottom = 0.192017
 theme_override_colors/default_color = Color(0.690196, 0.54902, 0, 1)
 theme_override_font_sizes/normal_font_size = 14
 
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.09
+anchor_bottom = 0.099
+offset_right = 0.319992
+offset_bottom = -0.152008
+text = "Close"
+
+[connection signal="panel_closed" from="." to="." method="close_panel"]
 [connection signal="request_completed" from="ReviewRequest" to="." method="_on_review_request_request_completed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3 uid="uid://dckyxvltktr2p"]
+
+[ext_resource type="Theme" uid="uid://c1kv8oho47wpe" path="res://themes/location_theme.tres" id="1_pxf0a"]
+[ext_resource type="Script" path="res://scenes/PMU_page/pmu_panel.gd" id="2_cfunh"]
+[ext_resource type="Theme" uid="uid://bw38c741am4hj" path="res://themes/club_theme.tres" id="2_lqdkb"]
+
+[node name="pmu_panel" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_pxf0a")
+script = ExtResource("2_cfunh")
+
+[node name="title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.318
+anchor_top = 0.099
+anchor_right = 0.672
+anchor_bottom = 0.224
+offset_left = -0.336029
+offset_top = -0.152008
+offset_right = -0.144043
+offset_bottom = -0.152008
+theme = ExtResource("2_lqdkb")
+theme_override_font_sizes/font_size = 40
+text = "Purde Memorial Union"
+
+[node name="clubs_button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.095
+anchor_top = 0.435
+anchor_right = 0.361
+anchor_bottom = 0.562
+offset_left = 0.55999
+offset_top = 0.119965
+offset_right = 0.12796
+offset_bottom = -0.176025
+theme_override_colors/font_color = Color(0.643137, 0.517647, 0.141176, 1)
+theme_override_font_sizes/font_size = 20
+text = "Clubs and Organizations"
+
+[node name="games_button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.618
+anchor_top = 0.435
+anchor_right = 0.884
+anchor_bottom = 0.562
+offset_left = 0.0639648
+offset_top = 0.119965
+offset_right = -0.368042
+offset_bottom = -0.176025
+theme_override_colors/font_color = Color(0.643137, 0.517647, 0.141176, 1)
+theme_override_font_sizes/font_size = 20
+text = "Upcoming Games"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.09
+anchor_bottom = 0.099
+offset_right = 0.319992
+offset_bottom = -0.152008
+text = "Close"
+
+[connection signal="pressed" from="clubs_button" to="." method="_on_club_button_pressed"]
+[connection signal="pressed" from="games_button" to="." method="_on_game_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
