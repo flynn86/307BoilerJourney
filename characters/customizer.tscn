@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://de5dxulsypy4g"]
 
-[ext_resource type="Texture2D" uid="uid://c2r70y0lpk83y" path="res://characters/assets/Bodies/16x16/Body_02.png" id="2_mnuuq"]
+[ext_resource type="Texture2D" uid="uid://35asql5p6n4f" path="res://characters/assets/Bodies/16x16/Body_02.png" id="2_mnuuq"]
 
 [node name="Player" type="Node2D"]
 position = Vector2(289, 242)
