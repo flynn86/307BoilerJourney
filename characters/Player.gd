@@ -1,4 +1,5 @@
 extends Node2D
+
 @onready var bodySprite = $CompositeSprites/Body
 @onready var eyesSprite = $CompositeSprites/Eyes
 @onready var hairstylesSprite = $CompositeSprites/Hairstyles

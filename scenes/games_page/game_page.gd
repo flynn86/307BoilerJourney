@@ -28,8 +28,6 @@ func _get_game_info(file_name: String):
 				var name = line.substr(0, comma_index).strip_edges()
 				var description = line.substr(comma_index + 1, line.length()).strip_edges()
 				items[name] = description
-				print(name)
-				print(description)
 		if file_name == "PMB_info":
 			_generate_buttons("PMB")
 			total_items.merge(items)
@@ -94,3 +92,6 @@ func _on_MF_text_changed(new_text):
 
 func _on_button_pressed():
 	$Popup.hide()
+
+func _on_close_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/PMU_page/pmu_panel.tscn")

@@ -1,15 +1,16 @@
 [gd_resource type="TileSet" load_steps=34 format=3 uid="uid://dfhx1ytk7y0ei"]
 
-[ext_resource type="Texture2D" uid="uid://kgo448575iuc" path="res://scenes/map/Building and terrain assets/plants.png" id="1_0b1i2"]
-[ext_resource type="Texture2D" uid="uid://bwjpclhj888iv" path="res://scenes/map/Building and terrain assets/victorian-streets.png" id="1_6oomi"]
-[ext_resource type="Texture2D" uid="uid://3xpua8gnkmal" path="res://scenes/map/Building and terrain assets/terrain.png" id="1_ut2xu"]
-[ext_resource type="Texture2D" uid="uid://j0b4xjcky0su" path="res://scenes/map/Building and terrain assets/victorian-tenement.png" id="1_wufg6"]
-[ext_resource type="Texture2D" uid="uid://bhpmpm14jhqq8" path="res://scenes/map/Building and terrain assets/victorian-windows-doors.png" id="3_r7yo1"]
-[ext_resource type="Texture2D" uid="uid://dr4dujy2kxhbt" path="res://scenes/map/Building and terrain assets/victorian-accessories.png" id="4_pc5be"]
-[ext_resource type="Texture2D" uid="uid://btydktv1spuqy" path="res://scenes/map/Building and terrain assets/roofs.png" id="5_cbe21"]
-[ext_resource type="Texture2D" uid="uid://beyk8m1672b50" path="res://scenes/map/Building and terrain assets/victorian-market.png" id="6_31dvq"]
-[ext_resource type="Texture2D" uid="uid://h4r41uwqydva" path="res://scenes/map/Building and terrain assets/victorian-garden.png" id="7_8isak"]
-[ext_resource type="Texture2D" uid="uid://4r6fuaj7fn1q" path="res://scenes/map/Building and terrain assets/trees-green.png" id="8_vrmlh"]
+
+[ext_resource type="Texture2D" uid="uid://s1w5gx5jh6u4" path="res://scenes/map/Building and terrain assets/plants.png" id="1_0b1i2"]
+[ext_resource type="Texture2D" uid="uid://ksrwyqeauxe0" path="res://scenes/map/Building and terrain assets/victorian-streets.png" id="1_6oomi"]
+[ext_resource type="Texture2D" uid="uid://bi5dlk4lirfam" path="res://scenes/map/Building and terrain assets/terrain.png" id="1_ut2xu"]
+[ext_resource type="Texture2D" uid="uid://wqllowoyu6ew" path="res://scenes/map/Building and terrain assets/victorian-tenement.png" id="1_wufg6"]
+[ext_resource type="Texture2D" uid="uid://bt2kw76gssojp" path="res://scenes/map/Building and terrain assets/victorian-windows-doors.png" id="3_r7yo1"]
+[ext_resource type="Texture2D" uid="uid://bhsyxh4nu07ps" path="res://scenes/map/Building and terrain assets/victorian-accessories.png" id="4_pc5be"]
+[ext_resource type="Texture2D" uid="uid://dcviwt54trrgr" path="res://scenes/map/Building and terrain assets/roofs.png" id="5_cbe21"]
+[ext_resource type="Texture2D" uid="uid://65isq7bdab8m" path="res://scenes/map/Building and terrain assets/victorian-market.png" id="6_31dvq"]
+[ext_resource type="Texture2D" uid="uid://cr1sss75b8wf5" path="res://scenes/map/Building and terrain assets/victorian-garden.png" id="7_8isak"]
+[ext_resource type="Texture2D" uid="uid://bfioa3eo7py8h" path="res://scenes/map/Building and terrain assets/trees-green.png" id="8_vrmlh"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_at4ve"]
 tile_data = PackedInt32Array(0, 1900546, 20, 65536, 1900546, 21, 131072, 1900546, 22, 1, 1966082, 20, 65537, 1966082, 21, 131073, 1966082, 22, 2, 1900546, 20, 65538, 1900546, 21, 131074, 1900546, 22)

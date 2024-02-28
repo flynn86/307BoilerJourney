@@ -3,24 +3,34 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_process_input(true)
+	
 
 func _input(event):
 	if event is InputEventMouseMotion or event is InputEventMouseButton:
 		# Convert the event's global position to the tilemap's local space.
 		var mouse_pos = event.position
 
-func _on_Area2D_input_event(viewport, event, shape_idx):
+func _on_Area2D_input_event(viewport, event, shape_idx, build_name: String):
 	if event is InputEventScreenTouch and event.pressed:
-		var building_name = get_name().replace("_area", "")
-		open_location_tab(building_name)
+		open_tab(build_name)
+	elif event is InputEventMouseButton and event.pressed:
+		open_tab(build_name)
 
-func open_location_tab(building_name: String):
-	self.visible = false
-	var scene = load("res://scenes/location_tab/location_page.tscn")
-	var scene_instance = scene.instance()
-	scene_instance.initialize_with_name(building_name)
-	scene_instance.connect("panel_closed", self, "_on_panel_closed")
-	get_tree().get_root().add_child(scene_instance)
+func open_tab(building_name: String):
+	var text_path1 = "res://scenes/map/char_pos.txt"
+	if FileAccess.file_exists(text_path1):
+		var file = FileAccess.open(text_path1, FileAccess.WRITE)
+		#file.store_string($CharacterBody2D.global_position)
+		file.close()
+	if building_name == "PMU":
+		get_tree().change_scene_to_file("res://scenes/PMU_page/pmu_panel.tscn")
+	else: 
+		var text_path = "res://location_information/loc_text/DISPLAY_NAME.txt"
+		if FileAccess.file_exists(text_path):
+			var file = FileAccess.open(text_path, FileAccess.WRITE)
+			file.store_string(building_name)
+			file.close()
+		get_tree().change_scene_to_file("res://scenes/location_tab/location_page.tscn")
 	
 func _on_panel_closed():
 	self.visible = true
