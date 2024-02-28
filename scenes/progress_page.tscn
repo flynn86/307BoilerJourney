@@ -40,6 +40,7 @@ offset_top = 45.288
 offset_right = -91.5201
 offset_bottom = -30.72
 theme_override_font_sizes/font_size = 50
+text = "Total Completion:"
 script = ExtResource("1_rpcx8")
 
 [node name="BackToMenuButton" type="Button" parent="."]
