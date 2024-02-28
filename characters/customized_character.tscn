@@ -33,8 +33,3 @@ hframes = 58
 vframes = 20
 
 [node name="Player" parent="." instance=ExtResource("3_d02ge")]
-
-[connection signal="body" from="Player" to="." method="_on_player_body"]
-[connection signal="eyes" from="Player" to="." method="_on_player_eyes"]
-[connection signal="hair" from="Player" to="." method="_on_player_hair"]
-[connection signal="outfit" from="Player" to="." method="_on_player_outfit"]

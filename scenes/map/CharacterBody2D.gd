@@ -2,6 +2,13 @@ extends CharacterBody2D
 
 
 @export var move_speed : float = 300
+func _ready():
+	$Player/ChangeBody.visible = false
+	$Player/Continue.visible = false
+	$Player/Random.visible = false
+	$Player/ChangeEyes.visible = false
+	$Player/ChangeOutfit.visible = false
+	$Player/ChangeHair.visible = false
 
 func _physics_process(_delta):
 	var input_direction = Vector2(
