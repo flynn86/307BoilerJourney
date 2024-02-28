@@ -1,12 +1,15 @@
 extends Node2D
-
+signal hair(value)
+signal body(value)
+signal eyes(value)
+signal outfit(value)
 @onready var bodySprite = $CompositeSprites/Body
 @onready var eyesSprite = $CompositeSprites/Eyes
 @onready var hairstylesSprite = $CompositeSprites/Hairstyles
 @onready var outfitSprite = $CompositeSprites/Outfit
 
 const composite_sprites = preload("res://characters/assets/CompositeSprites.gd")
-
+var cont: int = 0
 var curr_hair: int = 0
 var curr_eyes: int = 0
 var curr_body: int = 0
@@ -15,6 +18,8 @@ var curr_outfit: int = 0
 var rng = RandomNumberGenerator.new()
 
 func _ready():
+	if (cont == 1):
+		$ChangeBody.visible = false
 	bodySprite.texture = composite_sprites.body_spritesheet[curr_body]
 	eyesSprite.texture = composite_sprites.eyes_spritesheet[curr_eyes]
 	hairstylesSprite.texture = composite_sprites.hairstyles_spritesheet[curr_hair]
@@ -51,3 +56,13 @@ func _on_random_pressed():
 	eyesSprite.texture = composite_sprites.eyes_spritesheet[curr_eyes]
 	outfitSprite.texture = composite_sprites.outfit_spritesheet[curr_outfit]
 
+
+
+func _on_button_pressed():
+	emit_signal("hair", curr_hair)
+	emit_signal("body", curr_body)
+	emit_signal("eyes", curr_eyes)
+	emit_signal("outfit", curr_outfit)
+	cont = 1
+	get_tree().change_scene_to_file("res://scenes/map/academic_map.tscn")
+	

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c2r70y0lpk83y" path="res://characters/assets/Bodies/16x16/Body_02.png" id="1_wrlsq"]
 
 [node name="Player" type="Node2D"]
-position = Vector2(211, 215)
+position = Vector2(210.171, 266.012)
 scale = Vector2(3, 3)
 script = ExtResource("1_susai")
 
@@ -33,46 +33,56 @@ hframes = 58
 vframes = 20
 
 [node name="ChangeHair" type="Button" parent="."]
-offset_left = 25.6667
-offset_top = 8.33333
-offset_right = 66.6667
-offset_bottom = 39.3333
+offset_left = 34.6098
+offset_top = 8.3292
+offset_right = 75.6098
+offset_bottom = 39.3292
 text = "Hair"
 metadata/_edit_use_anchors_ = true
 
 [node name="ChangeEyes" type="Button" parent="."]
-offset_left = 76.3333
-offset_top = -26.0
-offset_right = 119.333
-offset_bottom = 5.0
+offset_left = 84.9432
+offset_top = -25.6708
+offset_right = 127.943
+offset_bottom = 5.3292
 text = "Eyes"
 metadata/_edit_use_anchors_ = true
 
 [node name="ChangeOutfit" type="Button" parent="."]
-offset_left = 69.6667
-offset_top = 7.66667
-offset_right = 123.667
-offset_bottom = 38.6667
+offset_left = 79.9432
+offset_top = 7.66254
+offset_right = 133.943
+offset_bottom = 38.6625
 text = "Outfit"
 metadata/_edit_use_anchors_ = true
 
 [node name="ChangeBody" type="Button" parent="."]
-offset_left = 24.3333
-offset_top = -27.3333
-offset_right = 71.3333
-offset_bottom = 3.66667
+offset_left = 33.6098
+offset_top = -27.0041
+offset_right = 80.6098
+offset_bottom = 3.99587
 text = "Body"
 metadata/_edit_use_anchors_ = true
 
 [node name="Random" type="Button" parent="."]
-offset_left = 34.0
-offset_top = 41.0
-offset_right = 107.0
-offset_bottom = 72.0
+offset_left = 43.6098
+offset_top = 40.9959
+offset_right = 116.61
+offset_bottom = 71.9959
 text = "Random"
+metadata/_edit_use_anchors_ = true
+
+[node name="Continue" type="Button" parent="."]
+offset_left = 158.61
+offset_top = 41.3292
+offset_right = 237.61
+offset_bottom = 72.3292
+text = "Continue"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="ChangeHair" to="." method="_on_change_hair_pressed"]
 [connection signal="pressed" from="ChangeEyes" to="." method="_on_change_eyes_pressed"]
 [connection signal="pressed" from="ChangeOutfit" to="." method="_on_change_outfit_pressed"]
 [connection signal="pressed" from="ChangeBody" to="." method="_on_change_body_pressed"]
 [connection signal="pressed" from="Random" to="." method="_on_random_pressed"]
+[connection signal="pressed" from="Continue" to="." method="_on_button_pressed"]
