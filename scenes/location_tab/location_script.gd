@@ -149,12 +149,12 @@ func display_rating(rating: float) -> void:
 	rating_text.text = "%0.1f Stars" % rating
 
 func _ready():
-	pass
-
-func initialize_with_name(name: String):
-	display_content(name)
-
-func close_panel():
-	emit_signal("panel_closed")
-	queue_free()
-
+	var text_path = "res://location_information/loc_text/DISPLAY_NAME.txt"
+	var main_name = "STEW"
+	if FileAccess.file_exists(text_path):
+		var file = FileAccess.open(text_path, FileAccess.READ)
+		main_name = file.get_as_text()
+	display_content(main_name)
+	
+func _on_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/map/academic_map.tscn")
