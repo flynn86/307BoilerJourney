@@ -1,0 +1,103 @@
+[gd_scene load_steps=13 format=3 uid="uid://brcr535vfknax"]
+
+[ext_resource type="Texture2D" uid="uid://cjkjm2r2yv1rx" path="res://scenes/map/NPCs/Squirrel Sprite Sheet.png" id="1_d53v4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uer51"]
+atlas = ExtResource("1_d53v4")
+region = Rect2(0, 140, 32, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jimt0"]
+atlas = ExtResource("1_d53v4")
+region = Rect2(32, 140, 32, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8jyu"]
+atlas = ExtResource("1_d53v4")
+region = Rect2(0, 74, 32, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30qxu"]
+atlas = ExtResource("1_d53v4")
+region = Rect2(32, 74, 32, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vs6mg"]
+atlas = ExtResource("1_d53v4")
+region = Rect2(64, 74, 32, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhl2y"]
+atlas = ExtResource("1_d53v4")
+region = Rect2(96, 74, 32, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htry0"]
+atlas = ExtResource("1_d53v4")
+region = Rect2(128, 74, 32, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsg6s"]
+atlas = ExtResource("1_d53v4")
+region = Rect2(160, 74, 32, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dj41k"]
+atlas = ExtResource("1_d53v4")
+region = Rect2(192, 74, 32, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ru01k"]
+atlas = ExtResource("1_d53v4")
+region = Rect2(224, 74, 32, 37)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4yfyb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uer51")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jimt0")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8jyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30qxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vs6mg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhl2y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_htry0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vsg6s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dj41k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ru01k")
+}],
+"loop": true,
+"name": &"Jump right",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="squirrel" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4yfyb")
+animation = &"Idle"
+frame = 1
+frame_progress = 0.147489
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]

@@ -1,0 +1,85 @@
+[gd_scene load_steps=12 format=3 uid="uid://dm0676gfgxjcv"]
+
+[ext_resource type="Texture2D" uid="uid://bkxcil3n8kw16" path="res://scenes/map/NPCs/professor walking.jpg" id="1_5mvxv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8thno"]
+atlas = ExtResource("1_5mvxv")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsmq0"]
+atlas = ExtResource("1_5mvxv")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmwt7"]
+atlas = ExtResource("1_5mvxv")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulohv"]
+atlas = ExtResource("1_5mvxv")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xdc4"]
+atlas = ExtResource("1_5mvxv")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7ko2"]
+atlas = ExtResource("1_5mvxv")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ud8n2"]
+atlas = ExtResource("1_5mvxv")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fkim"]
+atlas = ExtResource("1_5mvxv")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5i5fx"]
+atlas = ExtResource("1_5mvxv")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7lqop"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8thno")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsmq0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmwt7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulohv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xdc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7ko2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ud8n2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fkim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5i5fx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7lqop")
+frame = 2
+frame_progress = 0.285037
+
+[node name="Timer" type="Timer" parent="."]
