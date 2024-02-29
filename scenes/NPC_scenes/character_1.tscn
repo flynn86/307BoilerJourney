@@ -1,0 +1,118 @@
+[gd_scene load_steps=15 format=3 uid="uid://cd5vo237mgpri"]
+
+[ext_resource type="Texture2D" uid="uid://u32h7o4bw72w" path="res://scenes/map/NPCs/characters.png" id="1_8p32w"]
+[ext_resource type="Script" path="res://scenes/NPC_scenes/character_1.gd" id="1_r8o5q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s518o"]
+atlas = ExtResource("1_8p32w")
+region = Rect2(256, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2umpb"]
+atlas = ExtResource("1_8p32w")
+region = Rect2(192, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2s6e"]
+atlas = ExtResource("1_8p32w")
+region = Rect2(256, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnqtj"]
+atlas = ExtResource("1_8p32w")
+region = Rect2(320, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cmvm"]
+atlas = ExtResource("1_8p32w")
+region = Rect2(192, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3cy7"]
+atlas = ExtResource("1_8p32w")
+region = Rect2(256, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ftdgy"]
+atlas = ExtResource("1_8p32w")
+region = Rect2(320, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ld7k6"]
+atlas = ExtResource("1_8p32w")
+region = Rect2(192, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpj1o"]
+atlas = ExtResource("1_8p32w")
+region = Rect2(256, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ccxlm"]
+atlas = ExtResource("1_8p32w")
+region = Rect2(320, 384, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0h7dk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s518o")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2umpb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2s6e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pnqtj")
+}],
+"loop": true,
+"name": &"Walking Forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6cmvm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3cy7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ftdgy")
+}],
+"loop": true,
+"name": &"Walking Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ld7k6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xpj1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ccxlm")
+}],
+"loop": true,
+"name": &"Walking Right",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ekrc1"]
+radius = 30.0
+
+[node name="character1" type="CharacterBody2D"]
+script = ExtResource("1_r8o5q")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0h7dk")
+animation = &"Walking Forward"
+frame = 1
+frame_progress = 0.045678
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 5)
+shape = SubResource("CircleShape2D_ekrc1")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

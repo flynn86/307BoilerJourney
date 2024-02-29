@@ -240,6 +240,20 @@ offset_right = -0.512001
 offset_bottom = 0.271999
 text = "Close"
 
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.785
+anchor_top = 0.037
+anchor_right = 0.972
+anchor_bottom = 0.123
+offset_left = -0.320007
+offset_top = 0.0240002
+offset_right = 0.255981
+offset_bottom = 0.295998
+text = "Visit Pudue's Club Website"
+
 [connection signal="request_completed" from="ClubRequest" to="." method="_on_club_request_request_completed"]
 [connection signal="pressed" from="Popup/Button" to="." method="_on_pressed"]
 [connection signal="pressed" from="close_button" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_website_button_pressed"]
