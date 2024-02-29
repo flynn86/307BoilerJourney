@@ -5,7 +5,6 @@ var total_items = {}
 var popup
 
 func _ready():
-	#OS.shell_open("https://boilerlink.purdue.edu/events")
 	$Popup.hide()
 	_get_club_info("sport_info")
 	_get_club_info("frat_info")
@@ -95,3 +94,7 @@ func _on_pressed():
 
 func _on_close_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/PMU_page/pmu_panel.tscn")
+
+
+func _on_website_button_pressed():
+	OS.shell_open("https://boilerlink.purdue.edu/events")
