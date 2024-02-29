@@ -1,11 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://c4tfpj53nh2go"]
+[gd_scene load_steps=21 format=3 uid="uid://c4tfpj53nh2go"]
 
 [ext_resource type="TileSet" uid="uid://dfhx1ytk7y0ei" path="res://scenes/map/new_tile_set.tres" id="1_t5wst"]
 [ext_resource type="Script" path="res://scenes/map/academic_map.gd" id="1_xlc2o"]
 [ext_resource type="Script" path="res://scenes/map/CharacterBody2D.gd" id="3_38agp"]
 [ext_resource type="PackedScene" uid="uid://c5qi6qixvqiw4" path="res://scenes/NPC_scenes/rabbit.tscn" id="5_3su4i"]
 [ext_resource type="PackedScene" uid="uid://cvjbfijhlka84" path="res://characters/Player.tscn" id="5_xjdai"]
-[ext_resource type="PackedScene" uid="uid://cd5vo237mgpri" path="res://scenes/NPC_scenes/character_1.tscn" id="6_o3hea"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_obf6l"]
 size = Vector2(28.1002, 9.14294)
@@ -286,13 +285,7 @@ position = Vector2(-4106, -2978)
 [node name="rabbit2" parent="." instance=ExtResource("5_3su4i")]
 position = Vector2(-586, -376)
 
-<<<<<<< Updated upstream
 [connection signal="pressed" from="CharacterBody2D/Player/Button" to="." method="_on_housing_button_pressed"]
-=======
-[node name="character1" parent="." instance=ExtResource("6_o3hea")]
-position = Vector2(-3943, -3032)
-
->>>>>>> Stashed changes
 [connection signal="input_event" from="STEW_area" to="." method="_on_Area2D_input_event" binds= ["STEW"]]
 [connection signal="input_event" from="PMU_area" to="." method="_on_Area2D_input_event" binds= ["PMU"]]
 [connection signal="input_event" from="ARMS_area" to="." method="_on_Area2D_input_event" binds= ["ARMS"]]
