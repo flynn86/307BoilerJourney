@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://i7hj4u6qfhb7"]
 
-[ext_resource type="Texture2D" uid="uid://dfuqlmqduj7a0" path="res://characters/sample_character.png" id="1_8xfft"]
+[ext_resource type="Texture2D" uid="uid://u7eqyfj2cgub" path="res://characters/sample_character.png" id="1_8xfft"]
 
 [sub_resource type="Animation" id="Animation_yfdm5"]
 resource_name = "walk_back"
