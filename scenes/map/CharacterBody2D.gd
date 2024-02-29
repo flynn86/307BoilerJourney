@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 @export var move_speed : float = 300
 func _ready():
+	
 	$Player/ChangeBody.visible = false
 	$Player/Continue.visible = false
 	$Player/Random.visible = false
