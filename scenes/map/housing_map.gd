@@ -6,8 +6,19 @@ func _ready():
 		var file = FileAccess.open(text_path1, FileAccess.READ)
 		var position_string = file.get_line()
 		var position_xy = position_string.split(",")
-		var x = float(position_xy[0])
-		var y = float(position_xy[1])
+		if position_xy.size() != 2:
+			var x = float(256)
+			var y = float(256)
+			var position = Vector2(x, y)
+			$CharacterBody2D.global_position = position
+		else:
+			var x = float(position_xy[0])
+			var y = float(position_xy[1])
+			var position = Vector2(x, y)
+			$CharacterBody2D.global_position = position
+	else: 
+		var x = float(256)
+		var y = float(256)
 		var position = Vector2(x, y)
 		$CharacterBody2D.global_position = position
 
