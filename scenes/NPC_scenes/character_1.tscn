@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cd5vo237mgpri"]
+[gd_scene load_steps=15 format=3 uid="uid://ch37msuul2rqv"]
 
 [ext_resource type="Texture2D" uid="uid://u32h7o4bw72w" path="res://scenes/map/NPCs/characters.png" id="1_8p32w"]
 [ext_resource type="Script" path="res://scenes/NPC_scenes/character_1.gd" id="1_r8o5q"]
@@ -105,8 +105,8 @@ script = ExtResource("1_r8o5q")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0h7dk")
 animation = &"Walking Forward"
-frame = 1
-frame_progress = 0.045678
+frame = 2
+frame_progress = 0.615121
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 5)
