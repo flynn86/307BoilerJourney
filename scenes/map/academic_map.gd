@@ -2,7 +2,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var text_path1 = "res://scenes/map/char_pos.txt"
+	var text_path1 = "res://scenes/map/char_pos_academic.txt"
 	if FileAccess.file_exists(text_path1):
 		var file = FileAccess.open(text_path1, FileAccess.READ)
 		var position_string = file.get_line()
@@ -25,7 +25,7 @@ func _on_Area2D_input_event(viewport, event, shape_idx, build_name: String):
 		open_tab(build_name)
 
 func open_tab(building_name: String):
-	var text_path1 = "res://scenes/map/char_pos.txt"
+	var text_path1 = "res://scenes/map/char_pos_academic.txt"
 	if FileAccess.file_exists(text_path1):
 		var file = FileAccess.open(text_path1, FileAccess.WRITE)
 		var position_string = str($CharacterBody2D.global_position.x) + ", " + str($CharacterBody2D.global_position.y)
@@ -43,3 +43,12 @@ func open_tab(building_name: String):
 	
 func _on_panel_closed():
 	self.visible = true
+	
+func _on_housing_button_pressed():
+	var text_path1 = "res://scenes/map/char_pos_academic.txt"
+	if FileAccess.file_exists(text_path1):
+		var file = FileAccess.open(text_path1, FileAccess.WRITE)
+		var position_string = str($CharacterBody2D.global_position.x) + ", " + str($CharacterBody2D.global_position.y)
+		file.store_string(position_string)
+		file.close()
+		get_tree().change_scene_to_file("res://scenes/map/housing_map.tscn")

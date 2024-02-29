@@ -1,14 +1,17 @@
-[gd_scene load_steps=19 format=3 uid="uid://cq8qbhyfu4a4s"]
+[gd_scene load_steps=29 format=3 uid="uid://cq8qbhyfu4a4s"]
 
-[ext_resource type="Texture2D" uid="uid://bkoap76balt54" path="res://scenes/map/Building and terrain assets/Texture/TX Plant.png" id="1_osrpa"]
-[ext_resource type="Texture2D" uid="uid://dfjbpu21stqt2" path="res://scenes/map/Building and terrain assets/trees-green.png" id="2_pvr1s"]
-[ext_resource type="Texture2D" uid="uid://bvvyb8lowfko2" path="res://scenes/map/Building and terrain assets/victorian-accessories.png" id="3_uwxia"]
-[ext_resource type="Texture2D" uid="uid://dpa3r1tmnw65f" path="res://scenes/map/Building and terrain assets/victorian-tenement.png" id="4_bw1bn"]
-[ext_resource type="Texture2D" uid="uid://bvn0aq01axvyg" path="res://scenes/map/Building and terrain assets/victorian-windows-doors.png" id="5_h065r"]
-[ext_resource type="Texture2D" uid="uid://cyt0jr0tr1mvb" path="res://scenes/map/Building and terrain assets/roofs.png" id="6_htyct"]
-[ext_resource type="Texture2D" uid="uid://wwcwq2trngh1" path="res://scenes/map/Building and terrain assets/terrain.png" id="7_l3lw1"]
-[ext_resource type="Texture2D" uid="uid://bvxedmjbxbdin" path="res://scenes/map/Building and terrain assets/roads2W.png" id="8_aeuxb"]
+[ext_resource type="Script" path="res://scenes/map/housing_map.gd" id="1_1mynb"]
+[ext_resource type="Texture2D" uid="uid://bp1ntb0ji6bce" path="res://scenes/map/Building and terrain assets/Texture/TX Plant.png" id="1_osrpa"]
+[ext_resource type="Texture2D" uid="uid://bfioa3eo7py8h" path="res://scenes/map/Building and terrain assets/trees-green.png" id="2_pvr1s"]
+[ext_resource type="Texture2D" uid="uid://bhsyxh4nu07ps" path="res://scenes/map/Building and terrain assets/victorian-accessories.png" id="3_uwxia"]
+[ext_resource type="Texture2D" uid="uid://wqllowoyu6ew" path="res://scenes/map/Building and terrain assets/victorian-tenement.png" id="4_bw1bn"]
+[ext_resource type="Texture2D" uid="uid://bt2kw76gssojp" path="res://scenes/map/Building and terrain assets/victorian-windows-doors.png" id="5_h065r"]
+[ext_resource type="Texture2D" uid="uid://dcviwt54trrgr" path="res://scenes/map/Building and terrain assets/roofs.png" id="6_htyct"]
+[ext_resource type="Texture2D" uid="uid://bi5dlk4lirfam" path="res://scenes/map/Building and terrain assets/terrain.png" id="7_l3lw1"]
+[ext_resource type="Texture2D" uid="uid://b4rlwc5b1d1qf" path="res://scenes/map/Building and terrain assets/roads2W.png" id="8_aeuxb"]
 [ext_resource type="PackedScene" uid="uid://c5qi6qixvqiw4" path="res://scenes/NPC_scenes/rabbit.tscn" id="9_hl1ep"]
+[ext_resource type="Script" path="res://scenes/map/CharacterBody2D.gd" id="11_k2urq"]
+[ext_resource type="PackedScene" uid="uid://cvjbfijhlka84" path="res://characters/Player.tscn" id="12_okprt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7r5fb"]
 texture = ExtResource("1_osrpa")
@@ -39727,9 +39730,94 @@ sources/13 = SubResource("TileSetAtlasSource_jg5o6")
 sources/0 = SubResource("TileSetAtlasSource_7r5fb")
 sources/1 = SubResource("TileSetAtlasSource_anjav")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_247ml"]
+size = Vector2(28.1002, 9.14294)
+
+[sub_resource type="Animation" id="Animation_rv3tr"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_yfdm5"]
+resource_name = "walk_back"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [54, 55, 56, 57, 58, 59]
+}
+
+[sub_resource type="Animation" id="Animation_04ud8"]
+resource_name = "walk_front"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [66, 67, 68, 69, 70, 71]
+}
+
+[sub_resource type="Animation" id="Animation_g3q56"]
+resource_name = "walk_left"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [60, 61, 62, 63, 64, 65]
+}
+
+[sub_resource type="Animation" id="Animation_g1c17"]
+resource_name = "walk_right"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [48, 49, 50, 51, 52, 53]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xvhlm"]
+_data = {
+"RESET": SubResource("Animation_rv3tr"),
+"walk_back": SubResource("Animation_yfdm5"),
+"walk_front": SubResource("Animation_04ud8"),
+"walk_left": SubResource("Animation_g3q56"),
+"walk_right": SubResource("Animation_g1c17")
+}
+
 [node name="NewHousingMap" type="Node2D"]
+script = ExtResource("1_1mynb")
 
 [node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-1680, 1864)
 tile_set = SubResource("TileSet_t55o6")
 format = 2
 layer_0/name = "Base"
@@ -39748,5 +39836,38 @@ layer_6/name = "Trees and Bushes"
 layer_6/tile_data = PackedInt32Array(4259948, 2752513, 22, 4325524, 2752513, 22, 3014810, 2752513, 22, 2818181, 2752513, 22, 1900688, 2752513, 22, 721021, 2752513, 22, 852119, 2752513, 22, -130925, 2752513, 22, -65437, 2752513, 22, 1245288, 2752513, 22, 1114190, 2752513, 22, -65461, 2752513, 22, -131030, 2752513, 22, 852016, 2752513, 22, 2752531, 2752513, 22, 17, 2752513, 22, 786460, 2752513, 22, 1048574, 2752513, 22, -262154, 2752513, 22, 1834993, 2752513, 22, 2883575, 2752513, 22, 3473393, 2752513, 22, 4653040, 2752513, 22, 4587521, 2752513, 22, 4653101, 2752513, 22, -589875, 2752513, 22, -524343, 2752513, 22, 917470, 2752513, 22, 917452, 2752513, 22, 1834965, 2752513, 22, -91, 2752513, 22, -65651, 2752513, 22, 1114011, 2752513, 22, 3342295, 2752513, 22, 3604420, 2752513, 22, 4259794, 2752513, 22, 4652980, 2752513, 22, 2686885, 2752513, 22, 2817939, 2752513, 22, 4456346, 2752513, 22, -65703, 2752513, 22, 1703781, 2752513, 22, 2948957, 2752513, 22, 1900415, 2752513, 22, 3473266, 2752513, 22, 4194146, 2752513, 22, 4194174, 2752513, 22, -5767217, 2752513, 22, -6226000, 2752513, 22, -4063281, 2752513, 22, -3735625, 2752513, 22, -2555947, 2752513, 22, -1507384, 2752513, 22, -1704030, 2752513, 22, -2359401, 2752513, 22, -1507470, 2752513, 22, -1900704, 2752513, 22, -3276929, 2752513, 22, -3997833, 2752513, 22, -5898400, 2752513, 22, -6029431, 2752513, 22, -5111955, 2752513, 22, -7929865, 2752513, 22, -8388642, 2752513, 22, -7864370, 2752513, 22, -8257624, 2752513, 22, -8192126, 2752513, 22, -8454338, 2752513, 22, -7667873, 2752513, 22, -8388749, 2752513, 22, -14221334, 2752513, 22, -14221376, 2752513, 22, -13434979, 2752513, 22, -14221449, 2752513, 22, -13959339, 2752513, 22, -18022564, 2752513, 22, -15990978, 2752513, 22, -16056473, 2752513, 22, -19202170, 2752513, 22, -16187514, 2752513, 22, -18088132, 2752513, 22, -20512964, 2752513, 22, -23920837, 2752513, 22, -26017989, 2752513, 22, -26017950, 2752513, 22, -24772766, 2752513, 22, -25952383, 2752513, 22, -23855225, 2752513, 22, -22282362, 2752513, 22, -26149040, 1310721, 22, -26345660, 1310721, 22, -25493699, 1310721, 22, -24707272, 1310721, 22, -26476691, 1310721, 22, -25362597, 1310721, 22, -26083464, 1310721, 22, -26476662, 1310721, 22, -25428087, 1310721, 22, -24838270, 1310721, 22, -23265406, 1310721, 22, -23134406, 1310721, 22, -22020291, 1310721, 22, -21364936, 1310721, 22, -21233834, 1310721, 22, -19595460, 1310721, 22, -18677962, 1310721, 22, -17170629, 1310721, 22, -15925423, 1310721, 22, -17105057, 1310721, 22, -15925385, 1310721, 22, -20250746, 1310721, 22, -18022523, 1310721, 22, -14483657, 1310721, 22, -14549175, 1310721, 22, -13697216, 1310721, 22, -13631646, 1310721, 22, -14483603, 1310721, 22, -14352506, 1310721, 22, -13566063, 1310721, 22, -14614613, 1310721, 22, -13893707, 1310721, 22, -13631573, 1310721, 22, -14614578, 1310721, 22, -13566008, 1310721, 22, -13697060, 1310721, 22, -14614536, 1310721, 22, -14221323, 1310721, 22, -14090244, 1310721, 22, -11141128, 1310721, 22, -11272207, 1310721, 22, -12058726, 1310721, 22, -12648557, 1310721, 22, -11141316, 1310721, 22, -12452042, 1310721, 22, -11141296, 1310721, 22, -8519855, 1310721, 22, -8388763, 1310721, 22, -7471247, 1310721, 22, -8585329, 1310721, 22, -7536754, 1310721, 22, -7405761, 1310721, 22, -7536818, 1310721, 22, -7536667, 1310721, 22, -7471127, 1310721, 22, -7340061, 1310721, 22, -8257558, 1310721, 22, -8519745, 1310721, 22, -7340093, 1310721, 22, -7405632, 1310721, 22, -7405656, 1310721, 22, -10682479, 1310721, 22, -5963924, 1310721, 22, -5374120, 1310721, 22, -5439606, 1310721, 22, -4784266, 1310721, 22, -3539062, 1310721, 22, -3342481, 1310721, 22, -2818215, 1310721, 22, -1376424, 1310721, 22, -2490502, 1310721, 22, -1769581, 1310721, 22, -1441858, 1310721, 22, -2883662, 1310721, 22, -2752573, 1310721, 22, -1376297, 1310721, 22, -3670054, 1310721, 22, -4784166, 1310721, 22, -4653126, 1310721, 22, -5963869, 1310721, 22, -5177436, 1310721, 22, -6225984, 1310721, 22, -6225962, 1310721, 22, -5111866, 1310721, 22, -327747, 1310721, 22, -262284, 1310721, 22, -393351, 1310721, 22, 524121, 1310721, 22, 917348, 1310721, 22, 1834841, 1310721, 22, -104, 1310721, 22, 655246, 1310721, 22, 655269, 1310721, 22, 786361, 1310721, 22, 1572802, 1310721, 22, -65571, 1310721, 22, 3407774, 1310721, 22, 2424692, 1310721, 22, 3407743, 1310721, 22, 4521867, 1310721, 22, 3669848, 1310721, 22, 4718453, 1310721, 22, 4194240, 1310721, 22, 2949068, 1310721, 22, 4653018, 1310721, 22, 589811, 1310721, 22, -262139, 1310721, 22, 1048591, 1310721, 22, -131043, 1310721, 22, 458813, 1310721, 22, 589889, 1310721, 22, 1441854, 1310721, 22, 3866616, 1310721, 22, 2949101, 1310721, 22, 3407928, 1310721, 22, 4587599, 1310721, 22, 4587648, 1310721, 22, 3604620, 1310721, 22, 1638529, 1310721, 22, -65403, 1310721, 22, 262258, 1310721, 22, 458845, 1310721, 22, 1835165, 1310721, 22, 2424682, 3538945, 22, 3538791, 3538945, 22, 1179512, 3538945, 22, 655278, 3538945, 22, -393366, 3538945, 22, 4194213, 3538945, 22, 1376294, 3538945, 22, 327685, 3538945, 22, 1179628, 3538945, 22, 3801246, 3538945, 22, 2556048, 3538945, 22, 852107, 3538945, 22, -327558, 3538945, 22, 1310810, 3538945, 22, -196550, 3538945, 22, 4194379, 3538945, 22, 2752604, 3538945, 22, 2752617, 3538945, 22, -3735640, 3538945, 22, -5636160, 3538945, 22, -6160518, 3538945, 22, -2556061, 3538945, 22, -2359439, 3538945, 22, -1441912, 3538945, 22, -1376334, 3538945, 22, -3670075, 3538945, 22, -7798857, 3538945, 22, -7471231, 3538945, 22, -8716339, 3538945, 22, -8781830, 3538945, 22, -7274505, 3538945, 22, -14549094, 3538945, 22, -13566088, 3538945, 22, -14549151, 3538945, 22, -13566153, 3538945, 22, -9109636, 3538945, 22, -16449701, 3538945, 22, -16580810, 3538945, 22, -17301626, 3538945, 22, -20906104, 3538945, 22, -21430454, 3538945, 22, -19726539, 3538945, 22, -22479049, 3538945, 22, -23003253, 3538945, 22, -25493660, 3538945, 22, -26542247, 3538945, 22, -25362635, 3538945, 22)
 
 [node name="rabbit" parent="." instance=ExtResource("9_hl1ep")]
-position = Vector2(206, 131)
+position = Vector2(-2032, -280)
 up_direction = Vector2(0.707107, 0.707107)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+y_sort_enabled = true
+position = Vector2(-3320, 176)
+script = ExtResource("11_k2urq")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(48, 8)
+scale = Vector2(0.6, 0.6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-24, -16)
+scale = Vector2(0.6, 0.6)
+shape = SubResource("RectangleShape2D_247ml")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
+libraries = {
+"": SubResource("AnimationLibrary_xvhlm")
+}
+
+[node name="Player" parent="CharacterBody2D" instance=ExtResource("12_okprt")]
+position = Vector2(0, -24)
+scale = Vector2(0.6, 0.6)
+
+[node name="Button" type="Button" parent="CharacterBody2D/Player"]
+offset_left = -840.0
+offset_top = -400.0
+offset_right = -532.0
+offset_bottom = -334.0
+theme_override_font_sizes/font_size = 25
+text = "Return to Academic Map"
+
+[connection signal="pressed" from="CharacterBody2D/Player/Button" to="." method="_on_return_button_pressed"]

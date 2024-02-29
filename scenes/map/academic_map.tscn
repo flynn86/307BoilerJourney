@@ -169,6 +169,20 @@ libraries = {
 position = Vector2(-4145, -2918)
 scale = Vector2(0.6, 0.6)
 
+[node name="Button" type="Button" parent="CharacterBody2D/Player"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -562.0
+offset_top = -352.0
+offset_right = -307.0
+offset_bottom = -292.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Travel to Housing Map
+"
+
 [node name="STEW_area" type="Area2D" parent="."]
 
 [node name="stew_area" type="CollisionShape2D" parent="STEW_area"]
@@ -271,6 +285,7 @@ position = Vector2(-4106, -2978)
 [node name="rabbit2" parent="." instance=ExtResource("5_3su4i")]
 position = Vector2(-586, -376)
 
+[connection signal="pressed" from="CharacterBody2D/Player/Button" to="." method="_on_housing_button_pressed"]
 [connection signal="input_event" from="STEW_area" to="." method="_on_Area2D_input_event" binds= ["STEW"]]
 [connection signal="input_event" from="PMU_area" to="." method="_on_Area2D_input_event" binds= ["PMU"]]
 [connection signal="input_event" from="ARMS_area" to="." method="_on_Area2D_input_event" binds= ["ARMS"]]
