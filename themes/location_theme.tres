@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://c1kv8oho47wpe"]
 
-[ext_resource type="FontFile" uid="uid://djs6cu61f11ql" path="res://fonts/KOMIKAX_.ttf" id="1_ags3m"]
+[ext_resource type="FontFile" uid="uid://7x61o34kfaic" path="res://fonts/KOMIKAX_.ttf" id="1_ags3m"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2sd00"]
 bg_color = Color(0, 0, 0, 1)

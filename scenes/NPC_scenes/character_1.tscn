@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://ch37msuul2rqv"]
+[gd_scene load_steps=17 format=3 uid="uid://ch37msuul2rqv"]
 
 [ext_resource type="Texture2D" uid="uid://u32h7o4bw72w" path="res://scenes/map/NPCs/characters.png" id="1_8p32w"]
 [ext_resource type="Script" path="res://scenes/NPC_scenes/character_1.gd" id="1_r8o5q"]
+[ext_resource type="PackedScene" uid="uid://dnuofbl6cjimv" path="res://dialogue/dialogue_character_1.tscn" id="3_ofcfa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s518o"]
 atlas = ExtResource("1_8p32w")
@@ -99,6 +100,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_ekrc1"]
 radius = 39.0128
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_dpdmh"]
+radius = 99.8098
+
 [node name="character1" type="CharacterBody2D"]
 script = ExtResource("1_r8o5q")
 
@@ -115,4 +119,15 @@ shape = SubResource("CircleShape2D_ekrc1")
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
+[node name="Dialogue_character1" parent="." instance=ExtResource("3_ofcfa")]
+
+[node name="chat_detection_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_dpdmh")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="dialogue_finished" from="Dialogue_character1" to="." method="_on_dialogue_character_1_dialogue_finished"]
+[connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
