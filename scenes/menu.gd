@@ -10,4 +10,4 @@ func _on_back_to_main_menu_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 func _on_customize_character_button_pressed():
-	get_tree().change_scene_to_file("res://characters/character_built.tscn")
+	get_tree().change_scene_to_file("res://characters/Player.tscn")
