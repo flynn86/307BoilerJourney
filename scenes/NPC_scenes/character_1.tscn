@@ -103,6 +103,7 @@ radius = 39.0128
 script = ExtResource("1_r8o5q")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_0h7dk")
 animation = &"Walking Forward"
 frame_progress = 0.361281

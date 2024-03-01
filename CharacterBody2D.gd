@@ -34,7 +34,7 @@ func _process(delta):
 			IDLE:
 				pass
 			NEW_DIR:
-				dir = choose([Vector2.RIGHT, Vector2.LEFT, Vector2.DOWN])
+				dir = choose([Vector2.RIGHT, Vector2.LEFT, Vector2.UP])
 			MOVE:
 				move(delta)
 
