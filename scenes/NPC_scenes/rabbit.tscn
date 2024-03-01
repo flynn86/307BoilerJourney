@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=3 uid="uid://c5qi6qixvqiw4"]
 
 [ext_resource type="Script" path="res://scenes/NPC_scenes/rabbit.gd" id="1_a71wt"]
-[ext_resource type="Texture2D" uid="uid://b3p0tsemyl1dn" path="res://scenes/map/NPCs/rabbit sprite sheet.png" id="2_kwxh3"]
+[ext_resource type="Texture2D" uid="uid://ch8iavi4gu5ur" path="res://scenes/map/NPCs/rabbit sprite sheet.png" id="2_kwxh3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yujx3"]
 atlas = ExtResource("2_kwxh3")
@@ -180,9 +180,7 @@ script = ExtResource("1_a71wt")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_2mu1x")
-animation = &"Jump forward"
-frame = 3
-frame_progress = 0.141414
+animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true

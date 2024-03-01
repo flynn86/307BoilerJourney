@@ -12,4 +12,6 @@ var curr_eyes: int = 0
 var curr_body: int = 0
 var curr_outfit: int = 0
 var filename: String = "res://savefiles/save1.bin"
+var season: String = "Summer"
+var night: bool = false
 #var walk_right: AnimationPlayer

@@ -29,9 +29,9 @@ script = SubResource("GDScript_yyoyx")
 
 [node name="ViewProgressButton" type="Button" parent="."]
 offset_left = 579.0
-offset_top = 101.0
+offset_top = 103.0
 offset_right = 796.0
-offset_bottom = 216.0
+offset_bottom = 218.0
 text = "View Progress"
 
 [node name="BackToMapButton" type="Button" parent="."]
@@ -43,9 +43,9 @@ text = "Back To Map"
 
 [node name="BackToMainMenuButton" type="Button" parent="."]
 offset_left = 576.0
-offset_top = 461.0
+offset_top = 456.0
 offset_right = 808.0
-offset_bottom = 576.0
+offset_bottom = 571.0
 text = "Back To Main Menu"
 
 [node name="CustomizeCharacterButton" type="Button" parent="."]

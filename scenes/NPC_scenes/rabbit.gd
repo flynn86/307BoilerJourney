@@ -19,7 +19,7 @@ func _ready():
 	start_pos = position
 func _process(delta):
 	if curr_state == 0 or curr_state == 1:
-		$AnimatedSprite2D.play("idle")
+		$AnimatedSprite2D.play("Idle")
 	elif curr_state == 2:
 		if dir.x == -1:
 			$AnimatedSprite2D.play("Jump left")
