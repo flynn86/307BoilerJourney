@@ -27,8 +27,12 @@ func _input(event):
 
 func _on_Area2D_input_event(viewport, event, shape_idx, build_name: String):
 	if event is InputEventScreenTouch and event.pressed:
+		Attributes.xacademic = $CharacterBody2D.global_position.x
+		Attributes.yacademic = $CharacterBody2D.global_position.y
 		open_tab(build_name)
 	elif event is InputEventMouseButton and event.pressed:
+		Attributes.xacademic = $CharacterBody2D.global_position.x
+		Attributes.yacademic = $CharacterBody2D.global_position.y
 		open_tab(build_name)
 
 func open_tab(building_name: String):
@@ -37,11 +41,8 @@ func open_tab(building_name: String):
 	if building_name == "PMU":
 		get_tree().change_scene_to_file("res://scenes/PMU_page/pmu_panel.tscn")
 	else: 
-		var text_path = "res://location_information/loc_text/DISPLAY_NAME.txt"
-		if FileAccess.file_exists(text_path):
-			var file = FileAccess.open(text_path, FileAccess.WRITE)
-			file.store_string(building_name)
-			file.close()
+		var file = FileAccess.open("res://location_information/building_name.txt", FileAccess.WRITE)
+		file.store_string(building_name)
 		get_tree().change_scene_to_file("res://scenes/location_tab/location_page.tscn")
 	
 func _on_panel_closed():
@@ -64,8 +65,6 @@ func _on_change_summer_pressed():
 	get_node("FallVariantA").visible = false
 	get_node("SpringVariantA").visible = false
 	get_node("WinterVariantA").visible = false
-
-
 
 func _on_change_winter_pressed():
 	Attributes.season = "Winter"
