@@ -26,7 +26,7 @@ func _process(delta):
 			$AnimatedSprite2D.play("Walking Left")
 		if dir.x == 1:
 			$AnimatedSprite2D.play("Walking Right")
-		if dir.y == -1:
+		if dir.y == 1:
 			$AnimatedSprite2D.play("Walking Forward")
 		
 	if is_roaming:
