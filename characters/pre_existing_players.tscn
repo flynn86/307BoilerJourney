@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://w3lq32qxqxks"]
+[gd_scene load_steps=3 format=3 uid="uid://bce7gkjrhon4h"]
 
 [ext_resource type="Script" path="res://PreExistingPlayers.gd" id="1_btxrv"]
-[ext_resource type="Texture2D" uid="uid://c2r70y0lpk83y" path="res://characters/assets/Bodies/16x16/Body_02.png" id="2_inswm"]
+[ext_resource type="Texture2D" uid="uid://35asql5p6n4f" path="res://characters/assets/Bodies/16x16/Body_02.png" id="2_inswm"]
 
 [node name="PreExistingPlayers" type="Node2D"]
 position = Vector2(433, 246)
