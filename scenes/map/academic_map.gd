@@ -64,3 +64,32 @@ func _on_housing_button_pressed():
 		file.store_string(position_string)
 		file.close()
 		get_tree().change_scene_to_file("res://scenes/map/housing_map.tscn")
+
+
+func _on_change_summer_pressed():
+	get_node("SummerVariantA").visible = true
+	get_node("FallVariantA").visible = false
+	get_node("SpringVariantA").visible = false
+	get_node("WinterVariantA").visible = false
+
+
+
+func _on_change_winter_pressed():
+	get_node("SummerVariantA").visible = false
+	get_node("FallVariantA").visible = false
+	get_node("SpringVariantA").visible = false
+	get_node("WinterVariantA").visible = true
+
+
+func _on_change_fall_pressed():
+	get_node("SummerVariantA").visible = false
+	get_node("FallVariantA").visible = true
+	get_node("SpringVariantA").visible = false
+	get_node("WinterVariantA").visible = false
+
+
+func _on_change_spring_pressed():
+	get_node("SummerVariantA").visible = true
+	get_node("FallVariantA").visible = false
+	get_node("SpringVariantA").visible = true
+	get_node("WinterVariantA").visible = false
