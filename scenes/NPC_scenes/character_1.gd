@@ -26,13 +26,15 @@ func _process(delta):
 			$AnimatedSprite2D.play("Walking Left")
 		if dir.x == 1:
 			$AnimatedSprite2D.play("Walking Right")
+		if dir.y == 1:
+			$AnimatedSprite2D.play("Walking Forward")
 		
 	if is_roaming:
 		match curr_state:
 			IDLE:
 				pass
 			NEW_DIR:
-				dir = choose([Vector2.RIGHT, Vector2.LEFT])
+				dir = choose([Vector2.RIGHT, Vector2.LEFT, Vector2.DOWN])
 			MOVE:
 				move(delta)
 

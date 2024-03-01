@@ -2,9 +2,10 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+#var x = float(-855.100219726562)
+#var y = float(-1381.95544433594)
 	$CharacterBody2D.global_position = Vector2(float(Attributes.xacademic),float(Attributes.yacademic))
 	set_process_input(true)
-	
 
 func _input(event):
 	if event is InputEventMouseMotion or event is InputEventMouseButton:
@@ -45,3 +46,32 @@ func _on_housing_button_pressed():
 	Attributes.location = "res://scenes/map/housing_map.tscn"
 	get_tree().change_scene_to_file("res://scenes/map/housing_map.tscn")
 	SaveUtils.save()
+
+
+func _on_change_summer_pressed():
+	get_node("SummerVariantA").visible = true
+	get_node("FallVariantA").visible = false
+	get_node("SpringVariantA").visible = false
+	get_node("WinterVariantA").visible = false
+
+
+
+func _on_change_winter_pressed():
+	get_node("SummerVariantA").visible = false
+	get_node("FallVariantA").visible = false
+	get_node("SpringVariantA").visible = false
+	get_node("WinterVariantA").visible = true
+
+
+func _on_change_fall_pressed():
+	get_node("SummerVariantA").visible = false
+	get_node("FallVariantA").visible = true
+	get_node("SpringVariantA").visible = false
+	get_node("WinterVariantA").visible = false
+
+
+func _on_change_spring_pressed():
+	get_node("SummerVariantA").visible = true
+	get_node("FallVariantA").visible = false
+	get_node("SpringVariantA").visible = true
+	get_node("WinterVariantA").visible = false

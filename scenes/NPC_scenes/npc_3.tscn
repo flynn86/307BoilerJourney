@@ -1,0 +1,84 @@
+[gd_scene load_steps=11 format=3 uid="uid://u6oul4okha7s"]
+
+[ext_resource type="Texture2D" uid="uid://tylp6ome47ht" path="res://scenes/map/NPCs/npcs.png" id="1_lewdh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0t4x2"]
+atlas = ExtResource("1_lewdh")
+region = Rect2(225, 800, 45, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_638en"]
+atlas = ExtResource("1_lewdh")
+region = Rect2(270, 800, 45, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3qyb"]
+atlas = ExtResource("1_lewdh")
+region = Rect2(315, 800, 45, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_st8h3"]
+atlas = ExtResource("1_lewdh")
+region = Rect2(360, 800, 45, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbda3"]
+atlas = ExtResource("1_lewdh")
+region = Rect2(630, 800, 45, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qr7kq"]
+atlas = ExtResource("1_lewdh")
+region = Rect2(675, 800, 45, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2fxo"]
+atlas = ExtResource("1_lewdh")
+region = Rect2(720, 800, 45, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umpqk"]
+atlas = ExtResource("1_lewdh")
+region = Rect2(765, 800, 45, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_34j88"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0t4x2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_638en")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3qyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_st8h3")
+}],
+"loop": true,
+"name": &"Walking Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bbda3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qr7kq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2fxo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umpqk")
+}],
+"loop": true,
+"name": &"Walking Right",
+"speed": 4.0
+}]
+
+[node name="npc_3" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_34j88")
+animation = &"Walking Right"
+frame = 3
+frame_progress = 0.332417
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]

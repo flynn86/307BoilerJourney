@@ -178,12 +178,14 @@ radius = 18.0278
 script = ExtResource("1_a71wt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_2mu1x")
 animation = &"Jump forward"
 frame = 3
 frame_progress = 0.141414
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
 position = Vector2(-1, 4)
 shape = SubResource("CircleShape2D_cu4u5")
 
