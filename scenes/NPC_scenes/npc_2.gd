@@ -43,6 +43,7 @@ func _process(delta):
 				move(delta)
 	if Input.is_action_just_pressed("chat"):
 		print("chatting")
+		$Dialogue.start()
 		is_roaming = false
 		is_chatting = true
 		$AnimatedSprite2D.play("Idle")
@@ -71,3 +72,8 @@ func _on_chat_detection_area_body_entered(body):
 func _on_chat_detection_area_body_exited(body):
 	if body.has_method("Player"):
 		player_in_chat_zone = false
+
+
+func _on_dialogue_dialogue_finished():
+	is_chatting = false
+	is_roaming = true

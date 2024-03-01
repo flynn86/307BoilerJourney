@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://8fajo7sj3836"]
+[gd_scene load_steps=17 format=3 uid="uid://8fajo7sj3836"]
 
 [ext_resource type="Script" path="res://scenes/NPC_scenes/npc_2.gd" id="1_a38kt"]
 [ext_resource type="Texture2D" uid="uid://u32h7o4bw72w" path="res://scenes/map/NPCs/characters.png" id="1_bs604"]
+[ext_resource type="PackedScene" uid="uid://dli6f0mevjsir" path="res://dialogue/dialogue.tscn" id="3_a38y7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xpfuk"]
 atlas = ExtResource("1_bs604")
@@ -108,13 +109,13 @@ script = ExtResource("1_a38kt")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_s1hm3")
 animation = &"Idle"
-frame_progress = 0.0278162
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 7)
 shape = SubResource("CircleShape2D_g0fie")
 
 [node name="Timer" type="Timer" parent="."]
+autostart = true
 
 [node name="chat_detection_area" type="Area2D" parent="."]
 position = Vector2(1, 5)
@@ -123,6 +124,9 @@ position = Vector2(1, 5)
 position = Vector2(1, 2)
 shape = SubResource("CircleShape2D_xy03m")
 
+[node name="Dialogue" parent="." instance=ExtResource("3_a38y7")]
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
 [connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
+[connection signal="dialogue_finished" from="Dialogue" to="." method="_on_dialogue_dialogue_finished"]
