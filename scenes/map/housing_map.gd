@@ -34,3 +34,32 @@ func _on_return_button_pressed():
 		file.store_string(position_string)
 		file.close()
 		get_tree().change_scene_to_file("res://scenes/map/academic_map.tscn")
+
+
+func _on_change_summer_pressed():
+	get_node("SummerVariantH").visible = true
+	get_node("FallVariantH").visible = false
+	get_node("SpringVariantH").visible = false
+	get_node("WinterVariantH").visible = false
+
+
+
+func _on_change_winter_pressed():
+	get_node("SummerVariantH").visible = false
+	get_node("FallVariantH").visible = false
+	get_node("SpringVariantH").visible = false
+	get_node("WinterVariantH").visible = true
+
+
+func _on_change_fall_pressed():
+	get_node("SummerVariantH").visible = false
+	get_node("FallVariantH").visible = true
+	get_node("SpringVariantH").visible = false
+	get_node("WinterVariantH").visible = false
+
+
+func _on_change_spring_pressed():
+	get_node("SummerVariantH").visible = true
+	get_node("FallVariantH").visible = false
+	get_node("SpringVariantH").visible = true
+	get_node("WinterVariantH").visible = false
