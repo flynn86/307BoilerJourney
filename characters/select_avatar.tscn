@@ -1,0 +1,281 @@
+[gd_scene load_steps=3 format=3 uid="uid://24pr818a6nqn"]
+
+[ext_resource type="Script" path="res://SelectAvatar.gd" id="1_8wdn5"]
+[ext_resource type="Texture2D" uid="uid://c2r70y0lpk83y" path="res://characters/assets/Bodies/16x16/Body_02.png" id="2_t6tgu"]
+
+[node name="SelectAvatar" type="Node2D"]
+position = Vector2(215, 133)
+script = ExtResource("1_8wdn5")
+
+[node name="CompositeSprite1" type="Node2D" parent="."]
+position = Vector2(50, 2.08165e-12)
+scale = Vector2(2, 2)
+
+[node name="Body" type="Sprite2D" parent="CompositeSprite1"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(2, 2)
+texture = ExtResource("2_t6tgu")
+hframes = 58
+vframes = 20
+
+[node name="Eyes" type="Sprite2D" parent="CompositeSprite1"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="Hairstyles" type="Sprite2D" parent="CompositeSprite1"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="Outfit" type="Sprite2D" parent="CompositeSprite1"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="CompositeSprite2" type="Node2D" parent="."]
+position = Vector2(150, 2.08165e-12)
+scale = Vector2(2, 2)
+
+[node name="Body" type="Sprite2D" parent="CompositeSprite2"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(2, 2)
+texture = ExtResource("2_t6tgu")
+hframes = 58
+vframes = 20
+
+[node name="Eyes" type="Sprite2D" parent="CompositeSprite2"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="Hairstyles" type="Sprite2D" parent="CompositeSprite2"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="Outfit" type="Sprite2D" parent="CompositeSprite2"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="CompositeSprite3" type="Node2D" parent="."]
+position = Vector2(250, 2.08165e-12)
+scale = Vector2(2, 2)
+
+[node name="Body" type="Sprite2D" parent="CompositeSprite3"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(2, 2)
+texture = ExtResource("2_t6tgu")
+hframes = 58
+vframes = 20
+
+[node name="Eyes" type="Sprite2D" parent="CompositeSprite3"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="Hairstyles" type="Sprite2D" parent="CompositeSprite3"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="Outfit" type="Sprite2D" parent="CompositeSprite3"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="CompositeSprite4" type="Node2D" parent="."]
+position = Vector2(350, 2.08165e-12)
+scale = Vector2(2, 2)
+
+[node name="Body" type="Sprite2D" parent="CompositeSprite4"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(2, 2)
+texture = ExtResource("2_t6tgu")
+hframes = 58
+vframes = 20
+
+[node name="Eyes" type="Sprite2D" parent="CompositeSprite4"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="Hairstyles" type="Sprite2D" parent="CompositeSprite4"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="Outfit" type="Sprite2D" parent="CompositeSprite4"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="CompositeSprite5" type="Node2D" parent="."]
+position = Vector2(50, 150)
+scale = Vector2(2, 2)
+
+[node name="Body" type="Sprite2D" parent="CompositeSprite5"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(2, 2)
+texture = ExtResource("2_t6tgu")
+hframes = 58
+vframes = 20
+
+[node name="Eyes" type="Sprite2D" parent="CompositeSprite5"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="Hairstyles" type="Sprite2D" parent="CompositeSprite5"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="Outfit" type="Sprite2D" parent="CompositeSprite5"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="CompositeSprite6" type="Node2D" parent="."]
+position = Vector2(150, 150)
+scale = Vector2(2, 2)
+
+[node name="Body" type="Sprite2D" parent="CompositeSprite6"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(2, 2)
+texture = ExtResource("2_t6tgu")
+hframes = 58
+vframes = 20
+
+[node name="Eyes" type="Sprite2D" parent="CompositeSprite6"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="Hairstyles" type="Sprite2D" parent="CompositeSprite6"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="Outfit" type="Sprite2D" parent="CompositeSprite6"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="CompositeSprite7" type="Node2D" parent="."]
+position = Vector2(250, 150)
+scale = Vector2(2, 2)
+
+[node name="Body" type="Sprite2D" parent="CompositeSprite7"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(2, 2)
+texture = ExtResource("2_t6tgu")
+hframes = 58
+vframes = 20
+
+[node name="Eyes" type="Sprite2D" parent="CompositeSprite7"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="Hairstyles" type="Sprite2D" parent="CompositeSprite7"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="Outfit" type="Sprite2D" parent="CompositeSprite7"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="CompositeSprite8" type="Node2D" parent="."]
+position = Vector2(350, 150)
+scale = Vector2(2, 2)
+
+[node name="Body" type="Sprite2D" parent="CompositeSprite8"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(2, 2)
+texture = ExtResource("2_t6tgu")
+hframes = 58
+vframes = 20
+
+[node name="Eyes" type="Sprite2D" parent="CompositeSprite8"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="Hairstyles" type="Sprite2D" parent="CompositeSprite8"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="Outfit" type="Sprite2D" parent="CompositeSprite8"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="Button1" type="Button" parent="."]
+offset_left = 25.0
+offset_top = 75.0
+offset_right = 79.0
+offset_bottom = 106.0
+text = "Select"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 122.0
+offset_top = 75.0
+offset_right = 176.0
+offset_bottom = 106.0
+text = "Select"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 226.0
+offset_top = 74.0
+offset_right = 280.0
+offset_bottom = 105.0
+text = "Select"
+
+[node name="Button4" type="Button" parent="."]
+offset_left = 323.0
+offset_top = 73.0
+offset_right = 377.0
+offset_bottom = 104.0
+text = "Select"
+
+[node name="Button5" type="Button" parent="."]
+offset_left = 23.0
+offset_top = 229.0
+offset_right = 77.0
+offset_bottom = 260.0
+text = "Select"
+
+[node name="Button6" type="Button" parent="."]
+offset_left = 123.0
+offset_top = 229.0
+offset_right = 177.0
+offset_bottom = 260.0
+text = "Select"
+
+[node name="Button7" type="Button" parent="."]
+offset_left = 222.0
+offset_top = 230.0
+offset_right = 276.0
+offset_bottom = 261.0
+text = "Select"
+
+[node name="Button8" type="Button" parent="."]
+offset_left = 325.0
+offset_top = 230.0
+offset_right = 379.0
+offset_bottom = 261.0
+text = "Select"
+
+[connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="Button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="Button8" to="." method="_on_button_8_pressed"]

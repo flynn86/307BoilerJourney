@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=3 uid="uid://w3lq32qxqxks"]
+
+[ext_resource type="Script" path="res://PreExistingPlayers.gd" id="1_btxrv"]
+[ext_resource type="Texture2D" uid="uid://c2r70y0lpk83y" path="res://characters/assets/Bodies/16x16/Body_02.png" id="2_inswm"]
+
+[node name="PreExistingPlayers" type="Node2D"]
+position = Vector2(433, 246)
+scale = Vector2(2, 2)
+script = ExtResource("1_btxrv")
+
+[node name="CompositeSprites" type="Node2D" parent="."]
+position = Vector2(93, 55)
+scale = Vector2(2, 2)
+
+[node name="Body" type="Sprite2D" parent="CompositeSprites"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(2, 2)
+texture = ExtResource("2_inswm")
+hframes = 58
+vframes = 20
+
+[node name="Eyes" type="Sprite2D" parent="CompositeSprites"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="Hairstyles" type="Sprite2D" parent="CompositeSprites"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="Outfit" type="Sprite2D" parent="CompositeSprites"]
+scale = Vector2(2, 2)
+hframes = 58
+vframes = 20
+
+[node name="Next" type="Button" parent="."]
+offset_left = 129.0
+offset_top = 52.0
+offset_right = 174.0
+offset_bottom = 83.0
+scale = Vector2(2, 2)
+text = "Next"
+metadata/_edit_use_anchors_ = true
+
+[node name="Prev" type="Button" parent="."]
+offset_left = -35.0
+offset_top = 51.0
+offset_right = 8.0
+offset_bottom = 82.0
+scale = Vector2(2, 2)
+text = "Prev"
+metadata/_edit_use_anchors_ = true
+
+[node name="Select" type="Button" parent="."]
+offset_left = 169.0
+offset_top = 120.0
+offset_right = 223.0
+offset_bottom = 151.0
+scale = Vector2(2, 2)
+text = "Select"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="Prev" to="." method="_on_prev_button_pressed"]
+[connection signal="pressed" from="Select" to="." method="_on_select_pressed"]
