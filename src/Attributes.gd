@@ -10,3 +10,5 @@ var curr_eyes: int = 0
 var curr_body: int = 0
 var curr_outfit: int = 0
 var filename: String = "res://save.bin"
+
+var walk_right: AnimationPlayer 
