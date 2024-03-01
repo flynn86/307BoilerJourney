@@ -24,7 +24,8 @@ func reset(file: String):
 	xacademic = float(-855.100219726562)
 	yacademic = float(-1381.95544433594)
 	location = "res://scenes/map/academic_map.tscn"
-	#collectibles = 0
+	collectibleA = false
+	collectibleH = false
 	curr_hair = 0
 	curr_eyes = 0
 	curr_body = 0
