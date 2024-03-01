@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgvex6fdmoqph"]
+
+[ext_resource type="Script" path="res://characters/character_built.gd" id="1_bpakt"]
+
+[node name="CharacterBuilt" type="Node2D"]
+script = ExtResource("1_bpakt")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 409.0
+offset_top = 110.0
+offset_right = 640.0
+offset_bottom = 213.0
+text = "Select a Character"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 410.0
+offset_top = 246.0
+offset_right = 645.0
+offset_bottom = 351.0
+text = "Create your own character"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
