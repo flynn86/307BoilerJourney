@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://cq8qbhyfu4a4s"]
 
 [ext_resource type="Script" path="res://scenes/map/housing_map.gd" id="1_1mynb"]
-[ext_resource type="TileSet" uid="uid://c4j55m8isd4y" path="res://scenes/map/housing_map.tres" id="2_0msfa"]
+[ext_resource type="TileSet" uid="uid://bhcpmmlhu1im1" path="res://scenes/map/housing_map.tres" id="2_0msfa"]
 [ext_resource type="PackedScene" uid="uid://c5qi6qixvqiw4" path="res://scenes/NPC_scenes/rabbit.tscn" id="9_hl1ep"]
 [ext_resource type="Script" path="res://scenes/map/CharacterBody2D.gd" id="11_k2urq"]
 [ext_resource type="PackedScene" uid="uid://cvjbfijhlka84" path="res://characters/Player.tscn" id="12_okprt"]
