@@ -22,25 +22,41 @@ script = ExtResource("1_t28md")
 [node name="SaveProgressButton" type="Button" parent="."]
 offset_left = 312.0
 offset_top = 104.0
-offset_right = 828.0
+offset_right = 540.0
 offset_bottom = 219.0
 text = "Save Progress"
 script = SubResource("GDScript_yyoyx")
 
 [node name="ViewProgressButton" type="Button" parent="."]
-offset_left = 313.0
-offset_top = 285.0
-offset_right = 829.0
-offset_bottom = 400.0
+offset_left = 579.0
+offset_top = 101.0
+offset_right = 796.0
+offset_bottom = 216.0
 text = "View Progress"
 
 [node name="BackToMapButton" type="Button" parent="."]
-offset_left = 313.0
-offset_top = 461.0
-offset_right = 829.0
-offset_bottom = 576.0
+offset_left = 312.0
+offset_top = 280.0
+offset_right = 793.0
+offset_bottom = 395.0
 text = "Back To Map"
+
+[node name="BackToMainMenuButton" type="Button" parent="."]
+offset_left = 576.0
+offset_top = 461.0
+offset_right = 808.0
+offset_bottom = 576.0
+text = "Back To Main Menu"
+
+[node name="CustomizeCharacterButton" type="Button" parent="."]
+offset_left = 316.0
+offset_top = 457.0
+offset_right = 547.0
+offset_bottom = 572.0
+text = "Customize Character"
 
 [connection signal="pressed" from="SaveProgressButton" to="." method="_on_save_progress_button_pressed"]
 [connection signal="pressed" from="ViewProgressButton" to="." method="_on_view_progress_button_pressed"]
 [connection signal="pressed" from="BackToMapButton" to="." method="_on_back_to_map_button_pressed"]
+[connection signal="pressed" from="BackToMainMenuButton" to="." method="_on_back_to_main_menu_button_pressed"]
+[connection signal="pressed" from="CustomizeCharacterButton" to="." method="_on_customize_character_button_pressed"]
