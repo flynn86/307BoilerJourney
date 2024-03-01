@@ -6,27 +6,59 @@
 script = ExtResource("1_l8hk8")
 
 [node name="StartNewGame" type="Button" parent="."]
-offset_left = 176.0
-offset_top = 157.0
-offset_right = 370.0
-offset_bottom = 250.0
-text = "Start New Game"
+offset_left = 346.0
+offset_top = 169.0
+offset_right = 540.0
+offset_bottom = 262.0
+text = "Start New Game 1"
+
+[node name="StartNewGame2" type="Button" parent="."]
+offset_left = 606.0
+offset_top = 169.0
+offset_right = 800.0
+offset_bottom = 262.0
+text = "Start New Game 2"
+
+[node name="DeleteGame" type="Button" parent="."]
+offset_left = 347.0
+offset_top = 454.0
+offset_right = 541.0
+offset_bottom = 547.0
+text = "Delete Game 1"
+
+[node name="DeleteGame2" type="Button" parent="."]
+offset_left = 607.0
+offset_top = 454.0
+offset_right = 801.0
+offset_bottom = 547.0
+text = "Delete Game 2"
 
 [node name="LoadGame" type="Button" parent="."]
-offset_left = 176.0
-offset_top = 318.0
-offset_right = 370.0
-offset_bottom = 411.0
-text = "Load Game"
+offset_left = 344.0
+offset_top = 309.0
+offset_right = 538.0
+offset_bottom = 402.0
+text = "Load Game 1"
+
+[node name="LoadGame2" type="Button" parent="."]
+offset_left = 606.0
+offset_top = 309.0
+offset_right = 800.0
+offset_bottom = 402.0
+text = "Load Game 2"
 
 [node name="Label" type="Label" parent="."]
-offset_left = 139.0
-offset_top = 63.0
-offset_right = 412.0
-offset_bottom = 147.0
+offset_left = 430.0
+offset_top = 66.0
+offset_right = 703.0
+offset_bottom = 150.0
 text = "Welcome to BoilerJourney!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="pressed" from="StartNewGame" to="." method="_on_start_new_game_pressed"]
+[connection signal="pressed" from="StartNewGame2" to="." method="_on_start_new_game_2_pressed"]
+[connection signal="pressed" from="DeleteGame" to="." method="_on_delete_game_pressed"]
+[connection signal="pressed" from="DeleteGame2" to="." method="_on_delete_game_2_pressed"]
 [connection signal="pressed" from="LoadGame" to="." method="_on_load_game_pressed"]
+[connection signal="pressed" from="LoadGame2" to="." method="_on_load_game_2_pressed"]

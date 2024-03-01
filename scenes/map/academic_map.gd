@@ -9,16 +9,17 @@ func _ready():
 	get_node("WinterVariantA").visible = false
 	if (Attributes.season == "Summer"):
 		get_node("SummerVariantA").visible = true
-	else: if (Attributes.season == "Fall"):
+	elif (Attributes.season == "Fall"):
 		get_node("FallVariantA").visible = true
-	else: if (Attributes.season == "Spring"):
+	elif (Attributes.season == "Spring"):
 		get_node("SummerVariantA").visible = true
 		get_node("SpringVariantA").visible = true
-	else: if (Attributes.season == "Winter"):
+	elif (Attributes.season == "Winter"):
 		get_node("WinterVariantA").visible = true
 	if (Attributes.night):
 		get_node("day_night").set_time_state(1)
 		get_node("CharacterBody2D/Player/player_light").visible = true
+	get_node("CharacterBody2D/Player/CollectibleButton").visible = !Attributes.collectibleA
 	set_process_input(true)
 
 func _input(event):
@@ -109,3 +110,8 @@ func _on_menu_button_pressed():
 	Attributes.yacademic = $CharacterBody2D.global_position.y
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+
+
+func _on_collectible_button_pressed():
+	Attributes.collectibleA = true
+	get_node("CharacterBody2D/Player/CollectibleButton").visible = false
