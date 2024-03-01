@@ -1,13 +1,13 @@
 extends Node
 
-const SAVE_FILENAME = "res://save.bin"
-
 func save():
-	var file = FileAccess.open(SAVE_FILENAME, FileAccess.WRITE)
+	var file = FileAccess.open(Attributes.filename, FileAccess.WRITE)
 	var save_data: Dictionary = {
 		"xp" : Attributes.xp,
-		"xposition" : Attributes.xpos,
-		"yposition" : Attributes.ypos,
+		"xhousing" : Attributes.xhousing,
+		"yhousing" : Attributes.yhousing,
+		"xacademic" : Attributes.xacademic,
+		"yacademic" : Attributes.yacademic,
 		"location" : Attributes.location,
 		"collectibles" : Attributes.collectibles,
 		"hair" : Attributes.curr_hair,
@@ -34,19 +34,20 @@ func save():
 #	file.close()
 
 func load():
-	var file = FileAccess.open(SAVE_FILENAME, FileAccess.READ)
-	if FileAccess.file_exists(SAVE_FILENAME) == true:
-		if not file.eof_reached:
-			var line = JSON.parse_string(file.get_line())
-			if line:
-				Attributes.xp = line["xp"]
-				Attributes.xpos = line["xposition"]
-				Attributes.ypos = line["yposition"]
-				Attributes.location = line["location"]
-				Attributes.collectibles = line["collectibles"]
-				Attributes.curr_hair = line["hair"]
-				Attributes.curr_body = line["body"]
-				Attributes.curr_eyes = line["eyes"]
-				Attributes.curr_outfit = line["outfit"]
-	file.close()
-
+	if FileAccess.file_exists(Attributes.filename):
+		var file = FileAccess.open(Attributes.filename, FileAccess.READ)
+		var line = JSON.parse_string(file.get_line())
+		if line:
+			Attributes.xp = line["xp"]
+			Attributes.xhousing = line["xhousing"]
+			Attributes.yhousing = line["yhousing"]
+			Attributes.xacademic = line["xacademic"]
+			Attributes.yacademic = line["yacademic"]
+			Attributes.location = line["location"]
+			Attributes.collectibles = line["collectibles"]
+			Attributes.curr_hair = line["hair"]
+			Attributes.curr_body = line["body"]
+			Attributes.curr_eyes = line["eyes"]
+			Attributes.curr_outfit = line["outfit"]
+			Attributes.filename = line["filename"]
+		file.close()

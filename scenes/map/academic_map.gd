@@ -2,15 +2,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var text_path1 = "res://scenes/map/char_pos_academic.txt"
-	if FileAccess.file_exists(text_path1):
-		var file = FileAccess.open(text_path1, FileAccess.READ)
-		var position_string = file.get_line()
-		var position_xy = position_string.split(",")
-		var x = float(position_xy[0])
-		var y = float(position_xy[1])
-		var position = Vector2(x, y)
-		$CharacterBody2D.global_position = position
+	$CharacterBody2D.global_position = Vector2(float(Attributes.xacademic),float(Attributes.yacademic))
 	set_process_input(true)
 	
 
@@ -42,13 +34,14 @@ func open_tab(building_name: String):
 		get_tree().change_scene_to_file("res://scenes/location_tab/location_page.tscn")
 	
 func _on_panel_closed():
+	Attributes.xacademic = $CharacterBody2D.global_position.x
+	Attributes.yacademic = $CharacterBody2D.global_position.y
+	SaveUtils.save()
 	self.visible = true
 	
 func _on_housing_button_pressed():
-	var text_path1 = "res://scenes/map/char_pos_academic.txt"
-	if FileAccess.file_exists(text_path1):
-		var file = FileAccess.open(text_path1, FileAccess.WRITE)
-		var position_string = str($CharacterBody2D.global_position.x) + ", " + str($CharacterBody2D.global_position.y)
-		file.store_string(position_string)
-		file.close()
-		get_tree().change_scene_to_file("res://scenes/map/housing_map.tscn")
+	Attributes.xacademic = $CharacterBody2D.global_position.x
+	Attributes.yacademic = $CharacterBody2D.global_position.y
+	Attributes.location = "res://scenes/map/housing_map.tscn"
+	get_tree().change_scene_to_file("res://scenes/map/housing_map.tscn")
+	SaveUtils.save()

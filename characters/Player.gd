@@ -50,4 +50,3 @@ func _on_random_pressed():
 func _on_button_pressed():
 	SaveUtils.save()
 	get_tree().change_scene_to_file(Attributes.location)
-	#SaveUtils.load()
