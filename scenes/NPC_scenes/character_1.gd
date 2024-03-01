@@ -43,7 +43,7 @@ func _process(delta):
 				move(delta)
 	if Input.is_action_just_pressed("chat"):
 		print("chatting")
-		$Dialogue_character1.start()
+		$dialogue_character_1.start()
 		is_roaming = false
 		is_chatting = true
 		$AnimatedSprite2D.play("Idle")

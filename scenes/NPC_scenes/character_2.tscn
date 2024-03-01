@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://ddvojvu5gt5sb"]
+[gd_scene load_steps=17 format=3 uid="uid://ddvojvu5gt5sb"]
 
-[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_jt1kt"]
+[ext_resource type="Script" path="res://scenes/NPC_scenes/squirrel.gd" id="1_8vcqy"]
 [ext_resource type="Texture2D" uid="uid://u32h7o4bw72w" path="res://scenes/map/NPCs/characters.png" id="2_1seg7"]
+[ext_resource type="PackedScene" uid="uid://c7va0wjcrgypl" path="res://dialogue/dialogue_character_2.tscn" id="3_1c5jr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6ivre"]
 atlas = ExtResource("2_1seg7")
@@ -99,9 +100,12 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_6kr2d"]
 radius = 44.7772
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_n3658"]
+radius = 73.4983
+
 [node name="character_2" type="CharacterBody2D"]
 y_sort_enabled = true
-script = ExtResource("1_jt1kt")
+script = ExtResource("1_8vcqy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_5fvha")
@@ -115,4 +119,14 @@ shape = SubResource("CircleShape2D_6kr2d")
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
+[node name="chat_detection_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
+shape = SubResource("CircleShape2D_n3658")
+
+[node name="dialogue_character_2" parent="." instance=ExtResource("3_1c5jr")]
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
+[connection signal="dialogue_finished" from="dialogue_character_2" to="." method="_on_dialogue_character_2_dialogue_finished"]

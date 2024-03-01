@@ -119,7 +119,7 @@ shape = SubResource("CircleShape2D_ekrc1")
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
-[node name="Dialogue_character1" parent="." instance=ExtResource("3_ofcfa")]
+[node name="dialogue_character_1" parent="." instance=ExtResource("3_ofcfa")]
 
 [node name="chat_detection_area" type="Area2D" parent="."]
 
@@ -128,6 +128,6 @@ position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_dpdmh")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="dialogue_finished" from="Dialogue_character1" to="." method="_on_dialogue_character_1_dialogue_finished"]
+[connection signal="dialogue_finished" from="dialogue_character_1" to="." method="_on_dialogue_character_1_dialogue_finished"]
 [connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
 [connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
