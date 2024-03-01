@@ -93,3 +93,15 @@ func _on_change_spring_pressed():
 	get_node("FallVariantA").visible = false
 	get_node("SpringVariantA").visible = true
 	get_node("WinterVariantA").visible = false
+
+
+func _on_day_night_button_pressed():
+	var temp = get_node("day_night")
+	var temp2 = get_node("CharacterBody2D/Player/player_light")
+	if (temp.get_time_state() == 0):
+		temp.set_time_state(1)
+		temp2.visible = true
+	else:
+		temp.set_time_state(0)
+		temp2.visible = false
+
