@@ -149,7 +149,7 @@ func display_rating(rating: float) -> void:
 	rating_text.text = "%0.1f Stars" % rating
 
 func _ready():
-	var text_path = "res://location_information/loc_text/DISPLAY_NAME.txt"
+	var text_path = "res://location_information/building_name.txt"
 	var main_name = "STEW"
 	if FileAccess.file_exists(text_path):
 		var file = FileAccess.open(text_path, FileAccess.READ)
