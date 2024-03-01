@@ -11,6 +11,7 @@ offset_bottom = 40.0
 script = ExtResource("1_vo80w")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
+z_index = 10
 layout_mode = 0
 offset_left = 13.0
 offset_top = -158.0
