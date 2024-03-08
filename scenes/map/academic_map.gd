@@ -40,7 +40,7 @@ func open_tab(building_name: String):
 	Attributes.xacademic = $CharacterBody2D.global_position.x
 	Attributes.yacademic = $CharacterBody2D.global_position.y
 	if building_name == "PMU":
-		get_tree().change_scene_to_file("res://scenes/PMU_page/pmu_panel.tscn")
+		get_tree().change_scene_to_file("res://scenes/PMU_scene/pmu_scene.tscn")
 	else: 
 		var file = FileAccess.open("res://location_information/building_name.txt", FileAccess.WRITE)
 		file.store_string(building_name)
