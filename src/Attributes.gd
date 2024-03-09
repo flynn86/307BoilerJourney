@@ -1,6 +1,7 @@
 extends Node
 
 #var xp: int = 0
+var username: String = ""
 var xhousing: float = float(256)
 var yhousing: float = float(256)
 var xacademic: float = float(-855.100219726562)
@@ -18,7 +19,7 @@ var night: bool = false
 #var walk_right: AnimationPlayer
 
 func reset(file: String):
-	#xp = 0
+	username = ""
 	xhousing = float(256)
 	yhousing = float(256)
 	xacademic = float(-855.100219726562)

@@ -4,6 +4,7 @@ func save():
 	var file = FileAccess.open(Attributes.filename, FileAccess.WRITE)
 	var save_data: Dictionary = {
 		#"xp" : Attributes.xp,
+		"username" : Attributes.username,
 		"xhousing" : Attributes.xhousing,
 		"yhousing" : Attributes.yhousing,
 		"xacademic" : Attributes.xacademic,
@@ -30,6 +31,7 @@ func load(savefile: String):
 		var line = JSON.parse_string(file.get_line())
 		if line:
 			#Attributes.xp = line["xp"]
+			Attributes.username = line["username"]
 			Attributes.xhousing = line["xhousing"]
 			Attributes.yhousing = line["yhousing"]
 			Attributes.xacademic = line["xacademic"]

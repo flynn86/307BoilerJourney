@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cvjbfijhlka84"]
 
 [ext_resource type="Script" path="res://characters/Player.gd" id="1_susai"]
-[ext_resource type="Texture2D" uid="uid://c2r70y0lpk83y" path="res://characters/assets/Bodies/16x16/Body_02.png" id="1_wrlsq"]
+[ext_resource type="Texture2D" uid="uid://35asql5p6n4f" path="res://characters/assets/Bodies/16x16/Body_02.png" id="1_wrlsq"]
 
 [sub_resource type="Animation" id="Animation_1gtpf"]
 length = 0.001
