@@ -1,10 +1,8 @@
 extends Node2D
 
 func _ready():
-	print($CharacterBody2D.global_position)
-	$CharacterBody2D.global_position.x = 0
-	$CharacterBody2D.global_position.y = 0
-	print($CharacterBody2D.global_position)
+	$CharacterBody2D.global_position.x = 3300
+	$CharacterBody2D.global_position.y = 700
 
 func _input(event):
 	if event is InputEventMouseMotion or event is InputEventMouseButton:
