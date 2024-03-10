@@ -1,0 +1,81 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwpf262662vbj"]
+
+[ext_resource type="Script" path="res://scenes/quests/quest_log.gd" id="1_qb26r"]
+
+[node name="QuestLog" type="Node2D"]
+script = ExtResource("1_qb26r")
+
+[node name="BackToMap" type="Button" parent="."]
+offset_left = 445.0
+offset_top = 532.0
+offset_right = 658.0
+offset_bottom = 596.0
+theme_override_font_sizes/font_size = 20
+text = "Back to Map"
+
+[node name="MainLabel" type="Label" parent="."]
+offset_left = 455.0
+offset_top = 35.0
+offset_right = 644.0
+offset_bottom = 95.0
+theme_override_font_sizes/font_size = 39
+text = "Quest Log"
+
+[node name="QuestLabel1" type="Label" parent="."]
+offset_left = 269.0
+offset_top = 154.0
+offset_right = 651.0
+offset_bottom = 214.0
+theme_override_font_sizes/font_size = 20
+text = "Quest 1:  text for what quest is
+Reward: 10 XP"
+horizontal_alignment = 1
+
+[node name="QuestLabel2" type="Label" parent="."]
+offset_left = 269.0
+offset_top = 288.0
+offset_right = 651.0
+offset_bottom = 348.0
+theme_override_font_sizes/font_size = 20
+text = "Quest 2:  text for what quest is
+Reward: 15 XP"
+horizontal_alignment = 1
+
+[node name="QuestLabel3" type="Label" parent="."]
+offset_left = 269.0
+offset_top = 420.0
+offset_right = 651.0
+offset_bottom = 480.0
+theme_override_font_sizes/font_size = 20
+text = "Quest 3:  text for what quest is
+Reward: 5 XP"
+horizontal_alignment = 1
+
+[node name="StartQuest1" type="Button" parent="."]
+offset_left = 654.0
+offset_top = 158.0
+offset_right = 794.0
+offset_bottom = 217.0
+theme_override_font_sizes/font_size = 18
+text = "Start Quest"
+
+[node name="StartQuest2" type="Button" parent="."]
+offset_left = 654.0
+offset_top = 297.0
+offset_right = 794.0
+offset_bottom = 356.0
+theme_override_font_sizes/font_size = 18
+text = "Start Quest"
+
+[node name="StartQuest3" type="Button" parent="."]
+offset_left = 655.0
+offset_top = 427.0
+offset_right = 795.0
+offset_bottom = 486.0
+theme_override_font_sizes/font_size = 18
+text = "Start Quest"
+
+[connection signal="pressed" from="BackToMap" to="." method="_on_back_to_map_pressed"]
+[connection signal="pressed" from="StartQuest1" to="." method="_on_start_quest_1_pressed"]
+[connection signal="pressed" from="StartQuest2" to="." method="_on_start_quest_2_pressed"]
+[connection signal="pressed" from="StartQuest3" to="." method="_on_start_quest_3_pressed"]
