@@ -58,7 +58,7 @@ func _on_timer_timeout():
 	curr_state = choose([IDLE, NEW_DIR, MOVE])
 
 func _on_chat_detection_area_body_entered(body):
-	if body.to_string() == "CharacterBody2D:<CharacterBody2D#506772607380>":
+	if body.to_string() == "CharacterBody2D:<CharacterBody2D#506873270676>":
 		player = body
 		player_in_chat_zone = true
 		#print("chatting")
@@ -69,7 +69,7 @@ func _on_chat_detection_area_body_entered(body):
 	
 
 func _on_chat_detection_area_body_exited(body):
-	if body.to_string() == "CharacterBody2D:<CharacterBody2D#506772607380>":
+	if body.to_string() == "CharacterBody2D:<CharacterBody2D#506873270676>":
 		player_in_chat_zone = false
 
 
