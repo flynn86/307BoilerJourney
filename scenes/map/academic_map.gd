@@ -115,3 +115,10 @@ func _on_menu_button_pressed():
 func _on_collectible_button_pressed():
 	Attributes.collectibleA = true
 	get_node("CharacterBody2D/Player/CollectibleButton").visible = false
+
+
+func _on_questlog_button_pressed():
+	Attributes.xacademic = $CharacterBody2D.global_position.x
+	Attributes.yacademic = $CharacterBody2D.global_position.y
+	SaveUtils.save()
+	get_tree().change_scene_to_file("res://scenes/quests/quest_log.tscn")

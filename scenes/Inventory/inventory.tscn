@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dwuoauebb1w68" path="res://scenes/Inventory/bar.png" id="9_2xcfv"]
 
 [node name="Inventory" type="NinePatchRect"]
+custom_minimum_size = Vector2(0, 45)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -36,14 +37,17 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -34.5
-offset_top = -8.0
-offset_right = 36.5
+offset_left = -34.5001
+offset_top = -8.25
+offset_right = 106.5
+offset_bottom = 6.75
 grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(0.423529, 0.247059, 0.121569, 1)
+theme_override_colors/font_outline_color = Color(0.925353, 0.925353, 0.925353, 1)
 theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("3_01im4")
-theme_override_font_sizes/font_size = 9
+theme_override_font_sizes/font_size = 18
 text = "- Inventory Name -"
 horizontal_alignment = 1
 vertical_alignment = 1
