@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=3 uid="uid://dgfo0uogkbetu"]
+
+[ext_resource type="Texture2D" uid="uid://belmqpu4axgsw" path="res://scenes/Inventory/main panel.png" id="1_tqo37"]
+[ext_resource type="Texture2D" uid="uid://ch0e8qbbj0lvj" path="res://scenes/Inventory/title.png" id="2_vcglf"]
+[ext_resource type="FontFile" uid="uid://cmmr8t0m2myle" path="res://scenes/Inventory/Arcadepix Plus.ttf" id="3_ocwf2"]
+[ext_resource type="Texture2D" uid="uid://ba82ekbvbcuqh" path="res://scenes/Inventory/x_normal.png" id="4_ea7bw"]
+[ext_resource type="Texture2D" uid="uid://7b2yukw2qdog" path="res://scenes/Inventory/x_pressed.png" id="5_ma7sk"]
+[ext_resource type="Texture2D" uid="uid://bvvstqfshpv5t" path="res://scenes/Inventory/x_hover.png" id="6_nc6ct"]
+[ext_resource type="Texture2D" uid="uid://jh1k163wr5jb" path="res://scenes/Inventory/x_disabled.png" id="7_7qxsg"]
+
+[node name="Inventory_container" type="NinePatchRect"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.0
+offset_top = -49.0
+offset_right = 79.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+texture = ExtResource("1_tqo37")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Title" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -42.0
+offset_top = -16.0
+offset_right = 42.0
+offset_bottom = 7.0
+grow_horizontal = 2
+texture = ExtResource("2_vcglf")
+patch_margin_left = 8
+patch_margin_top = 6
+patch_margin_right = 8
+patch_margin_bottom = 2
+
+[node name="Label" type="Label" parent="Title"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.677966
+anchor_bottom = 1.53333
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 28.4068
+offset_bottom = -6.73333
+theme_override_colors/font_color = Color(0.301961, 0.34902, 0.4, 1)
+theme_override_fonts/font = ExtResource("3_ocwf2")
+text = "Inventory
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -9.0
+offset_bottom = 9.0
+grow_horizontal = 0
+texture_normal = ExtResource("4_ea7bw")
+texture_pressed = ExtResource("5_ma7sk")
+texture_hover = ExtResource("6_nc6ct")
+texture_disabled = ExtResource("7_7qxsg")
+
+[node name="Inventory_container" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
