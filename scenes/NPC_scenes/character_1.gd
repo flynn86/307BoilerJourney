@@ -41,12 +41,7 @@ func _process(delta):
 				dir = choose([Vector2.RIGHT, Vector2.LEFT, Vector2.DOWN])
 			MOVE:
 				move(delta)
-	if Input.is_action_just_pressed("chat"):
-		print("chatting")
-		$dialogue_character_1.start()
-		is_roaming = false
-		is_chatting = true
-		$AnimatedSprite2D.play("Idle")
+	#if Input.is_action_just_pressed("chat"):
 
 func choose(array):
 	array.shuffle()
@@ -62,13 +57,18 @@ func _on_timer_timeout():
 	curr_state = choose([IDLE, NEW_DIR, MOVE])
 
 func _on_chat_detection_area_body_entered(body):
-	if body.has_method("Player"):
+	if body.to_string() == "CharacterBody2D:<CharacterBody2D#506772607380>":
 		player = body
 		player_in_chat_zone = true
+		#print("chatting")
+		$dialogue_character_1.start()
+		is_roaming = false
+		is_chatting = true
+		$AnimatedSprite2D.play("Idle")
 	
 
 func _on_chat_detection_area_body_exited(body):
-	if body.has_method("Player"):
+	if body.to_string() == "CharacterBody2D:<CharacterBody2D#506772607380>":
 		player_in_chat_zone = false
 
 
