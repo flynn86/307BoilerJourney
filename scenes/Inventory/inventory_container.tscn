@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dgfo0uogkbetu"]
+[gd_scene load_steps=9 format=3 uid="uid://dgfo0uogkbetu"]
 
 [ext_resource type="Texture2D" uid="uid://belmqpu4axgsw" path="res://scenes/Inventory/main panel.png" id="1_tqo37"]
 [ext_resource type="Texture2D" uid="uid://ch0e8qbbj0lvj" path="res://scenes/Inventory/title.png" id="2_vcglf"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://7b2yukw2qdog" path="res://scenes/Inventory/x_pressed.png" id="5_ma7sk"]
 [ext_resource type="Texture2D" uid="uid://bvvstqfshpv5t" path="res://scenes/Inventory/x_hover.png" id="6_nc6ct"]
 [ext_resource type="Texture2D" uid="uid://jh1k163wr5jb" path="res://scenes/Inventory/x_disabled.png" id="7_7qxsg"]
+[ext_resource type="PackedScene" uid="uid://cg0juu3d3gepy" path="res://scenes/Inventory/inventory.tscn" id="8_63ko1"]
 
 [node name="Inventory_container" type="NinePatchRect"]
 anchors_preset = 8
@@ -74,7 +75,12 @@ texture_pressed = ExtResource("5_ma7sk")
 texture_hover = ExtResource("6_nc6ct")
 texture_disabled = ExtResource("7_7qxsg")
 
-[node name="Inventory_container" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Inventory_container" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 10.0
+offset_right = 149.0
+offset_bottom = 55.0
+
+[node name="Inventory" parent="Inventory_container" instance=ExtResource("8_63ko1")]
+layout_mode = 2
