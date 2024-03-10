@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://cg0juu3d3gepy"]
+
+[ext_resource type="Script" path="res://scenes/Inventory/Inventory.gd" id="2_q6cde"]
+[ext_resource type="FontFile" uid="uid://cmmr8t0m2myle" path="res://scenes/Inventory/Arcadepix Plus.ttf" id="3_01im4"]
+[ext_resource type="Texture2D" uid="uid://dqcdg4wxms527" path="res://scenes/Inventory/inner_panel.png" id="8_6lvgn"]
+[ext_resource type="Texture2D" uid="uid://dwuoauebb1w68" path="res://scenes/Inventory/bar.png" id="9_2xcfv"]
+
+[node name="Inventory" type="NinePatchRect"]
+custom_minimum_size = Vector2(0, 45)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -9.0
+offset_top = 10.0
+offset_right = 126.0
+offset_bottom = 55.0
+grow_horizontal = 2
+texture = ExtResource("8_6lvgn")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+script = ExtResource("2_q6cde")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.340741
+anchor_top = 0.25
+anchor_right = 0.688889
+anchor_bottom = 0.3
+texture = ExtResource("9_2xcfv")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.5001
+offset_top = -8.25
+offset_right = 106.5
+offset_bottom = 6.75
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.423529, 0.247059, 0.121569, 1)
+theme_override_colors/font_outline_color = Color(0.925353, 0.925353, 0.925353, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("3_01im4")
+theme_override_font_sizes/font_size = 18
+text = "- Inventory Name -"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 161
+visible_ratio = -0.0555556
+
+[node name="slot_container" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 18.0
+offset_right = 132.0
+offset_bottom = 38.0
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+columns = 5

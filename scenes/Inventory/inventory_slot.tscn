@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bf8xjyohll501"]
+
+[ext_resource type="Texture2D" uid="uid://cemha5100kjtj" path="res://scenes/Inventory/item_slot.png" id="1_fcmlr"]
+[ext_resource type="PackedScene" uid="uid://bk32iig6irgup" path="res://scenes/Inventory/item.tscn" id="2_e7bpn"]
+
+[node name="inventory_slot" type="TextureRect"]
+texture = ExtResource("1_fcmlr")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Item" parent="CenterContainer" instance=ExtResource("2_e7bpn")]
+layout_mode = 2
