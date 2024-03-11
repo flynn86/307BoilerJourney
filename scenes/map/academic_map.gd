@@ -122,3 +122,13 @@ func _on_questlog_button_pressed():
 	Attributes.yacademic = $CharacterBody2D.global_position.y
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/quests/quest_log.tscn")
+
+signal engineering_fountain
+signal loeb_fountain
+
+func _on_engineering_fountain_area_entered(area):
+	emit_signal("engineering_fountain")
+
+
+func _on_loeb_fountain_area_entered(area):
+	emit_signal("loeb_fountain")

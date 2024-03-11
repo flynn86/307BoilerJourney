@@ -22,12 +22,13 @@ theme_override_font_sizes/font_size = 39
 text = "Quest Log"
 
 [node name="QuestLabel1" type="Label" parent="."]
-offset_left = 269.0
-offset_top = 154.0
-offset_right = 651.0
-offset_bottom = 214.0
+offset_left = 244.0
+offset_top = 147.0
+offset_right = 684.0
+offset_bottom = 237.0
 theme_override_font_sizes/font_size = 20
-text = "Quest 1:  text for what quest is
+text = "Quest 1:  visit the Engineering
+ fountain and Loeb fountain
 Reward: 10 XP"
 horizontal_alignment = 1
 
