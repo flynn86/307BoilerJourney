@@ -6,6 +6,8 @@ var xhousing: float = float(256)
 var yhousing: float = float(256)
 var xacademic: float = float(-855.100219726562)
 var yacademic: float = float(-1381.95544433594)
+var xPMU: float = float(3250)
+var yPMU: float = float(830)
 var location: String = "res://scenes/map/academic_map.tscn"
 var collectibleA: bool = false
 var collectibleH: bool = false
@@ -16,6 +18,7 @@ var curr_outfit: int = 0
 var filename: String = "res://savefiles/save1.bin"
 var season: String = "Summer"
 var night: bool = false
+var PMU_renter: bool = false
 #var walk_right: AnimationPlayer
 
 func reset(file: String):
@@ -24,6 +27,8 @@ func reset(file: String):
 	yhousing = float(256)
 	xacademic = float(-855.100219726562)
 	yacademic = float(-1381.95544433594)
+	xPMU = float(3250)
+	yPMU = (830)
 	location = "res://scenes/map/academic_map.tscn"
 	collectibleA = false
 	collectibleH = false
@@ -34,3 +39,4 @@ func reset(file: String):
 	filename = file
 	season = "Summer"
 	night = false
+	PMU_renter = false

@@ -93,7 +93,7 @@ func _on_pressed():
 	$Popup.hide()
 
 func _on_close_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/PMU_page/pmu_panel.tscn")
+	get_tree().change_scene_to_file("res://scenes/PMU_scene/pmu_scene.tscn")
 
 
 func _on_website_button_pressed():
