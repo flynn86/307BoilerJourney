@@ -19,6 +19,14 @@ var filename: String = "res://savefiles/save1.bin"
 var season: String = "Summer"
 var night: bool = false
 var PMU_renter: bool = false
+var engineering_ftn_visited: bool = false
+var loeb_ftn_visited: bool = false
+var quest1_active: bool = false
+var quest1_completed: bool = false
+var quest2_active: bool = false
+var quest2_completed: bool = false
+var quest3_active: bool = false
+var quest3_completed: bool = false
 #var walk_right: AnimationPlayer
 
 func reset(file: String):
@@ -40,3 +48,11 @@ func reset(file: String):
 	season = "Summer"
 	night = false
 	PMU_renter = false
+	engineering_ftn_visited = false
+	loeb_ftn_visited = false
+	var quest1_active = false
+	var quest1_completed = false
+	var quest2_active = false
+	var quest2_completed = false
+	var quest3_active = false
+	var quest3_completed = false

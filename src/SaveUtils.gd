@@ -18,7 +18,15 @@ func save():
 		"outfit" : Attributes.curr_outfit,
 		"filename" : Attributes.filename,
 		"season" : Attributes.season,
-		"isNight" : Attributes.night
+		"isNight" : Attributes.night,
+		"engineeringVisited" : Attributes.engineering_ftn_visited,
+		"loebVisited": Attributes.loeb_ftn_visited,
+		"quest1active" : Attributes.quest1_active,
+		"quest1complete" : Attributes.quest1_completed,
+		"quest2active" : Attributes.quest2_active,
+		"quest2complete" : Attributes.quest2_completed,
+		"quest3active" : Attributes.quest3_active,
+		"quest3complete" : Attributes.quest3_completed
 	}
 	var string_data = JSON.stringify(save_data)
 	file.store_line(string_data)
@@ -46,6 +54,14 @@ func load(savefile: String):
 			Attributes.filename = savefile
 			Attributes.season = line["season"]
 			Attributes.night = line["isNight"]
+			Attributes.engineering_ftn_visited = line["engineeringVisited"]
+			Attributes.loeb_ftn_visited = line["loebVisited"]
+			Attributes.quest1_active = line["quest1active"]
+			Attributes.quest1_completed = line["quest1complete"]
+			Attributes.quest2_active = line["quest2active"]
+			Attributes.quest2_completed = line["quest2complete"]
+			Attributes.quest3_active = line["quest3active"]
+			Attributes.quest3_completed = line["quest3complete"]
 		file.close()
 
 func delete(savefile: String):

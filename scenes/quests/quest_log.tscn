@@ -76,6 +76,15 @@ offset_bottom = 486.0
 theme_override_font_sizes/font_size = 18
 text = "Start Quest"
 
+[node name="Quest1Status" type="Label" parent="."]
+visible = false
+offset_left = 665.0
+offset_top = 170.0
+offset_right = 799.0
+offset_bottom = 214.0
+theme_override_font_sizes/font_size = 20
+text = "In Progress"
+
 [connection signal="pressed" from="BackToMap" to="." method="_on_back_to_map_pressed"]
 [connection signal="pressed" from="StartQuest1" to="." method="_on_start_quest_1_pressed"]
 [connection signal="pressed" from="StartQuest2" to="." method="_on_start_quest_2_pressed"]

@@ -82,3 +82,10 @@ func _on_questlog_button_pressed():
 	Attributes.yacademic = $CharacterBody2D.global_position.y
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/quests/quest_log.tscn")
+
+func _process(delta):
+	if (Attributes.quest1_active):
+		if (Attributes.engineering_ftn_visited == true and Attributes.loeb_ftn_visited == true):
+			Attributes.quest1_completed = true
+			Attributes.quest1_active = false
+
