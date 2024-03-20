@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nteqv"]
 size = Vector2(59, 66)
 
-[node name="IU Sucks Poster" type="Area2D"]
+[node name="IU_Sucks_Poster" type="Area2D"]
 z_index = -1
 script = ExtResource("1_jgp10")
 
