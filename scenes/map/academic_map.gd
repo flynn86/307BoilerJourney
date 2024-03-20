@@ -145,4 +145,4 @@ func _process(delta):
 
 
 func _on_view_schedule_pressed():
-	get_tree().change_scene_to_file("res://scenes/scheduling.tscn")
+	get_tree().change_scene_to_file("res://scenes/schedule.tscn")

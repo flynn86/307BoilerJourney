@@ -1,0 +1,97 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv6mupakqs063"]
+
+[ext_resource type="Script" path="res://scenes/addschedule.gd" id="1_4lj8b"]
+
+[node name="Add Schedule" type="Node2D"]
+script = ExtResource("1_4lj8b")
+dropdown_path = NodePath("buildingDropdown")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 495.0
+offset_top = 114.0
+offset_right = 742.0
+offset_bottom = 137.0
+text = "Add Courses"
+
+[node name="Course Name" type="TextEdit" parent="."]
+offset_left = 8.0
+offset_top = 199.0
+offset_right = 214.0
+offset_bottom = 243.0
+placeholder_text = "Course Name"
+
+[node name="Course Time" type="TextEdit" parent="."]
+offset_left = 227.0
+offset_top = 198.0
+offset_right = 484.0
+offset_bottom = 242.0
+placeholder_text = "Course Time (in 24 hour format)"
+
+[node name="Monday" type="Button" parent="."]
+offset_left = 507.0
+offset_top = 200.0
+offset_right = 552.0
+offset_bottom = 244.0
+text = "M"
+
+[node name="Tuesday" type="Button" parent="."]
+offset_left = 566.0
+offset_top = 199.0
+offset_right = 611.0
+offset_bottom = 243.0
+text = "T"
+
+[node name="Wednesday" type="Button" parent="."]
+offset_left = 630.0
+offset_top = 199.0
+offset_right = 675.0
+offset_bottom = 243.0
+text = "W"
+
+[node name="Thursday" type="Button" parent="."]
+offset_left = 694.0
+offset_top = 200.0
+offset_right = 739.0
+offset_bottom = 244.0
+text = "R"
+
+[node name="Friday" type="Button" parent="."]
+offset_left = 755.0
+offset_top = 201.0
+offset_right = 800.0
+offset_bottom = 245.0
+text = "F"
+
+[node name="buildingDropdown" type="OptionButton" parent="."]
+offset_left = 825.0
+offset_top = 200.0
+offset_right = 996.0
+offset_bottom = 248.0
+
+[node name="submit" type="Button" parent="."]
+offset_left = 1010.0
+offset_top = 200.0
+offset_right = 1120.0
+offset_bottom = 248.0
+text = "Submit"
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 373.0
+offset_top = 504.0
+offset_right = 693.0
+offset_bottom = 564.0
+text = "You must enter a all fields before submitting"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="text_changed" from="Course Name" to="." method="_on_course_name_text_changed"]
+[connection signal="text_changed" from="Course Time" to="." method="_on_course_time_text_changed"]
+[connection signal="pressed" from="Monday" to="." method="_on_monday_pressed"]
+[connection signal="pressed" from="Tuesday" to="." method="_on_tuesday_pressed"]
+[connection signal="pressed" from="Wednesday" to="." method="_on_wednesday_pressed"]
+[connection signal="pressed" from="Thursday" to="." method="_on_thursday_pressed"]
+[connection signal="pressed" from="Friday" to="." method="_on_friday_pressed"]
+[connection signal="item_selected" from="buildingDropdown" to="." method="_on_building_dropdown_item_selected"]
+[connection signal="pressed" from="submit" to="." method="_on_submit_pressed"]
