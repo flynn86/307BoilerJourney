@@ -2,6 +2,10 @@ extends Node2D
 
 @export var dropdown_path:NodePath
 @onready var dropdown = get_node(dropdown_path)
+
+@onready var courseName_entry = $"Course Name"
+@onready var courseTime_entry = $"Course Time"
+
 # Called when the node enters the scene tree for the first time.
 var building_list = ["ARMS", "PUSH", "HAMP", "PHYS", "RNPH", "JSN", "FRNY", "DSCB", "MSEE", "CHAS", "BHEE", "AR", "ELLT", 
 					"HOVD", "ME", "WALC", "POTR", "LMBS", "KNOY", "DUDL", "HAAS", "PSYC", "PRCE", "CL50", "MATH", "SC", 
@@ -43,4 +47,5 @@ func _on_friday_pressed():
 
 
 func _on_submit_pressed():
-	pass # Replace with function body.
+	if courseName_entry.text == "" || courseTime_entry.text == "":
+		$Label.visible = true
