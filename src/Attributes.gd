@@ -11,6 +11,7 @@ var yPMU: float = float(830)
 var location: String = "res://scenes/map/academic_map.tscn"
 var collectibleA: bool = false
 var collectibleH: bool = false
+var iu_poster: bool = false
 var curr_hair: int = 0
 var curr_eyes: int = 0
 var curr_body: int = 0
@@ -75,6 +76,7 @@ func reset(file: String):
 	location = "res://scenes/map/academic_map.tscn"
 	collectibleA = false
 	collectibleH = false
+	iu_poster = false
 	curr_hair = 0
 	curr_eyes = 0
 	curr_body = 0

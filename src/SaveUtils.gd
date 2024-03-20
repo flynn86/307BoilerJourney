@@ -12,6 +12,7 @@ func save():
 		"location" : Attributes.location,
 		"collectibleA" : Attributes.collectibleA,
 		"collectibleH" : Attributes.collectibleH,
+		"iu_poster" : Attributes.iu_poster,
 		"hair" : Attributes.curr_hair,
 		"body" : Attributes.curr_body,
 		"eyes" : Attributes.curr_eyes,
@@ -47,6 +48,7 @@ func load(savefile: String):
 			Attributes.location = line["location"]
 			Attributes.collectibleA = line["collectibleA"]
 			Attributes.collectibleH = line["collectibleH"]
+			Attributes.iu_poster = line["iu_poster"]
 			Attributes.curr_hair = line["hair"]
 			Attributes.curr_body = line["body"]
 			Attributes.curr_eyes = line["eyes"]

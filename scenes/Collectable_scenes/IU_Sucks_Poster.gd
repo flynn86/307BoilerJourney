@@ -1,11 +1,11 @@
 extends Area2D
 
+var collected = false;
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_node("collect_button").visible = false;
-	pass # Replace with function body.
-
 
 
 
@@ -16,6 +16,7 @@ func _on_body_entered(body):
 
 
 func _on_collect_button_pressed():
+	Attributes.iu_poster = true;
 	queue_free();
 	
 
