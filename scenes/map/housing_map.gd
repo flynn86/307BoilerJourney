@@ -89,3 +89,7 @@ func _process(delta):
 			Attributes.quest1_completed = true
 			Attributes.quest1_active = false
 
+
+
+func _on_view_schedule_pressed():
+	get_tree().change_scene_to_file("res://scenes/scheduling.tscn")
