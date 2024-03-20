@@ -100,4 +100,5 @@ autowrap_mode = 2
 [connection signal="pressed" from="Wednesday" to="." method="_on_wednesday_pressed"]
 [connection signal="pressed" from="Thursday" to="." method="_on_thursday_pressed"]
 [connection signal="pressed" from="Friday" to="." method="_on_friday_pressed"]
+[connection signal="item_selected" from="buildingDropdown" to="." method="_on_building_dropdown_item_selected"]
 [connection signal="pressed" from="submit" to="." method="_on_submit_pressed"]

@@ -75,25 +75,25 @@ var courseNames: Dictionary = {
 }
 
 var courseTimes: Dictionary = {
-	"course1_time" : "",
-	"course2_time" : "",
-	"course3_time" : "",
-	"course4_time" : "",
-	"course5_time" : "",
-	"course6_time" : "",
-	"course7_time" : "",
-	"course8_time" : ""
+	"course1_time" : 0,
+	"course2_time" : 0,
+	"course3_time" : 0,
+	"course4_time" : 0,
+	"course5_time" : 0,
+	"course6_time" : 0,
+	"course7_time" : 0,
+	"course8_time" : 0
 }
 
 var courseDays: Dictionary = {
-	"course1_days" : {},
-	"course2_days" : {},
-	"course3_days" : {},
-	"course4_days" : {},
-	"course5_days" : {},
-	"course6_days" : {},
-	"course7_days" : {},
-	"course8_days" : {}
+	"course1_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+	"course2_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+	"course3_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+	"course4_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+	"course5_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+	"course6_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+	"course7_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+	"course8_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0}
 }
 var courseLocations: Dictionary = {
 	"course1_location" : "",
@@ -105,6 +105,7 @@ var courseLocations: Dictionary = {
 	"course7_location" : "",
 	"course8_location" : ""
 }
+var course_num: int = 1
 
 
 
@@ -186,24 +187,24 @@ func reset(file: String):
 		"course8_name" : ""
 	}
 	courseTimes = {
-		"course1_time" : "",
-		"course2_time" : "",
-		"course3_time" : "",
-		"course4_time" : "",
-		"course5_time" : "",
-		"course6_time" : "",
-		"course7_time" : "",
-		"course8_time" : ""
+		"course1_time" : 0,
+		"course2_time" : 0,
+		"course3_time" : 0,
+		"course4_time" : 0,
+		"course5_time" : 0,
+		"course6_time" : 0,
+		"course7_time" : 0,
+		"course8_time" : 0
 	}
 	courseDays = {
-		"course1_days" : "",
-		"course2_days" : "",
-		"course3_days" : "",
-		"course4_days" : "",
-		"course5_days" : "",
-		"course6_days" : "",
-		"course7_days" : "",
-		"course8_days" : ""
+		"course1_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+		"course2_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+		"course3_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+		"course4_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+		"course5_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+		"course6_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+		"course7_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+		"course8_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0}
 	}
 	courseLocations = {
 		"course1_location" : "",
@@ -215,5 +216,6 @@ func reset(file: String):
 		"course7_location" : "",
 		"course8_location" : ""
 	}
+	course_num = 1
 	
 	
