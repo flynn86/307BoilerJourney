@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://di3xoup64at7w"]
+
+[ext_resource type="Texture2D" uid="uid://da5vem7buy26v" path="res://scenes/Collectable_scenes/Collectables/Pixel-Art-Basketball-2-1015x1024.png" id="1_67dku"]
+[ext_resource type="Script" path="res://scenes/Collectable_scenes/basketball.gd" id="1_uodrc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kdd5l"]
+radius = 29.0
+
+[node name="basketball" type="Area2D"]
+script = ExtResource("1_uodrc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(0, -2)
+scale = Vector2(0.0776324, 0.0748291)
+texture = ExtResource("1_67dku")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1)
+shape = SubResource("CircleShape2D_kdd5l")
+
+[node name="collect_button" type="Button" parent="."]
+z_index = 1
+offset_left = -46.0
+offset_top = -73.0
+offset_right = 49.0
+offset_bottom = -42.0
+text = "Collect"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="pressed" from="collect_button" to="." method="_on_collect_button_pressed"]
