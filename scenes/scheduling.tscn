@@ -69,13 +69,6 @@ offset_right = 811.0
 offset_bottom = 483.0
 text = "F"
 
-[node name="Building" type="TextEdit" parent="."]
-offset_left = 885.0
-offset_top = 597.0
-offset_right = 1147.0
-offset_bottom = 641.0
-placeholder_text = "Building Name"
-
 [node name="buildingDropdown" type="OptionButton" parent="."]
 offset_left = 836.0
 offset_top = 438.0
@@ -88,6 +81,17 @@ offset_top = 438.0
 offset_right = 1131.0
 offset_bottom = 486.0
 text = "Submit"
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 373.0
+offset_top = 504.0
+offset_right = 693.0
+offset_bottom = 564.0
+text = "You must enter a all fields before submitting"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [connection signal="text_changed" from="Course Name" to="." method="_on_course_name_text_changed"]
 [connection signal="text_changed" from="Course Time" to="." method="_on_course_time_text_changed"]
