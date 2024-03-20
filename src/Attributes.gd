@@ -51,6 +51,16 @@ var course5_location: String = ""
 var course6_location: String = ""
 var course7_location: String = ""
 var course8_location: String = ""
+var course1_days: String = ""
+var course2_days: String = ""
+var course3_days: String = ""
+var course4_days: String = ""
+var course5_days: String = ""
+var course6_days: String = ""
+var course7_days: String = ""
+var course8_days: String = ""
+
+
 
 #var walk_right: AnimationPlayer
 
@@ -105,4 +115,12 @@ func reset(file: String):
 	course6_location = ""
 	course7_location = ""
 	course8_location = ""
+	course1_days = ""
+	course2_days = ""
+	course3_days = ""
+	course4_days = ""
+	course5_days = ""
+	course6_days = ""
+	course7_days = ""
+	course8_days = ""
 	
