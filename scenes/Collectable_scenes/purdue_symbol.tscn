@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://bp65mowhjyl05"]
+
+[ext_resource type="Script" path="res://scenes/Collectable_scenes/Purdue_symbol.gd" id="1_njb7m"]
+[ext_resource type="Texture2D" uid="uid://bgpw1vd1ygp8k" path="res://scenes/Collectable_scenes/Collectables/purdue-boilermakers-football-purdue-boilermakers-men-s-basketball-mackey-arena-purdue-pete-university-purdue-boilermakers-women-s-basketball-thumbnail.png" id="2_4q4qw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d7hfc"]
+radius = 28.1603
+
+[node name="Purdue_symbol" type="Area2D"]
+z_index = -1
+script = ExtResource("1_njb7m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3.00001, 4.00002)
+scale = Vector2(0.233333, 0.263333)
+texture = ExtResource("2_4q4qw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 5)
+shape = SubResource("CircleShape2D_d7hfc")
+
+[node name="collect_button" type="Button" parent="."]
+offset_left = -40.0
+offset_top = -62.0
+offset_right = 55.0
+offset_bottom = -31.0
+text = "Collect"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="pressed" from="collect_button" to="." method="_on_collect_button_pressed"]
