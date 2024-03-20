@@ -8,3 +8,66 @@ offset_top = 35.0
 offset_right = 723.0
 offset_bottom = 58.0
 text = "Your Weekly Scehdule"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 506.0
+offset_top = 352.0
+offset_right = 753.0
+offset_bottom = 375.0
+text = "Add Courses"
+
+[node name="Course Name" type="TextEdit" parent="."]
+offset_left = 19.0
+offset_top = 437.0
+offset_right = 225.0
+offset_bottom = 481.0
+placeholder_text = "Course Name"
+
+[node name="Course Time" type="TextEdit" parent="."]
+offset_left = 238.0
+offset_top = 436.0
+offset_right = 495.0
+offset_bottom = 480.0
+placeholder_text = "Course Time (in 24 hour format)"
+
+[node name="Monday" type="Button" parent="."]
+offset_left = 518.0
+offset_top = 438.0
+offset_right = 563.0
+offset_bottom = 482.0
+text = "M"
+
+[node name="Tuesday" type="Button" parent="."]
+offset_left = 577.0
+offset_top = 437.0
+offset_right = 622.0
+offset_bottom = 481.0
+text = "T"
+
+[node name="Wednesday" type="Button" parent="."]
+offset_left = 641.0
+offset_top = 437.0
+offset_right = 686.0
+offset_bottom = 481.0
+text = "W"
+
+[node name="Thursday" type="Button" parent="."]
+offset_left = 705.0
+offset_top = 438.0
+offset_right = 750.0
+offset_bottom = 482.0
+text = "R"
+
+[node name="Friday" type="Button" parent="."]
+offset_left = 766.0
+offset_top = 439.0
+offset_right = 811.0
+offset_bottom = 483.0
+text = "F"
+
+[node name="Building" type="TextEdit" parent="."]
+offset_left = 836.0
+offset_top = 441.0
+offset_right = 1098.0
+offset_bottom = 485.0
+placeholder_text = "Building Name"

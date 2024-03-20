@@ -27,6 +27,31 @@ var quest2_active: bool = false
 var quest2_completed: bool = false
 var quest3_active: bool = false
 var quest3_completed: bool = false
+var course1_name: String = ""
+var course2_name: String = ""
+var course3_name: String = ""
+var course4_name: String = ""
+var course5_name: String = ""
+var course6_name: String = ""
+var course7_name: String = ""
+var course8_name: String = ""
+var course1_time: int = 0
+var course2_time: int = 0
+var course3_time: int = 0
+var course4_time: int = 0
+var course5_time: int = 0
+var course6_time: int = 0
+var course7_time: int = 0
+var course8_time: int = 0
+var course1_location: String = ""
+var course2_location: String = ""
+var course3_location: String = ""
+var course4_location: String = ""
+var course5_location: String = ""
+var course6_location: String = ""
+var course7_location: String = ""
+var course8_location: String = ""
+
 #var walk_right: AnimationPlayer
 
 func reset(file: String):
@@ -56,3 +81,28 @@ func reset(file: String):
 	var quest2_completed = false
 	var quest3_active = false
 	var quest3_completed = false
+	course1_name = ""
+	course2_name = ""
+	course3_name = ""
+	course4_name = ""
+	course5_name = ""
+	course6_name = ""
+	course7_name = ""
+	course8_name = ""
+	course1_time = 0
+	course2_time = 0
+	course3_time = 0
+	course4_time = 0
+	course5_time = 0
+	course6_time = 0
+	course7_time = 0
+	course8_time = 0
+	course1_location = ""
+	course2_location = ""
+	course3_location = ""
+	course4_location = ""
+	course5_location = ""
+	course6_location = ""
+	course7_location = ""
+	course8_location = ""
+	
