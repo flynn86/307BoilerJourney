@@ -33,7 +33,12 @@ func save():
 		"quest2active" : Attributes.quest2_active,
 		"quest2complete" : Attributes.quest2_completed,
 		"quest3active" : Attributes.quest3_active,
-		"quest3complete" : Attributes.quest3_completed
+		"quest3complete" : Attributes.quest3_completed,
+		"courseNames": Attributes.courseNames,
+		"courseTimes": Attributes.courseTimes,
+		"courseDays": Attributes.courseDays,
+		"courseLocations": Attributes.courseLocations
+		
 	}
 	var string_data = JSON.stringify(save_data)
 	file.store_line(string_data)
@@ -76,6 +81,10 @@ func load(savefile: String):
 			Attributes.quest2_completed = line["quest2complete"]
 			Attributes.quest3_active = line["quest3active"]
 			Attributes.quest3_completed = line["quest3complete"]
+			Attributes.courseNames = line["courseNames"]
+			Attributes.courseTimes = line["courseTimes"]
+			Attributes.courseDays = line["courseDays"]
+			Attributes.courseLocations = line["courseLocations"]
 		file.close()
 
 func delete(savefile: String):
