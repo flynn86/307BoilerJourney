@@ -17,6 +17,7 @@ func _on_body_entered(body):
 
 func _on_collect_button_pressed():
 	Attributes.purdue_symbol = true;
+	SaveUtils.save();
 	queue_free();
 	
 
