@@ -22,8 +22,8 @@ func _ready():
 	get_node("CharacterBody2D/Player/CollectibleButton").visible = !Attributes.collectibleA
 	set_process_input(true)
 	get_node("Purdue_symbol").visible = !Attributes.purdue_symbol
-	if Attributes.iu_poster == true:
-		get_node("IU_Sucks_Poster").visible = false
+	get_node("IU_Sucks_Poster").visible = !Attributes.iu_poster
+	get_node("basketball").visible = !Attributes.basketball
 
 func _input(event):
 	if event is InputEventMouseMotion or event is InputEventMouseButton:

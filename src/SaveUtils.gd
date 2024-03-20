@@ -10,10 +10,15 @@ func save():
 		"xacademic" : Attributes.xacademic,
 		"yacademic" : Attributes.yacademic,
 		"location" : Attributes.location,
+		
+		# collectables
+		
 		"collectibleA" : Attributes.collectibleA,
 		"collectibleH" : Attributes.collectibleH,
 		"iu_poster" : Attributes.iu_poster,
 		"purdue_symbol" : Attributes.purdue_symbol,
+		"basketball" : Attributes.basketball,
+		
 		"hair" : Attributes.curr_hair,
 		"body" : Attributes.curr_body,
 		"eyes" : Attributes.curr_eyes,
@@ -53,10 +58,15 @@ func load(savefile: String):
 			Attributes.xacademic = line["xacademic"]
 			Attributes.yacademic = line["yacademic"]
 			Attributes.location = line["location"]
+			
+			# collectables
+			
 			Attributes.collectibleA = line["collectibleA"]
 			Attributes.collectibleH = line["collectibleH"]
 			Attributes.iu_poster = line["iu_poster"]
 			Attributes.purdue_symbol = line["purdue_symbol"]
+			Attributes.basketball = line["basketball"]
+			
 			Attributes.curr_hair = line["hair"]
 			Attributes.curr_body = line["body"]
 			Attributes.curr_eyes = line["eyes"]

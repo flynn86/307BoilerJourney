@@ -9,10 +9,15 @@ var yacademic: float = float(-1381.95544433594)
 var xPMU: float = float(3250)
 var yPMU: float = float(830)
 var location: String = "res://scenes/map/academic_map.tscn"
+
+# collectables
+
 var collectibleA: bool = false
 var collectibleH: bool = false
 var iu_poster: bool = false
 var purdue_symbol: bool = false
+var basketball: bool = false
+
 var curr_hair: int = 0
 var curr_eyes: int = 0
 var curr_body: int = 0
@@ -122,10 +127,15 @@ func reset(file: String):
 	xPMU = float(3250)
 	yPMU = (830)
 	location = "res://scenes/map/academic_map.tscn"
+	
+	# collectables
+	
 	collectibleA = false
 	collectibleH = false
 	iu_poster = false
 	purdue_symbol = false
+	basketball = false
+	
 	curr_hair = 0
 	curr_eyes = 0
 	curr_body = 0
