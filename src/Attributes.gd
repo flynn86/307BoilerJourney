@@ -29,6 +29,7 @@ var quest2_active: bool = false
 var quest2_completed: bool = false
 var quest3_active: bool = false
 var quest3_completed: bool = false
+'''
 var course1_name: String = ""
 var course2_name: String = ""
 var course3_name: String = ""
@@ -61,6 +62,51 @@ var course5_days: String = ""
 var course6_days: String = ""
 var course7_days: String = ""
 var course8_days: String = ""
+'''
+var courseNames: Dictionary = {
+	"course1_name" : "",
+	"course2_name" : "",
+	"course3_name" : "",
+	"course4_name" : "",
+	"course5_name" : "",
+	"course6_name" : "",
+	"course7_name" : "",
+	"course8_name" : ""
+}
+
+var courseTimes: Dictionary = {
+	"course1_time" : "",
+	"course2_time" : "",
+	"course3_time" : "",
+	"course4_time" : "",
+	"course5_time" : "",
+	"course6_time" : "",
+	"course7_time" : "",
+	"course8_time" : ""
+}
+
+var courseDays: Dictionary = {
+	"course1_days" : {},
+	"course2_days" : {},
+	"course3_days" : {},
+	"course4_days" : {},
+	"course5_days" : {},
+	"course6_days" : {},
+	"course7_days" : {},
+	"course8_days" : {}
+}
+var courseLocations: Dictionary = {
+	"course1_location" : "",
+	"course2_location" : "",
+	"course3_location" : "",
+	"course4_location" : "",
+	"course5_location" : "",
+	"course6_location" : "",
+	"course7_location" : "",
+	"course8_location" : ""
+}
+
+
 
 
 
@@ -95,6 +141,7 @@ func reset(file: String):
 	var quest2_completed = false
 	var quest3_active = false
 	var quest3_completed = false
+	'''
 	course1_name = ""
 	course2_name = ""
 	course3_name = ""
@@ -127,4 +174,46 @@ func reset(file: String):
 	course6_days = ""
 	course7_days = ""
 	course8_days = ""
+	'''
+	courseNames = {
+		"course1_name" : "",
+		"course2_name" : "",
+		"course3_name" : "",
+		"course4_name" : "",
+		"course5_name" : "",
+		"course6_name" : "",
+		"course7_name" : "",
+		"course8_name" : ""
+	}
+	courseTimes = {
+		"course1_time" : "",
+		"course2_time" : "",
+		"course3_time" : "",
+		"course4_time" : "",
+		"course5_time" : "",
+		"course6_time" : "",
+		"course7_time" : "",
+		"course8_time" : ""
+	}
+	courseDays = {
+		"course1_days" : "",
+		"course2_days" : "",
+		"course3_days" : "",
+		"course4_days" : "",
+		"course5_days" : "",
+		"course6_days" : "",
+		"course7_days" : "",
+		"course8_days" : ""
+	}
+	courseLocations = {
+		"course1_location" : "",
+		"course2_location" : "",
+		"course3_location" : "",
+		"course4_location" : "",
+		"course5_location" : "",
+		"course6_location" : "",
+		"course7_location" : "",
+		"course8_location" : ""
+	}
+	
 	
