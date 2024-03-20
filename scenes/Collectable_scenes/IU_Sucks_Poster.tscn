@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcegymu4uknti"]
+
+[ext_resource type="Script" path="res://scenes/Collectable_scenes/IU_Sucks_Poster.gd" id="1_jgp10"]
+[ext_resource type="Texture2D" uid="uid://6vtdbyd5di8t" path="res://scenes/Collectable_scenes/Collectables/fposter,small,wall_texture,product,750x1000.u2.jpg" id="2_rt4e0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nteqv"]
+size = Vector2(59, 66)
+
+[node name="IU_Sucks_Poster" type="Area2D"]
+z_index = -1
+script = ExtResource("1_jgp10")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -2)
+shape = SubResource("RectangleShape2D_nteqv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, -0.999985)
+scale = Vector2(0.0813335, 0.066)
+texture = ExtResource("2_rt4e0")
+
+[node name="collect_button" type="Button" parent="."]
+offset_left = -43.0
+offset_top = -74.0
+offset_right = 52.0
+offset_bottom = -43.0
+text = "Collect"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="pressed" from="collect_button" to="." method="_on_collect_button_pressed"]

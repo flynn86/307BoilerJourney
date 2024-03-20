@@ -11,6 +11,8 @@ var yPMU: float = float(830)
 var location: String = "res://scenes/map/academic_map.tscn"
 var collectibleA: bool = false
 var collectibleH: bool = false
+var iu_poster: bool = false
+var purdue_symbol: bool = false
 var curr_hair: int = 0
 var curr_eyes: int = 0
 var curr_body: int = 0
@@ -51,6 +53,16 @@ var course5_location: String = ""
 var course6_location: String = ""
 var course7_location: String = ""
 var course8_location: String = ""
+var course1_days: String = ""
+var course2_days: String = ""
+var course3_days: String = ""
+var course4_days: String = ""
+var course5_days: String = ""
+var course6_days: String = ""
+var course7_days: String = ""
+var course8_days: String = ""
+
+
 
 #var walk_right: AnimationPlayer
 
@@ -65,6 +77,8 @@ func reset(file: String):
 	location = "res://scenes/map/academic_map.tscn"
 	collectibleA = false
 	collectibleH = false
+	iu_poster = false
+	purdue_symbol = false
 	curr_hair = 0
 	curr_eyes = 0
 	curr_body = 0
@@ -105,4 +119,12 @@ func reset(file: String):
 	course6_location = ""
 	course7_location = ""
 	course8_location = ""
+	course1_days = ""
+	course2_days = ""
+	course3_days = ""
+	course4_days = ""
+	course5_days = ""
+	course6_days = ""
+	course7_days = ""
+	course8_days = ""
 	
