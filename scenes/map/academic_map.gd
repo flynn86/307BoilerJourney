@@ -136,6 +136,19 @@ func _on_loeb_fountain_body_entered(body):
 	if (body.name == "CharacterBody2D"):
 		Attributes.loeb_ftn_visited = true
 
+func _on_bell_tower_body_entered(body):
+	if (body.name == "CharacterBody2D" and Attributes.quest2_active):
+		$RingBellTower.visible = true
+
+func _on_bell_tower_body_exited(body):
+	if (body.name == "CharacterBody2D"):
+		$RingBellTower.visible = false
+
+func _on_ring_bell_tower_pressed():
+	Attributes.quest2_active = false
+	Attributes.quest2_completed = true
+	$RingBellTower.visible = false
+	$BellTowerSound.play()
 
 func _process(delta):
 	if (Attributes.quest1_active):
@@ -146,3 +159,5 @@ func _process(delta):
 
 func _on_view_schedule_pressed():
 	get_tree().change_scene_to_file("res://scenes/schedule.tscn")
+
+
