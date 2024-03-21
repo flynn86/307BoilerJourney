@@ -70,6 +70,9 @@ func _on_chat_detection_area_body_entered(body):
 func _on_chat_detection_area_body_exited(body):
 	if body.has_method("Player"):
 		player_in_chat_zone = false
+		get_node("dialogue_character_2/NinePatchRect").visible = false
+		$dialogue_character_2.d_active = false
+		_on_dialogue_character_2_dialogue_finished()
 
 
 func _on_dialogue_character_2_dialogue_finished():

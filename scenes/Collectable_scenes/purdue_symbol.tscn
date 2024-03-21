@@ -20,6 +20,7 @@ position = Vector2(3, 5)
 shape = SubResource("CircleShape2D_d7hfc")
 
 [node name="collect_button" type="Button" parent="."]
+z_index = 1
 offset_left = -40.0
 offset_top = -62.0
 offset_right = 55.0

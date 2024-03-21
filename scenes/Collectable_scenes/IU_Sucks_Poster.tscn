@@ -20,6 +20,7 @@ scale = Vector2(0.0813335, 0.066)
 texture = ExtResource("2_rt4e0")
 
 [node name="collect_button" type="Button" parent="."]
+z_index = 1
 offset_left = -43.0
 offset_top = -74.0
 offset_right = 52.0

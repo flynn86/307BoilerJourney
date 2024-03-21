@@ -50,8 +50,4 @@ func _on_club_area_entered(area_rid, area, area_shape_index, local_shape_index):
 
 func _on_games_area_entered(area):
 	$CharacterBody2D/games_popup.show()
-	
-func _on_area_exited(): 
-	$CharacterBody2D/games_popup.hide()
-	$CharacterBody2D/clubs_popup.hide()
 

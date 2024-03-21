@@ -9,10 +9,15 @@ var yacademic: float = float(-1381.95544433594)
 var xPMU: float = float(3250)
 var yPMU: float = float(830)
 var location: String = "res://scenes/map/academic_map.tscn"
+
+# collectables
+
 var collectibleA: bool = false
 var collectibleH: bool = false
 var iu_poster: bool = false
 var purdue_symbol: bool = false
+var basketball: bool = false
+
 var curr_hair: int = 0
 var curr_eyes: int = 0
 var curr_body: int = 0
@@ -29,6 +34,7 @@ var quest2_active: bool = false
 var quest2_completed: bool = false
 var quest3_active: bool = false
 var quest3_completed: bool = false
+'''
 var course1_name: String = ""
 var course2_name: String = ""
 var course3_name: String = ""
@@ -61,6 +67,52 @@ var course5_days: String = ""
 var course6_days: String = ""
 var course7_days: String = ""
 var course8_days: String = ""
+'''
+var courseNames: Dictionary = {
+	"course1_name" : "",
+	"course2_name" : "",
+	"course3_name" : "",
+	"course4_name" : "",
+	"course5_name" : "",
+	"course6_name" : "",
+	"course7_name" : "",
+	"course8_name" : ""
+}
+
+var courseTimes: Dictionary = {
+	"course1_time" : 0,
+	"course2_time" : 0,
+	"course3_time" : 0,
+	"course4_time" : 0,
+	"course5_time" : 0,
+	"course6_time" : 0,
+	"course7_time" : 0,
+	"course8_time" : 0
+}
+
+var courseDays: Dictionary = {
+	"course1_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+	"course2_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+	"course3_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+	"course4_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+	"course5_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+	"course6_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+	"course7_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+	"course8_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0}
+}
+var courseLocations: Dictionary = {
+	"course1_location" : "",
+	"course2_location" : "",
+	"course3_location" : "",
+	"course4_location" : "",
+	"course5_location" : "",
+	"course6_location" : "",
+	"course7_location" : "",
+	"course8_location" : ""
+}
+var course_num: int = 1
+
+
 
 
 
@@ -75,10 +127,15 @@ func reset(file: String):
 	xPMU = float(3250)
 	yPMU = (830)
 	location = "res://scenes/map/academic_map.tscn"
+	
+	# collectables
+	
 	collectibleA = false
 	collectibleH = false
 	iu_poster = false
 	purdue_symbol = false
+	basketball = false
+	
 	curr_hair = 0
 	curr_eyes = 0
 	curr_body = 0
@@ -89,12 +146,13 @@ func reset(file: String):
 	PMU_renter = false
 	engineering_ftn_visited = false
 	loeb_ftn_visited = false
-	var quest1_active = false
-	var quest1_completed = false
-	var quest2_active = false
-	var quest2_completed = false
-	var quest3_active = false
-	var quest3_completed = false
+	quest1_active = false
+	quest1_completed = false
+	quest2_active = false
+	quest2_completed = false
+	quest3_active = false
+	quest3_completed = false
+	'''
 	course1_name = ""
 	course2_name = ""
 	course3_name = ""
@@ -127,4 +185,47 @@ func reset(file: String):
 	course6_days = ""
 	course7_days = ""
 	course8_days = ""
+	'''
+	courseNames = {
+		"course1_name" : "",
+		"course2_name" : "",
+		"course3_name" : "",
+		"course4_name" : "",
+		"course5_name" : "",
+		"course6_name" : "",
+		"course7_name" : "",
+		"course8_name" : ""
+	}
+	courseTimes = {
+		"course1_time" : 0,
+		"course2_time" : 0,
+		"course3_time" : 0,
+		"course4_time" : 0,
+		"course5_time" : 0,
+		"course6_time" : 0,
+		"course7_time" : 0,
+		"course8_time" : 0
+	}
+	courseDays = {
+		"course1_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+		"course2_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+		"course3_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+		"course4_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+		"course5_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+		"course6_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+		"course7_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0},
+		"course8_days" : {"M" : 0, "T" : 0, "W" : 0, "R" : 0, "F" : 0}
+	}
+	courseLocations = {
+		"course1_location" : "",
+		"course2_location" : "",
+		"course3_location" : "",
+		"course4_location" : "",
+		"course5_location" : "",
+		"course6_location" : "",
+		"course7_location" : "",
+		"course8_location" : ""
+	}
+	course_num = 1
+	
 	

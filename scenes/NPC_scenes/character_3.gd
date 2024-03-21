@@ -71,6 +71,9 @@ func _on_chat_detection_area_body_entered(body):
 func _on_chat_detection_area_body_exited(body):
 	if body.to_string() == $"../../CharacterBody2D".to_string():
 		player_in_chat_zone = false
+		get_node("dialogue_character_3/NinePatchRect").visible = false
+		$dialogue_character_3.d_active = false
+		_on_dialogue_character_3_dialogue_finished()
 
 
 func _on_dialogue_character_3_dialogue_finished():

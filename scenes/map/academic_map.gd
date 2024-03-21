@@ -22,8 +22,8 @@ func _ready():
 	get_node("CharacterBody2D/Player/CollectibleButton").visible = !Attributes.collectibleA
 	set_process_input(true)
 	get_node("Purdue_symbol").visible = !Attributes.purdue_symbol
-	if Attributes.iu_poster == true:
-		get_node("IU_Sucks_Poster").visible = false
+	get_node("IU_Sucks_Poster").visible = !Attributes.iu_poster
+	get_node("basketball").visible = !Attributes.basketball
 
 func _input(event):
 	if event is InputEventMouseMotion or event is InputEventMouseButton:
@@ -136,6 +136,19 @@ func _on_loeb_fountain_body_entered(body):
 	if (body.name == "CharacterBody2D"):
 		Attributes.loeb_ftn_visited = true
 
+func _on_bell_tower_body_entered(body):
+	if (body.name == "CharacterBody2D" and Attributes.quest2_active):
+		$RingBellTower.visible = true
+
+func _on_bell_tower_body_exited(body):
+	if (body.name == "CharacterBody2D"):
+		$RingBellTower.visible = false
+
+func _on_ring_bell_tower_pressed():
+	Attributes.quest2_active = false
+	Attributes.quest2_completed = true
+	$RingBellTower.visible = false
+	$BellTowerSound.play()
 
 func _process(delta):
 	if (Attributes.quest1_active):
@@ -145,4 +158,6 @@ func _process(delta):
 
 
 func _on_view_schedule_pressed():
-	get_tree().change_scene_to_file("res://scenes/scheduling.tscn")
+	get_tree().change_scene_to_file("res://scenes/schedule.tscn")
+
+
