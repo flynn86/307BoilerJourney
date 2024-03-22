@@ -19,4 +19,10 @@ offset_right = 315.0
 offset_bottom = 614.0
 text = "Add Course"
 
+[node name="Label" type="Label" parent="."]
+offset_left = 13.0
+offset_top = 116.0
+offset_right = 1138.0
+offset_bottom = 536.0
+
 [connection signal="pressed" from="Add" to="." method="_on_add_pressed"]
