@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqkfkch17mh6o"]
+
+[ext_resource type="Script" path="res://Schedule.gd" id="1_xpkvg"]
+
+[node name="Schedule" type="Node2D"]
+script = ExtResource("1_xpkvg")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 447.0
+offset_top = 54.0
+offset_right = 694.0
+offset_bottom = 77.0
+text = "Your Weekly Scehdule"
+
+[node name="Add" type="Button" parent="."]
+offset_left = 43.0
+offset_top = 551.0
+offset_right = 315.0
+offset_bottom = 614.0
+text = "Add Course"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 13.0
+offset_top = 116.0
+offset_right = 1138.0
+offset_bottom = 536.0
+
+[connection signal="pressed" from="Add" to="." method="_on_add_pressed"]

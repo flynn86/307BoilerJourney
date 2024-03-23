@@ -146,12 +146,12 @@ func reset(file: String):
 	PMU_renter = false
 	engineering_ftn_visited = false
 	loeb_ftn_visited = false
-	var quest1_active = false
-	var quest1_completed = false
-	var quest2_active = false
-	var quest2_completed = false
-	var quest3_active = false
-	var quest3_completed = false
+	quest1_active = false
+	quest1_completed = false
+	quest2_active = false
+	quest2_completed = false
+	quest3_active = false
+	quest3_completed = false
 	'''
 	course1_name = ""
 	course2_name = ""
