@@ -37,13 +37,21 @@ func _on_host_server_button_pressed():
 	multiplayer.peer_connected.connect(add_client)
 	multiplayer.peer_disconnected.connect(remove_client)
 	add_client(multiplayer.get_unique_id())
-	setup_upnp()
+	
+	var upnp = UPNP.new()
+	var discover_status = upnp.discover()
+	assert(discover_status == UPNP.UPNP_RESULT_SUCCESS, "Discover Failed with Error %s" % discover_status)
+	assert(upnp.get_gateway() and upnp.get_gateway().is_valid_gateway(), "UPNP Invalid Gateway!")
+	var port_status = upnp.add_port_mapping(PORT)
+	assert(port_status == UPNP.UPNP_RESULT_SUCCESS, "Port Mapping Failed with Error %s" % port_status)
+	$Label3.text.set_text("Join Address: %s" % upnp.query_external_address())
 
+var player = preload("res://characters/Player.tscn")
 func add_client(id):
-	pass # Need to Implement
+	var client = player.instantiate()
+	add_child(client)
 	
 func remove_client(id):
-	pass # Need to Implement
-	
-func setup_upnp():
-	pass # Need to Implement
+	var client = get_node_or_null(str(id))
+	if client:
+		client.queue_free()

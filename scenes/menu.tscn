@@ -77,6 +77,15 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
+[node name="Label3" type="Label" parent="."]
+offset_left = 270.0
+offset_top = 584.0
+offset_right = 858.0
+offset_bottom = 620.0
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
 [connection signal="pressed" from="ViewProgressButton" to="." method="_on_view_progress_button_pressed"]
 [connection signal="pressed" from="BackToMapButton" to="." method="_on_back_to_map_button_pressed"]
 [connection signal="pressed" from="BackToMainMenuButton" to="." method="_on_back_to_main_menu_button_pressed"]
