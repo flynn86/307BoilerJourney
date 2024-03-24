@@ -1,6 +1,7 @@
 extends Node
 
 #var xp: int = 0
+var database: SQLite
 var username: String = ""
 var xhousing: float = float(256)
 var yhousing: float = float(256)

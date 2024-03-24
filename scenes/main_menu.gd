@@ -17,6 +17,15 @@ func _ready():
 			get_node("LoadGame2").visible = false
 			get_node("StartNewGame2").visible = true
 			get_node("DeleteGame2").visible = false
+	
+	Attributes.database = SQLite.new()
+	(Attributes.database).path = "res://data.db"
+	(Attributes.database).open_db()
+	var table = {
+		"username" : {"data_type":"text"},
+		"xp" : {"data_type":"int"}
+	}
+	(Attributes.database).create_table("Players", table)
 
 func _on_start_new_game_pressed():
 	Attributes.reset("res://savefiles/save1.bin")
