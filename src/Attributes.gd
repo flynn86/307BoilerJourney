@@ -11,7 +11,7 @@ var yPMU: float = float(830)
 var location: String = "res://scenes/map/academic_map.tscn"
 
 # collectables
-
+var numCollected: int = 0
 var collectibleA: bool = false
 var collectibleH: bool = false
 var iu_poster: bool = false
@@ -129,7 +129,7 @@ func reset(file: String):
 	location = "res://scenes/map/academic_map.tscn"
 	
 	# collectables
-	
+	numCollected = 0
 	collectibleA = false
 	collectibleH = false
 	iu_poster = false

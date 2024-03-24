@@ -147,6 +147,7 @@ func _on_bell_tower_body_exited(body):
 func _on_ring_bell_tower_pressed():
 	Attributes.quest2_active = false
 	Attributes.quest2_completed = true
+	print("5XP added to player")
 	$RingBellTower.visible = false
 	$BellTowerSound.play()
 
@@ -155,6 +156,7 @@ func _process(delta):
 		if (Attributes.engineering_ftn_visited == true and Attributes.loeb_ftn_visited == true):
 			Attributes.quest1_completed = true
 			Attributes.quest1_active = false
+			print("10XP added to player")
 
 
 func _on_view_schedule_pressed():

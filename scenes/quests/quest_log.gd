@@ -37,6 +37,12 @@ func _process(delta):
 	else:
 		$StartQuest3.visible = true
 		$Quest3Status.visible = false
+	
+	
+	if Attributes.quest3_active and Attributes.numCollected >= 3:
+		Attributes.quest3_active = false
+		Attributes.quest3_completed = true
+		print("15XP added to player")
 
 
 func _on_start_quest_1_pressed():

@@ -43,12 +43,13 @@ Reward: 5 XP"
 horizontal_alignment = 1
 
 [node name="QuestLabel3" type="Label" parent="."]
-offset_left = 269.0
-offset_top = 420.0
-offset_right = 651.0
-offset_bottom = 480.0
+offset_left = 274.0
+offset_top = 411.0
+offset_right = 656.0
+offset_bottom = 501.0
 theme_override_font_sizes/font_size = 20
-text = "Quest 3:  text for what quest is
+text = "Quest 3:  have collected at least 3
+collectibles
 Reward: 15 XP"
 horizontal_alignment = 1
 
