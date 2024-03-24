@@ -3,6 +3,7 @@ extends Node2D
 func _ready():
 	$CharacterBody2D.global_position = Vector2(float(Attributes.xhousing),float(Attributes.yhousing))
 	get_node("SummerVariantH").visible = false
+	get_node("CharacterBody2D/Panel").visible = false
 	get_node("FallVariantH").visible = false
 	get_node("SpringVariantH").visible = false
 	get_node("WinterVariantH").visible = false
@@ -93,3 +94,9 @@ func _process(delta):
 
 func _on_view_schedule_pressed():
 	get_tree().change_scene_to_file("res://scenes/scheduling.tscn")
+
+func _on_changes_button_pressed():
+	get_node("CharacterBody2D/Panel").visible = false
+	
+func _on_variants_pressed():
+	get_node("CharacterBody2D/Panel").visible = true

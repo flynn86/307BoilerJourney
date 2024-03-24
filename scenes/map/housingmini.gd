@@ -8,4 +8,4 @@ func _physics_process(delta):
 	var minimap_size = Vector2(1066, 1354)  
 	var player_ratio = player.global_position / tilemap_size
 	var player_minimap_position = player_ratio * minimap_size
-	camera.position = player_minimap_position + Vector2(259.32232, 655.2879)
+	camera.position = player_minimap_position + Vector2(259.32232, 700.2879)
