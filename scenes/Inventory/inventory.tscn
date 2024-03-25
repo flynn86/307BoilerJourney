@@ -52,7 +52,8 @@ text = "- Inventory Name -"
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 161
-visible_ratio = -0.0555556
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="slot_container" type="GridContainer" parent="."]
 layout_mode = 0

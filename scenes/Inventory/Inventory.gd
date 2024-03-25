@@ -11,12 +11,23 @@ var slots : Array = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	for s in slots:
+		slot_container.add_child(s)
+		
+	title.text = "- " + inventory_name + " -"
+	SignalManager.emit_signal("inventory_ready", self)
 
 
 func set_inventory_size(value):
 	size = value
+	rect_min_size.y = 40 + (ceil(size/5.0) - 1) * 22
 	
 	for s in size:
 		var new_slot = inventory_slot_res.instance()
 		slots.append(new_slot)
+		
+func add_item(item):
+	for s in slots:
+		if not s.item:
+			# add item to slot
+			return

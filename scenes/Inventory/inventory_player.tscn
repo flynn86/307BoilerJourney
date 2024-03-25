@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcxom1di6pc3o"]
+
+[ext_resource type="PackedScene" uid="uid://dgfo0uogkbetu" path="res://scenes/Inventory/inventory_container.tscn" id="1_tktvy"]
+[ext_resource type="Script" path="res://inventory_player.gd" id="2_ronbe"]
+[ext_resource type="PackedScene" uid="uid://cg0juu3d3gepy" path="res://scenes/Inventory/inventory.tscn" id="3_k0p7w"]
+
+[node name="Inventory_container" instance=ExtResource("1_tktvy")]
+script = ExtResource("2_ronbe")
+
+[node name="Inventory2" parent="Inventory_container" index="1" instance=ExtResource("3_k0p7w")]
+layout_mode = 2

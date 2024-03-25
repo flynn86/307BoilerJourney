@@ -1,8 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://bk32iig6irgup"]
-
-[ext_resource type="Texture2D" uid="uid://dl6i6p712xrdv" path="res://scenes/Inventory/tree_icon.png" id="1_mv6ii"]
-[ext_resource type="Script" path="res://scenes/Inventory/item.gd" id="2_5n6ey"]
-
-[node name="Item" type="TextureRect"]
-texture = ExtResource("1_mv6ii")
-script = ExtResource("2_5n6ey")
