@@ -1,0 +1,232 @@
+[gd_scene load_steps=21 format=3 uid="uid://cnwk7svibwils"]
+
+[ext_resource type="Texture2D" uid="uid://b2435ocsrwg86" path="res://images/Screen Shot 2024-03-25 at 12.08.42 PM.png" id="2_0wikf"]
+[ext_resource type="Script" path="res://scenes/rank_page/rank_page.gd" id="2_l2gjh"]
+[ext_resource type="Texture2D" uid="uid://b6kbsfhf22lmm" path="res://images/rounded_rect.png" id="3_06kdi"]
+[ext_resource type="Texture2D" uid="uid://c4bjeq4j1qykc" path="res://images/shield.png" id="3_bs8fq"]
+[ext_resource type="Texture2D" uid="uid://ctv7d55ycgr1h" path="res://images/wing.png" id="4_th8fe"]
+[ext_resource type="Texture2D" uid="uid://dvfgsj4avq3v" path="res://images/wing_l.png" id="5_4a0lw"]
+
+[sub_resource type="Curve" id="Curve_j7ihc"]
+_data = [Vector2(0.354749, 0.827078), 0.0, 0.0, 0, 0, Vector2(0.634078, 0.376247), 0.0, 0.0, 0, 0, Vector2(0.969274, 0.836342), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_w2y73"]
+curve = SubResource("Curve_j7ihc")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_guv0q"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(568, 400, 1)
+angle_min = -300.0
+angle_max = 300.0
+gravity = Vector3(0, -15, 0)
+scale_min = 0.01
+scale_max = 0.1
+scale_curve = SubResource("CurveTexture_w2y73")
+
+[sub_resource type="Gradient" id="Gradient_set7s"]
+offsets = PackedFloat32Array(0.0516963, 0.53958, 1)
+colors = PackedColorArray(1, 1, 1, 0.698039, 1, 1, 1, 0.576471, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2ynlt"]
+gradient = SubResource("Gradient_set7s")
+
+[sub_resource type="Curve" id="Curve_klco6"]
+_data = [Vector2(0, 0.650171), 0.0, 0.0, 0, 0, Vector2(0.810931, 0.870307), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_rkjya"]
+curve = SubResource("Curve_klco6")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wbhw7"]
+particle_flag_disable_z = true
+spread = 0.0
+flatness = 0.155
+initial_velocity_min = 65.0
+initial_velocity_max = 65.0
+gravity = Vector3(0, -23, 0)
+damping_min = 50.0
+damping_max = 50.0
+scale_min = 0.7
+scale_max = 0.7
+scale_curve = SubResource("CurveTexture_rkjya")
+color_ramp = SubResource("GradientTexture1D_2ynlt")
+
+[sub_resource type="Gradient" id="Gradient_78x0x"]
+offsets = PackedFloat32Array(0.0516963, 0.53958, 1)
+colors = PackedColorArray(1, 1, 1, 0.698039, 1, 1, 1, 0.576471, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_k7y48"]
+gradient = SubResource("Gradient_78x0x")
+
+[sub_resource type="Curve" id="Curve_ici6x"]
+_data = [Vector2(0, 0.650171), 0.0, 0.0, 0, 0, Vector2(0.810931, 0.870307), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_32uhe"]
+curve = SubResource("Curve_ici6x")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_daw3j"]
+particle_flag_disable_z = true
+direction = Vector3(-1, 0, 0)
+spread = 0.0
+flatness = 0.155
+initial_velocity_min = 65.0
+initial_velocity_max = 65.0
+gravity = Vector3(0, -23, 0)
+damping_min = 50.0
+damping_max = 50.0
+scale_min = 0.7
+scale_max = 0.7
+scale_curve = SubResource("CurveTexture_32uhe")
+color_ramp = SubResource("GradientTexture1D_k7y48")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i251n"]
+bg_color = Color(0.709804, 0.65098, 0, 1)
+
+[node name="Panel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_l2gjh")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.001
+anchor_bottom = 1.003
+offset_right = -0.1521
+offset_bottom = 0.0410156
+texture = ExtResource("2_0wikf")
+
+[node name="back" type="GPUParticles2D" parent="."]
+position = Vector2(568, 273)
+amount = 31
+process_material = SubResource("ParticleProcessMaterial_guv0q")
+texture = ExtResource("3_06kdi")
+lifetime = 4.5
+
+[node name="wing" type="GPUParticles2D" parent="."]
+position = Vector2(700, 280)
+amount = 1
+sub_emitter = NodePath("../wing2")
+process_material = SubResource("ParticleProcessMaterial_wbhw7")
+texture = ExtResource("4_th8fe")
+lifetime = 1.6
+
+[node name="wing2" type="GPUParticles2D" parent="."]
+position = Vector2(442, 288)
+amount = 1
+process_material = SubResource("ParticleProcessMaterial_daw3j")
+texture = ExtResource("5_4a0lw")
+lifetime = 1.6
+
+[node name="pivot" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.538
+anchor_top = 0.758
+anchor_right = 0.538
+anchor_bottom = 0.758
+offset_left = -68.7761
+offset_top = -241.974
+offset_right = -28.7761
+offset_bottom = -201.974
+
+[node name="Shield" type="TextureRect" parent="pivot"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -130.5
+offset_right = 190.0
+offset_bottom = 130.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_bs8fq")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="wing1" type="TextureRect" parent="pivot/Shield"]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 58.5
+offset_right = 407.0
+offset_bottom = 222.5
+texture = ExtResource("4_th8fe")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="wing2" type="TextureRect" parent="pivot/Shield"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -28.0
+offset_top = 56.5
+offset_right = 114.0
+offset_bottom = 220.5
+texture = ExtResource("5_4a0lw")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="pivot/Shield"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.321
+anchor_top = 0.5
+anchor_right = 0.676
+anchor_bottom = 0.605
+offset_left = -5.97988
+offset_top = -9.0
+offset_right = 4.12012
+offset_bottom = 5.595
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Freshman"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.312
+anchor_top = 0.052
+anchor_right = 0.689
+anchor_bottom = 0.141
+offset_left = -0.424011
+offset_top = 3.044
+offset_right = 0.271973
+offset_bottom = -0.072998
+theme_override_font_sizes/font_size = 40
+text = "Your Current Rank is: "
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 326.0
+offset_top = 557.0
+offset_right = 829.0
+offset_bottom = 592.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_i251n")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 332.0
+offset_top = 517.0
+offset_right = 521.0
+offset_bottom = 546.0
+text = "Remaining Xp until Next Rank: 100 XP"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 23.0
+offset_right = 131.0
+offset_bottom = 56.0
+text = "Close"
+
+[connection signal="pressed" from="Button" to="." method="_on_close_button_pressed"]

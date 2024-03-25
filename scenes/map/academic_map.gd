@@ -158,9 +158,13 @@ func _process(delta):
 			Attributes.quest1_active = false
 
 func _on_view_schedule_pressed():
+	Attributes.xacademic = $CharacterBody2D.global_position.x
+	Attributes.yacademic = $CharacterBody2D.global_position.y
 	get_tree().change_scene_to_file("res://scenes/schedule.tscn")
 
 func _on_inventory_pressed():
+	Attributes.xacademic = $CharacterBody2D.global_position.x
+	Attributes.yacademic = $CharacterBody2D.global_position.y
 	get_tree().change_scene_to_file("res://scenes/Inventory/player_inventory.tscn")
 	
 func _on_close_variants_button_pressed():
@@ -168,3 +172,8 @@ func _on_close_variants_button_pressed():
 	
 func _on_variants_pressed():
 	get_node("CharacterBody2D/Panel").visible = true
+
+func _on_rank_pressed():
+	Attributes.xacademic = $CharacterBody2D.global_position.x
+	Attributes.yacademic = $CharacterBody2D.global_position.y
+	get_tree().change_scene_to_file("res://scenes/rank_page/rank_page.tscn")
