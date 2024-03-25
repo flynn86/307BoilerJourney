@@ -7,7 +7,6 @@ func _ready():
 	get_node("FallVariantA").visible = false
 	get_node("SpringVariantA").visible = false
 	get_node("WinterVariantA").visible = false
-	get_node("CharacterBody2D/Panel").visible = false
 	if (Attributes.season == "Summer"):
 		get_node("SummerVariantA").visible = true
 	elif (Attributes.season == "Fall"):
@@ -148,7 +147,6 @@ func _on_bell_tower_body_exited(body):
 func _on_ring_bell_tower_pressed():
 	Attributes.quest2_active = false
 	Attributes.quest2_completed = true
-	print("5XP added to player")
 	$RingBellTower.visible = false
 	$BellTowerSound.play()
 
@@ -157,14 +155,11 @@ func _process(delta):
 		if (Attributes.engineering_ftn_visited == true and Attributes.loeb_ftn_visited == true):
 			Attributes.quest1_completed = true
 			Attributes.quest1_active = false
-			print("10XP added to player")
 
 
 func _on_view_schedule_pressed():
 	get_tree().change_scene_to_file("res://scenes/schedule.tscn")
-
-func _on_variants_close_button_pressed():
-	get_node("CharacterBody2D/Panel").visible = false
 	
-func _on_variants_pressed():
-	get_node("CharacterBody2D/Panel").visible = true
+
+func _on_inventory_pressed():
+	get_tree().change_scene_to_file("res://scenes/Inventory/player_inventory.tscn")

@@ -1,11 +1,10 @@
 class_name Item extends TextureRect
 
+var id : String
+var item_name : String
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func pick_item():
+	mouse_filter = Control.MOUSE_FILTER_IGNORE
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func put_item():
+	mouse_filter = Control.MOUSE_FILTER_PASS

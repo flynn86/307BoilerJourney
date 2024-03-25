@@ -1,12 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cg0juu3d3gepy"]
+[gd_scene load_steps=6 format=3 uid="uid://cg0juu3d3gepy"]
 
 [ext_resource type="Script" path="res://scenes/Inventory/Inventory.gd" id="2_q6cde"]
 [ext_resource type="FontFile" uid="uid://cmmr8t0m2myle" path="res://scenes/Inventory/Arcadepix Plus.ttf" id="3_01im4"]
+[ext_resource type="Texture2D" uid="uid://cemha5100kjtj" path="res://scenes/Inventory/item_slot.png" id="5_7djee"]
 [ext_resource type="Texture2D" uid="uid://dqcdg4wxms527" path="res://scenes/Inventory/inner_panel.png" id="8_6lvgn"]
 [ext_resource type="Texture2D" uid="uid://dwuoauebb1w68" path="res://scenes/Inventory/bar.png" id="9_2xcfv"]
 
 [node name="Inventory" type="NinePatchRect"]
-custom_minimum_size = Vector2(0, 45)
+custom_minimum_size = Vector2(0, 100)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -29,10 +30,15 @@ anchor_left = 0.340741
 anchor_top = 0.25
 anchor_right = 0.688889
 anchor_bottom = 0.3
+offset_left = -3.43323e-05
+offset_top = -11.0
+offset_right = -3.05176e-05
+offset_bottom = -15.0
 texture = ExtResource("9_2xcfv")
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="TextureRect"]
+[node name="title" type="Label" parent="TextureRect"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -48,11 +54,11 @@ theme_override_colors/font_outline_color = Color(0.925353, 0.925353, 0.925353, 1
 theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("3_01im4")
 theme_override_font_sizes/font_size = 18
-text = "- Inventory Name -"
+text = "- Collectibles -"
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 161
-visible_ratio = -0.0555556
+visible_ratio = -0.0625
 
 [node name="slot_container" type="GridContainer" parent="."]
 layout_mode = 0
@@ -63,3 +69,63 @@ offset_bottom = 38.0
 theme_override_constants/h_separation = 6
 theme_override_constants/v_separation = 6
 columns = 5
+
+[node name="slot1" type="TextureRect" parent="slot_container"]
+layout_mode = 2
+texture = ExtResource("5_7djee")
+
+[node name="slot2" type="TextureRect" parent="slot_container"]
+layout_mode = 2
+texture = ExtResource("5_7djee")
+
+[node name="slot3" type="TextureRect" parent="slot_container"]
+layout_mode = 2
+texture = ExtResource("5_7djee")
+
+[node name="slot4" type="TextureRect" parent="slot_container"]
+layout_mode = 2
+texture = ExtResource("5_7djee")
+
+[node name="slot5" type="TextureRect" parent="slot_container"]
+layout_mode = 2
+texture = ExtResource("5_7djee")
+
+[node name="slot6" type="TextureRect" parent="slot_container"]
+layout_mode = 2
+texture = ExtResource("5_7djee")
+
+[node name="slot7" type="TextureRect" parent="slot_container"]
+layout_mode = 2
+texture = ExtResource("5_7djee")
+
+[node name="slot8" type="TextureRect" parent="slot_container"]
+layout_mode = 2
+texture = ExtResource("5_7djee")
+
+[node name="slot9" type="TextureRect" parent="slot_container"]
+layout_mode = 2
+texture = ExtResource("5_7djee")
+
+[node name="slot10" type="TextureRect" parent="slot_container"]
+layout_mode = 2
+texture = ExtResource("5_7djee")
+
+[node name="slot11" type="TextureRect" parent="slot_container"]
+layout_mode = 2
+texture = ExtResource("5_7djee")
+
+[node name="slot12" type="TextureRect" parent="slot_container"]
+layout_mode = 2
+texture = ExtResource("5_7djee")
+
+[node name="slot13" type="TextureRect" parent="slot_container"]
+layout_mode = 2
+texture = ExtResource("5_7djee")
+
+[node name="slot14" type="TextureRect" parent="slot_container"]
+layout_mode = 2
+texture = ExtResource("5_7djee")
+
+[node name="slot15" type="TextureRect" parent="slot_container"]
+layout_mode = 2
+texture = ExtResource("5_7djee")

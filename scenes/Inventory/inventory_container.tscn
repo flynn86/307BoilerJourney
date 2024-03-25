@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dgfo0uogkbetu"]
+[gd_scene load_steps=10 format=3 uid="uid://dgfo0uogkbetu"]
 
 [ext_resource type="Texture2D" uid="uid://belmqpu4axgsw" path="res://scenes/Inventory/main panel.png" id="1_tqo37"]
+[ext_resource type="Script" path="res://scenes/Inventory/Inventory_container.gd" id="2_j4fpj"]
 [ext_resource type="Texture2D" uid="uid://ch0e8qbbj0lvj" path="res://scenes/Inventory/title.png" id="2_vcglf"]
 [ext_resource type="FontFile" uid="uid://cmmr8t0m2myle" path="res://scenes/Inventory/Arcadepix Plus.ttf" id="3_ocwf2"]
 [ext_resource type="Texture2D" uid="uid://ba82ekbvbcuqh" path="res://scenes/Inventory/x_normal.png" id="4_ea7bw"]
@@ -17,8 +18,8 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -79.0
 offset_top = -49.0
-offset_right = 79.0
-offset_bottom = 16.0
+offset_right = 73.0
+offset_bottom = 71.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
@@ -29,6 +30,7 @@ patch_margin_right = 9
 patch_margin_bottom = 9
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
+script = ExtResource("2_j4fpj")
 
 [node name="Title" type="NinePatchRect" parent="."]
 layout_mode = 1
@@ -62,7 +64,7 @@ text = "Inventory
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="close" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -79,8 +81,10 @@ texture_disabled = ExtResource("7_7qxsg")
 layout_mode = 0
 offset_left = 9.0
 offset_top = 10.0
-offset_right = 149.0
-offset_bottom = 55.0
+offset_right = 143.0
+offset_bottom = 110.0
 
 [node name="Inventory" parent="Inventory_container" instance=ExtResource("8_63ko1")]
 layout_mode = 2
+
+[connection signal="pressed" from="close" to="." method="_on_close_pressed"]

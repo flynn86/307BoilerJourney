@@ -1,0 +1,91 @@
+[gd_scene load_steps=10 format=3 uid="uid://cc565weox2i2y"]
+
+[ext_resource type="Texture2D" uid="uid://belmqpu4axgsw" path="res://scenes/Inventory/main panel.png" id="1_lr7od"]
+[ext_resource type="Script" path="res://scenes/Inventory/Inventory_container.gd" id="2_rj2ma"]
+[ext_resource type="Texture2D" uid="uid://ch0e8qbbj0lvj" path="res://scenes/Inventory/title.png" id="3_xg6qk"]
+[ext_resource type="FontFile" uid="uid://cmmr8t0m2myle" path="res://scenes/Inventory/Arcadepix Plus.ttf" id="4_82p0w"]
+[ext_resource type="Texture2D" uid="uid://ba82ekbvbcuqh" path="res://scenes/Inventory/x_normal.png" id="5_8vkhs"]
+[ext_resource type="Texture2D" uid="uid://7b2yukw2qdog" path="res://scenes/Inventory/x_pressed.png" id="6_dvlk2"]
+[ext_resource type="Texture2D" uid="uid://bvvstqfshpv5t" path="res://scenes/Inventory/x_hover.png" id="7_gth37"]
+[ext_resource type="Texture2D" uid="uid://jh1k163wr5jb" path="res://scenes/Inventory/x_disabled.png" id="8_a4mao"]
+[ext_resource type="PackedScene" uid="uid://cg0juu3d3gepy" path="res://scenes/Inventory/inventory.tscn" id="9_gin48"]
+
+[node name="Inventory_container" type="NinePatchRect"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -376.0
+offset_top = -270.0
+offset_right = -224.0
+offset_bottom = -150.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5, 5)
+size_flags_vertical = 4
+texture = ExtResource("1_lr7od")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("2_rj2ma")
+
+[node name="Title" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -44.0
+offset_top = -13.0
+offset_right = 46.0
+offset_bottom = 7.0
+grow_horizontal = 2
+texture = ExtResource("3_xg6qk")
+patch_margin_left = 8
+patch_margin_top = 6
+patch_margin_right = 8
+patch_margin_bottom = 2
+
+[node name="Label" type="Label" parent="Title"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.677966
+anchor_bottom = 1.53333
+offset_left = 3.0
+offset_top = -1.0
+offset_right = 30.4068
+offset_bottom = -5.73333
+theme_override_colors/font_color = Color(0.301961, 0.34902, 0.4, 1)
+theme_override_fonts/font = ExtResource("4_82p0w")
+text = "Inventory
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="close" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -9.0
+offset_bottom = 9.0
+grow_horizontal = 0
+texture_normal = ExtResource("5_8vkhs")
+texture_pressed = ExtResource("6_dvlk2")
+texture_hover = ExtResource("7_gth37")
+texture_disabled = ExtResource("8_a4mao")
+
+[node name="Inventory_container" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 10.0
+offset_right = 142.0
+offset_bottom = 110.0
+
+[node name="Inventory" parent="Inventory_container" instance=ExtResource("9_gin48")]
+layout_mode = 2
+
+[connection signal="pressed" from="close" to="." method="_on_close_pressed"]
