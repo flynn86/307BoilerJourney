@@ -7,6 +7,7 @@ func _ready():
 	get_node("FallVariantA").visible = false
 	get_node("SpringVariantA").visible = false
 	get_node("WinterVariantA").visible = false
+	get_node("CharacterBody2D/Panel").visible = false
 	if (Attributes.season == "Summer"):
 		get_node("SummerVariantA").visible = true
 	elif (Attributes.season == "Fall"):
@@ -156,10 +157,14 @@ func _process(delta):
 			Attributes.quest1_completed = true
 			Attributes.quest1_active = false
 
-
 func _on_view_schedule_pressed():
 	get_tree().change_scene_to_file("res://scenes/schedule.tscn")
-	
 
 func _on_inventory_pressed():
 	get_tree().change_scene_to_file("res://scenes/Inventory/player_inventory.tscn")
+	
+func _on_close_variants_button_pressed():
+	get_node("CharacterBody2D/Panel").visible = false
+	
+func _on_variants_pressed():
+	get_node("CharacterBody2D/Panel").visible = true
