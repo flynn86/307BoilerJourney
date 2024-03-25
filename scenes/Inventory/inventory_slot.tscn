@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bf8xjyohll501"]
 
 [ext_resource type="Texture2D" uid="uid://cemha5100kjtj" path="res://scenes/Inventory/item_slot.png" id="1_fcmlr"]
-[ext_resource type="PackedScene" uid="uid://bk32iig6irgup" path="res://items/data/tree.tscn" id="2_pae43"]
+[ext_resource type="PackedScene" uid="uid://bk32iig6irgup" path="res://scenes/Inventory/item.tscn" id="2_e7bpn"]
 
 [node name="inventory_slot" type="TextureRect"]
 texture = ExtResource("1_fcmlr")
@@ -16,7 +16,6 @@ offset_left = -8.0
 offset_right = 8.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
 
-[node name="Item" parent="CenterContainer" instance=ExtResource("2_pae43")]
+[node name="Item" parent="CenterContainer" instance=ExtResource("2_e7bpn")]
 layout_mode = 2

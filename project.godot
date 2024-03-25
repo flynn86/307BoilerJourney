@@ -19,8 +19,6 @@ config/icon="res://icon.svg"
 
 SaveUtils="*res://src/SaveUtils.gd"
 Attributes="*res://src/Attributes.gd"
-SignalManager="*res://managers/signal_manager.gd"
-ItemManager="*res://scenes/managers/item_manager.gd"
 
 [display]
 
