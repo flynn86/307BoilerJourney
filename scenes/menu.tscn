@@ -86,6 +86,13 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
+[node name="GlobalChatButton" type="Button" parent="."]
+offset_left = 49.0
+offset_top = 280.0
+offset_right = 283.0
+offset_bottom = 395.0
+text = "Global Chat"
+
 [connection signal="pressed" from="ViewProgressButton" to="." method="_on_view_progress_button_pressed"]
 [connection signal="pressed" from="BackToMapButton" to="." method="_on_back_to_map_button_pressed"]
 [connection signal="pressed" from="BackToMainMenuButton" to="." method="_on_back_to_main_menu_button_pressed"]
@@ -93,3 +100,4 @@ autowrap_mode = 2
 [connection signal="pressed" from="HostServerButton" to="." method="_on_host_server_button_pressed"]
 [connection signal="pressed" from="JoinServerButton" to="." method="_on_join_server_button_pressed"]
 [connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="pressed" from="GlobalChatButton" to="." method="_on_global_chat_button_pressed"]

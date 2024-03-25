@@ -26,6 +26,12 @@ func _ready():
 		"xp" : {"data_type":"int"}
 	}
 	(Attributes.database).create_table("Players", table)
+	table = {
+		"username" : {"data_type":"text"},
+		"message" : {"data_type":"text"},
+		"time_date" : {"data_type":"text"}
+	}
+	(Attributes.database).create_table("GlobalChat", table)
 
 func _on_start_new_game_pressed():
 	Attributes.reset("res://savefiles/save1.bin")

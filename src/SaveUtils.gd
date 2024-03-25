@@ -92,3 +92,5 @@ func load(savefile: String):
 func delete(savefile: String):
 	if FileAccess.file_exists(savefile):
 		FileAccess.open(savefile, FileAccess.WRITE)
+		
+
