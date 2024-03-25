@@ -14,7 +14,7 @@ func _on_send_message_pressed():
 		"username" = Attributes.username,
 		"message" = $LineEdit.text,
 		"date" = str(timedate.month) + "-" + str(timedate.day) + "-" + str(timedate.year),
-		"time" = str(timedate.hour) + ":" + str(timedate.minute) + ":" + str(timedate.second)
+		"time" = "%02d:%02d:%02d" % [timedate.hour, timedate.minute, timedate.second]
 	}
 	(Attributes.database).insert_row("GlobalChat", data)
 	_ready()
