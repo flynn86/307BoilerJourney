@@ -29,7 +29,8 @@ func _ready():
 	table = {
 		"username" : {"data_type":"text"},
 		"message" : {"data_type":"text"},
-		"time_date" : {"data_type":"text"}
+		"time" : {"data_type":"text"},
+		"date" : {"data_type":"text"}
 	}
 	(Attributes.database).create_table("GlobalChat", table)
 
