@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cg0juu3d3gepy"]
+[gd_scene load_steps=7 format=3 uid="uid://cg0juu3d3gepy"]
 
 [ext_resource type="Script" path="res://scenes/Inventory/Inventory.gd" id="2_q6cde"]
 [ext_resource type="FontFile" uid="uid://cmmr8t0m2myle" path="res://scenes/Inventory/Arcadepix Plus.ttf" id="3_01im4"]
 [ext_resource type="Texture2D" uid="uid://cemha5100kjtj" path="res://scenes/Inventory/item_slot.png" id="5_7djee"]
+[ext_resource type="Texture2D" uid="uid://c8xx1ayvq0g65" path="res://scenes/Collectable_scenes/Pixel-Art-Basketball-2-1015x1024 (1) (1).png" id="6_kot08"]
 [ext_resource type="Texture2D" uid="uid://dqcdg4wxms527" path="res://scenes/Inventory/inner_panel.png" id="8_6lvgn"]
 [ext_resource type="Texture2D" uid="uid://dwuoauebb1w68" path="res://scenes/Inventory/bar.png" id="9_2xcfv"]
 
@@ -73,6 +74,15 @@ columns = 5
 [node name="slot1" type="TextureRect" parent="slot_container"]
 layout_mode = 2
 texture = ExtResource("5_7djee")
+
+[node name="TextureRect" type="TextureButton" parent="slot_container/slot1"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 22.0
+offset_bottom = 21.0
+texture_normal = ExtResource("6_kot08")
 
 [node name="slot2" type="TextureRect" parent="slot_container"]
 layout_mode = 2

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://di3xoup64at7w"]
 
-[ext_resource type="Texture2D" uid="uid://da5vem7buy26v" path="res://scenes/Collectable_scenes/Collectables/Pixel-Art-Basketball-2-1015x1024.png" id="1_67dku"]
+[ext_resource type="Texture2D" uid="uid://cw1p6nt815vk" path="res://scenes/Collectable_scenes/Collectables/Pixel-Art-Basketball-2-1015x1024.png" id="1_67dku"]
 [ext_resource type="Script" path="res://scenes/Collectable_scenes/basketball.gd" id="1_uodrc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kdd5l"]

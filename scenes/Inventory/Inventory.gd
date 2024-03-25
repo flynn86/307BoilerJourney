@@ -9,7 +9,7 @@ func _ready():
 #@export var size : int = 0 : set = set_inventory_size
 #@onready var title = get_node("title")
 
-#var slots : Array = []
+var slots : Array = []
 
 # Called when the node enters the scene tree for the first time.
 #func _ready():
@@ -29,8 +29,8 @@ func _ready():
 		#var new_slot = inventory_slot_res.instance()
 		#slots.append(new_slot)
 		
-#func add_item(item):
-	#for s in slots:
-		#if not s.item:
-			# add item to slot
-			#return
+func add_item(item):
+	for s in slots:
+		if not s.item:
+			$slotcontainer/slot1/TextureRect.visible = true
+			return
