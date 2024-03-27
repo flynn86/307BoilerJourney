@@ -27,6 +27,7 @@ func _ready():
 	#	enet.poll()
 
 #const PORT = 9999
+
 @onready var address_entry = $LineEdit
 #var enet = ENetMultiplayerPeer.new()
 #var serverOn : bool = false;
@@ -95,6 +96,7 @@ func _on_host_server_button_pressed():
 	(Attributes.database).drop_table("%s_Chat" % Attributes.serverName)
 	(Attributes.database).create_table("%s_Chat" % Attributes.serverName, table)
 	SaveUtils.save()
+
 
 #var player = preload("res://characters/Player.tscn")
 #func add_client(id):

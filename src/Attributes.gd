@@ -1,5 +1,6 @@
 extends Node
 
+#var xp: int = 0
 var database: SQLite
 var username: String = ""
 var xhousing: float = float(256)
@@ -18,9 +19,16 @@ var serverName: String = ""
 var numCollected: int = 0
 var collectibleA: bool = false
 var collectibleH: bool = false
-var iu_poster: bool = false
-var purdue_symbol: bool = false
+var angry_pete: bool = false
 var basketball: bool = false
+var bell_tower: bool = false
+var boilermaker_train: bool = false
+var go_boilers: bool = false
+var iu_poster: bool = false
+var purdue_cap: bool = false
+var purdue_helmet: bool = false
+var purdue_symbol: bool = false
+
 
 var curr_hair: int = 0
 var curr_eyes: int = 0
@@ -116,6 +124,13 @@ var courseLocations: Dictionary = {
 }
 var course_num: int = 1
 
+# Inventory
+var items : Array = []
+
+# Daily Question
+var question_available : bool = true
+var last_daily_question_time : Dictionary = {}
+
 
 
 
@@ -140,9 +155,17 @@ func reset(file: String):
 	numCollected = 0
 	collectibleA = false
 	collectibleH = false
-	iu_poster = false
-	purdue_symbol = false
+	angry_pete = false
 	basketball = false
+	bell_tower = false
+	boilermaker_train = false
+	go_boilers = false
+	iu_poster = false
+	purdue_cap = false
+	purdue_helmet = false
+	purdue_symbol = false
+	
+	
 	
 	curr_hair = 0
 	curr_eyes = 0
@@ -235,5 +258,5 @@ func reset(file: String):
 		"course8_location" : ""
 	}
 	course_num = 1
-	
+	items.clear()
 	

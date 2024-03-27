@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dcegymu4uknti"]
 
 [ext_resource type="Script" path="res://scenes/Collectable_scenes/IU_Sucks_Poster.gd" id="1_jgp10"]
-[ext_resource type="Texture2D" uid="uid://6vtdbyd5di8t" path="res://scenes/Collectable_scenes/Collectables/fposter,small,wall_texture,product,750x1000.u2.jpg" id="2_rt4e0"]
+[ext_resource type="Texture2D" uid="uid://b0ye158257rcn" path="res://scenes/Collectable_scenes/Collectables/fposter,small,wall_texture,product,750x1000.u2.jpg" id="2_rt4e0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nteqv"]
 size = Vector2(59, 66)

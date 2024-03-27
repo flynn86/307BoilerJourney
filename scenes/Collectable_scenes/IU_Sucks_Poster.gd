@@ -10,7 +10,6 @@ func _ready():
 
 
 func _on_body_entered(body):
-	print(body);
 	if body.name == "CharacterBody2D":
 		get_node("collect_button").visible = true;
 		SaveUtils.save()
@@ -20,12 +19,12 @@ func _on_body_entered(body):
 func _on_collect_button_pressed():
 	Attributes.iu_poster = true;
 	Attributes.numCollected += 1;
+	Attributes.items.append(ItemManager.Items.IU_SUCKS_POSTER)
 	queue_free();
 	SaveUtils.save()
 	
 
 
 func _on_body_exited(body):
-	print(body);
 	if body.name == "CharacterBody2D":
 		get_node("collect_button").visible = false;

@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://btjdwfj1s0wbf"]
+
+[ext_resource type="Script" path="res://scenes/Collectable_scenes/purdue_cap.gd" id="1_kx44c"]
+[ext_resource type="Texture2D" uid="uid://cfbiwcykt44v3" path="res://scenes/Collectable_scenes/Collectables/collectables 2.jpeg" id="2_v8rh4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kdd5l"]
+radius = 24.0
+
+[node name="purdue_cap" type="Area2D"]
+script = ExtResource("1_kx44c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1, -1)
+scale = Vector2(0.685145, 0.393707)
+texture = ExtResource("2_v8rh4")
+hframes = 9
+vframes = 5
+frame = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_kdd5l")
+
+[node name="collect_button" type="Button" parent="."]
+z_index = 1
+offset_left = -46.0
+offset_top = -73.0
+offset_right = 49.0
+offset_bottom = -42.0
+text = "Collect"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="pressed" from="collect_button" to="." method="_on_collect_button_pressed"]

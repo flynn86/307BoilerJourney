@@ -15,11 +15,19 @@ func save():
 		"serverName" : Attributes.serverName,
 		
 		# collectables
+		
 		"collectibleA" : Attributes.collectibleA,
 		"collectibleH" : Attributes.collectibleH,
-		"iu_poster" : Attributes.iu_poster,
-		"purdue_symbol" : Attributes.purdue_symbol,
+		"angry_pete" : Attributes.angry_pete,
 		"basketball" : Attributes.basketball,
+		"bell_tower" : Attributes.bell_tower,
+		"boilermaker_train" : Attributes.boilermaker_train,
+		"go_boilers" : Attributes.go_boilers,
+		"iu_poster" : Attributes.iu_poster,
+		"purdue_cap" : Attributes.purdue_cap,
+		"purdue_helmet" : Attributes.purdue_helmet,
+		"purdue_symbol" : Attributes.purdue_symbol,
+		
 		
 		"hair" : Attributes.curr_hair,
 		"body" : Attributes.curr_body,
@@ -68,9 +76,16 @@ func load(savefile: String):
 			
 			Attributes.collectibleA = line["collectibleA"]
 			Attributes.collectibleH = line["collectibleH"]
-			Attributes.iu_poster = line["iu_poster"]
-			Attributes.purdue_symbol = line["purdue_symbol"]
+			Attributes.angry_pete = line["angry_pete"]
 			Attributes.basketball = line["basketball"]
+			Attributes.bell_tower = line["bell_tower"]
+			Attributes.boilermaker_train = line["boilermaker_train"]
+			Attributes.go_boilers = line["go_boilers"]
+			Attributes.iu_poster = line["iu_poster"]
+			Attributes.purdue_cap = line["purdue_cap"]
+			Attributes.purdue_helmet = line["purdue_helmet"]
+			Attributes.purdue_symbol = line["purdue_symbol"]
+			
 			
 			Attributes.curr_hair = line["hair"]
 			Attributes.curr_body = line["body"]

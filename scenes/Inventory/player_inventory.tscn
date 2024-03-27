@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cc565weox2i2y"]
+[gd_scene load_steps=12 format=3 uid="uid://cc565weox2i2y"]
 
 [ext_resource type="Texture2D" uid="uid://belmqpu4axgsw" path="res://scenes/Inventory/main panel.png" id="1_lr7od"]
 [ext_resource type="Script" path="res://scenes/Inventory/Inventory_container.gd" id="2_rj2ma"]
@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://7b2yukw2qdog" path="res://scenes/Inventory/x_pressed.png" id="6_dvlk2"]
 [ext_resource type="Texture2D" uid="uid://bvvstqfshpv5t" path="res://scenes/Inventory/x_hover.png" id="7_gth37"]
 [ext_resource type="Texture2D" uid="uid://jh1k163wr5jb" path="res://scenes/Inventory/x_disabled.png" id="8_a4mao"]
-[ext_resource type="PackedScene" uid="uid://cg0juu3d3gepy" path="res://scenes/Inventory/inventory.tscn" id="9_gin48"]
+[ext_resource type="Texture2D" uid="uid://dqcdg4wxms527" path="res://scenes/Inventory/inner_panel.png" id="9_lfcf2"]
+[ext_resource type="Texture2D" uid="uid://dwuoauebb1w68" path="res://scenes/Inventory/bar.png" id="10_b6qp6"]
+[ext_resource type="Texture2D" uid="uid://cemha5100kjtj" path="res://scenes/Inventory/item_slot.png" id="11_hrwvj"]
 
 [node name="Inventory_container" type="NinePatchRect"]
 anchors_preset = 8
@@ -33,7 +35,7 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 script = ExtResource("2_rj2ma")
 
-[node name="Title" type="NinePatchRect" parent="."]
+[node name="main_title" type="NinePatchRect" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -49,7 +51,7 @@ patch_margin_top = 6
 patch_margin_right = 8
 patch_margin_bottom = 2
 
-[node name="Label" type="Label" parent="Title"]
+[node name="main_title_label" type="Label" parent="main_title"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.677966
@@ -85,7 +87,363 @@ offset_top = 10.0
 offset_right = 142.0
 offset_bottom = 110.0
 
-[node name="Inventory" parent="Inventory_container" instance=ExtResource("9_gin48")]
+[node name="inventory_patch" type="NinePatchRect" parent="Inventory_container"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
+texture = ExtResource("9_lfcf2")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="title_header" type="TextureRect" parent="Inventory_container/inventory_patch"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.340741
+anchor_top = 0.25
+anchor_right = 0.688889
+anchor_bottom = 0.3
+offset_left = -3.43323e-05
+offset_top = -11.0
+offset_right = -3.05176e-05
+offset_bottom = -15.0
+texture = ExtResource("10_b6qp6")
+metadata/_edit_use_anchors_ = true
+
+[node name="title" type="Label" parent="Inventory_container/inventory_patch/title_header"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.5001
+offset_top = -8.25
+offset_right = 106.5
+offset_bottom = 6.75
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.423529, 0.247059, 0.121569, 1)
+theme_override_colors/font_outline_color = Color(0.925353, 0.925353, 0.925353, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("4_82p0w")
+theme_override_font_sizes/font_size = 18
+text = "- Collectibles -"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 161
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="slot_container" type="GridContainer" parent="Inventory_container/inventory_patch"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 18.0
+offset_right = 132.0
+offset_bottom = 38.0
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+columns = 5
+
+[node name="slot1" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
+layout_mode = 2
+texture_normal = ExtResource("11_hrwvj")
+
+[node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot1"]
+unique_name_in_owner = true
+layout_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot1/item_container"]
+position = Vector2(-14, -28)
+
+[node name="slot2" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
+layout_mode = 2
+texture_normal = ExtResource("11_hrwvj")
+
+[node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot2"]
+layout_mode = 2
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot2/item_container"]
+position = Vector2(-14, -28)
+
+[node name="slot3" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
+layout_mode = 2
+texture_normal = ExtResource("11_hrwvj")
+
+[node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot3"]
+layout_mode = 2
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot3/item_container"]
+position = Vector2(-14, -28)
+
+[node name="slot4" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
+layout_mode = 2
+texture_normal = ExtResource("11_hrwvj")
+
+[node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot4"]
+layout_mode = 2
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot4/item_container"]
+position = Vector2(-14, -28)
+
+[node name="slot5" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
+layout_mode = 2
+texture_normal = ExtResource("11_hrwvj")
+
+[node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot5"]
+layout_mode = 2
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot5/item_container"]
+position = Vector2(-14, -28)
+
+[node name="slot6" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
+layout_mode = 2
+texture_normal = ExtResource("11_hrwvj")
+
+[node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot6"]
+layout_mode = 2
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot6/item_container"]
+position = Vector2(-14, -28)
+
+[node name="slot7" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
+layout_mode = 2
+texture_normal = ExtResource("11_hrwvj")
+
+[node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot7"]
+layout_mode = 2
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot7/item_container"]
+position = Vector2(-14, -28)
+
+[node name="slot8" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
+layout_mode = 2
+texture_normal = ExtResource("11_hrwvj")
+
+[node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot8"]
+layout_mode = 2
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot8/item_container"]
+position = Vector2(-14, -28)
+
+[node name="slot9" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
+layout_mode = 2
+texture_normal = ExtResource("11_hrwvj")
+
+[node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot9"]
+layout_mode = 2
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot9/item_container"]
+position = Vector2(-14, -28)
+
+[node name="slot10" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
+layout_mode = 2
+texture_normal = ExtResource("11_hrwvj")
+
+[node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot10"]
+layout_mode = 2
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot10/item_container"]
+position = Vector2(-14, -28)
+
+[node name="slot11" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
+layout_mode = 2
+texture_normal = ExtResource("11_hrwvj")
+
+[node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot11"]
+layout_mode = 2
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot11/item_container"]
+position = Vector2(-14, -28)
+
+[node name="slot12" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
+layout_mode = 2
+texture_normal = ExtResource("11_hrwvj")
+
+[node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot12"]
+layout_mode = 2
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot12/item_container"]
+position = Vector2(-14, -28)
+
+[node name="slot13" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
+layout_mode = 2
+texture_normal = ExtResource("11_hrwvj")
+
+[node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot13"]
+layout_mode = 2
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot13/item_container"]
+position = Vector2(-14, -28)
+
+[node name="slot14" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
+layout_mode = 2
+texture_normal = ExtResource("11_hrwvj")
+
+[node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot14"]
+layout_mode = 2
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot14/item_container"]
+position = Vector2(-14, -28)
+
+[node name="slot15" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
+layout_mode = 2
+texture_normal = ExtResource("11_hrwvj")
+
+[node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot15"]
+layout_mode = 2
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot15/item_container"]
+position = Vector2(-14, -28)
+
+[node name="item_info" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 44.0
+offset_right = 190.0
+offset_bottom = 117.0
+texture = ExtResource("9_lfcf2")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="item_info_title" type="NinePatchRect" parent="item_info"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -21.2
+offset_top = -21.0
+offset_right = 19.8
+offset_bottom = 3.0
+grow_horizontal = 2
+texture = ExtResource("3_xg6qk")
+patch_margin_left = 8
+patch_margin_top = 6
+patch_margin_right = 8
+patch_margin_bottom = 2
+
+[node name="item_info_title_label" type="Label" parent="item_info/item_info_title"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.677966
+anchor_bottom = 1.53333
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 45.2034
+offset_bottom = 10.2001
+scale = Vector2(0.4, 0.4)
+theme_override_colors/font_color = Color(0.301961, 0.34902, 0.4, 1)
+theme_override_fonts/font = ExtResource("4_82p0w")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="item_info_icon" type="TextureRect" parent="item_info"]
+layout_mode = 0
+offset_left = 11.8
+offset_top = 4.8
+offset_right = 31.8
+offset_bottom = 24.8
+texture = ExtResource("11_hrwvj")
+
+[node name="item_info_icon_container" type="CenterContainer" parent="item_info/item_info_icon"]
+layout_mode = 2
+offset_top = 0.400002
+offset_right = 20.0
+offset_bottom = 20.4
+
+[node name="Sprite2D" type="Sprite2D" parent="item_info/item_info_icon/item_info_icon_container"]
+position = Vector2(-14, -28)
+
+[node name="description_patch" type="NinePatchRect" parent="item_info"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 25.0
+offset_right = 40.0
+offset_bottom = 69.0
+
+[node name="description" type="Label" parent="item_info/description_patch"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.677966
+anchor_bottom = 1.53333
+offset_top = 1.0
+offset_right = 99.9153
+offset_bottom = 76.5335
+scale = Vector2(0.3, 0.3)
+theme_override_colors/font_color = Color(0.301961, 0.34902, 0.4, 1)
+theme_override_fonts/font = ExtResource("4_82p0w")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="item_info_close" type="TextureButton" parent="item_info"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -5.4
+offset_top = -3.0
+offset_right = 3.6
+offset_bottom = 6.0
+grow_horizontal = 0
+texture_normal = ExtResource("5_8vkhs")
+texture_pressed = ExtResource("6_dvlk2")
+texture_hover = ExtResource("7_gth37")
+texture_disabled = ExtResource("8_a4mao")
 
 [connection signal="pressed" from="close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot1" to="." method="_on_slot_1_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot2" to="." method="_on_slot_2_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot3" to="." method="_on_slot_3_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot4" to="." method="_on_slot_4_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot5" to="." method="_on_slot_5_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot6" to="." method="_on_slot_6_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot7" to="." method="_on_slot_7_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot8" to="." method="_on_slot_8_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot9" to="." method="_on_slot_9_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot10" to="." method="_on_slot_10_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot11" to="." method="_on_slot_11_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot12" to="." method="_on_slot_12_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot13" to="." method="_on_slot_13_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot14" to="." method="_on_slot_14_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot15" to="." method="_on_slot_15_pressed"]
+[connection signal="pressed" from="item_info/item_info_close" to="." method="_on_item_info_close_pressed"]

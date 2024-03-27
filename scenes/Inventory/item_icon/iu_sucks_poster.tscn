@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bf1ok3civ0cqs"]
+
+[ext_resource type="Texture2D" uid="uid://b0ye158257rcn" path="res://scenes/Collectable_scenes/Collectables/fposter,small,wall_texture,product,750x1000.u2.jpg" id="1_cnx2b"]
+
+[node name="Sprite2D" type="Sprite2D"]
+scale = Vector2(0.014, 0.014)
+texture = ExtResource("1_cnx2b")

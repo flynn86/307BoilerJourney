@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1d6lgnwliysi"]
+
+[ext_resource type="Script" path="res://scenes/Collectable_scenes/angry_pete.gd" id="1_nk1dx"]
+[ext_resource type="Texture2D" uid="uid://b2thakanl08hu" path="res://scenes/Collectable_scenes/Collectables/purdue-university-pete-4-logo-png-transparent.png" id="2_32dgt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kdd5l"]
+radius = 23.0
+
+[node name="angry_pete" type="Area2D"]
+script = ExtResource("1_nk1dx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(2, 3.8147e-06)
+scale = Vector2(0.0279829, 0.0249146)
+texture = ExtResource("2_32dgt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1)
+shape = SubResource("CircleShape2D_kdd5l")
+
+[node name="collect_button" type="Button" parent="."]
+z_index = 1
+offset_left = -46.0
+offset_top = -73.0
+offset_right = 49.0
+offset_bottom = -42.0
+text = "Collect"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="pressed" from="collect_button" to="." method="_on_collect_button_pressed"]
