@@ -9,7 +9,9 @@ var xacademic: float = float(-855.100219726562)
 var yacademic: float = float(-1381.95544433594)
 var xPMU: float = float(3250)
 var yPMU: float = float(830)
+var xp: int = 0
 var location: String = "res://scenes/map/academic_map.tscn"
+var rank: String = "Freshman"
 
 # collectables
 var numCollected: int = 0
@@ -135,6 +137,9 @@ func reset(file: String):
 	xPMU = float(3250)
 	yPMU = (830)
 	location = "res://scenes/map/academic_map.tscn"
+	xp = (0)
+	rank = "Freshman"
+
 	
 	# collectables
 	numCollected = 0
