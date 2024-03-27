@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://rhyb4hih8dsy"]
+
+[sub_resource type="TileSet" id="TileSet_lctwa"]
+
+[node name="DormRoom" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_lctwa")
+format = 2
