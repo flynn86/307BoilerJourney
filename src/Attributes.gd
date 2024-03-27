@@ -116,6 +116,10 @@ var course_num: int = 1
 # Inventory
 var items : Array = []
 
+# Daily Question
+var question_available : bool = true
+var last_daily_question_time : Dictionary = {}
+
 
 
 
@@ -231,5 +235,5 @@ func reset(file: String):
 		"course8_location" : ""
 	}
 	course_num = 1
-	
+	items.clear()
 	

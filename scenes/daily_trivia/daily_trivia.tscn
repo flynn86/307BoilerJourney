@@ -1,0 +1,427 @@
+[gd_scene load_steps=13 format=3 uid="uid://dn26hxwbovi1e"]
+
+[ext_resource type="Texture2D" uid="uid://belmqpu4axgsw" path="res://scenes/Inventory/main panel.png" id="1_1t1pl"]
+[ext_resource type="Script" path="res://scenes/daily_trivia/daily_trivia.gd" id="2_fl3gw"]
+[ext_resource type="FontFile" uid="uid://cmmr8t0m2myle" path="res://scenes/Inventory/Arcadepix Plus.ttf" id="3_vad0g"]
+[ext_resource type="Texture2D" uid="uid://ba82ekbvbcuqh" path="res://scenes/Inventory/x_normal.png" id="4_wf5qw"]
+[ext_resource type="Texture2D" uid="uid://7b2yukw2qdog" path="res://scenes/Inventory/x_pressed.png" id="5_u22nb"]
+[ext_resource type="Texture2D" uid="uid://dqcdg4wxms527" path="res://scenes/Inventory/inner_panel.png" id="6_edcfu"]
+[ext_resource type="Texture2D" uid="uid://bvvstqfshpv5t" path="res://scenes/Inventory/x_hover.png" id="6_iq0ta"]
+[ext_resource type="Texture2D" uid="uid://jh1k163wr5jb" path="res://scenes/Inventory/x_disabled.png" id="7_dthh5"]
+[ext_resource type="Texture2D" uid="uid://dwuoauebb1w68" path="res://scenes/Inventory/bar.png" id="7_velji"]
+[ext_resource type="Texture2D" uid="uid://oc2bidqahrh8" path="res://scenes/daily_trivia/Purdue Pete 1.png" id="9_w8vm1"]
+[ext_resource type="Texture2D" uid="uid://cyyw8ifnjcy52" path="res://scenes/daily_trivia/Purdue Pete 2.png" id="10_fq8us"]
+[ext_resource type="Texture2D" uid="uid://cemha5100kjtj" path="res://scenes/Inventory/item_slot.png" id="11_jrdf7"]
+
+[node name="Trivia_container" type="NinePatchRect"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.0
+offset_top = -49.0
+offset_right = 73.0
+offset_bottom = 71.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1t1pl")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("2_fl3gw")
+
+[node name="close" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -9.0
+offset_bottom = 9.0
+grow_horizontal = 0
+texture_normal = ExtResource("4_wf5qw")
+texture_pressed = ExtResource("5_u22nb")
+texture_hover = ExtResource("6_iq0ta")
+texture_disabled = ExtResource("7_dthh5")
+
+[node name="Trivia_frame" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 10.0
+offset_right = 143.0
+offset_bottom = 110.0
+
+[node name="Trivia_patch" type="NinePatchRect" parent="Trivia_frame"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+texture = ExtResource("6_edcfu")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="title_header" type="TextureRect" parent="Trivia_frame/Trivia_patch"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.340741
+anchor_top = 0.25
+anchor_right = 0.688889
+anchor_bottom = 0.3
+offset_left = -3.43323e-05
+offset_top = -11.0
+offset_right = -3.05176e-05
+offset_bottom = -15.0
+texture = ExtResource("7_velji")
+metadata/_edit_use_anchors_ = true
+
+[node name="title" type="Label" parent="Trivia_frame/Trivia_patch/title_header"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.9851
+offset_top = -10.0
+offset_right = 106.015
+offset_bottom = 10.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.423529, 0.247059, 0.121569, 1)
+theme_override_colors/font_outline_color = Color(0.925353, 0.925353, 0.925353, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("3_vad0g")
+theme_override_font_sizes/font_size = 25
+text = "Daily Trivia"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 161
+visible_ratio = -0.0833333
+
+[node name="Image1" type="Sprite2D" parent="Trivia_frame"]
+position = Vector2(24, 16)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("9_w8vm1")
+
+[node name="Image2" type="Sprite2D" parent="Trivia_frame"]
+position = Vector2(114, 15)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("10_fq8us")
+
+[node name="Question_control" type="Control" parent="Trivia_frame"]
+layout_mode = 2
+
+[node name="Question" type="Label" parent="Trivia_frame/Question_control"]
+layout_mode = 2
+offset_left = 6.0
+offset_top = -75.0
+offset_right = 254.0
+offset_bottom = -23.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.423529, 0.247059, 0.121569, 1)
+theme_override_colors/font_outline_color = Color(0.925353, 0.925353, 0.925353, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("3_vad0g")
+theme_override_font_sizes/font_size = 20
+text = "This is a question"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 161
+visible_characters = -2
+visible_ratio = -0.125
+
+[node name="Choice1" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 67.0
+offset_right = 69.0
+offset_bottom = 84.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Choice1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_jrdf7")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Label1" type="Label" parent="Choice1/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 130.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(0.423529, 0.247059, 0.121569, 1)
+theme_override_colors/font_outline_color = Color(0.925353, 0.925353, 0.925353, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("3_vad0g")
+theme_override_font_sizes/font_size = 20
+text = "Choice1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 161
+visible_ratio = -0.166667
+
+[node name="Choice2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 67.0
+offset_right = 133.0
+offset_bottom = 84.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Choice2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_jrdf7")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Label2" type="Label" parent="Choice2/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 130.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(0.423529, 0.247059, 0.121569, 1)
+theme_override_colors/font_outline_color = Color(0.925353, 0.925353, 0.925353, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("3_vad0g")
+theme_override_font_sizes/font_size = 20
+text = "Choice2"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 161
+visible_ratio = -0.142857
+
+[node name="Choice3" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 88.0
+offset_right = 69.0
+offset_bottom = 105.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Choice3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_jrdf7")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Label3" type="Label" parent="Choice3/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 130.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(0.423529, 0.247059, 0.121569, 1)
+theme_override_colors/font_outline_color = Color(0.925353, 0.925353, 0.925353, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("3_vad0g")
+theme_override_font_sizes/font_size = 20
+text = "Choice3"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 161
+visible_ratio = -0.142857
+
+[node name="Choice4" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 88.0
+offset_right = 133.0
+offset_bottom = 105.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Choice4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_jrdf7")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Label4" type="Label" parent="Choice4/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 130.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(0.423529, 0.247059, 0.121569, 1)
+theme_override_colors/font_outline_color = Color(0.925353, 0.925353, 0.925353, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("3_vad0g")
+theme_override_font_sizes/font_size = 20
+text = "Choice4"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 161
+visible_ratio = -0.142857
+
+[node name="time_till_next" type="NinePatchRect" parent="."]
+offset_left = 146.0
+offset_top = 72.0
+offset_right = 190.0
+offset_bottom = 117.0
+texture = ExtResource("6_edcfu")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="description_patch" type="NinePatchRect" parent="time_till_next"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 43.0
+offset_bottom = 23.0
+
+[node name="description" type="Label" parent="time_till_next/description_patch"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 7.0
+offset_right = 55.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+theme_override_colors/font_color = Color(0.301961, 0.34902, 0.4, 1)
+theme_override_fonts/font = ExtResource("3_vad0g")
+text = "Time Until Next Daily Trivia"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="NinePatchRect" type="NinePatchRect" parent="time_till_next"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 26.0
+offset_right = -3.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_jrdf7")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="time" type="Label" parent="time_till_next/NinePatchRect"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 97.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(0.423529, 0.247059, 0.121569, 1)
+theme_override_colors/font_outline_color = Color(0.925353, 0.925353, 0.925353, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("3_vad0g")
+theme_override_font_sizes/font_size = 20
+text = "Remaining Time"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 161
+visible_characters = -2
+visible_ratio = -0.142857
+
+[node name="Result_control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Result" type="Label" parent="Result_control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = 65.0
+offset_right = 262.0
+offset_bottom = 143.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.423529, 0.247059, 0.121569, 1)
+theme_override_colors/font_outline_color = Color(0.925353, 0.925353, 0.925353, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("3_vad0g")
+theme_override_font_sizes/font_size = 20
+text = "Correct! You gain +[x] EXP!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 161
+visible_ratio = -0.037037
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(90, 60)
+zoom = Vector2(5, 5)
+
+[connection signal="pressed" from="close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Choice1" to="." method="_on_choice_1_pressed"]
+[connection signal="pressed" from="Choice2" to="." method="_on_choice_2_pressed"]
+[connection signal="pressed" from="Choice3" to="." method="_on_choice_3_pressed"]
+[connection signal="pressed" from="Choice4" to="." method="_on_choice_4_pressed"]
