@@ -163,7 +163,6 @@ offset_bottom = 10.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot1/item_container"]
 position = Vector2(-14, -28)
-scale = Vector2(1, 1)
 
 [node name="slot2" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
@@ -176,7 +175,6 @@ offset_bottom = 20.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot2/item_container"]
 position = Vector2(-14, -28)
-scale = Vector2(1, 1)
 
 [node name="slot3" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
@@ -189,7 +187,6 @@ offset_bottom = 20.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot3/item_container"]
 position = Vector2(-14, -28)
-scale = Vector2(1, 1)
 
 [node name="slot4" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
@@ -202,7 +199,6 @@ offset_bottom = 20.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot4/item_container"]
 position = Vector2(-14, -28)
-scale = Vector2(1, 1)
 
 [node name="slot5" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
@@ -215,7 +211,6 @@ offset_bottom = 20.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot5/item_container"]
 position = Vector2(-14, -28)
-scale = Vector2(1, 1)
 
 [node name="slot6" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
@@ -228,7 +223,6 @@ offset_bottom = 20.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot6/item_container"]
 position = Vector2(-14, -28)
-scale = Vector2(1, 1)
 
 [node name="slot7" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
@@ -241,7 +235,6 @@ offset_bottom = 20.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot7/item_container"]
 position = Vector2(-14, -28)
-scale = Vector2(1, 1)
 
 [node name="slot8" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
@@ -254,7 +247,6 @@ offset_bottom = 20.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot8/item_container"]
 position = Vector2(-14, -28)
-scale = Vector2(1, 1)
 
 [node name="slot9" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
@@ -267,7 +259,6 @@ offset_bottom = 20.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot9/item_container"]
 position = Vector2(-14, -28)
-scale = Vector2(1, 1)
 
 [node name="slot10" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
@@ -280,7 +271,6 @@ offset_bottom = 20.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot10/item_container"]
 position = Vector2(-14, -28)
-scale = Vector2(1, 1)
 
 [node name="slot11" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
@@ -293,7 +283,6 @@ offset_bottom = 20.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot11/item_container"]
 position = Vector2(-14, -28)
-scale = Vector2(1, 1)
 
 [node name="slot12" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
@@ -306,7 +295,6 @@ offset_bottom = 20.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot12/item_container"]
 position = Vector2(-14, -28)
-scale = Vector2(1, 1)
 
 [node name="slot13" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
@@ -319,7 +307,6 @@ offset_bottom = 20.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot13/item_container"]
 position = Vector2(-14, -28)
-scale = Vector2(1, 1)
 
 [node name="slot14" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
@@ -332,7 +319,6 @@ offset_bottom = 20.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot14/item_container"]
 position = Vector2(-14, -28)
-scale = Vector2(1, 1)
 
 [node name="slot15" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
@@ -345,7 +331,6 @@ offset_bottom = 20.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Inventory_container/inventory_patch/slot_container/slot15/item_container"]
 position = Vector2(-14, -28)
-scale = Vector2(1, 1)
 
 [node name="item_info" type="NinePatchRect" parent="."]
 layout_mode = 0
@@ -392,6 +377,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="item_info_icon" type="TextureRect" parent="item_info"]
+layout_mode = 0
 offset_left = 11.8
 offset_top = 4.8
 offset_right = 31.8
@@ -406,7 +392,6 @@ offset_bottom = 20.4
 
 [node name="Sprite2D" type="Sprite2D" parent="item_info/item_info_icon/item_info_icon_container"]
 position = Vector2(-14, -28)
-scale = Vector2(1, 1)
 
 [node name="description_patch" type="NinePatchRect" parent="item_info"]
 layout_mode = 0
