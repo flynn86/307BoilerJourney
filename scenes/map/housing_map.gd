@@ -78,8 +78,8 @@ func _on_collectible_button_pressed():
 
 
 func _on_questlog_button_pressed():
-	Attributes.xacademic = $CharacterBody2D.global_position.x
-	Attributes.yacademic = $CharacterBody2D.global_position.y
+	Attributes.xhousing = $CharacterBody2D.global_position.x
+	Attributes.yhousing = $CharacterBody2D.global_position.y
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/quests/quest_log.tscn")
 
@@ -93,3 +93,11 @@ func _process(delta):
 
 func _on_view_schedule_pressed():
 	get_tree().change_scene_to_file("res://scenes/scheduling.tscn")
+
+
+func _on_inventory_pressed():
+	Attributes.xhousing = $CharacterBody2D.global_position.x
+	Attributes.yhousing = $CharacterBody2D.global_position.y
+	Attributes.location = "res://scenes/map/housing_map.tscn"
+	SaveUtils.save()
+	get_tree().change_scene_to_file("res://scenes/Inventory/player_inventory.tscn")

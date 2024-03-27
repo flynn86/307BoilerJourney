@@ -400,9 +400,9 @@ texture = ExtResource("11_hrwvj")
 
 [node name="item_info_icon_container" type="CenterContainer" parent="item_info/item_info_icon"]
 layout_mode = 2
-offset_top = 0.600002
+offset_top = 0.400002
 offset_right = 20.0
-offset_bottom = 20.6
+offset_bottom = 20.4
 
 [node name="Sprite2D" type="Sprite2D" parent="item_info/item_info_icon/item_info_icon_container"]
 position = Vector2(-14, -28)

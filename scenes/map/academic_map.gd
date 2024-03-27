@@ -164,5 +164,6 @@ func _on_view_schedule_pressed():
 func _on_inventory_pressed():
 	Attributes.xacademic = $CharacterBody2D.global_position.x
 	Attributes.yacademic = $CharacterBody2D.global_position.y
+	Attributes.location = "res://scenes/map/academic_map.tscn"
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/Inventory/player_inventory.tscn")

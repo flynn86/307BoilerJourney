@@ -37,7 +37,8 @@ func _on_close_pressed():
 	close()
 	
 func close():
-	get_tree().change_scene_to_file("res://scenes/map/academic_map.tscn")
+	var last_location = Attributes.location
+	get_tree().change_scene_to_file(last_location)
 
 func _on_item_info_close_pressed():
 	item_info.visible = false
