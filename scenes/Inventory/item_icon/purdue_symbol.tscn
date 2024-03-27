@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bah8xdlheimel"]
+
+[ext_resource type="Texture2D" uid="uid://pt12vh0iqgkg" path="res://scenes/Collectable_scenes/Collectables/purdue-boilermakers-football-purdue-boilermakers-men-s-basketball-mackey-arena-purdue-pete-university-purdue-boilermakers-women-s-basketball-thumbnail.png" id="1_u45xy"]
+
+[node name="Sprite2D" type="Sprite2D"]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_u45xy")

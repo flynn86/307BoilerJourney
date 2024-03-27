@@ -20,6 +20,7 @@ func _on_body_entered(body):
 func _on_collect_button_pressed():
 	Attributes.iu_poster = true;
 	Attributes.numCollected += 1;
+	Attributes.items.append(ItemManager.Items.IU_SUCKS_POSTER)
 	queue_free();
 	SaveUtils.save()
 	
