@@ -19,6 +19,11 @@ func _ready():
 	if (Attributes.night):
 		get_node("day_night").set_time_state(1)
 		get_node("CharacterBody2D/Player/player_light").visible = true
+	var building_list = ["ARMS", "PUSH", "HAMP", "PHYS", "RNPH", "JSN", "FRNY", "DSCB", "MSEE", "CHAS", "BHEE", "AR", "ELLT", 
+ 					"HOVD", "ME", "WALC", "POTR", "LMBS", "KNOY", "DUDL", "HAAS", "PSYC", "PRCE", "CL50", "MATH", "SC", 
+ 					"WTHR", "BRWN", "HEAV", "GRIS", "BRNG", "SCHM", "UNIV", "MTHW", "STON", "STEW", "HIKS", "PMU"]
+	for building in building_list:
+		_schedule_for_each_building(building)
 	get_node("CharacterBody2D/Player/CollectibleButton").visible = !Attributes.collectibleA
 	set_process_input(true)
 	get_node("Purdue_symbol").visible = !Attributes.purdue_symbol
@@ -30,6 +35,7 @@ func _ready():
 	get_node("angry_pete").visible = !Attributes.angry_pete
 	get_node("purdue_helmet").visible = !Attributes.purdue_helmet
 	get_node("purdue_cap").visible = !Attributes.purdue_cap
+
 
 func _input(event):
 	if event is InputEventMouseMotion or event is InputEventMouseButton:
@@ -166,6 +172,10 @@ func _process(delta):
 
 
 func _on_view_schedule_pressed():
+	Attributes.xacademic = $CharacterBody2D.global_position.x
+	Attributes.yacademic = $CharacterBody2D.global_position.y
+	Attributes.location = "res://scenes/map/academic_map.tscn"
+	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/schedule.tscn")
 	
 
@@ -193,3 +203,36 @@ func _on_button_pressed():
 func _on_variants_pressed():
 	$CharacterBody2D/Panel.visible = true
 	SaveUtils.save()
+
+
+func _schedule_for_each_building(building):
+	var complete_string = ""
+	var count = 0
+	if (Attributes.course_num == 1) :
+		pass
+	else:
+		for i in range (1, Attributes.course_num):
+			var location = "course" + str(i) + "_location"
+			var courseLocation = Attributes.courseLocations[location]
+			if courseLocation == building:
+				count+=1
+				var name = "course" + str(i) + "_name"
+				var courseName = Attributes.courseNames[name]
+				var time = "course" + str(i) + "_time"
+				var courseTime = Attributes.courseTimes[time]
+				var day = "course" + str(i) + "_days"
+				var Days_dict = Attributes.courseDays[day]
+				var courseDays = ""
+				for j in Days_dict:
+					if Days_dict[j] == 1:
+						courseDays += j
+				var format_string = "| Course Name: %s | Time: %s | Days: %s | Location: %s |\n"
+				var actual_string = format_string % [courseName, courseTime, courseDays, courseLocation]
+				complete_string += actual_string
+	if count == 0:
+		find_child(building).visible = false
+	else:
+		find_child(building).visible = true
+		var count_string = "You have %s Courses in this building.\n" + complete_string
+		var string_with_count = count_string % [count]
+		find_child(building).text= string_with_count 
