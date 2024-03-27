@@ -61,6 +61,8 @@ func _on_housing_button_pressed():
 	Attributes.location = "res://scenes/map/housing_map.tscn"
 	get_tree().change_scene_to_file("res://scenes/map/housing_map.tscn")
 	SaveUtils.save()
+	
+
 
 
 func _on_change_summer_pressed():
@@ -175,3 +177,13 @@ func _on_daily_trivia_pressed():
 	Attributes.location = "res://scenes/map/academic_map.tscn"
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/daily_trivia/daily_trivia.tscn")
+
+
+func _on_button_pressed():
+	$CharacterBody2D/Panel.visible = false
+	SaveUtils.save()
+	
+
+func _on_variants_pressed():
+	$CharacterBody2D/Panel.visible = true
+	SaveUtils.save()

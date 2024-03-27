@@ -10,7 +10,6 @@ func _ready():
 
 
 func _on_body_entered(body):
-	print(body);
 	if body.name == "CharacterBody2D":
 		get_node("collect_button").visible = true;
 		SaveUtils.save()
@@ -27,6 +26,5 @@ func _on_collect_button_pressed():
 
 
 func _on_body_exited(body):
-	print(body);
 	if body.name == "CharacterBody2D":
 		get_node("collect_button").visible = false;
