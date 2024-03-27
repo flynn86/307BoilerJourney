@@ -145,9 +145,9 @@ theme_override_constants/h_separation = 6
 theme_override_constants/v_separation = 6
 columns = 5
 
-[node name="slot1" type="TextureRect" parent="Inventory_container/inventory_patch/slot_container"]
+[node name="slot1" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
-texture = ExtResource("11_hrwvj")
+texture_normal = ExtResource("11_hrwvj")
 
 [node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot1"]
 unique_name_in_owner = true
@@ -165,9 +165,9 @@ offset_bottom = 10.0
 position = Vector2(-14, -28)
 scale = Vector2(1, 1)
 
-[node name="slot2" type="TextureRect" parent="Inventory_container/inventory_patch/slot_container"]
+[node name="slot2" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
-texture = ExtResource("11_hrwvj")
+texture_normal = ExtResource("11_hrwvj")
 
 [node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot2"]
 layout_mode = 2
@@ -178,9 +178,9 @@ offset_bottom = 20.0
 position = Vector2(-14, -28)
 scale = Vector2(1, 1)
 
-[node name="slot3" type="TextureRect" parent="Inventory_container/inventory_patch/slot_container"]
+[node name="slot3" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
-texture = ExtResource("11_hrwvj")
+texture_normal = ExtResource("11_hrwvj")
 
 [node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot3"]
 layout_mode = 2
@@ -191,9 +191,9 @@ offset_bottom = 20.0
 position = Vector2(-14, -28)
 scale = Vector2(1, 1)
 
-[node name="slot4" type="TextureRect" parent="Inventory_container/inventory_patch/slot_container"]
+[node name="slot4" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
-texture = ExtResource("11_hrwvj")
+texture_normal = ExtResource("11_hrwvj")
 
 [node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot4"]
 layout_mode = 2
@@ -204,9 +204,9 @@ offset_bottom = 20.0
 position = Vector2(-14, -28)
 scale = Vector2(1, 1)
 
-[node name="slot5" type="TextureRect" parent="Inventory_container/inventory_patch/slot_container"]
+[node name="slot5" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
-texture = ExtResource("11_hrwvj")
+texture_normal = ExtResource("11_hrwvj")
 
 [node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot5"]
 layout_mode = 2
@@ -217,9 +217,9 @@ offset_bottom = 20.0
 position = Vector2(-14, -28)
 scale = Vector2(1, 1)
 
-[node name="slot6" type="TextureRect" parent="Inventory_container/inventory_patch/slot_container"]
+[node name="slot6" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
-texture = ExtResource("11_hrwvj")
+texture_normal = ExtResource("11_hrwvj")
 
 [node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot6"]
 layout_mode = 2
@@ -230,9 +230,9 @@ offset_bottom = 20.0
 position = Vector2(-14, -28)
 scale = Vector2(1, 1)
 
-[node name="slot7" type="TextureRect" parent="Inventory_container/inventory_patch/slot_container"]
+[node name="slot7" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
-texture = ExtResource("11_hrwvj")
+texture_normal = ExtResource("11_hrwvj")
 
 [node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot7"]
 layout_mode = 2
@@ -243,9 +243,9 @@ offset_bottom = 20.0
 position = Vector2(-14, -28)
 scale = Vector2(1, 1)
 
-[node name="slot8" type="TextureRect" parent="Inventory_container/inventory_patch/slot_container"]
+[node name="slot8" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
-texture = ExtResource("11_hrwvj")
+texture_normal = ExtResource("11_hrwvj")
 
 [node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot8"]
 layout_mode = 2
@@ -256,9 +256,9 @@ offset_bottom = 20.0
 position = Vector2(-14, -28)
 scale = Vector2(1, 1)
 
-[node name="slot9" type="TextureRect" parent="Inventory_container/inventory_patch/slot_container"]
+[node name="slot9" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
-texture = ExtResource("11_hrwvj")
+texture_normal = ExtResource("11_hrwvj")
 
 [node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot9"]
 layout_mode = 2
@@ -269,9 +269,9 @@ offset_bottom = 20.0
 position = Vector2(-14, -28)
 scale = Vector2(1, 1)
 
-[node name="slot10" type="TextureRect" parent="Inventory_container/inventory_patch/slot_container"]
+[node name="slot10" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
-texture = ExtResource("11_hrwvj")
+texture_normal = ExtResource("11_hrwvj")
 
 [node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot10"]
 layout_mode = 2
@@ -282,9 +282,9 @@ offset_bottom = 20.0
 position = Vector2(-14, -28)
 scale = Vector2(1, 1)
 
-[node name="slot11" type="TextureRect" parent="Inventory_container/inventory_patch/slot_container"]
+[node name="slot11" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
-texture = ExtResource("11_hrwvj")
+texture_normal = ExtResource("11_hrwvj")
 
 [node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot11"]
 layout_mode = 2
@@ -295,9 +295,9 @@ offset_bottom = 20.0
 position = Vector2(-14, -28)
 scale = Vector2(1, 1)
 
-[node name="slot12" type="TextureRect" parent="Inventory_container/inventory_patch/slot_container"]
+[node name="slot12" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
-texture = ExtResource("11_hrwvj")
+texture_normal = ExtResource("11_hrwvj")
 
 [node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot12"]
 layout_mode = 2
@@ -308,9 +308,9 @@ offset_bottom = 20.0
 position = Vector2(-14, -28)
 scale = Vector2(1, 1)
 
-[node name="slot13" type="TextureRect" parent="Inventory_container/inventory_patch/slot_container"]
+[node name="slot13" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
-texture = ExtResource("11_hrwvj")
+texture_normal = ExtResource("11_hrwvj")
 
 [node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot13"]
 layout_mode = 2
@@ -321,9 +321,9 @@ offset_bottom = 20.0
 position = Vector2(-14, -28)
 scale = Vector2(1, 1)
 
-[node name="slot14" type="TextureRect" parent="Inventory_container/inventory_patch/slot_container"]
+[node name="slot14" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
-texture = ExtResource("11_hrwvj")
+texture_normal = ExtResource("11_hrwvj")
 
 [node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot14"]
 layout_mode = 2
@@ -334,9 +334,9 @@ offset_bottom = 20.0
 position = Vector2(-14, -28)
 scale = Vector2(1, 1)
 
-[node name="slot15" type="TextureRect" parent="Inventory_container/inventory_patch/slot_container"]
+[node name="slot15" type="TextureButton" parent="Inventory_container/inventory_patch/slot_container"]
 layout_mode = 2
-texture = ExtResource("11_hrwvj")
+texture_normal = ExtResource("11_hrwvj")
 
 [node name="item_container" type="CenterContainer" parent="Inventory_container/inventory_patch/slot_container/slot15"]
 layout_mode = 2
@@ -347,4 +347,118 @@ offset_bottom = 20.0
 position = Vector2(-14, -28)
 scale = Vector2(1, 1)
 
+[node name="item_info" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 44.0
+offset_right = 190.0
+offset_bottom = 117.0
+texture = ExtResource("9_lfcf2")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="item_info_title" type="NinePatchRect" parent="item_info"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -21.2
+offset_top = -21.0
+offset_right = 19.8
+offset_bottom = 3.0
+grow_horizontal = 2
+texture = ExtResource("3_xg6qk")
+patch_margin_left = 8
+patch_margin_top = 6
+patch_margin_right = 8
+patch_margin_bottom = 2
+
+[node name="item_info_title_label" type="Label" parent="item_info/item_info_title"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.677966
+anchor_bottom = 1.53333
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 45.2034
+offset_bottom = 10.2001
+scale = Vector2(0.4, 0.4)
+theme_override_colors/font_color = Color(0.301961, 0.34902, 0.4, 1)
+theme_override_fonts/font = ExtResource("4_82p0w")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="item_info_icon" type="TextureRect" parent="item_info"]
+offset_left = 11.8
+offset_top = 4.8
+offset_right = 31.8
+offset_bottom = 24.8
+texture = ExtResource("11_hrwvj")
+
+[node name="item_info_icon_container" type="CenterContainer" parent="item_info/item_info_icon"]
+layout_mode = 2
+offset_top = 0.600002
+offset_right = 20.0
+offset_bottom = 20.6
+
+[node name="Sprite2D" type="Sprite2D" parent="item_info/item_info_icon/item_info_icon_container"]
+position = Vector2(-14, -28)
+scale = Vector2(1, 1)
+
+[node name="description_patch" type="NinePatchRect" parent="item_info"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 25.0
+offset_right = 40.0
+offset_bottom = 69.0
+
+[node name="description" type="Label" parent="item_info/description_patch"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.677966
+anchor_bottom = 1.53333
+offset_top = 1.0
+offset_right = 99.9153
+offset_bottom = 76.5335
+scale = Vector2(0.3, 0.3)
+theme_override_colors/font_color = Color(0.301961, 0.34902, 0.4, 1)
+theme_override_fonts/font = ExtResource("4_82p0w")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="item_info_close" type="TextureButton" parent="item_info"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -5.4
+offset_top = -3.0
+offset_right = 3.6
+offset_bottom = 6.0
+grow_horizontal = 0
+texture_normal = ExtResource("5_8vkhs")
+texture_pressed = ExtResource("6_dvlk2")
+texture_hover = ExtResource("7_gth37")
+texture_disabled = ExtResource("8_a4mao")
+
 [connection signal="pressed" from="close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot1" to="." method="_on_slot_1_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot2" to="." method="_on_slot_2_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot3" to="." method="_on_slot_3_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot4" to="." method="_on_slot_4_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot5" to="." method="_on_slot_5_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot6" to="." method="_on_slot_6_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot7" to="." method="_on_slot_7_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot8" to="." method="_on_slot_8_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot9" to="." method="_on_slot_9_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot10" to="." method="_on_slot_10_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot11" to="." method="_on_slot_11_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot12" to="." method="_on_slot_12_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot13" to="." method="_on_slot_13_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot14" to="." method="_on_slot_14_pressed"]
+[connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot15" to="." method="_on_slot_15_pressed"]
+[connection signal="pressed" from="item_info/item_info_close" to="." method="_on_item_info_close_pressed"]
