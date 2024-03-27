@@ -7,6 +7,7 @@ func _ready():
 	get_node("FallVariantA").visible = false
 	get_node("SpringVariantA").visible = false
 	get_node("WinterVariantA").visible = false
+	get_node("CharacterBody2D/Panel").visible = false
 	if (Attributes.season == "Summer"):
 		get_node("SummerVariantA").visible = true
 	elif (Attributes.season == "Fall"):
@@ -24,12 +25,11 @@ func _ready():
 	get_node("Purdue_symbol").visible = !Attributes.purdue_symbol
 	get_node("IU_Sucks_Poster").visible = !Attributes.iu_poster
 	get_node("basketball").visible = !Attributes.basketball
-	get_node("bell_tower").visible = !Attributes.bell_tower
-	get_node("go_boilers").visible = !Attributes.go_boilers
-	get_node("boilermaker_train").visible = !Attributes.boilermaker_train
-	get_node("angry_pete").visible = !Attributes.angry_pete
-	get_node("purdue_helmet").visible = !Attributes.purdue_helmet
-	get_node("purdue_cap").visible = !Attributes.purdue_cap
+	var building_list = ["ARMS", "PUSH", "HAMP", "PHYS", "RNPH", "JSN", "FRNY", "DSCB", "MSEE", "CHAS", "BHEE", "AR", "ELLT", 
+					"HOVD", "ME", "WALC", "POTR", "LMBS", "KNOY", "DUDL", "HAAS", "PSYC", "PRCE", "CL50", "MATH", "SC", 
+					"WTHR", "BRWN", "HEAV", "GRIS", "BRNG", "SCHM", "UNIV", "MTHW", "STON", "STEW", "HIKS", "PMU"]
+	for building in building_list:
+		_schedule_for_each_building(building)
 
 func _input(event):
 	if event is InputEventMouseMotion or event is InputEventMouseButton:
@@ -67,8 +67,6 @@ func _on_housing_button_pressed():
 	Attributes.location = "res://scenes/map/housing_map.tscn"
 	get_tree().change_scene_to_file("res://scenes/map/housing_map.tscn")
 	SaveUtils.save()
-	
-
 
 
 func _on_change_summer_pressed():
@@ -164,32 +162,56 @@ func _process(delta):
 			Attributes.quest1_completed = true
 			Attributes.quest1_active = false
 
-
 func _on_view_schedule_pressed():
+	Attributes.xacademic = $CharacterBody2D.global_position.x
+	Attributes.yacademic = $CharacterBody2D.global_position.y
 	get_tree().change_scene_to_file("res://scenes/schedule.tscn")
-	
 
 func _on_inventory_pressed():
 	Attributes.xacademic = $CharacterBody2D.global_position.x
 	Attributes.yacademic = $CharacterBody2D.global_position.y
-	Attributes.location = "res://scenes/map/academic_map.tscn"
-	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/Inventory/player_inventory.tscn")
+	
+func _on_close_variants_button_pressed():
+	get_node("CharacterBody2D/Panel").visible = false
+	
+func _on_variants_pressed():
+	get_node("CharacterBody2D/Panel").visible = true
 
-
-func _on_daily_trivia_pressed():
+func _on_rank_pressed():
 	Attributes.xacademic = $CharacterBody2D.global_position.x
 	Attributes.yacademic = $CharacterBody2D.global_position.y
-	Attributes.location = "res://scenes/map/academic_map.tscn"
-	SaveUtils.save()
-	get_tree().change_scene_to_file("res://scenes/daily_trivia/daily_trivia.tscn")
-
-
-func _on_button_pressed():
-	$CharacterBody2D/Panel.visible = false
-	SaveUtils.save()
+	get_tree().change_scene_to_file("res://scenes/rank_page/rank_page.tscn")
 	
-
-func _on_variants_pressed():
-	$CharacterBody2D/Panel.visible = true
-	SaveUtils.save()
+func _schedule_for_each_building(building):
+	var complete_string = ""
+	var count = 0
+	if (Attributes.course_num == 1) :
+		pass
+	else:
+		for i in range (1, Attributes.course_num):
+			var location = "course" + str(i) + "_location"
+			var courseLocation = Attributes.courseLocations[location]
+			if courseLocation == building:
+				count+=1
+				var name = "course" + str(i) + "_name"
+				var courseName = Attributes.courseNames[name]
+				var time = "course" + str(i) + "_time"
+				var courseTime = Attributes.courseTimes[time]
+				var day = "course" + str(i) + "_days"
+				var Days_dict = Attributes.courseDays[day]
+				var courseDays = ""
+				for j in Days_dict:
+					if Days_dict[j] == 1:
+						courseDays += j
+				var format_string = "| Course Name: %s | Time: %s | Days: %s | Location: %s |\n"
+				var actual_string = format_string % [courseName, courseTime, courseDays, courseLocation]
+				complete_string += actual_string
+	if count == 0:
+		find_child(building).visible = false
+	else:
+		find_child(building).visible = true
+		var count_string = "You have %s Courses in this building.\n" + complete_string
+		var string_with_count = count_string % [count]
+		find_child(building).text= string_with_count 
+		
