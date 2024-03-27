@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cc565weox2i2y"]
+[gd_scene load_steps=10 format=3 uid="uid://cc565weox2i2y"]
 
 [ext_resource type="Texture2D" uid="uid://belmqpu4axgsw" path="res://scenes/Inventory/main panel.png" id="1_lr7od"]
 [ext_resource type="Script" path="res://scenes/Inventory/Inventory_container.gd" id="2_rj2ma"]
@@ -8,9 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://7b2yukw2qdog" path="res://scenes/Inventory/x_pressed.png" id="6_dvlk2"]
 [ext_resource type="Texture2D" uid="uid://bvvstqfshpv5t" path="res://scenes/Inventory/x_hover.png" id="7_gth37"]
 [ext_resource type="Texture2D" uid="uid://jh1k163wr5jb" path="res://scenes/Inventory/x_disabled.png" id="8_a4mao"]
-[ext_resource type="Texture2D" uid="uid://dqcdg4wxms527" path="res://scenes/Inventory/inner_panel.png" id="9_lfcf2"]
-[ext_resource type="Texture2D" uid="uid://dwuoauebb1w68" path="res://scenes/Inventory/bar.png" id="10_b6qp6"]
-[ext_resource type="Texture2D" uid="uid://cemha5100kjtj" path="res://scenes/Inventory/item_slot.png" id="11_hrwvj"]
+[ext_resource type="PackedScene" uid="uid://cg0juu3d3gepy" path="res://scenes/Inventory/inventory.tscn" id="9_gin48"]
 
 [node name="Inventory_container" type="NinePatchRect"]
 anchors_preset = 8
@@ -35,7 +33,7 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 script = ExtResource("2_rj2ma")
 
-[node name="main_title" type="NinePatchRect" parent="."]
+[node name="Title" type="NinePatchRect" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -51,7 +49,7 @@ patch_margin_top = 6
 patch_margin_right = 8
 patch_margin_bottom = 2
 
-[node name="main_title_label" type="Label" parent="main_title"]
+[node name="Label" type="Label" parent="Title"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.677966
@@ -87,9 +85,9 @@ offset_top = 10.0
 offset_right = 142.0
 offset_bottom = 110.0
 
-[node name="inventory_patch" type="NinePatchRect" parent="Inventory_container"]
-custom_minimum_size = Vector2(0, 100)
+[node name="Inventory" parent="Inventory_container" instance=ExtResource("9_gin48")]
 layout_mode = 2
+<<<<<<< HEAD
 texture = ExtResource("9_lfcf2")
 patch_margin_left = 8
 patch_margin_top = 8
@@ -429,6 +427,8 @@ texture_normal = ExtResource("5_8vkhs")
 texture_pressed = ExtResource("6_dvlk2")
 texture_hover = ExtResource("7_gth37")
 texture_disabled = ExtResource("8_a4mao")
+=======
+>>>>>>> parent of 306e1de (Rewrote the code to utilize Attributes script)
 
 [connection signal="pressed" from="close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot1" to="." method="_on_slot_1_pressed"]

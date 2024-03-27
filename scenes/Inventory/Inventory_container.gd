@@ -1,6 +1,31 @@
 extends NinePatchRect
 
-var slots : Array = []
+#var current_inventories : Array = []
+# Called when the node enters the scene tree for the first time.
+#func _ready():
+	#SignalManager.inventory_opened.connect( _on_inventory_opened )
+	
+#func close():
+	#for i in current_inventories:
+		#%inventory_container.remove_child(i)
+	
+	#current_inventories = []
+	#hide()
+	
+#func _on_inventory_opened(inventory : Inventory):
+	#if current_inventories.size() == 0:
+		#custom_minimum_size.y = 20
+		
+	#if current_inventories.has(inventory):
+		#return
+		
+	#%inventory_container.add_child(inventory)
+	#current_inventories.append(inventory)
+	#custom_minimum_size.y += inventory.custom_minimum_size.y + %inventory_container.get_constant("separation")
+	#show()
+	
+#func _on_close_pressed():
+	#close()
 
 @onready var item_info = get_child(3)
 @onready var item_info_title_label = item_info.get_child(0).get_child(0)
@@ -8,6 +33,7 @@ var slots : Array = []
 @onready var description = item_info.get_child(2).get_child(0)
 @onready var item_info_close_button = item_info.get_child(3)
 
+<<<<<<< HEAD
 func _ready():
 	var main_title = get_child(0)
 	var main_title_label = main_title.get_child(0)
@@ -32,6 +58,8 @@ func _ready():
 			slot_sprite_i.position = final_position
 			slot_sprite_i.visible = true
 
+=======
+>>>>>>> parent of 306e1de (Rewrote the code to utilize Attributes script)
 func _on_close_pressed():
 	item_info.visible = false
 	close()

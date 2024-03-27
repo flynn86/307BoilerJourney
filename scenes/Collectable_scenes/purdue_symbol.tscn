@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bp65mowhjyl05"]
 
 [ext_resource type="Script" path="res://scenes/Collectable_scenes/Purdue_symbol.gd" id="1_njb7m"]
-[ext_resource type="Texture2D" uid="uid://pt12vh0iqgkg" path="res://scenes/Collectable_scenes/Collectables/purdue-boilermakers-football-purdue-boilermakers-men-s-basketball-mackey-arena-purdue-pete-university-purdue-boilermakers-women-s-basketball-thumbnail.png" id="2_4q4qw"]
+[ext_resource type="Texture2D" uid="uid://bgpw1vd1ygp8k" path="res://scenes/Collectable_scenes/Collectables/purdue-boilermakers-football-purdue-boilermakers-men-s-basketball-mackey-arena-purdue-pete-university-purdue-boilermakers-women-s-basketball-thumbnail.png" id="2_4q4qw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d7hfc"]
 radius = 28.1603

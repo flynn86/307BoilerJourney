@@ -1,6 +1,5 @@
 extends Node
 
-#var xp: int = 0
 var database: SQLite
 var username: String = ""
 var xhousing: float = float(256)
@@ -12,8 +11,11 @@ var yPMU: float = float(830)
 var xp: int = 0
 var location: String = "res://scenes/map/academic_map.tscn"
 var rank: String = "Freshman"
+<<<<<<< HEAD
 var isServer: bool = false
 var serverName: String = ""
+=======
+>>>>>>> parent of 306e1de (Rewrote the code to utilize Attributes script)
 
 # collectables
 var numCollected: int = 0
@@ -124,6 +126,7 @@ var courseLocations: Dictionary = {
 }
 var course_num: int = 1
 
+<<<<<<< HEAD
 # Inventory
 var items : Array = []
 
@@ -131,6 +134,8 @@ var items : Array = []
 var question_available : bool = true
 var last_daily_question_time : Dictionary = {}
 
+=======
+>>>>>>> parent of 306e1de (Rewrote the code to utilize Attributes script)
 
 
 
@@ -148,8 +153,11 @@ func reset(file: String):
 	location = "res://scenes/map/academic_map.tscn"
 	xp = (0)
 	rank = "Freshman"
+<<<<<<< HEAD
 	isServer = false
 	serverName = ""
+=======
+>>>>>>> parent of 306e1de (Rewrote the code to utilize Attributes script)
 	
 	# collectables
 	numCollected = 0

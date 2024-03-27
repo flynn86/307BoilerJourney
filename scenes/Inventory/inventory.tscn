@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cg0juu3d3gepy"]
+[gd_scene load_steps=6 format=3 uid="uid://cg0juu3d3gepy"]
 
+[ext_resource type="Script" path="res://scenes/Inventory/Inventory.gd" id="2_q6cde"]
 [ext_resource type="FontFile" uid="uid://cmmr8t0m2myle" path="res://scenes/Inventory/Arcadepix Plus.ttf" id="3_01im4"]
 [ext_resource type="PackedScene" uid="uid://bf8xjyohll501" path="res://scenes/Inventory/inventory_slot.tscn" id="5_e8yq8"]
 [ext_resource type="Texture2D" uid="uid://dqcdg4wxms527" path="res://scenes/Inventory/inner_panel.png" id="8_6lvgn"]
@@ -20,6 +21,7 @@ patch_margin_left = 8
 patch_margin_top = 8
 patch_margin_right = 8
 patch_margin_bottom = 8
+script = ExtResource("2_q6cde")
 
 [node name="title_header" type="TextureRect" parent="."]
 unique_name_in_owner = true

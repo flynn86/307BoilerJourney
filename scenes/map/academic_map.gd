@@ -7,6 +7,7 @@ func _ready():
 	get_node("FallVariantA").visible = false
 	get_node("SpringVariantA").visible = false
 	get_node("WinterVariantA").visible = false
+	get_node("CharacterBody2D/Panel").visible = false
 	if (Attributes.season == "Summer"):
 		get_node("SummerVariantA").visible = true
 	elif (Attributes.season == "Fall"):
@@ -164,12 +165,26 @@ func _process(delta):
 			Attributes.quest1_completed = true
 			Attributes.quest1_active = false
 
-
 func _on_view_schedule_pressed():
+	Attributes.xacademic = $CharacterBody2D.global_position.x
+	Attributes.yacademic = $CharacterBody2D.global_position.y
 	get_tree().change_scene_to_file("res://scenes/schedule.tscn")
-	
 
 func _on_inventory_pressed():
+<<<<<<< HEAD
+=======
+	Attributes.xacademic = $CharacterBody2D.global_position.x
+	Attributes.yacademic = $CharacterBody2D.global_position.y
+	get_tree().change_scene_to_file("res://scenes/Inventory/player_inventory.tscn")
+	
+func _on_close_variants_button_pressed():
+	get_node("CharacterBody2D/Panel").visible = false
+	
+func _on_variants_pressed():
+	get_node("CharacterBody2D/Panel").visible = true
+
+func _on_rank_pressed():
+>>>>>>> parent of 306e1de (Rewrote the code to utilize Attributes script)
 	Attributes.xacademic = $CharacterBody2D.global_position.x
 	Attributes.yacademic = $CharacterBody2D.global_position.y
 	Attributes.location = "res://scenes/map/academic_map.tscn"
@@ -189,7 +204,42 @@ func _on_button_pressed():
 	$CharacterBody2D/Panel.visible = false
 	SaveUtils.save()
 	
+<<<<<<< HEAD
 
 func _on_variants_pressed():
 	$CharacterBody2D/Panel.visible = true
 	SaveUtils.save()
+=======
+func _schedule_for_each_building(building):
+	var complete_string = ""
+	var count = 0
+	if (Attributes.course_num == 1) :
+		pass
+	else:
+		for i in range (1, Attributes.course_num):
+			var location = "course" + str(i) + "_location"
+			var courseLocation = Attributes.courseLocations[location]
+			if courseLocation == building:
+				count+=1
+				var name = "course" + str(i) + "_name"
+				var courseName = Attributes.courseNames[name]
+				var time = "course" + str(i) + "_time"
+				var courseTime = Attributes.courseTimes[time]
+				var day = "course" + str(i) + "_days"
+				var Days_dict = Attributes.courseDays[day]
+				var courseDays = ""
+				for j in Days_dict:
+					if Days_dict[j] == 1:
+						courseDays += j
+				var format_string = "| Course Name: %s | Time: %s | Days: %s | Location: %s |\n"
+				var actual_string = format_string % [courseName, courseTime, courseDays, courseLocation]
+				complete_string += actual_string
+	if count == 0:
+		find_child(building).visible = false
+	else:
+		find_child(building).visible = true
+		var count_string = "You have %s Courses in this building.\n" + complete_string
+		var string_with_count = count_string % [count]
+		find_child(building).text= string_with_count 
+		
+>>>>>>> parent of 306e1de (Rewrote the code to utilize Attributes script)

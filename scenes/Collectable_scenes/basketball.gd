@@ -20,9 +20,9 @@ func _on_body_entered(body):
 func _on_collect_button_pressed():
 	Attributes.basketball = true;
 	Attributes.numCollected += 1;
-	Attributes.items.append(ItemManager.Items.BASKETBALL)
 	queue_free();
 	SaveUtils.save()
+	
 	
 
 

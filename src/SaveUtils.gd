@@ -11,11 +11,13 @@ func save():
 		"yacademic" : Attributes.yacademic,
 		"location" : Attributes.location,
 		"rank" : Attributes.rank,
+<<<<<<< HEAD
 		"isServer" : Attributes.isServer,
 		"serverName" : Attributes.serverName,
+=======
+>>>>>>> parent of 306e1de (Rewrote the code to utilize Attributes script)
 		
 		# collectables
-		
 		"collectibleA" : Attributes.collectibleA,
 		"collectibleH" : Attributes.collectibleH,
 		"angry_pete" : Attributes.angry_pete,
@@ -69,8 +71,11 @@ func load(savefile: String):
 			Attributes.yacademic = line["yacademic"]
 			Attributes.location = line["location"]
 			Attributes.rank = line["rank"]
+<<<<<<< HEAD
 			Attributes.isServer = line["isServer"]
 			Attributes.serverName = line["serverName"]
+=======
+>>>>>>> parent of 306e1de (Rewrote the code to utilize Attributes script)
 			
 			# collectables
 			

@@ -26,6 +26,16 @@ func _ready():
 		"xp" : {"data_type":"int"}
 	}
 	(Attributes.database).create_table("Players", table)
+<<<<<<< HEAD
+=======
+	table = {
+		"username" : {"data_type":"text"},
+		"message" : {"data_type":"text"},
+		"time" : {"data_type":"text"},
+		"date" : {"data_type":"text"}
+	}
+	(Attributes.database).create_table("GlobalChat", table)
+>>>>>>> parent of 306e1de (Rewrote the code to utilize Attributes script)
 
 func _on_start_new_game_pressed():
 	Attributes.reset("res://savefiles/save1.bin")

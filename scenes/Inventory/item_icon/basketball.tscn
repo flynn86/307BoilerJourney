@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvqud83r0jw6h"]
-
-[ext_resource type="Texture2D" uid="uid://cw1p6nt815vk" path="res://scenes/Collectable_scenes/Collectables/Pixel-Art-Basketball-2-1015x1024.png" id="1_1mnti"]
-
-[node name="Sprite2D" type="Sprite2D"]
-scale = Vector2(0.02, 0.02)
-texture = ExtResource("1_1mnti")
