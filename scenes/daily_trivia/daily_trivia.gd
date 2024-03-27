@@ -4,7 +4,7 @@ extends NinePatchRect
 	"When did the Purdue Memorial Union open?",
 	"Robert C. Baker, the inventor of chicken nuggets, got what degree at Purdue?",
 	"In 2001, the following part was added to the Engineering Fountain.",
-	"The Clapping Circle, in which clapping produces a high squeak noise, is located in which park?"
+	"The Clapping Circle, where clapping produces high squeak noises, is located in which park?"
 ]
 @onready var choice1 : Array = ["1969", "Master's", "The cat engraving", "Academy Park"]
 @onready var choice2 : Array = ["1940", "Doctorate", "Water", "Founders Park"]

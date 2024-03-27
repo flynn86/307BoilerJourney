@@ -97,7 +97,8 @@ text = "Daily Trivia"
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 161
-visible_ratio = -0.0833333
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="Image1" type="Sprite2D" parent="Trivia_frame"]
 position = Vector2(24, 16)
@@ -130,8 +131,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 justification_flags = 161
-visible_characters = -2
-visible_ratio = -0.125
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="Choice1" type="TextureButton" parent="."]
 layout_mode = 0
@@ -175,7 +176,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 justification_flags = 161
-visible_ratio = -0.166667
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="Choice2" type="TextureButton" parent="."]
 layout_mode = 0
@@ -219,7 +221,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 justification_flags = 161
-visible_ratio = -0.142857
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="Choice3" type="TextureButton" parent="."]
 layout_mode = 0
@@ -263,7 +266,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 justification_flags = 161
-visible_ratio = -0.142857
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="Choice4" type="TextureButton" parent="."]
 layout_mode = 0
@@ -307,9 +311,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 justification_flags = 161
-visible_ratio = -0.142857
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="time_till_next" type="NinePatchRect" parent="."]
+layout_mode = 0
 offset_left = 146.0
 offset_top = 72.0
 offset_right = 190.0
@@ -385,8 +391,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 justification_flags = 161
-visible_characters = -2
-visible_ratio = -0.142857
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="Result_control" type="Control" parent="."]
 layout_mode = 3
@@ -414,7 +420,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 justification_flags = 161
-visible_ratio = -0.037037
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(90, 60)

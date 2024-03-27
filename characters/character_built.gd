@@ -11,7 +11,7 @@ func _on_button_pressed():
 			"username" = Attributes.username,
 			"xp" = 0
 		}
-#		(Attributes.database).insert_row("Players", data)
+		(Attributes.database).insert_row("Players", data)
 		get_tree().change_scene_to_file("res://characters/select_avatar.tscn")
 
 func _on_button_2_pressed():

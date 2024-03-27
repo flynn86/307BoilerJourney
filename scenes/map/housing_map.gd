@@ -101,3 +101,11 @@ func _on_inventory_pressed():
 	Attributes.location = "res://scenes/map/housing_map.tscn"
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/Inventory/player_inventory.tscn")
+
+
+func _on_daily_trivia_pressed():
+	Attributes.xhousing = $CharacterBody2D.global_position.x
+	Attributes.yhousing = $CharacterBody2D.global_position.y
+	Attributes.location = "res://scenes/map/housing_map.tscn"
+	SaveUtils.save()
+	get_tree().change_scene_to_file("res://scenes/daily_trivia/daily_trivia.tscn")
