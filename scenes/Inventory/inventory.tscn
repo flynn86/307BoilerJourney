@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cg0juu3d3gepy"]
+[gd_scene load_steps=6 format=3 uid="uid://cg0juu3d3gepy"]
 
 [ext_resource type="Script" path="res://scenes/Inventory/Inventory.gd" id="2_q6cde"]
 [ext_resource type="FontFile" uid="uid://cmmr8t0m2myle" path="res://scenes/Inventory/Arcadepix Plus.ttf" id="3_01im4"]
-[ext_resource type="Texture2D" uid="uid://cemha5100kjtj" path="res://scenes/Inventory/item_slot.png" id="5_7djee"]
-[ext_resource type="Texture2D" uid="uid://c8xx1ayvq0g65" path="res://scenes/Collectable_scenes/Pixel-Art-Basketball-2-1015x1024 (1) (1).png" id="6_kot08"]
+[ext_resource type="PackedScene" uid="uid://bf8xjyohll501" path="res://scenes/Inventory/inventory_slot.tscn" id="5_e8yq8"]
 [ext_resource type="Texture2D" uid="uid://dqcdg4wxms527" path="res://scenes/Inventory/inner_panel.png" id="8_6lvgn"]
 [ext_resource type="Texture2D" uid="uid://dwuoauebb1w68" path="res://scenes/Inventory/bar.png" id="9_2xcfv"]
 
@@ -24,7 +23,8 @@ patch_margin_right = 8
 patch_margin_bottom = 8
 script = ExtResource("2_q6cde")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="title_header" type="TextureRect" parent="."]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.340741
@@ -38,7 +38,7 @@ offset_bottom = -15.0
 texture = ExtResource("9_2xcfv")
 metadata/_edit_use_anchors_ = true
 
-[node name="title" type="Label" parent="TextureRect"]
+[node name="title" type="Label" parent="title_header"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 5
@@ -59,7 +59,8 @@ text = "- Collectibles -"
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 161
-visible_ratio = -0.0625
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="slot_container" type="GridContainer" parent="."]
 layout_mode = 0
@@ -71,71 +72,47 @@ theme_override_constants/h_separation = 6
 theme_override_constants/v_separation = 6
 columns = 5
 
-[node name="slot1" type="TextureRect" parent="slot_container"]
+[node name="slot1" parent="slot_container" instance=ExtResource("5_e8yq8")]
 layout_mode = 2
-texture = ExtResource("5_7djee")
 
-[node name="TextureRect" type="TextureButton" parent="slot_container/slot1"]
-custom_minimum_size = Vector2(20, 20)
+[node name="slot2" parent="slot_container" instance=ExtResource("5_e8yq8")]
 layout_mode = 2
-offset_left = 2.0
-offset_top = 1.0
-offset_right = 22.0
-offset_bottom = 21.0
-texture_normal = ExtResource("6_kot08")
 
-[node name="slot2" type="TextureRect" parent="slot_container"]
+[node name="slot3" parent="slot_container" instance=ExtResource("5_e8yq8")]
 layout_mode = 2
-texture = ExtResource("5_7djee")
 
-[node name="slot3" type="TextureRect" parent="slot_container"]
+[node name="slot4" parent="slot_container" instance=ExtResource("5_e8yq8")]
 layout_mode = 2
-texture = ExtResource("5_7djee")
 
-[node name="slot4" type="TextureRect" parent="slot_container"]
+[node name="slot5" parent="slot_container" instance=ExtResource("5_e8yq8")]
 layout_mode = 2
-texture = ExtResource("5_7djee")
 
-[node name="slot5" type="TextureRect" parent="slot_container"]
+[node name="slot6" parent="slot_container" instance=ExtResource("5_e8yq8")]
 layout_mode = 2
-texture = ExtResource("5_7djee")
 
-[node name="slot6" type="TextureRect" parent="slot_container"]
+[node name="slot7" parent="slot_container" instance=ExtResource("5_e8yq8")]
 layout_mode = 2
-texture = ExtResource("5_7djee")
 
-[node name="slot7" type="TextureRect" parent="slot_container"]
+[node name="slot8" parent="slot_container" instance=ExtResource("5_e8yq8")]
 layout_mode = 2
-texture = ExtResource("5_7djee")
 
-[node name="slot8" type="TextureRect" parent="slot_container"]
+[node name="slot9" parent="slot_container" instance=ExtResource("5_e8yq8")]
 layout_mode = 2
-texture = ExtResource("5_7djee")
 
-[node name="slot9" type="TextureRect" parent="slot_container"]
+[node name="slot10" parent="slot_container" instance=ExtResource("5_e8yq8")]
 layout_mode = 2
-texture = ExtResource("5_7djee")
 
-[node name="slot10" type="TextureRect" parent="slot_container"]
+[node name="slot11" parent="slot_container" instance=ExtResource("5_e8yq8")]
 layout_mode = 2
-texture = ExtResource("5_7djee")
 
-[node name="slot11" type="TextureRect" parent="slot_container"]
+[node name="slot12" parent="slot_container" instance=ExtResource("5_e8yq8")]
 layout_mode = 2
-texture = ExtResource("5_7djee")
 
-[node name="slot12" type="TextureRect" parent="slot_container"]
+[node name="slot13" parent="slot_container" instance=ExtResource("5_e8yq8")]
 layout_mode = 2
-texture = ExtResource("5_7djee")
 
-[node name="slot13" type="TextureRect" parent="slot_container"]
+[node name="slot14" parent="slot_container" instance=ExtResource("5_e8yq8")]
 layout_mode = 2
-texture = ExtResource("5_7djee")
 
-[node name="slot14" type="TextureRect" parent="slot_container"]
+[node name="slot15" parent="slot_container" instance=ExtResource("5_e8yq8")]
 layout_mode = 2
-texture = ExtResource("5_7djee")
-
-[node name="slot15" type="TextureRect" parent="slot_container"]
-layout_mode = 2
-texture = ExtResource("5_7djee")

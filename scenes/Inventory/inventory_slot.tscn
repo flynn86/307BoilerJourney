@@ -1,22 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://bf8xjyohll501"]
+[gd_scene load_steps=4 format=3 uid="uid://bf8xjyohll501"]
 
-[ext_resource type="Texture2D" uid="uid://cemha5100kjtj" path="res://scenes/Inventory/item_slot.png" id="1_fcmlr"]
-[ext_resource type="PackedScene" path="res://items/data/tree.tscn" id="2_3b16y"]
+[ext_resource type="Texture2D" uid="uid://cemha5100kjtj" path="res://scenes/Inventory/item_slot.png" id="1_c2gt1"]
+[ext_resource type="Script" path="res://scenes/Inventory/inventory_slot.gd" id="2_kgw62"]
+[ext_resource type="Texture2D" uid="uid://cw1p6nt815vk" path="res://scenes/Collectable_scenes/Collectables/Pixel-Art-Basketball-2-1015x1024.png" id="2_u0524"]
 
-[node name="inventory_slot" type="TextureRect"]
-texture = ExtResource("1_fcmlr")
+[node name="slot" type="TextureRect"]
+texture = ExtResource("1_c2gt1")
+script = ExtResource("2_kgw62")
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
-layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -8.0
-offset_right = 8.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="Item" parent="CenterContainer" instance=ExtResource("2_3b16y")]
+[node name="item_container" type="CenterContainer" parent="."]
+unique_name_in_owner = true
 layout_mode = 2
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Sprite2D" type="Sprite2D" parent="item_container"]
+position = Vector2(10, 10)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_u0524")
