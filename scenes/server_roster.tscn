@@ -22,6 +22,21 @@ offset_bottom = 95.0
 text = "Back to Menu
 "
 
+[node name="ClientDisconnect" type="Button" parent="."]
+offset_left = 85.0
+offset_top = 573.0
+offset_right = 652.0
+offset_bottom = 636.0
+text = "Disconnect from Server"
+
+[node name="ServerDisconnect" type="Button" parent="."]
+visible = false
+offset_left = 85.0
+offset_top = 573.0
+offset_right = 652.0
+offset_bottom = 636.0
+text = "Close the Server"
+
 [node name="Label" type="Label" parent="."]
 offset_left = 13.0
 offset_top = 116.0
@@ -48,3 +63,5 @@ placeholder_text = "Enter Message"
 alignment = 1
 
 [connection signal="pressed" from="BackToMenu" to="." method="_on_back_to_menu_pressed"]
+[connection signal="pressed" from="ClientDisconnect" to="." method="_on_client_disconnect_pressed"]
+[connection signal="pressed" from="ServerDisconnect" to="." method="_on_server_disconnect_pressed"]
