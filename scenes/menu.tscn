@@ -63,35 +63,35 @@ offset_left = 576.0
 offset_top = 440.0
 offset_right = 808.0
 offset_bottom = 490.0
-placeholder_text = "Enter Server Address"
+placeholder_text = "Enter Server Host Name"
 alignment = 1
 
 [node name="Label2" type="Label" parent="."]
 visible = false
-offset_left = 270.0
+offset_left = 234.0
 offset_top = 584.0
-offset_right = 858.0
-offset_bottom = 620.0
-text = "You must enter the address of server you want to join before you can join it."
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-
-[node name="Label3" type="Label" parent="."]
-offset_left = 270.0
-offset_top = 584.0
-offset_right = 858.0
-offset_bottom = 620.0
+offset_right = 894.0
+offset_bottom = 609.0
+text = "You must enter the name of host of the server you want to join before you can join it."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="GlobalChatButton" type="Button" parent="."]
+visible = false
 offset_left = 49.0
 offset_top = 280.0
 offset_right = 283.0
 offset_bottom = 395.0
-text = "Global Chat"
+text = "Server Chat"
+
+[node name="ServerRosterButton" type="Button" parent="."]
+visible = false
+offset_left = 49.0
+offset_top = 440.0
+offset_right = 283.0
+offset_bottom = 555.0
+text = "Server Roster"
 
 [connection signal="pressed" from="ViewProgressButton" to="." method="_on_view_progress_button_pressed"]
 [connection signal="pressed" from="BackToMapButton" to="." method="_on_back_to_map_button_pressed"]
@@ -99,5 +99,5 @@ text = "Global Chat"
 [connection signal="pressed" from="CustomizeCharacterButton" to="." method="_on_customize_character_button_pressed"]
 [connection signal="pressed" from="HostServerButton" to="." method="_on_host_server_button_pressed"]
 [connection signal="pressed" from="JoinServerButton" to="." method="_on_join_server_button_pressed"]
-[connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]
 [connection signal="pressed" from="GlobalChatButton" to="." method="_on_global_chat_button_pressed"]
+[connection signal="pressed" from="ServerRosterButton" to="." method="_on_server_roster_button_pressed"]

@@ -11,6 +11,8 @@ func save():
 		"yacademic" : Attributes.yacademic,
 		"location" : Attributes.location,
 		"rank" : Attributes.rank,
+		"isServer" : Attributes.isServer,
+		"serverName" : Attributes.serverName,
 		
 		# collectables
 		"collectibleA" : Attributes.collectibleA,
@@ -59,6 +61,8 @@ func load(savefile: String):
 			Attributes.yacademic = line["yacademic"]
 			Attributes.location = line["location"]
 			Attributes.rank = line["rank"]
+			Attributes.isServer = line["isServer"]
+			Attributes.serverName = line["serverName"]
 			
 			# collectables
 			

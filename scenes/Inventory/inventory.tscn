@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://cg0juu3d3gepy"]
 
 [ext_resource type="Script" path="res://scenes/Inventory/Inventory.gd" id="2_q6cde"]
-[ext_resource type="FontFile" uid="uid://cmmr8t0m2myle" path="res://scenes/Inventory/Arcadepix Plus.ttf" id="3_01im4"]
-[ext_resource type="Texture2D" uid="uid://cemha5100kjtj" path="res://scenes/Inventory/item_slot.png" id="5_7djee"]
-[ext_resource type="Texture2D" uid="uid://c8xx1ayvq0g65" path="res://scenes/Collectable_scenes/Pixel-Art-Basketball-2-1015x1024 (1) (1).png" id="6_kot08"]
-[ext_resource type="Texture2D" uid="uid://dqcdg4wxms527" path="res://scenes/Inventory/inner_panel.png" id="8_6lvgn"]
-[ext_resource type="Texture2D" uid="uid://dwuoauebb1w68" path="res://scenes/Inventory/bar.png" id="9_2xcfv"]
+[ext_resource type="FontFile" uid="uid://jxw7jrwy0ssh" path="res://scenes/Inventory/Arcadepix Plus.ttf" id="3_01im4"]
+[ext_resource type="Texture2D" uid="uid://oos3aq8rkp3r" path="res://scenes/Inventory/item_slot.png" id="5_7djee"]
+[ext_resource type="Texture2D" uid="uid://bhgrppw1olke8" path="res://scenes/Collectable_scenes/Pixel-Art-Basketball-2-1015x1024 (1) (1).png" id="6_kot08"]
+[ext_resource type="Texture2D" uid="uid://clnf05wug8tjr" path="res://scenes/Inventory/inner_panel.png" id="8_6lvgn"]
+[ext_resource type="Texture2D" uid="uid://bivxaxl2itbo1" path="res://scenes/Inventory/bar.png" id="9_2xcfv"]
 
 [node name="Inventory" type="NinePatchRect"]
 custom_minimum_size = Vector2(0, 100)
@@ -59,7 +59,8 @@ text = "- Collectibles -"
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 161
-visible_ratio = -0.0625
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="slot_container" type="GridContainer" parent="."]
 layout_mode = 0

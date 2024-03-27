@@ -11,6 +11,8 @@ var yPMU: float = float(830)
 var xp: int = 0
 var location: String = "res://scenes/map/academic_map.tscn"
 var rank: String = "Freshman"
+var isServer: bool = false
+var serverName: String = ""
 
 # collectables
 var numCollected: int = 0
@@ -131,6 +133,8 @@ func reset(file: String):
 	location = "res://scenes/map/academic_map.tscn"
 	xp = (0)
 	rank = "Freshman"
+	isServer = false
+	serverName = ""
 	
 	# collectables
 	numCollected = 0
