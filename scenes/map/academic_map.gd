@@ -24,6 +24,12 @@ func _ready():
 	get_node("Purdue_symbol").visible = !Attributes.purdue_symbol
 	get_node("IU_Sucks_Poster").visible = !Attributes.iu_poster
 	get_node("basketball").visible = !Attributes.basketball
+	get_node("bell_tower").visible = !Attributes.bell_tower
+	get_node("go_boilers").visible = !Attributes.go_boilers
+	get_node("boilermaker_train").visible = !Attributes.boilermaker_train
+	get_node("angry_pete").visible = !Attributes.angry_pete
+	get_node("purdue_helmet").visible = !Attributes.purdue_helmet
+	get_node("purdue_cap").visible = !Attributes.purdue_cap
 
 func _input(event):
 	if event is InputEventMouseMotion or event is InputEventMouseButton:
