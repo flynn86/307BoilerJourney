@@ -10,14 +10,32 @@ extends Control
 func set_daytime(day: int, hour: int, minute: int) -> void:
 	day_label.text = "Day " + str(day + 1)
 	day_label_background.text = day_label.text
+	var hour_str : String = ""
+	var minute_str : String = ""
+	var am_pm_str : String = ""
 	
-	time_label.text = _amfm_hour(hour) + ":" + _minute(minute) + " " + _am_pm(hour)
+	if hour <= 12:
+		hour_str = str(hour)
+	elif hour > 12:
+		hour_str = str(hour - 12)
+	
+	if minute < 10:
+		minute_str = "0" + str(minute)
+	else:
+		minute_str = str(minute)
+		
+	if hour < 12:
+		am_pm_str = "am"
+	else:
+		am_pm_str = "pm"
+	
+	time_label.text = hour_str + ":" + minute_str + " " + am_pm_str
 	time_label_background.text = time_label.text
 	
 	if hour <= 12:
-		arrow.rotation_degrees = _remap_rangef(hour, 0, 12, -90, 90)
+		arrow.rotation_degrees = ((hour / 12) * 180) - 90
 	else:
-		arrow.rotation_degrees = _remap_rangef(hour, 13, 23, 90, -90)
+		arrow.rotation_degrees = (((hour - 13) / 10) * (-180)) + 90 
 
 
 func _amfm_hour(hour:int) -> String:
