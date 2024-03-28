@@ -19,6 +19,7 @@ func _ready():
 	get_node("Inventory_container").visible = false
 	get_node("Trivia_container").visible = false
 	set_process_input(true)
+	get_node("CharacterBody2D/Panel2").visible = false
 	$CharacterBody2D/Panel.visible = false
 
 func _on_panel_closed():
@@ -91,6 +92,20 @@ func _process(delta):
 		if (Attributes.engineering_ftn_visited == true and Attributes.loeb_ftn_visited == true):
 			Attributes.quest1_completed = true
 			Attributes.quest1_active = false
+	if Attributes.xp <= 29:
+		Attributes.rank = "Freshman"
+	elif Attributes.xp <= 59: 
+		if (Attributes.rank != "Sophmore"):
+			get_node("CharacterBody2D/Panel2").visible = true
+		Attributes.rank = "Sophmore"
+	elif Attributes.xp <= 89:
+		if (Attributes.rank != "Junior"):
+			get_node("CharacterBody2D/Panel2").visible = true
+		Attributes.rank = "Junior"
+	else: 
+		if (Attributes.rank != "Senior"):
+			get_node("CharacterBody2D/Panel2").visible = true
+		Attributes.rank = "Senior"
 
 func _on_view_schedule_pressed():
 	Attributes.xhousing = $CharacterBody2D.global_position.x
@@ -132,4 +147,7 @@ func _on_rank_pressed():
 	Attributes.location = "res://scenes/map/housing_map.tscn"
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/rank_page/rank_page.tscn")
+
+func _on_noti_close_pressed():
+	get_node("CharacterBody2D/Panel2").visible = false
 	

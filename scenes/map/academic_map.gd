@@ -7,6 +7,7 @@ func _ready():
 	get_node("FallVariantA").visible = false
 	get_node("SpringVariantA").visible = false
 	get_node("WinterVariantA").visible = false
+	get_node("CharacterBody2D/Panel2").visible = false
 	$CharacterBody2D/Panel.visible = false
 	if (Attributes.season == "Summer"):
 		get_node("SummerVariantA").visible = true
@@ -165,6 +166,20 @@ func _process(delta):
 		if (Attributes.engineering_ftn_visited == true and Attributes.loeb_ftn_visited == true):
 			Attributes.quest1_completed = true
 			Attributes.quest1_active = false
+	if Attributes.xp <= 29:
+		Attributes.rank = "Freshman"
+	elif Attributes.xp <= 59: 
+		if (Attributes.rank != "Sophmore"):
+			get_node("CharacterBody2D/Panel2").visible = true
+		Attributes.rank = "Sophmore"
+	elif Attributes.xp <= 89:
+		if (Attributes.rank != "Junior"):
+			get_node("CharacterBody2D/Panel2").visible = true
+		Attributes.rank = "Junior"
+	else: 
+		if (Attributes.rank != "Senior"):
+			get_node("CharacterBody2D/Panel2").visible = true
+		Attributes.rank = "Senior"
 
 func _on_view_schedule_pressed():
 	Attributes.xacademic = $CharacterBody2D.global_position.x
@@ -231,3 +246,6 @@ func _on_class_rank_pressed():
 	Attributes.yacademic = $CharacterBody2D.global_position.y
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/rank_page/rank_page.tscn")
+
+func _on_noti_close_pressed():
+	get_node("CharacterBody2D/Panel2").visible = false
