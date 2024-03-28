@@ -259,4 +259,6 @@ func reset(file: String):
 	}
 	course_num = 1
 	items.clear()
+	question_available = true
+	last_daily_question_time = {}
 	

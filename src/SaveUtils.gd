@@ -48,8 +48,12 @@ func save():
 		"courseTimes": Attributes.courseTimes,
 		"courseDays": Attributes.courseDays,
 		"courseLocations": Attributes.courseLocations,
-		"coursenum": Attributes.course_num
-		
+		"coursenum": Attributes.course_num,
+		# Inventory
+		"items": Attributes.items,
+		# Daily Question
+		"question_available" : Attributes.question_available,
+		"last_daily_question_time" : Attributes.last_daily_question_time
 	}
 	var string_data = JSON.stringify(save_data)
 	file.store_line(string_data)
@@ -107,6 +111,11 @@ func load(savefile: String):
 			Attributes.courseDays = line["courseDays"]
 			Attributes.courseLocations = line["courseLocations"]
 			Attributes.course_num = line["coursenum"] 
+			# Inventory
+			Attributes.items = line["items"]
+			# Daily Question
+			Attributes.question_available = line["question_available"]
+			Attributes.last_daily_question_time = line["last_daily_question_time"]
 		file.close()
 
 func delete(savefile: String):
