@@ -70,6 +70,7 @@ func display_correct():
 	# Attributes.xp += exp_reward[index]
 	Attributes.question_available = false
 	Attributes.last_daily_question_time = Time.get_datetime_dict_from_system()
+	SaveUtils.save()
 	result_control.visible = true
 
 func display_incorrect():
@@ -90,14 +91,36 @@ func display_incorrect():
 	result_label.text = "Incorrect. The correct answer was " + correct_answer + "."
 	Attributes.question_available = false
 	Attributes.last_daily_question_time = Time.get_datetime_dict_from_system()
+	SaveUtils.save()
 	result_control.visible = true
 	
 func _process(_delta):
-	if (Attributes.question_available):
+	if (Attributes.question_available) || (Attributes.last_daily_question_time.size() == 0):
 		time.text = "Ready"
 	else:
-		# Add calculation for remaining time
-		time.text = "Not Ready"
+		var cur = Time.get_datetime_dict_from_system()
+		var last = Attributes.last_daily_question_time
+		if (cur.weekday != last.weekday): # If the weekday is different, than refresh question
+			Attributes.question_available = true
+			_ready()
+		elif (cur.day != last.day) || (cur.month != last.month) || (cur.year != last.year):
+			# Edge case of weekday being same, but on a different date
+			Attributes.question_available = true
+			_ready()
+		else:
+			var remaining_hour = 23 - cur.hour
+			var remaining_minute = 59 - cur.minute
+			var remaining_second = 59 - cur.second
+			var remaining_hour_str = str(remaining_hour)
+			var remaining_minute_str = str(remaining_minute)
+			var remaining_second_str = str(remaining_second)
+			if (remaining_hour < 10):
+				remaining_hour_str = "0" + str(remaining_hour)
+			if (remaining_minute < 10):
+				remaining_minute_str = "0" + str(remaining_minute)
+			if (remaining_second < 10):
+				remaining_second_str = "0" + str(remaining_second)
+			time.text = remaining_hour_str + ":" + remaining_minute_str + ":" + remaining_second_str
 	time.visible_characters = -1
 
 func _on_choice_1_pressed():

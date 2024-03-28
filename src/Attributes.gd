@@ -129,7 +129,7 @@ var items : Array = []
 
 # Daily Question
 var question_available : bool = true
-var last_daily_question_time : Dictionary = {}
+var last_daily_question_time : Dictionary = Time.get_datetime_dict_from_system()
 
 
 
