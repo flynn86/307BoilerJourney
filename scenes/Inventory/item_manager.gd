@@ -29,7 +29,7 @@ var purdue_helmet = preload("res://scenes/Collectable_scenes/Collectables/Purdue
 	"Gear up for game day or show your pride with this Purdue University football helmet."
 ]
 
-# Values correspond to index of array items in Attributes
+# Values correspond to index of array items in names
 enum Items {
 	BASKETBALL,
 	IU_SUCKS_POSTER,
