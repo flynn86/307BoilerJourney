@@ -36,6 +36,8 @@ func _ready():
 	get_node("purdue_helmet").visible = !Attributes.purdue_helmet
 	get_node("purdue_cap").visible = !Attributes.purdue_cap
 	$CharacterBody2D/Panel.visible = false
+	get_node("Inventory_container").visible = false
+	get_node("Trivia_container").visible = false
 
 
 func _input(event):
