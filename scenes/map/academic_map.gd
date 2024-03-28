@@ -7,6 +7,7 @@ func _ready():
 	get_node("FallVariantA").visible = false
 	get_node("SpringVariantA").visible = false
 	get_node("WinterVariantA").visible = false
+	$CharacterBody2D/Panel.visible = false
 	if (Attributes.season == "Summer"):
 		get_node("SummerVariantA").visible = true
 	elif (Attributes.season == "Fall"):

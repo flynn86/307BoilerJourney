@@ -19,6 +19,7 @@ func _ready():
 	get_node("Inventory_container").visible = false
 	get_node("Trivia_container").visible = false
 	set_process_input(true)
+	$CharacterBody2D/Panel.visible = false
 
 func _on_panel_closed():
 	Attributes.xhousing = $CharacterBody2D.global_position.x
@@ -91,8 +92,6 @@ func _process(delta):
 			Attributes.quest1_completed = true
 			Attributes.quest1_active = false
 
-
-
 func _on_view_schedule_pressed():
 	Attributes.xhousing = $CharacterBody2D.global_position.x
 	Attributes.yhousing = $CharacterBody2D.global_position.y
@@ -124,3 +123,9 @@ func _on_dorm_pressed():
 	Attributes.location = "res://scenes/map/housing_map.tscn"
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/map/dorm_room.tscn")
+	
+func _on_close_variants_pressed():
+	get_node("CharacterBody2D/Panel").visible = false
+
+func _on_variants_pressed():
+	$CharacterBody2D/Panel.visible = true
