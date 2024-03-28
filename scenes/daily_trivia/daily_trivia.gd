@@ -38,7 +38,7 @@ func _ready():
 		button2.visible = true
 		button3.visible = true
 		button4.visible = true
-		index = randi_range(0, 3)
+		index = randi_range(0, numQuestions - 1)
 		question_label.text = questions[index]
 		label1.text = choice1[index]
 		label2.text = choice2[index]
