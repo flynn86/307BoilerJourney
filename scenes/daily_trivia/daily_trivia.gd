@@ -67,7 +67,7 @@ func display_correct():
 	button4.visible = false
 	question_label.text = "Come back soon!"
 	result_label.text = "Correct! You gained +" + str(exp_reward[index]) + " EXP!"
-	# Attributes.xp += exp_reward[index]
+	Attributes.xp += exp_reward[index]
 	Attributes.question_available = false
 	Attributes.last_daily_question_time = Time.get_datetime_dict_from_system()
 	SaveUtils.save()
