@@ -20,7 +20,7 @@ func _on_body_entered(body):
 func _on_collect_button_pressed():
 	Attributes.angry_pete = true;
 	Attributes.numCollected += 1;
-	#Attributes.items.append(ItemManager.Items.ANGRY_PETE)
+	Attributes.items.append(ItemManager.Items.ANGRY_PETE)
 	queue_free();
 	SaveUtils.save()
 	

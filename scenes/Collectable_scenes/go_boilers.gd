@@ -20,7 +20,7 @@ func _on_body_entered(body):
 func _on_collect_button_pressed():
 	Attributes.go_boilers = true;
 	Attributes.numCollected += 1;
-	#Attributes.items.append(ItemManager.Items.GO_BOILERS)
+	Attributes.items.append(ItemManager.Items.GO_BOILERS)
 	queue_free();
 	SaveUtils.save()
 	

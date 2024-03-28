@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://btjdwfj1s0wbf"]
 
 [ext_resource type="Script" path="res://scenes/Collectable_scenes/purdue_cap.gd" id="1_kx44c"]
-[ext_resource type="Texture2D" uid="uid://cfbiwcykt44v3" path="res://scenes/Collectable_scenes/Collectables/collectables 2.jpeg" id="2_v8rh4"]
+[ext_resource type="Texture2D" uid="uid://cvt4yg6g2pph2" path="res://scenes/Collectable_scenes/Collectables/collectables 2.jpeg" id="2_v8rh4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kdd5l"]
 radius = 24.0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ypr73yyi6eja"]
 
 [ext_resource type="Script" path="res://scenes/Collectable_scenes/purdue_helmet.gd" id="1_3c371"]
-[ext_resource type="Texture2D" uid="uid://bxj53k5w4bjs7" path="res://scenes/Collectable_scenes/Collectables/bunch of images.png" id="2_n4crx"]
+[ext_resource type="Texture2D" uid="uid://d3d136uafx5xc" path="res://scenes/Collectable_scenes/Collectables/bunch of images.png" id="2_n4crx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kdd5l"]
 radius = 23.0

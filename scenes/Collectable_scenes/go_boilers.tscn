@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bipgdxowsbo4q"]
 
 [ext_resource type="Script" path="res://scenes/Collectable_scenes/go_boilers.gd" id="1_va2pt"]
-[ext_resource type="Texture2D" uid="uid://ds74k8sxk3xl4" path="res://scenes/Collectable_scenes/Collectables/go boilers.png" id="2_r0t3u"]
+[ext_resource type="Texture2D" uid="uid://cn1t02liv36yc" path="res://scenes/Collectable_scenes/Collectables/go boilers.png" id="2_r0t3u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kdd5l"]
 radius = 29.0

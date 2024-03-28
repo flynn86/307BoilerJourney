@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cg0juu3d3gepy"]
+[gd_scene load_steps=7 format=3 uid="uid://cg0juu3d3gepy"]
 
 [ext_resource type="FontFile" uid="uid://cmmr8t0m2myle" path="res://scenes/Inventory/Arcadepix Plus.ttf" id="3_01im4"]
 [ext_resource type="PackedScene" uid="uid://bf8xjyohll501" path="res://scenes/Inventory/inventory_slot.tscn" id="5_e8yq8"]
+[ext_resource type="Texture2D" uid="uid://cemha5100kjtj" path="res://scenes/Inventory/item_slot.png" id="5_f0cw3"]
+[ext_resource type="Texture2D" uid="uid://ie7bmvpaducq" path="res://scenes/Collectable_scenes/Collectables/Purdue_Helmet_Transparent.png" id="6_xenvh"]
 [ext_resource type="Texture2D" uid="uid://dqcdg4wxms527" path="res://scenes/Inventory/inner_panel.png" id="8_6lvgn"]
 [ext_resource type="Texture2D" uid="uid://dwuoauebb1w68" path="res://scenes/Inventory/bar.png" id="9_2xcfv"]
 
@@ -112,5 +114,23 @@ layout_mode = 2
 [node name="slot14" parent="slot_container" instance=ExtResource("5_e8yq8")]
 layout_mode = 2
 
-[node name="slot15" parent="slot_container" instance=ExtResource("5_e8yq8")]
+[node name="slot15" type="TextureButton" parent="slot_container"]
 layout_mode = 2
+texture_normal = ExtResource("5_f0cw3")
+
+[node name="item_container" type="CenterContainer" parent="slot_container/slot15"]
+unique_name_in_owner = true
+layout_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+
+[node name="Sprite2D" type="Sprite2D" parent="slot_container/slot15/item_container"]
+position = Vector2(-16, -16)
+scale = Vector2(0.045, 0.045)
+texture = ExtResource("6_xenvh")
