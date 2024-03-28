@@ -40,7 +40,6 @@ func _ready():
 	get_node("Inventory_container").visible = false
 	get_node("Trivia_container").visible = false
 
-
 func _input(event):
 	if event is InputEventMouseMotion or event is InputEventMouseButton:
 		var mouse_pos = event.position
@@ -64,22 +63,19 @@ func open_tab(building_name: String):
 		var file = FileAccess.open("res://location_information/building_name.txt", FileAccess.WRITE)
 		file.store_string(building_name)
 		get_tree().change_scene_to_file("res://scenes/location_tab/location_page.tscn")
-	
+
 func _on_panel_closed():
 	Attributes.xacademic = $CharacterBody2D.global_position.x
 	Attributes.yacademic = $CharacterBody2D.global_position.y
 	SaveUtils.save()
 	self.visible = true
-	
+
 func _on_housing_button_pressed():
 	Attributes.xacademic = $CharacterBody2D.global_position.x
 	Attributes.yacademic = $CharacterBody2D.global_position.y
 	Attributes.location = "res://scenes/map/housing_map.tscn"
 	get_tree().change_scene_to_file("res://scenes/map/housing_map.tscn")
 	SaveUtils.save()
-	
-
-
 
 func _on_change_summer_pressed():
 	Attributes.season = "Summer"
@@ -94,7 +90,6 @@ func _on_change_winter_pressed():
 	get_node("FallVariantA").visible = false
 	get_node("SpringVariantA").visible = false
 	get_node("WinterVariantA").visible = true
-
 
 func _on_change_fall_pressed():
 	Attributes.season = "Fall"
@@ -111,7 +106,6 @@ func _on_change_spring_pressed():
 	get_node("SpringVariantA").visible = true
 	get_node("WinterVariantA").visible = false
 
-
 func _on_day_night_button_pressed():
 	var temp = get_node("day_night")
 	var temp2 = get_node("CharacterBody2D/Player/player_light")
@@ -123,8 +117,6 @@ func _on_day_night_button_pressed():
 		Attributes.night = false;
 		temp.set_time_state(0)
 		temp2.visible = false
-
-
 
 func _on_menu_button_pressed():
 	Attributes.xacademic = $CharacterBody2D.global_position.x
@@ -174,7 +166,6 @@ func _process(delta):
 			Attributes.quest1_completed = true
 			Attributes.quest1_active = false
 
-
 func _on_view_schedule_pressed():
 	Attributes.xacademic = $CharacterBody2D.global_position.x
 	Attributes.yacademic = $CharacterBody2D.global_position.y
@@ -190,7 +181,6 @@ func _on_inventory_pressed():
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/Inventory/player_inventory.tscn")
 
-
 func _on_daily_trivia_pressed():
 	Attributes.xacademic = $CharacterBody2D.global_position.x
 	Attributes.yacademic = $CharacterBody2D.global_position.y
@@ -198,13 +188,11 @@ func _on_daily_trivia_pressed():
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/daily_trivia/daily_trivia.tscn")
 
-
 func _on_button_pressed():
 	$CharacterBody2D/Panel.visible = false
 
 func _on_variants_pressed():
 	$CharacterBody2D/Panel.visible = true
-
 
 func _schedule_for_each_building(building):
 	var complete_string = ""
@@ -237,3 +225,9 @@ func _schedule_for_each_building(building):
 		var count_string = "You have %s Courses in this building.\n" + complete_string
 		var string_with_count = count_string % [count]
 		find_child(building).text= string_with_count 
+
+func _on_class_rank_pressed():
+	Attributes.xacademic = $CharacterBody2D.global_position.x
+	Attributes.yacademic = $CharacterBody2D.global_position.y
+	SaveUtils.save()
+	get_tree().change_scene_to_file("res://scenes/rank_page/rank_page.tscn")

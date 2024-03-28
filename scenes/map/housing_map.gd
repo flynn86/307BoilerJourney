@@ -99,7 +99,6 @@ func _on_view_schedule_pressed():
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/schedule.tscn")
 
-
 func _on_inventory_pressed():
 	Attributes.xhousing = $CharacterBody2D.global_position.x
 	Attributes.yhousing = $CharacterBody2D.global_position.y
@@ -107,15 +106,12 @@ func _on_inventory_pressed():
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/Inventory/player_inventory.tscn")
 
-
 func _on_daily_trivia_pressed():
 	Attributes.xhousing = $CharacterBody2D.global_position.x
 	Attributes.yhousing = $CharacterBody2D.global_position.y
 	Attributes.location = "res://scenes/map/housing_map.tscn"
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/daily_trivia/daily_trivia.tscn")
-
-
 
 func _on_dorm_pressed():
 	Attributes.xhousing = $CharacterBody2D.global_position.x
@@ -129,3 +125,11 @@ func _on_close_variants_pressed():
 
 func _on_variants_pressed():
 	$CharacterBody2D/Panel.visible = true
+	
+func _on_rank_pressed(): 
+	Attributes.xhousing = $CharacterBody2D.global_position.x
+	Attributes.yhousing = $CharacterBody2D.global_position.y
+	Attributes.location = "res://scenes/map/housing_map.tscn"
+	SaveUtils.save()
+	get_tree().change_scene_to_file("res://scenes/rank_page/rank_page.tscn")
+	
