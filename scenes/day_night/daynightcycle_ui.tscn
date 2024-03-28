@@ -103,7 +103,6 @@ offset_left = 51.0
 offset_top = 19.0
 offset_right = 91.0
 offset_bottom = 59.0
-rotation = -1.60047
 pivot_offset = Vector2(1, 2.5)
 texture = SubResource("AtlasTexture_ucvpk")
 stretch_mode = 2
