@@ -6,6 +6,8 @@ extends Control
 @onready var time_label = time_label_background.get_child(0)
 @onready var arrow = get_child(3)
 
+func _process(delta):
+	set_daytime(GlobalTime.day,GlobalTime.hour, GlobalTime.minute)
 
 func set_daytime(day: int, hour: int, minute: int) -> void:
 	day_label.text = "Day " + str(day + 1)
@@ -32,6 +34,11 @@ func set_daytime(day: int, hour: int, minute: int) -> void:
 	time_label.text = hour_str + ":" + minute_str + " " + am_pm_str
 	time_label_background.text = time_label.text
 	
+	# up = -90 deg
+	# right = 0 deg
+	# down = 90 deg
+	# When going from night -> day, rotate arrow from up -> down
+	# When going from day -> night, rotate arrow from down -> up
 	if hour <= 12:
 		arrow.rotation_degrees = ((hour / 12) * 180) - 90
 	else:
