@@ -1,11 +1,11 @@
 [gd_scene load_steps=21 format=3 uid="uid://cnwk7svibwils"]
 
-[ext_resource type="Texture2D" uid="uid://b2435ocsrwg86" path="res://images/Screen Shot 2024-03-25 at 12.08.42 PM.png" id="2_0wikf"]
+[ext_resource type="Texture2D" uid="uid://cjxqsuegknsc6" path="res://images/Screen Shot 2024-03-25 at 12.08.42 PM.png" id="2_0wikf"]
 [ext_resource type="Script" path="res://scenes/rank_page/rank_page.gd" id="2_l2gjh"]
-[ext_resource type="Texture2D" uid="uid://b6kbsfhf22lmm" path="res://images/rounded_rect.png" id="3_06kdi"]
-[ext_resource type="Texture2D" uid="uid://c4bjeq4j1qykc" path="res://images/shield.png" id="3_bs8fq"]
-[ext_resource type="Texture2D" uid="uid://ctv7d55ycgr1h" path="res://images/wing.png" id="4_th8fe"]
-[ext_resource type="Texture2D" uid="uid://dvfgsj4avq3v" path="res://images/wing_l.png" id="5_4a0lw"]
+[ext_resource type="Texture2D" uid="uid://cuc2rawxiuuu" path="res://images/rounded_rect.png" id="3_06kdi"]
+[ext_resource type="Texture2D" uid="uid://dsdw8wc44x2qh" path="res://images/shield.png" id="3_bs8fq"]
+[ext_resource type="Texture2D" uid="uid://dw0aob548de5t" path="res://images/wing.png" id="4_th8fe"]
+[ext_resource type="Texture2D" uid="uid://btfbgdju68kw4" path="res://images/wing_l.png" id="5_4a0lw"]
 
 [sub_resource type="Curve" id="Curve_j7ihc"]
 _data = [Vector2(0.354749, 0.827078), 0.0, 0.0, 0, 0, Vector2(0.634078, 0.376247), 0.0, 0.0, 0, 0, Vector2(0.969274, 0.836342), 0.0, 0.0, 0, 0]
@@ -183,13 +183,14 @@ anchor_left = 0.321
 anchor_top = 0.5
 anchor_right = 0.676
 anchor_bottom = 0.605
-offset_left = -5.97988
-offset_top = -9.0
-offset_right = 4.12012
-offset_bottom = 5.595
+offset_left = -34.98
+offset_top = -8.5
+offset_right = 37.12
+offset_bottom = 6.095
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
 text = "Freshman"
+horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -215,11 +216,19 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_i251n")
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 332.0
-offset_top = 517.0
-offset_right = 521.0
-offset_bottom = 546.0
+offset_left = 533.0
+offset_top = 508.0
+offset_right = 823.0
+offset_bottom = 537.0
 text = "Remaining Xp until Next Rank: 100 XP"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 362.0
+offset_top = 509.0
+offset_right = 501.0
+offset_bottom = 538.0
+text = "Total XP: 100 XP"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0

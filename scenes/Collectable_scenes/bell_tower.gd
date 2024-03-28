@@ -20,6 +20,7 @@ func _on_body_entered(body):
 func _on_collect_button_pressed():
 	Attributes.bell_tower = true;
 	Attributes.numCollected += 1;
+	Attributes.xp += 2
 	Attributes.items.append(ItemManager.Items.BELL_TOWER)
 	queue_free();
 	SaveUtils.save()

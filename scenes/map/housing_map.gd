@@ -92,12 +92,17 @@ func _process(delta):
 		if (Attributes.engineering_ftn_visited == true and Attributes.loeb_ftn_visited == true):
 			Attributes.quest1_completed = true
 			Attributes.quest1_active = false
+	if (Attributes.quest3_active):
+		if (Attributes.numCollected >= 3):
+			Attributes.quest3_completed = true
+			Attributes.quest3_active = false
+			Attributes.xp = Attributes.xp + 15
 	if Attributes.xp <= 29:
 		Attributes.rank = "Freshman"
 	elif Attributes.xp <= 59: 
-		if (Attributes.rank != "Sophmore"):
+		if (Attributes.rank != "Sophomore"):
 			get_node("CharacterBody2D/Panel2").visible = true
-		Attributes.rank = "Sophmore"
+		Attributes.rank = "Sophomore"
 	elif Attributes.xp <= 89:
 		if (Attributes.rank != "Junior"):
 			get_node("CharacterBody2D/Panel2").visible = true

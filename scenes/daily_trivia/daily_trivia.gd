@@ -11,7 +11,7 @@ extends NinePatchRect
 @onready var choice3 : Array = ["1924", "Bachelor's", "Engine", "Purdue Horticulture Park"]
 @onready var choice4 : Array = ["1951", "Certificate Programs", "Mirrored metal cylinder", "Happy Hollow Park"]
 @onready var correct : Array = [3, 2, 4, 1]
-@onready var exp_reward : Array = [40, 75, 60, 45]
+@onready var exp_reward : Array = [8, 15, 12, 9]
 @onready var numQuestions = questions.size()
 var index : int = 0
 

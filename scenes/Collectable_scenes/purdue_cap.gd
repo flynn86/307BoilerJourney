@@ -20,6 +20,7 @@ func _on_body_entered(body):
 func _on_collect_button_pressed():
 	Attributes.purdue_cap = true;
 	Attributes.numCollected += 1;
+	Attributes.xp += 2
 	Attributes.items.append(ItemManager.Items.PURDUE_CAP)
 	queue_free();
 	SaveUtils.save()

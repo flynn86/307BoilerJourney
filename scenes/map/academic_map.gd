@@ -148,7 +148,7 @@ func _on_loeb_fountain_body_entered(body):
 		Attributes.loeb_ftn_visited = true
 
 func _on_bell_tower_body_entered(body):
-	if (body.name == "CharacterBody2D" and Attributes.quest2_active):
+	if (body.name == "CharacterBody2D"):
 		$RingBellTower.visible = true
 
 func _on_bell_tower_body_exited(body):
@@ -156,9 +156,10 @@ func _on_bell_tower_body_exited(body):
 		$RingBellTower.visible = false
 
 func _on_ring_bell_tower_pressed():
-	Attributes.quest2_active = false
-	Attributes.quest2_completed = true
-	$RingBellTower.visible = false
+	if Attributes.quest2_active:
+		Attributes.quest2_active = false
+		Attributes.quest2_completed = true
+		Attributes.xp = Attributes.xp + 5
 	$BellTowerSound.play()
 
 func _process(delta):
@@ -166,12 +167,18 @@ func _process(delta):
 		if (Attributes.engineering_ftn_visited == true and Attributes.loeb_ftn_visited == true):
 			Attributes.quest1_completed = true
 			Attributes.quest1_active = false
+			Attributes.xp = Attributes.xp + 10
+	if (Attributes.quest3_active):
+		if (Attributes.numCollected >= 3):
+			Attributes.quest3_completed = true
+			Attributes.quest3_active = false
+			Attributes.xp = Attributes.xp + 15
 	if Attributes.xp <= 29:
 		Attributes.rank = "Freshman"
 	elif Attributes.xp <= 59: 
-		if (Attributes.rank != "Sophmore"):
+		if (Attributes.rank != "Sophomore"):
 			get_node("CharacterBody2D/Panel2").visible = true
-		Attributes.rank = "Sophmore"
+		Attributes.rank = "Sophomore"
 	elif Attributes.xp <= 89:
 		if (Attributes.rank != "Junior"):
 			get_node("CharacterBody2D/Panel2").visible = true
