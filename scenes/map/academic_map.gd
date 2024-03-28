@@ -35,6 +35,7 @@ func _ready():
 	get_node("angry_pete").visible = !Attributes.angry_pete
 	get_node("purdue_helmet").visible = !Attributes.purdue_helmet
 	get_node("purdue_cap").visible = !Attributes.purdue_cap
+	$CharacterBody2D/Panel.visible = false
 
 
 func _input(event):
@@ -197,12 +198,9 @@ func _on_daily_trivia_pressed():
 
 func _on_button_pressed():
 	$CharacterBody2D/Panel.visible = false
-	SaveUtils.save()
-	
 
 func _on_variants_pressed():
 	$CharacterBody2D/Panel.visible = true
-	SaveUtils.save()
 
 
 func _schedule_for_each_building(building):
