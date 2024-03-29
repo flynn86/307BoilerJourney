@@ -26,6 +26,8 @@ func _ready():
 	get_node("purdue_helmet").visible = !Attributes.purdue_helmet
 	get_node("purdue_cap").visible = !Attributes.purdue_cap
 	get_node("CharacterBody2D/Player/view_suggestions").visible = false
+	get_node("Inventory_container").visible = false
+	get_node("Trivia_container").visible = false
 
 func _on_panel_closed():
 	Attributes.xhousing = $CharacterBody2D.global_position.x
