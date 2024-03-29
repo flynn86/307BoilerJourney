@@ -18,7 +18,7 @@ var hour = 0
 var minute = 0
 
 # Multiplier for time elapse speed. Increase to make time go faster, decrease to make time go slower.
-var INGAME_SPEED = 100.0
+var INGAME_SPEED = 2.0
 
 # Current in-game time
 var time:float= 0.0
@@ -69,5 +69,9 @@ func _recalculate_time():
 	minute = int(current_day_minutes % MINUTES_PER_HOUR)
 	if (minute != past_minute):
 		past_minute = minute
-	#	minute_passed.emit()
+		minute_passed.emit()
+	if (hour >= 6) && (hour <= 18):
+		Attributes.night = false
+	else:
+		Attributes.night = true
 		
