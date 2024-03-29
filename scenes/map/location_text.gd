@@ -60,282 +60,206 @@ func header_animation_scene():
 
 func _on_stew_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = "Stewart Center\n" + $"../../../STEW".text
-		
-		
+		label.text = "Stewart Center"
 		header_animation_scene()
 
 
 func _on_ellt_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = "Elliot Hall\n" + $"../../../ELLT".text
-		
-		
+		label.text = "Elliot Hall"
 		header_animation_scene()
 
 
 func _on_pmu_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = "Purdue Memorial Union\n" + $"../../../PMU".text
-		
-		
+		label.text = "Purdue Memorial Union"
 		header_animation_scene()
 
 
 func _on_wthr_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = "Wetherill Hall of Chemistry\n" + $"../../../WTHR".text
-		
-		
+		label.text = "Wetherill Hall of Chemistry"
 		header_animation_scene()
 
 
 func _on_walc_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = "Wilmeth Active Learning Center\n" + $"../../../WALC".text
-		label.position.x = 60 - (label.size.x / 2)
-		
+		label.text = "Wilmeth Active Learning Center"
 		header_animation_scene()
 
 
 func _on_hamp_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = "Hamptom Hall of Civil Engineering\n" + $"../../../HAMP".text
-		
-		
+		label.text = "Hamptom Hall of Civil Engineering"
 		header_animation_scene()
 
 
 func _on_arms_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = "Neil Armstrong Hall of Engineering\n" + $"../../../ARMS".text
-		
-		
+		label.text = "Neil Armstrong Hall of Engineering"
 		header_animation_scene()
 
 
 func _on_phys_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = "Physics Building\n" + $"../../../PHYS".text
-		
-		
+		label.text = "Physics Building"
 		header_animation_scene()
 
 
 func _on_ar_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = "Armory\n" + $"../../../AR".text
-		
-		
+		label.text = "Armory"
 		header_animation_scene()
 
 
 
 func _on_push_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../PUSH".text
-		
-		
+		label.text = "Purdue University Student Health Center"
 		header_animation_scene()
 
 func _on_rnph_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../RNPH".text
-		
-		
+		label.text = "Heine Pharmacy Building"
 		header_animation_scene()
 		
 func _on_jnsn_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../JNSN".text
-		
-		
+		label.text = "Johnson Hall of Nursing"
 		header_animation_scene()
 
 func _on_frny_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../FRNY".text
-		
-		
+		label.text = "Forney Hall of Chemical Engineering"
 		header_animation_scene()
 
 
 func _on_dscb_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../DSCB".text
-		
-		
+		label.text = "Schleman Hall of Student Services"
 		header_animation_scene()
 		
 func _on_msee_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../MSEE".text
-		
-		
+		label.text = "Materials and Electrical Engineering Building"
 		header_animation_scene()
 		
 func _on_chas_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../CHAS".text
-		
-		
+		label.text = "Chaney-Hale Hall of Science"
 		header_animation_scene()
 		
 func _on_bhee_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../BHEE".text
-		
-		
+		label.text = "Brown Family Hall"
 		header_animation_scene()
 		
 func _on_hovd_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../HOVD".text
-		
-		
+		label.text = "Hovde Hall of Administration"
 		header_animation_scene()
 		
 func _on_me_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../ME".text
-		
-		
+		label.text = "Mechanical Engineering Building"
 		header_animation_scene()
 		
 func _on_brwn_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../BRWN".text
-		
-		
+		label.text = "Brown Laboratory of Chemistry"
 		header_animation_scene()
 		
 func _on_potr_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../POTR".text
-		
-		
+		label.text = "Potter Engineering Center"
 		header_animation_scene()
 		
 func _on_lmbs_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../LMBS".text
-		
-		
+		label.text = "Lambertus Hall"
 		header_animation_scene()
 		
 func _on_knoy_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../KNOY".text
-		
-		
+		label.text = "Knoy Hall of Technology"
 		header_animation_scene()
 		
 func _on_dudl_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../DUDL".text
-		
-		
+		label.text = "Dudley Hall"
 		header_animation_scene()
 		
 func _on_haas_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../HAAS".text
-		
-		
+		label.text = "Haas Hall"
 		header_animation_scene()
 		
 func _on_psyc_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../PSYC".text
-		
-		
+		label.text = "Psychological Sciences Building"
 		header_animation_scene()
 		
 func _on_prce_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../PRCE".text
-		
-		
+		label.text = "Peirce Hall"
 		header_animation_scene()
 		
 
 		
 func _on_math_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../MATH".text
-		
-		
+		label.text = "Mathematical Sciences Building"
 		header_animation_scene()
 		
 func _on_sc_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../SC".text
-		
-		
+		label.text = "Stanley Coulter Hall"
 		header_animation_scene()
 		
 func _on_heav_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../HEAV".text
-		
-		
+		label.text = "Heavilon Hall"
 		header_animation_scene()
 
 func _on_gris_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../GRIS".text
-		
-		
+		label.text = "Grissom Hall"
 		header_animation_scene()
 		
 func _on_BRNG_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../BRNG".text
-		
-		
+		label.text = "Beering Hall of Liberal Arts and Education"
 		header_animation_scene()
 		
 func _on_schm_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../SCHM".text
-		
-		
+		label.text = "Schleman Hall"
 		header_animation_scene()
 
 func _on_univ_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../UNIV".text
-		
-		
+		label.text = "University Hall"
 		header_animation_scene()
 		
 func _on_mthw_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../MTHW".text
-		
-		
+		label.text = "Matthews Hall"
 		header_animation_scene()
 		
 func _on_ston_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../STON".text
-		
-		
+		label.text = "Stone Hall"
 		header_animation_scene()
 		
 func _on_hiks_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../HIKS".text
-		
-		
+		label.text = "Hicks Undergraduate Library"
 		header_animation_scene()
 
 
 func _on_cl_50_area_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
-		label.text = $"../../../CL50".text
-		
-		
+		label.text = "Class of 1950 Lecture Hall"
 		header_animation_scene()
 
 
