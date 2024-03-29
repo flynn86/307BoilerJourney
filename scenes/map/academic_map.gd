@@ -222,6 +222,7 @@ func _schedule_for_each_building(building):
 		pass
 	else:
 		for i in range (1, Attributes.course_num):
+			find_child(building).visible = false
 			var location = "course" + str(i) + "_location"
 			var courseLocation = Attributes.courseLocations[location]
 			if courseLocation == building:
@@ -242,7 +243,6 @@ func _schedule_for_each_building(building):
 	if count == 0:
 		find_child(building).visible = false
 	else:
-		find_child(building).visible = true
 		var count_string = "You have %s Courses in this building.\n" + complete_string
 		var string_with_count = count_string % [count]
 		find_child(building).text= string_with_count 

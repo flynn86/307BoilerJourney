@@ -281,7 +281,7 @@ func _on_gris_area_body_entered(body):
 		max_scale_x = len(label.text) * scale_x_char_multiplier
 		header_animation_scene()
 		
-func _on_BRNG_area_body_entered(body):
+func _on_brng_area_body_entered(body):
 	if (body is CharacterBody2D) && (body.get_meta("Player")):
 		label.text = $"../../../BRNG".text
 		label.position.x = 100 - (label.size.x / 2)
@@ -330,3 +330,5 @@ func _on_cl_50_area_body_entered(body):
 		label.position.x = 100 - (label.size.x / 2)
 		max_scale_x = len(label.text) * scale_x_char_multiplier
 		header_animation_scene()
+
+
