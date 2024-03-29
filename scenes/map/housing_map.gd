@@ -88,15 +88,12 @@ func _on_questlog_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/quests/quest_log.tscn")
 
 func _process(delta):
-	if (Attributes.quest1_active):
-		if (Attributes.engineering_ftn_visited == true and Attributes.loeb_ftn_visited == true):
-			Attributes.quest1_completed = true
-			Attributes.quest1_active = false
 	if (Attributes.quest3_active):
 		if (Attributes.numCollected >= 3):
 			Attributes.quest3_completed = true
 			Attributes.quest3_active = false
 			Attributes.xp = Attributes.xp + 15
+			(Attributes.database).update_rows("Players", "username = '" + Attributes.username + "'", {"xp": Attributes.xp})
 	if Attributes.xp <= 29:
 		Attributes.rank = "Freshman"
 	elif Attributes.xp <= 59: 
