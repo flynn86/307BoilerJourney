@@ -18,7 +18,19 @@ func _ready():
 	
 	if (int(Attributes.display_item_number) != -1):
 		%collectable.texture = ItemManager.icons[Attributes.items[int(Attributes.display_item_number)]]
-		%collectable.scale = Vector2(0.3, 0.3)
+		print(ItemManager.names[Attributes.items[int(Attributes.display_item_number)]])
+		if (ItemManager.names[Attributes.items[int(Attributes.display_item_number)]] == "Angry Pete"):
+			%collectable.scale = Vector2(0.05, 0.05)
+		elif (ItemManager.names[Attributes.items[int(Attributes.display_item_number)]] == "Basketball"):
+			%collectable.scale = Vector2(0.1, 0.1)
+		elif (ItemManager.names[Attributes.items[int(Attributes.display_item_number)]] == "IU Sucks Poster"):
+			%collectable.scale = Vector2(0.1, 0.1)
+		elif (ItemManager.names[Attributes.items[int(Attributes.display_item_number)]] == "Purdue Helmet"):
+			%collectable.scale = Vector2(0.5, 0.5)
+		elif (ItemManager.names[Attributes.items[int(Attributes.display_item_number)]] == "Go Boilers!"):
+			%collectable.scale = Vector2(0.25, 0.25)
+		elif (ItemManager.names[Attributes.items[int(Attributes.display_item_number)]] == "Bell Tower"):
+			%collectable.scale = Vector2(0.35, 0.35)
 
 func _on_change_bed_pressed():
 	Attributes.curr_bed = (Attributes.curr_bed + 1) % dorm_sprites.bed_spritesheet.size()

@@ -1084,7 +1084,7 @@ position = Vector2(49, 38)
 [node name="collectable" type="Sprite2D" parent="Node2D"]
 unique_name_in_owner = true
 position = Vector2(295, 311.5)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.35, 0.35)
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="ViewSchedule" to="." method="_on_view_schedule_pressed"]
