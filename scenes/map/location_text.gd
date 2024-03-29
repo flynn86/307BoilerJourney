@@ -52,16 +52,16 @@ func header_animation_scene():
 
 func _on_stew_area_body_entered(body):
 	if (body is CharacterBody2D) && (body.get_meta("Player")):
-		label.text = "Stewart Center"
-		label.position.x = 60 - (label.size.x / 2)
+		label.text = "Stewart Center\n" + $"../../../STEW".text
+		label.position.x = 100 - (label.size.x / 2)
 		max_scale_x = len(label.text) * scale_x_char_multiplier
 		header_animation_scene()
 
 
 func _on_ellt_area_body_entered(body):
 	if (body is CharacterBody2D) && (body.get_meta("Player")):
-		label.text = "Elliot Hall"
-		label.position.x = 60 - (label.size.x / 2)
+		label.text = "Elliot Hall\n" + $"../../../ELLT".text
+		label.position.x = 100 - (label.size.x / 2)
 		max_scale_x = len(label.text) * scale_x_char_multiplier
 		header.position.x = 70 - (header.texture.get_width() / 2)
 		header_animation_scene()
@@ -69,23 +69,23 @@ func _on_ellt_area_body_entered(body):
 
 func _on_pmu_area_body_entered(body):
 	if (body is CharacterBody2D) && (body.get_meta("Player")):
-		label.text = "Purdue Memorial Union"
-		label.position.x = 60 - (label.size.x / 2)
+		label.text = "Purdue Memorial Union\n" + $"../../../PMU".text
+		label.position.x = 100 - (label.size.x / 2)
 		max_scale_x = len(label.text) * scale_x_char_multiplier
 		header_animation_scene()
 
 
 func _on_wthr_area_body_entered(body):
 	if (body is CharacterBody2D) && (body.get_meta("Player")):
-		label.text = "Wetherill Hall of Chemistry"
-		label.position.x = 60 - (label.size.x / 2)
+		label.text = "Wetherill Hall of Chemistry\n" + $"../../../WTHR".text
+		label.position.x = 100 - (label.size.x / 2)
 		max_scale_x = len(label.text) * scale_x_char_multiplier
 		header_animation_scene()
 
 
 func _on_walc_area_body_entered(body):
 	if (body is CharacterBody2D) && (body.get_meta("Player")):
-		label.text = "Wilmeth Active Learning Center"
+		label.text = "Wilmeth Active Learning Center\n" + $"../../../WALC".text
 		label.position.x = 60 - (label.size.x / 2)
 		max_scale_x = len(label.text) * scale_x_char_multiplier
 		header_animation_scene()
@@ -93,16 +93,16 @@ func _on_walc_area_body_entered(body):
 
 func _on_hamp_area_body_entered(body):
 	if (body is CharacterBody2D) && (body.get_meta("Player")):
-		label.text = "Hamptom Hall of Civil Engineering"
-		label.position.x = 60 - (label.size.x / 2)
+		label.text = "Hamptom Hall of Civil Engineering\n" + $"../../../HAMP".text
+		label.position.x = 100 - (label.size.x / 2)
 		max_scale_x = len(label.text) * scale_x_char_multiplier
 		header_animation_scene()
 
 
 func _on_arms_area_body_entered(body):
 	if (body is CharacterBody2D) && (body.get_meta("Player")):
-		label.text = "Neil Armstrong Hall of Engineering"
-		label.position.x = 60 - (label.size.x / 2)
+		label.text = "Neil Armstrong Hall of Engineering\n" + $"../../../ARMS".text
+		label.position.x = 100 - (label.size.x / 2)
 		max_scale_x = len(label.text) * scale_x_char_multiplier
 		header_animation_scene()
 
@@ -117,8 +117,8 @@ func _on_phys_area_body_entered(body):
 
 func _on_ar_area_body_entered(body):
 	if (body is CharacterBody2D) && (body.get_meta("Player")):
-		label.text = "Armory"
-		label.position.x = 60 - (label.size.x / 2)
+		label.text = "Armory\n" + $"../../../AR".text
+		label.position.x = 100 - (label.size.x / 2)
 		max_scale_x = len(label.text) * scale_x_char_multiplier
 		header_animation_scene()
 
