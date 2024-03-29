@@ -262,5 +262,17 @@ func _on_cl_50_area_body_entered(body):
 		label.text = "Class of 1950 Lecture Hall"
 		header_animation_scene()
 
+func _on_engineering_fountain_body_entered(body):
+	if (body.is_in_group("player") && !in_execution):
+		label.text = "Engineering Fountain"
+		header_animation_scene()
 
+func _on_bell_tower_body_entered(body):
+	if (body.is_in_group("player") && !in_execution):
+		label.text = "Bell Tower"
+		header_animation_scene()
 
+func _on_loeb_fountain_body_entered(body):
+	if (body.is_in_group("player") && !in_execution):
+		label.text = "Loeb Fountain"
+		header_animation_scene()
