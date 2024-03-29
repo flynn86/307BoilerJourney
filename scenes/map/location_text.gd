@@ -3,7 +3,7 @@ extends Node2D
 @onready var label = get_child(0)
 @onready var scale_x : float = 0.008
 @onready var scale_y : float = 0.008
-@onready var header : Sprite2D = get_child(1)
+@onready var header = get_child(1)
 var scale_x_increment : float = 0.0375
 var transparency_increment : float = 0.1
 var max_scale_x : float = 0.75
@@ -17,7 +17,8 @@ func _ready():
 	label.modulate = Color(255, 255, 255, 0)
 	label.visible_characters = -1
 	var final_scale = Vector2(0.008, 0.008)
-	header.scale = final_scale
+	if header is Sprite2D:
+		header.scale = final_scale
 
 func header_animation_scene():
 	visible = true
