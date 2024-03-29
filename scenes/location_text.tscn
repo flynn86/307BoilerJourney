@@ -25,7 +25,8 @@ text = "Location Name"
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 161
-visible_ratio = -0.0769231
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(30, 10)

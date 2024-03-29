@@ -31,8 +31,8 @@ func header_animation_scene():
 		header.scale = final_scale
 		label.modulate.a += transparency_increment
 		await get_tree().create_timer(0.01).timeout
-		if (scale_x >= 0.75):
-			scale_x = 0.75
+		if (scale_x >= max_scale_x):
+			scale_x = max_scale_x
 		if (label.modulate.a >= 1):
 			label.modulate.a = 1
 	await get_tree().create_timer(1).timeout
@@ -53,7 +53,7 @@ func _on_stew_area_body_entered(body):
 	if (body is CharacterBody2D) && (body.get_meta("Player")):
 		label.text = "Stewart Center"
 		label.position.x = 60 - (label.size.x / 2)
-		max_scale_x = 1
+		max_scale_x = len(label.text) * scale_x_char_multiplier
 		header_animation_scene()
 
 
@@ -61,7 +61,8 @@ func _on_ellt_area_body_entered(body):
 	if (body is CharacterBody2D) && (body.get_meta("Player")):
 		label.text = "Elliot Hall"
 		label.position.x = 60 - (label.size.x / 2)
-		max_scale_x = label.size.x / 100
+		max_scale_x = len(label.text) * scale_x_char_multiplier
+		header.position.x = 70 - (header.texture.get_width() / 2)
 		header_animation_scene()
 
 
