@@ -276,3 +276,51 @@ func _on_loeb_fountain_body_entered(body):
 	if (body.is_in_group("player") && !in_execution):
 		label.text = "Loeb Fountain"
 		header_animation_scene()
+
+
+func _on_erht_area_body_entered(body):
+	if (body.is_in_group("player") && !in_execution):
+		label.text = "Earhart Hall"
+		header_animation_scene()
+
+
+func _on_shrv_area_body_entered(body):
+	if (body.is_in_group("player") && !in_execution):
+		label.text = "Shreve Hall"
+		header_animation_scene()
+
+
+func _on_mrdh_area_body_entered(body):
+	if (body.is_in_group("player") && !in_execution):
+		label.text = "Meredith Hall"
+		header_animation_scene()
+
+
+func _on_windsor_area_body_entered(body):
+	if (body.is_in_group("player") && !in_execution):
+		label.text = "Windsor Halls"
+		header_animation_scene()
+
+
+func _on_wiley_area_body_entered(body):
+	if (body.is_in_group("player") && !in_execution):
+		label.text = "Wiley Hall"
+		header_animation_scene()
+
+
+func _on_tark_area_body_entered(body):
+	if (body.is_in_group("player") && !in_execution):
+		label.text = "Tarkington Hall"
+		header_animation_scene()
+
+
+func _on_harr_area_body_entered(body):
+	if (body.is_in_group("player") && !in_execution):
+		label.text = "Harrison Hall"
+		header_animation_scene()
+
+
+func _on_mcut_area_body_entered(body):
+	if (body.is_in_group("player") && !in_execution):
+		label.text = "McCutcheon Hall"
+		header_animation_scene()
