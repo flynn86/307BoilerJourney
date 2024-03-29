@@ -21,6 +21,7 @@ func _on_collect_button_pressed():
 	Attributes.angry_pete = true;
 	Attributes.numCollected += 1;
 	Attributes.xp += 2
+	(Attributes.database).update_rows("Players", "username = '" + Attributes.username + "'", {"xp": Attributes.xp})
 	Attributes.items.append(ItemManager.Items.ANGRY_PETE)
 	queue_free();
 	SaveUtils.save()

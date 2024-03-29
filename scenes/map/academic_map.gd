@@ -160,6 +160,7 @@ func _on_ring_bell_tower_pressed():
 		Attributes.quest2_active = false
 		Attributes.quest2_completed = true
 		Attributes.xp = Attributes.xp + 5
+		(Attributes.database).update_rows("Players", "username = '" + Attributes.username + "'", {"xp": Attributes.xp})
 	$BellTowerSound.play()
 
 func _process(delta):
@@ -168,11 +169,13 @@ func _process(delta):
 			Attributes.quest1_completed = true
 			Attributes.quest1_active = false
 			Attributes.xp = Attributes.xp + 10
+			(Attributes.database).update_rows("Players", "username = '" + Attributes.username + "'", {"xp": Attributes.xp})
 	if (Attributes.quest3_active):
 		if (Attributes.numCollected >= 3):
 			Attributes.quest3_completed = true
 			Attributes.quest3_active = false
 			Attributes.xp = Attributes.xp + 15
+			(Attributes.database).update_rows("Players", "username = '" + Attributes.username + "'", {"xp": Attributes.xp})
 	if Attributes.xp <= 29:
 		Attributes.rank = "Freshman"
 	elif Attributes.xp <= 59: 

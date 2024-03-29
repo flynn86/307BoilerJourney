@@ -21,6 +21,7 @@ func _on_collect_button_pressed():
 	Attributes.boilermaker_train = true;
 	Attributes.numCollected += 1;
 	Attributes.xp += 2
+	(Attributes.database).update_rows("Players", "username = '" + Attributes.username + "'", {"xp": Attributes.xp})
 	Attributes.items.append(ItemManager.Items.BOILERMAKER_TRAIN)
 	queue_free();
 	SaveUtils.save()

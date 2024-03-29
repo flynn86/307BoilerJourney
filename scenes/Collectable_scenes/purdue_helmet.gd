@@ -21,6 +21,7 @@ func _on_collect_button_pressed():
 	Attributes.purdue_helmet = true;
 	Attributes.numCollected += 1;
 	Attributes.xp += 2
+	(Attributes.database).update_rows("Players", "username = '" + Attributes.username + "'", {"xp": Attributes.xp})
 	Attributes.items.append(ItemManager.Items.PURDUE_HELMET)
 	queue_free();
 	SaveUtils.save()

@@ -21,6 +21,7 @@ func _on_collect_button_pressed():
 	Attributes.purdue_symbol = true;
 	Attributes.numCollected += 1;
 	Attributes.xp += 2
+	(Attributes.database).update_rows("Players", "username = '" + Attributes.username + "'", {"xp": Attributes.xp})
 	Attributes.items.append(ItemManager.Items.PURDUE_SYMBOL)
 	queue_free();
 	SaveUtils.save()

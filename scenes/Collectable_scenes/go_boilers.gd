@@ -21,6 +21,7 @@ func _on_collect_button_pressed():
 	Attributes.go_boilers = true;
 	Attributes.numCollected += 1;
 	Attributes.xp += 2
+	(Attributes.database).update_rows("Players", "username = '" + Attributes.username + "'", {"xp": Attributes.xp})
 	Attributes.items.append(ItemManager.Items.GO_BOILERS)
 	queue_free();
 	SaveUtils.save()

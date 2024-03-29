@@ -68,6 +68,7 @@ func display_correct():
 	question_label.text = "Come back soon!"
 	result_label.text = "Correct! You gained +" + str(exp_reward[index]) + " EXP!"
 	Attributes.xp += exp_reward[index]
+	(Attributes.database).update_rows("Players", "username = '" + Attributes.username + "'", {"xp": Attributes.xp})
 	Attributes.question_available = false
 	Attributes.last_daily_question_time = Time.get_datetime_dict_from_system()
 	SaveUtils.save()
