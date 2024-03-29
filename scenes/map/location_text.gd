@@ -123,10 +123,3 @@ func _on_ar_area_body_entered(body):
 		header_animation_scene()
 
 
-
-func _on_push_area_body_entered(body):
-	if (body is CharacterBody2D) && (body.get_meta("Player")):
-		label.text = $"../../../PUSH".text
-		label.position.x = 100 - (label.size.x / 2)
-		max_scale_x = len(label.text) * scale_x_char_multiplier
-		header_animation_scene()
