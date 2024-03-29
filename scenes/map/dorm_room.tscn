@@ -1079,11 +1079,20 @@ offset_right = 354.2
 offset_bottom = 379.2
 
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(49, 38)
+position = Vector2(-68, 52)
 
 [node name="collectable" type="Sprite2D" parent="Node2D"]
 unique_name_in_owner = true
-position = Vector2(295, 311.5)
+position = Vector2(316, 311)
+scale = Vector2(0.35, 0.35)
+
+[node name="collectable_1" type="Sprite2D" parent="Node2D"]
+position = Vector2(419, 262)
+scale = Vector2(0.35, 0.35)
+offset = Vector2(-68, 52)
+
+[node name="collectable_2" type="Sprite2D" parent="Node2D"]
+position = Vector2(528, 311)
 scale = Vector2(0.35, 0.35)
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

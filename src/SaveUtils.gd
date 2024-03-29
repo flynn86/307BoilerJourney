@@ -26,6 +26,9 @@ func save():
 		"purdue_symbol" : Attributes.purdue_symbol,
 		"dorm_display" : Attributes.dorm_display,
 		"display_item_number" : Attributes.display_item_number,
+		"display_item_1" : Attributes.display_item_1,
+		"display_item_2" : Attributes.display_item_2,
+		"display_item_3" : Attributes.display_item_3,
 		
 		"bed" : Attributes.curr_bed,
 		"desk" : Attributes.curr_desk,
@@ -103,6 +106,9 @@ func load(savefile: String):
 			Attributes.purdue_symbol = line["purdue_symbol"]
 			Attributes.dorm_display = line["dorm_display"]
 			Attributes.display_item_number = line["display_item_number"]
+			Attributes.display_item_1 = line["display_item_1"]
+			Attributes.display_item_2 = line["display_item_2"]
+			Attributes.display_item_3 = line["display_item_3"]
 			
 			Attributes.curr_bed = line["bed"]
 			Attributes.curr_desk = line["desk"]

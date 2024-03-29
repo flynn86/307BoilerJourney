@@ -28,6 +28,9 @@ var purdue_helmet: bool = false
 var purdue_symbol: bool = false
 var dorm_display: bool = false
 var display_item_number: int = -1
+var display_item_1: int = -1
+var display_item_2: int = -1
+var display_item_3: int = -1
 
 
 var curr_hair: int = 0
@@ -175,6 +178,9 @@ func reset(file: String):
 	purdue_symbol = false
 	dorm_display = false
 	display_item_number = -1
+	display_item_1 = -1
+	display_item_2 = -1
+	display_item_3 = -1
 	
 	curr_bed = 0
 	curr_desk = 0

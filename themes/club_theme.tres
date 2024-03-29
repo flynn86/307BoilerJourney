@@ -1,6 +1,10 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://bw38c741am4hj"]
 
+<<<<<<< HEAD
 [ext_resource type="FontFile" uid="uid://cwnopee8f26ig" path="res://fonts/varsity_regular.ttf" id="1_qwogg"]
+=======
+[ext_resource type="FontFile" uid="uid://dfyoo5kj2trpo" path="res://fonts/varsity_regular.ttf" id="1_qwogg"]
+>>>>>>> 2d64892e44caa52bd9ba59ade28e960e83447c65
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_om0pf"]
 bg_color = Color(0, 0, 0, 1)
