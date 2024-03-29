@@ -1,11 +1,11 @@
 [gd_scene load_steps=21 format=3 uid="uid://cnwk7svibwils"]
 
-[ext_resource type="Texture2D" uid="uid://g66rkucu76er" path="res://images/Screen Shot 2024-03-25 at 12.08.42 PM.png" id="2_0wikf"]
+[ext_resource type="Texture2D" uid="uid://cjxqsuegknsc6" path="res://images/Screen Shot 2024-03-25 at 12.08.42 PM.png" id="2_0wikf"]
 [ext_resource type="Script" path="res://scenes/rank_page/rank_page.gd" id="2_l2gjh"]
-[ext_resource type="Texture2D" uid="uid://bgy16uwj6x323" path="res://images/rounded_rect.png" id="3_06kdi"]
-[ext_resource type="Texture2D" uid="uid://dl4awvkah41i2" path="res://images/shield.png" id="3_bs8fq"]
-[ext_resource type="Texture2D" uid="uid://dq1gg61lpif2" path="res://images/wing.png" id="4_th8fe"]
-[ext_resource type="Texture2D" uid="uid://dc4flocbb7tcq" path="res://images/wing_l.png" id="5_4a0lw"]
+[ext_resource type="Texture2D" uid="uid://cuc2rawxiuuu" path="res://images/rounded_rect.png" id="3_06kdi"]
+[ext_resource type="Texture2D" uid="uid://dsdw8wc44x2qh" path="res://images/shield.png" id="3_bs8fq"]
+[ext_resource type="Texture2D" uid="uid://dw0aob548de5t" path="res://images/wing.png" id="4_th8fe"]
+[ext_resource type="Texture2D" uid="uid://btfbgdju68kw4" path="res://images/wing_l.png" id="5_4a0lw"]
 
 [sub_resource type="Curve" id="Curve_j7ihc"]
 _data = [Vector2(0.354749, 0.827078), 0.0, 0.0, 0, 0, Vector2(0.634078, 0.376247), 0.0, 0.0, 0, 0, Vector2(0.969274, 0.836342), 0.0, 0.0, 0, 0]
@@ -107,6 +107,7 @@ offset_bottom = 0.0410156
 texture = ExtResource("2_0wikf")
 
 [node name="back" type="GPUParticles2D" parent="."]
+visible = false
 position = Vector2(568, 273)
 amount = 31
 process_material = SubResource("ParticleProcessMaterial_guv0q")
@@ -114,6 +115,7 @@ texture = ExtResource("3_06kdi")
 lifetime = 4.5
 
 [node name="wing" type="GPUParticles2D" parent="."]
+visible = false
 position = Vector2(700, 280)
 amount = 1
 sub_emitter = NodePath("../wing2")
@@ -122,6 +124,7 @@ texture = ExtResource("4_th8fe")
 lifetime = 1.6
 
 [node name="wing2" type="GPUParticles2D" parent="."]
+visible = false
 position = Vector2(442, 288)
 amount = 1
 process_material = SubResource("ParticleProcessMaterial_daw3j")
