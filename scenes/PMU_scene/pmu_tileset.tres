@@ -1,10 +1,10 @@
 [gd_resource type="TileSet" load_steps=11 format=3 uid="uid://2ivu5bsdjl4f"]
 
-[ext_resource type="Texture2D" uid="uid://wvy4cbwkdbvi" path="res://scenes/PMU_scene/Inside_E.png" id="3_tuqw3"]
-[ext_resource type="Texture2D" uid="uid://cick2blbssr75" path="res://scenes/PMU_scene/Inside_D.png" id="4_yfm15"]
-[ext_resource type="Texture2D" uid="uid://b24yccbg8gjcc" path="res://scenes/PMU_scene/Inside_C.png" id="5_fv724"]
-[ext_resource type="Texture2D" uid="uid://e2x5w1t4w3gm" path="res://scenes/PMU_scene/resources/PixelSpaces Free Pack.png" id="7_tnfy1"]
-[ext_resource type="Texture2D" uid="uid://wwcwq2trngh1" path="res://scenes/map/Building and terrain assets/terrain.png" id="8_82our"]
+[ext_resource type="Texture2D" uid="uid://bgi3vwn4eefdc" path="res://scenes/PMU_scene/Inside_E.png" id="3_tuqw3"]
+[ext_resource type="Texture2D" uid="uid://woxpjevqkbm6" path="res://scenes/PMU_scene/Inside_D.png" id="4_yfm15"]
+[ext_resource type="Texture2D" uid="uid://bn1k6snyx5m76" path="res://scenes/PMU_scene/Inside_C.png" id="5_fv724"]
+[ext_resource type="Texture2D" uid="uid://dmfra4wbn73ok" path="res://scenes/PMU_scene/resources/PixelSpaces Free Pack.png" id="7_tnfy1"]
+[ext_resource type="Texture2D" uid="uid://d2lwv8h7ne5h0" path="res://scenes/map/Building and terrain assets/terrain.png" id="8_82our"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0r6av"]
 texture = ExtResource("7_tnfy1")
