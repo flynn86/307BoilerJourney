@@ -251,12 +251,7 @@ func _on_prce_area_body_entered(body):
 		max_scale_x = len(label.text) * scale_x_char_multiplier
 		header_animation_scene()
 		
-func _on_cl50_area_body_entered(body):
-	if (body is CharacterBody2D) && (body.get_meta("Player")):
-		label.text = $"../../../CL50".text
-		label.position.x = 100 - (label.size.x / 2)
-		max_scale_x = len(label.text) * scale_x_char_multiplier
-		header_animation_scene()
+
 		
 func _on_math_area_body_entered(body):
 	if (body is CharacterBody2D) && (body.get_meta("Player")):
@@ -324,6 +319,14 @@ func _on_ston_area_body_entered(body):
 func _on_hiks_area_body_entered(body):
 	if (body is CharacterBody2D) && (body.get_meta("Player")):
 		label.text = $"../../../HIKS".text
+		label.position.x = 100 - (label.size.x / 2)
+		max_scale_x = len(label.text) * scale_x_char_multiplier
+		header_animation_scene()
+
+
+func _on_cl_50_area_body_entered(body):
+	if (body is CharacterBody2D) && (body.get_meta("Player")):
+		label.text = $"../../../CL50".text
 		label.position.x = 100 - (label.size.x / 2)
 		max_scale_x = len(label.text) * scale_x_char_multiplier
 		header_animation_scene()
