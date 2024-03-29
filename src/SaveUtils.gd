@@ -44,6 +44,7 @@ func save():
 		"quest2complete" : Attributes.quest2_completed,
 		"quest3active" : Attributes.quest3_active,
 		"quest3complete" : Attributes.quest3_completed,
+		"basics_shown" : Attributes.basics_shown,
 		"courseNames": Attributes.courseNames,
 		"courseTimes": Attributes.courseTimes,
 		"courseDays": Attributes.courseDays,
@@ -110,6 +111,7 @@ func load(savefile: String):
 			Attributes.quest2_completed = line["quest2complete"]
 			Attributes.quest3_active = line["quest3active"]
 			Attributes.quest3_completed = line["quest3complete"]
+			Attributes.basics_shown = line["basics_shown"]
 			Attributes.courseNames = line["courseNames"]
 			Attributes.courseTimes = line["courseTimes"]
 			Attributes.courseDays = line["courseDays"]

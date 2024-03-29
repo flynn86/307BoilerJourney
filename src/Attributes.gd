@@ -46,6 +46,8 @@ var quest2_active: bool = false
 var quest2_completed: bool = false
 var quest3_active: bool = false
 var quest3_completed: bool = false
+var basics_shown: bool = false
+
 '''
 var course1_name: String = ""
 var course2_name: String = ""
@@ -188,6 +190,8 @@ func reset(file: String):
 	quest2_completed = false
 	quest3_active = false
 	quest3_completed = false
+	basics_shown = false
+	
 	'''
 	course1_name = ""
 	course2_name = ""
