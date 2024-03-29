@@ -112,3 +112,7 @@ func _on_phys_area_body_entered(body):
 		label.position.x = 60 - (label.size.x / 2)
 		max_scale_x = len(label.text) * scale_x_char_multiplier
 		header_animation_scene()
+
+
+func _on_ar_area_body_entered(body):
+	pass # Replace with function body.
