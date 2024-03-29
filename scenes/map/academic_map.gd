@@ -19,7 +19,7 @@ func _ready():
 	elif (Attributes.season == "Winter"):
 		get_node("WinterVariantA").visible = true
 	if (Attributes.night):
-		get_node("day_nsight").set_time_state(1)
+		get_node("day_night").set_time_state(1)
 		get_node("CharacterBody2D/Player/player_light").visible = true
 	var building_list = ["ARMS", "PUSH", "HAMP", "PHYS", "RNPH", "JSN", "FRNY", "DSCB", "MSEE", "CHAS", "BHEE", "AR", "ELLT", 
  					"HOVD", "ME", "WALC", "POTR", "LMBS", "KNOY", "DUDL", "HAAS", "PSYC", "PRCE", "CL50", "MATH", "SC", 
