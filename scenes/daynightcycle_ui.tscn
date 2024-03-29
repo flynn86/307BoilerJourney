@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://b4mitotcubsj0"]
 
-[ext_resource type="Shader" path="res://assets/pixelperfect.gdshader" id="1_5i3u0"]
-[ext_resource type="Script" path="res://day-night-cycle/demo/ui/daynightcycle_ui.gd" id="2_8tcnw"]
-[ext_resource type="Texture2D" uid="uid://b435cqm35cj4u" path="res://assets/daynightcycle-ui.png" id="3_nf8nd"]
-[ext_resource type="FontFile" uid="uid://dt6jbuskqvs7g" path="res://assets/fonts/pixelmix/pixelmix.ttf" id="4_xbu5t"]
+[ext_resource type="Shader" path="res://scenes/day_night/pixelperfect.gdshader" id="1_5i3u0"]
+[ext_resource type="Script" path="res://scenes/day_night/daynightcycle_ui.gd" id="2_8tcnw"]
+[ext_resource type="Texture2D" uid="uid://borbqthw2l5c2" path="res://scenes/day_night/daynightcycle-ui.png" id="3_nf8nd"]
+[ext_resource type="FontFile" uid="uid://byw6wu8k4n1oj" path="res://scenes/day_night/pixelmix.ttf" id="4_xbu5t"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qhbnj"]
 shader = ExtResource("1_5i3u0")

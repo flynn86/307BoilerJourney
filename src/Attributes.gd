@@ -17,8 +17,6 @@ var isHost: bool = false
 
 # collectables
 var numCollected: int = 0
-var collectibleA: bool = false
-var collectibleH: bool = false
 var angry_pete: bool = false
 var basketball: bool = false
 var bell_tower: bool = false
@@ -28,6 +26,8 @@ var iu_poster: bool = false
 var purdue_cap: bool = false
 var purdue_helmet: bool = false
 var purdue_symbol: bool = false
+var dorm_display: bool = false
+var display_item_number: int = -1
 
 
 var curr_hair: int = 0
@@ -46,6 +46,8 @@ var quest2_active: bool = false
 var quest2_completed: bool = false
 var quest3_active: bool = false
 var quest3_completed: bool = false
+var basics_shown: bool = false
+
 '''
 var course1_name: String = ""
 var course2_name: String = ""
@@ -123,6 +125,10 @@ var courseLocations: Dictionary = {
 	"course8_location" : ""
 }
 var course_num: int = 1
+var curr_bed: int = 0
+var curr_desk: int = 0
+var curr_window: int = 0
+var curr_sidetable: int = 0
 
 # Inventory
 var items : Array = []
@@ -158,8 +164,6 @@ func reset(file: String):
 	
 	# collectables
 	numCollected = 0
-	collectibleA = false
-	collectibleH = false
 	angry_pete = false
 	basketball = false
 	bell_tower = false
@@ -169,8 +173,13 @@ func reset(file: String):
 	purdue_cap = false
 	purdue_helmet = false
 	purdue_symbol = false
+	dorm_display = false
+	display_item_number = -1
 	
-	
+	curr_bed = 0
+	curr_desk = 0
+	curr_window = 0
+	curr_sidetable = 0
 	
 	curr_hair = 0
 	curr_eyes = 0
@@ -188,6 +197,8 @@ func reset(file: String):
 	quest2_completed = false
 	quest3_active = false
 	quest3_completed = false
+	basics_shown = false
+	
 	'''
 	course1_name = ""
 	course2_name = ""

@@ -19,28 +19,27 @@ func _ready():
 	elif (Attributes.season == "Winter"):
 		get_node("WinterVariantA").visible = true
 	if (Attributes.night):
-		get_node("day_night").set_time_state(1)
+		get_node("day_nsight").set_time_state(1)
 		get_node("CharacterBody2D/Player/player_light").visible = true
 	var building_list = ["ARMS", "PUSH", "HAMP", "PHYS", "RNPH", "JSN", "FRNY", "DSCB", "MSEE", "CHAS", "BHEE", "AR", "ELLT", 
  					"HOVD", "ME", "WALC", "POTR", "LMBS", "KNOY", "DUDL", "HAAS", "PSYC", "PRCE", "CL50", "MATH", "SC", 
  					"WTHR", "BRWN", "HEAV", "GRIS", "BRNG", "SCHM", "UNIV", "MTHW", "STON", "STEW", "HIKS", "PMU"]
 	for building in building_list:
 		_schedule_for_each_building(building)
-	get_node("CharacterBody2D/Player/CollectibleButton").visible = !Attributes.collectibleA
 	set_process_input(true)
 	get_node("Purdue_symbol").visible = !Attributes.purdue_symbol
 	get_node("IU_Sucks_Poster").visible = !Attributes.iu_poster
-	get_node("basketball").visible = !Attributes.basketball
 	get_node("bell_tower").visible = !Attributes.bell_tower
 	get_node("go_boilers").visible = !Attributes.go_boilers
-	get_node("boilermaker_train").visible = !Attributes.boilermaker_train
 	get_node("angry_pete").visible = !Attributes.angry_pete
-	get_node("purdue_helmet").visible = !Attributes.purdue_helmet
-	get_node("purdue_cap").visible = !Attributes.purdue_cap
+	
 	$CharacterBody2D/Panel.visible = false
 	get_node("Inventory_container").visible = false
 	get_node("Trivia_container").visible = false
 	get_node("day_night").visible = false
+	get_node("CharacterBody2D/Player/location_text")
+	get_node("CharacterBody2D/Player/GameBasics").visible = !Attributes.basics_shown
+	get_node("CharacterBody2D/Player/view_suggestions").visible = false
 
 func _input(event):
 	if event is InputEventMouseMotion or event is InputEventMouseButton:
@@ -126,11 +125,6 @@ func _on_menu_button_pressed():
 	Attributes.yacademic = $CharacterBody2D.global_position.y
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
-
-
-func _on_collectible_button_pressed():
-	Attributes.collectibleA = true
-	get_node("CharacterBody2D/Player/CollectibleButton").visible = false
 
 
 func _on_questlog_button_pressed():
@@ -228,6 +222,7 @@ func _schedule_for_each_building(building):
 		pass
 	else:
 		for i in range (1, Attributes.course_num):
+			find_child(building).visible = false
 			var location = "course" + str(i) + "_location"
 			var courseLocation = Attributes.courseLocations[location]
 			if courseLocation == building:
@@ -248,7 +243,6 @@ func _schedule_for_each_building(building):
 	if count == 0:
 		find_child(building).visible = false
 	else:
-		find_child(building).visible = true
 		var count_string = "You have %s Courses in this building.\n" + complete_string
 		var string_with_count = count_string % [count]
 		find_child(building).text= string_with_count 
@@ -261,3 +255,16 @@ func _on_class_rank_pressed():
 
 func _on_noti_close_pressed():
 	get_node("CharacterBody2D/Panel2").visible = false
+
+func _on_close_pressed():
+	Attributes.basics_shown = true
+	SaveUtils.save()
+	get_node("CharacterBody2D/Player/GameBasics").visible = false
+	
+
+func _on_suggestions_pressed():
+	get_node("CharacterBody2D/Player/view_suggestions").visible = true
+
+
+func _on_close1_pressed():
+	get_node("CharacterBody2D/Player/view_suggestions").visible = false

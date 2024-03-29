@@ -15,12 +15,17 @@ func _ready():
 		get_node("SpringVariantH").visible = true
 	elif (Attributes.season == "Winter"):
 		get_node("WinterVariantH").visible = true
-	get_node("CharacterBody2D/Player/CollectibleButton").visible = !Attributes.collectibleH
 	get_node("Inventory_container").visible = false
 	get_node("Trivia_container").visible = false
 	set_process_input(true)
 	get_node("CharacterBody2D/Panel2").visible = false
 	$CharacterBody2D/Panel.visible = false
+	
+	get_node("basketball").visible = !Attributes.basketball
+	get_node("boilermaker_train").visible = !Attributes.boilermaker_train
+	get_node("purdue_helmet").visible = !Attributes.purdue_helmet
+	get_node("purdue_cap").visible = !Attributes.purdue_cap
+	get_node("CharacterBody2D/Player/view_suggestions").visible = false
 
 func _on_panel_closed():
 	Attributes.xhousing = $CharacterBody2D.global_position.x
@@ -74,11 +79,6 @@ func _on_menu_button_pressed():
 	Attributes.yhousing = $CharacterBody2D.global_position.y
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
-
-
-func _on_collectible_button_pressed():
-	Attributes.collectibleH = true
-	get_node("CharacterBody2D/Player/CollectibleButton").visible = false
 
 
 func _on_questlog_button_pressed():
@@ -158,3 +158,9 @@ func _on_noti_close_pressed():
 	
 func _on_day_night_pressed():
 	Attributes.day_night_enabled = ! Attributes.day_night_enabled
+
+func _on_suggestions_pressed():
+	get_node("CharacterBody2D/Player/view_suggestions").visible = true
+
+func _on_close_pressed():
+	get_node("CharacterBody2D/Player/view_suggestions").visible = false

@@ -14,8 +14,7 @@ func save():
 		
 		# collectables
 		
-		"collectibleA" : Attributes.collectibleA,
-		"collectibleH" : Attributes.collectibleH,
+		"numCollected" : Attributes.numCollected,
 		"angry_pete" : Attributes.angry_pete,
 		"basketball" : Attributes.basketball,
 		"bell_tower" : Attributes.bell_tower,
@@ -25,8 +24,13 @@ func save():
 		"purdue_cap" : Attributes.purdue_cap,
 		"purdue_helmet" : Attributes.purdue_helmet,
 		"purdue_symbol" : Attributes.purdue_symbol,
+		"dorm_display" : Attributes.dorm_display,
+		"display_item_number" : Attributes.display_item_number,
 		
-		
+		"bed" : Attributes.curr_bed,
+		"desk" : Attributes.curr_desk,
+		"sidetable" : Attributes.curr_sidetable,
+		"window" : Attributes.curr_window,
 		"hair" : Attributes.curr_hair,
 		"body" : Attributes.curr_body,
 		"eyes" : Attributes.curr_eyes,
@@ -42,6 +46,7 @@ func save():
 		"quest2complete" : Attributes.quest2_completed,
 		"quest3active" : Attributes.quest3_active,
 		"quest3complete" : Attributes.quest3_completed,
+		"basics_shown" : Attributes.basics_shown,
 		"courseNames": Attributes.courseNames,
 		"courseTimes": Attributes.courseTimes,
 		"courseDays": Attributes.courseDays,
@@ -86,8 +91,7 @@ func load(savefile: String):
 			
 			# collectables
 			
-			Attributes.collectibleA = line["collectibleA"]
-			Attributes.collectibleH = line["collectibleH"]
+			Attributes.numCollected = line["numCollected"]
 			Attributes.angry_pete = line["angry_pete"]
 			Attributes.basketball = line["basketball"]
 			Attributes.bell_tower = line["bell_tower"]
@@ -97,8 +101,13 @@ func load(savefile: String):
 			Attributes.purdue_cap = line["purdue_cap"]
 			Attributes.purdue_helmet = line["purdue_helmet"]
 			Attributes.purdue_symbol = line["purdue_symbol"]
+			Attributes.dorm_display = line["dorm_display"]
+			Attributes.display_item_number = line["display_item_number"]
 			
-			
+			Attributes.curr_bed = line["bed"]
+			Attributes.curr_desk = line["desk"]
+			Attributes.curr_window = line["window"]
+			Attributes.curr_sidetable = line["sidetable"]
 			Attributes.curr_hair = line["hair"]
 			Attributes.curr_body = line["body"]
 			Attributes.curr_eyes = line["eyes"]
@@ -114,6 +123,7 @@ func load(savefile: String):
 			Attributes.quest2_completed = line["quest2complete"]
 			Attributes.quest3_active = line["quest3active"]
 			Attributes.quest3_completed = line["quest3complete"]
+			Attributes.basics_shown = line["basics_shown"]
 			Attributes.courseNames = line["courseNames"]
 			Attributes.courseTimes = line["courseTimes"]
 			Attributes.courseDays = line["courseDays"]
@@ -133,5 +143,6 @@ func load(savefile: String):
 func delete(savefile: String):
 	if FileAccess.file_exists(savefile):
 		FileAccess.open(savefile, FileAccess.WRITE)
+		
 		
 

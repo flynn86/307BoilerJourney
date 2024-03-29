@@ -36,4 +36,4 @@ func _on_button_2_pressed():
 				"xp" = 0
 			}
 			(Attributes.database).insert_row("Players", data)
-			get_tree().change_scene_to_file("res://characters/select_avatar.tscn")
+			get_tree().change_scene_to_file("res://characters/customized_character.tscn")

@@ -71,4 +71,3 @@ func _recalculate_time():
 		Attributes.night = false
 	else:
 		Attributes.night = true
-		
