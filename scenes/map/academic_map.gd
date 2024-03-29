@@ -19,7 +19,7 @@ func _ready():
 	elif (Attributes.season == "Winter"):
 		get_node("WinterVariantA").visible = true
 	if (Attributes.night):
-		get_node("day_night").set_time_state(1)
+		get_node("day_nsight").set_time_state(1)
 		get_node("CharacterBody2D/Player/player_light").visible = true
 	var building_list = ["ARMS", "PUSH", "HAMP", "PHYS", "RNPH", "JSN", "FRNY", "DSCB", "MSEE", "CHAS", "BHEE", "AR", "ELLT", 
  					"HOVD", "ME", "WALC", "POTR", "LMBS", "KNOY", "DUDL", "HAAS", "PSYC", "PRCE", "CL50", "MATH", "SC", 
@@ -222,6 +222,7 @@ func _schedule_for_each_building(building):
 		pass
 	else:
 		for i in range (1, Attributes.course_num):
+			find_child(building).visible = false
 			var location = "course" + str(i) + "_location"
 			var courseLocation = Attributes.courseLocations[location]
 			if courseLocation == building:
@@ -242,7 +243,6 @@ func _schedule_for_each_building(building):
 	if count == 0:
 		find_child(building).visible = false
 	else:
-		find_child(building).visible = true
 		var count_string = "You have %s Courses in this building.\n" + complete_string
 		var string_with_count = count_string % [count]
 		find_child(building).text= string_with_count 

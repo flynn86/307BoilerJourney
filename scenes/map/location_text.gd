@@ -35,7 +35,7 @@ func header_animation_scene():
 			scale_x = max_scale_x
 		if (label.modulate.a >= 1):
 			label.modulate.a = 1
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(5).timeout
 	for i in range(0,20,1):
 		scale_x -= scale_x_increment
 		var final_scale = Vector2(scale_x, scale_y)
@@ -108,8 +108,8 @@ func _on_arms_area_body_entered(body):
 
 func _on_phys_area_body_entered(body):
 	if (body is CharacterBody2D) && (body.get_meta("Player")):
-		label.text = "Physics Buildings"
-		label.position.x = 60 - (label.size.x / 2)
+		label.text = "Physics Building\n" + $"../../../PHYS".text
+		label.position.x = 100 - (label.size.x / 2)
 		max_scale_x = len(label.text) * scale_x_char_multiplier
 		header_animation_scene()
 
@@ -118,5 +118,14 @@ func _on_ar_area_body_entered(body):
 	if (body is CharacterBody2D) && (body.get_meta("Player")):
 		label.text = "Armory"
 		label.position.x = 60 - (label.size.x / 2)
+		max_scale_x = len(label.text) * scale_x_char_multiplier
+		header_animation_scene()
+
+
+
+func _on_push_area_body_entered(body):
+	if (body is CharacterBody2D) && (body.get_meta("Player")):
+		label.text = $"../../../PUSH".text
+		label.position.x = 100 - (label.size.x / 2)
 		max_scale_x = len(label.text) * scale_x_char_multiplier
 		header_animation_scene()
