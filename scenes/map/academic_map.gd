@@ -42,6 +42,7 @@ func _ready():
 	get_node("Trivia_container").visible = false
 	get_node("day_night").visible = false
 	get_node("CharacterBody2D/Player/location_text")
+	get_node("CharacterBody2D/Player/GameBasics").visible = !Attributes.basics_shown
 
 func _input(event):
 	if event is InputEventMouseMotion or event is InputEventMouseButton:
@@ -262,3 +263,10 @@ func _on_class_rank_pressed():
 
 func _on_noti_close_pressed():
 	get_node("CharacterBody2D/Panel2").visible = false
+
+
+
+func _on_close_pressed():
+	Attributes.basics_shown = true
+	SaveUtils.save()
+	get_node("CharacterBody2D/Player/GameBasics").visible = false

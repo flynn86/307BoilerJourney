@@ -16,6 +16,7 @@ func save():
 		
 		# collectables
 		
+		"numCollected" : Attributes.numCollected,
 		"collectibleA" : Attributes.collectibleA,
 		"collectibleH" : Attributes.collectibleH,
 		"angry_pete" : Attributes.angry_pete,
@@ -85,6 +86,7 @@ func load(savefile: String):
 			
 			# collectables
 			
+			Attributes.numCollected = line["numCollected"]
 			Attributes.collectibleA = line["collectibleA"]
 			Attributes.collectibleH = line["collectibleH"]
 			Attributes.angry_pete = line["angry_pete"]
