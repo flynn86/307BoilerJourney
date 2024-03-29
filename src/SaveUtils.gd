@@ -53,7 +53,11 @@ func save():
 		"items": Attributes.items,
 		# Daily Question
 		"question_available" : Attributes.question_available,
-		"last_daily_question_time" : Attributes.last_daily_question_time
+		"last_daily_question_time" : Attributes.last_daily_question_time,
+		
+		# Time and Day/Night Cycle
+		"time" : Attributes.time,
+		"day_night_enabled" : Attributes.day_night_enabled
 	}
 	var string_data = JSON.stringify(save_data)
 	file.store_line(string_data)
@@ -116,6 +120,10 @@ func load(savefile: String):
 			# Daily Question
 			Attributes.question_available = line["question_available"]
 			Attributes.last_daily_question_time = line["last_daily_question_time"]
+			
+			# Time and Day/Night
+			Attributes.time = line["time"]
+			Attributes.day_night_enabled = line["day_night_enabled"]
 		file.close()
 
 func delete(savefile: String):

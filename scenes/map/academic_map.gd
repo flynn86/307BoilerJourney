@@ -40,6 +40,7 @@ func _ready():
 	$CharacterBody2D/Panel.visible = false
 	get_node("Inventory_container").visible = false
 	get_node("Trivia_container").visible = false
+	get_node("day_night").visible = false
 
 func _input(event):
 	if event is InputEventMouseMotion or event is InputEventMouseButton:
@@ -108,16 +109,17 @@ func _on_change_spring_pressed():
 	get_node("WinterVariantA").visible = false
 
 func _on_day_night_button_pressed():
-	var temp = get_node("day_night")
-	var temp2 = get_node("CharacterBody2D/Player/player_light")
-	if (temp.get_time_state() == 0):
-		Attributes.night = true;
-		temp.set_time_state(1)
-		temp2.visible = true
-	else:
-		Attributes.night = false;
-		temp.set_time_state(0)
-		temp2.visible = false
+	Attributes.day_night_enabled = ! Attributes.day_night_enabled
+	#var temp = get_node("day_night")
+	#var temp2 = get_node("CharacterBody2D/Player/player_light")
+	#if (temp.get_time_state() == 0):
+	#	Attributes.night = true;
+	#	temp.set_time_state(1)
+	#	temp2.visible = true
+	#else:
+	#	Attributes.night = false;
+	#	temp.set_time_state(0)
+	#	temp2.visible = false
 
 func _on_menu_button_pressed():
 	Attributes.xacademic = $CharacterBody2D.global_position.x

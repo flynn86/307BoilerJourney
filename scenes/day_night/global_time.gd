@@ -17,19 +17,28 @@ var hour = 0
 # In-game minutes elapsed for current day only
 var minute = 0
 
-# Multiplier for time elapse speed. 20.0 = normal speed
-var INGAME_SPEED = 40.0
+# Multiplier for time elapse speed. Increase to make time go faster, decrease to make time go slower.
+var INGAME_SPEED = 2.0
 
 # Current in-game time
 var time:float= 0.0
 
-var past_minute:int= -1
+
 
 # Initial time
 var INITIAL_HOUR = 12
 
+# Past Minute used for emitting tick signals
+var past_minute:int= -1
+
+# Signal
+signal minute_passed
+
 func _ready():
-	time = INGAME_TO_REAL_MINUTE_DURATION * MINUTES_PER_HOUR * INITIAL_HOUR
+	if (Attributes.time == 0):
+		time = INGAME_TO_REAL_MINUTE_DURATION * MINUTES_PER_HOUR * INITIAL_HOUR
+	else:
+		time = Attributes.time
 	total_minutes = int(time / INGAME_TO_REAL_MINUTE_DURATION)	
 	day = int(total_minutes / MINUTES_PER_DAY)
 	current_day_minutes = total_minutes % MINUTES_PER_DAY
@@ -38,6 +47,8 @@ func _ready():
 
 func _process(delta):
 	time += delta * INGAME_TO_REAL_MINUTE_DURATION * INGAME_SPEED
+	if (minute != past_minute): # So that it saves per in-game minute rather than per delta
+		SaveUtils.save()
 	_recalculate_time()	
 
 		
@@ -56,3 +67,7 @@ func _recalculate_time():
 	
 	# In-game minutes elapsed for current day only
 	minute = int(current_day_minutes % MINUTES_PER_HOUR)
+	if (minute != past_minute):
+		past_minute = minute
+	#	minute_passed.emit()
+		

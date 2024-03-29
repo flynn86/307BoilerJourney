@@ -131,6 +131,10 @@ var items : Array = []
 var question_available : bool = true
 var last_daily_question_time : Dictionary = Time.get_datetime_dict_from_system()
 
+# Time and Day/Night Cycle
+var time : float= 0.0
+var day_night_enabled : bool = false
+
 
 
 
@@ -261,4 +265,6 @@ func reset(file: String):
 	items.clear()
 	question_available = true
 	last_daily_question_time = {}
+	time = 0.0
+	day_night_enabled = false
 	

@@ -10,8 +10,8 @@ var slots : Array = []
 
 func _ready():
 	var main_title = get_child(0)
-	var main_title_label = main_title.get_child(0)
-	var close_button = get_child(1)
+	#var main_title_label = main_title.get_child(0)
+	#var close_button = get_child(1)
 	var inventory_container = get_child(2)
 	var inventory_patch = inventory_container.get_child(0)
 	var title_header = inventory_patch.get_child(0)
