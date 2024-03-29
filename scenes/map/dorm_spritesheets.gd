@@ -69,3 +69,41 @@ const desk_spritesheet = {
 	2 : preload("res://scenes/map/dorm_desk_assets/Bedroom_Singles_431.png"),
 	3 : preload("res://scenes/map/dorm_desk_assets/Bedroom_Singles_432.png"),
 }
+
+const window_spritesheet = {
+	0 : preload("res://scenes/map/dorm_window_assets/Bedroom_Singles_421.png"),
+	1 : preload("res://scenes/map/dorm_window_assets/Bedroom_Singles_57.png"),
+	2 : preload("res://scenes/map/dorm_window_assets/Bedroom_Singles_58.png"),
+	3 : preload("res://scenes/map/dorm_window_assets/Bedroom_Singles_59.png"),
+	4 : preload("res://scenes/map/dorm_window_assets/Bedroom_Singles_60.png"),
+	5 : preload("res://scenes/map/dorm_window_assets/Bedroom_Singles_61.png"),
+	6 : preload("res://scenes/map/dorm_window_assets/Bedroom_Singles_62.png")
+}
+
+const sidetable_spritesheet = {
+	0 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_393.png"),
+	1 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_394.png"),
+	2 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_395.png"),
+	3 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_396.png"),
+	4 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_397.png"),
+	5 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_398.png"),
+	6 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_399.png"),
+	7 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_400.png"),
+	8 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_401.png"),
+	9 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_402.png"),
+	10 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_403.png"),
+	11 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_404.png"),
+	12 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_405.png"),
+	13 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_406.png"),
+	14 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_407.png"),
+	15 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_408.png"),
+	16 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_409.png"),
+	17 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_410.png"),
+	18 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_411.png"),
+	19 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_412.png"),
+	20 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_413.png"),
+	21 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_414.png"),
+	22 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_415.png"),
+	23 : preload("res://scenes/map/dorm_room_assets/Bedroom_Singles_416.png")
+}
+

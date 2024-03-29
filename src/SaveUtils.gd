@@ -29,7 +29,8 @@ func save():
 		"purdue_symbol" : Attributes.purdue_symbol,
 		"bed" : Attributes.curr_bed,
 		"desk" : Attributes.curr_desk,
-		
+		"sidetable" : Attributes.curr_sidetable,
+		"window" : Attributes.curr_window,
 		"hair" : Attributes.curr_hair,
 		"body" : Attributes.curr_body,
 		"eyes" : Attributes.curr_eyes,
@@ -97,7 +98,8 @@ func load(savefile: String):
 			Attributes.purdue_symbol = line["purdue_symbol"]
 			Attributes.curr_bed = line["bed"]
 			Attributes.curr_desk = line["desk"]
-			
+			Attributes.curr_window = line["window"]
+			Attributes.curr_sidetable = line["sidetable"]
 			Attributes.curr_hair = line["hair"]
 			Attributes.curr_body = line["body"]
 			Attributes.curr_eyes = line["eyes"]
@@ -133,5 +135,6 @@ func load(savefile: String):
 func delete(savefile: String):
 	if FileAccess.file_exists(savefile):
 		FileAccess.open(savefile, FileAccess.WRITE)
+		
 		
 
