@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://0p2k50lhbvkx"]
+
+[ext_resource type="FontFile" uid="uid://cmmr8t0m2myle" path="res://scenes/Inventory/Arcadepix Plus.ttf" id="1_1x5gg"]
+[ext_resource type="Script" path="res://scenes/map/location_text.gd" id="1_e2idv"]
+[ext_resource type="Texture2D" uid="uid://c28l3gegy1vdc" path="res://images/rounded_rect.png" id="2_4elbo"]
+
+[node name="location_text" type="Node2D"]
+script = ExtResource("1_e2idv")
+
+[node name="title" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.5001
+offset_top = -8.25
+offset_right = 106.5
+offset_bottom = 6.75
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.925353, 0.925353, 0.925353, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("1_1x5gg")
+theme_override_font_sizes/font_size = 24
+text = "Location Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 161
+visible_ratio = -0.0769231
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(30, 10)
+scale = Vector2(0.008, 0.008)
+texture = ExtResource("2_4elbo")
