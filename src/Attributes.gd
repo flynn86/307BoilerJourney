@@ -17,8 +17,6 @@ var serverName: String = ""
 
 # collectables
 var numCollected: int = 0
-var collectibleA: bool = false
-var collectibleH: bool = false
 var angry_pete: bool = false
 var basketball: bool = false
 var bell_tower: bool = false
@@ -166,8 +164,6 @@ func reset(file: String):
 	
 	# collectables
 	numCollected = 0
-	collectibleA = false
-	collectibleH = false
 	angry_pete = false
 	basketball = false
 	bell_tower = false

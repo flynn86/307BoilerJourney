@@ -15,7 +15,6 @@ func _ready():
 		get_node("SpringVariantH").visible = true
 	elif (Attributes.season == "Winter"):
 		get_node("WinterVariantH").visible = true
-	get_node("CharacterBody2D/Player/CollectibleButton").visible = !Attributes.collectibleH
 	get_node("Inventory_container").visible = false
 	get_node("Trivia_container").visible = false
 	set_process_input(true)
@@ -80,11 +79,6 @@ func _on_menu_button_pressed():
 	Attributes.yhousing = $CharacterBody2D.global_position.y
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
-
-
-func _on_collectible_button_pressed():
-	Attributes.collectibleH = true
-	get_node("CharacterBody2D/Player/CollectibleButton").visible = false
 
 
 func _on_questlog_button_pressed():

@@ -26,7 +26,6 @@ func _ready():
  					"WTHR", "BRWN", "HEAV", "GRIS", "BRNG", "SCHM", "UNIV", "MTHW", "STON", "STEW", "HIKS", "PMU"]
 	for building in building_list:
 		_schedule_for_each_building(building)
-	get_node("CharacterBody2D/Player/CollectibleButton").visible = !Attributes.collectibleA
 	set_process_input(true)
 	get_node("Purdue_symbol").visible = !Attributes.purdue_symbol
 	get_node("IU_Sucks_Poster").visible = !Attributes.iu_poster
@@ -126,11 +125,6 @@ func _on_menu_button_pressed():
 	Attributes.yacademic = $CharacterBody2D.global_position.y
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
-
-
-func _on_collectible_button_pressed():
-	Attributes.collectibleA = true
-	get_node("CharacterBody2D/Player/CollectibleButton").visible = false
 
 
 func _on_questlog_button_pressed():
