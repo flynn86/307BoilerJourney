@@ -1,6 +1,13 @@
 extends Node
 
 func save():
+	(Attributes.database).update_rows("Players", "username == '%s'" % Attributes.username, {
+		"username" = Attributes.username,
+		"xp" = Attributes.xp,
+		"rank" = Attributes.rank,
+		"serverName" = Attributes.serverName,
+		"isHost" = Attributes.isHost
+	})
 	var file = FileAccess.open(Attributes.filename, FileAccess.WRITE)
 	var save_data: Dictionary = {
 		"xp" : Attributes.xp,
@@ -143,6 +150,3 @@ func load(savefile: String):
 func delete(savefile: String):
 	if FileAccess.file_exists(savefile):
 		FileAccess.open(savefile, FileAccess.WRITE)
-		
-		
-
