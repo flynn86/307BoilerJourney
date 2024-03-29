@@ -26,6 +26,7 @@ func _ready():
 	get_node("boilermaker_train").visible = !Attributes.boilermaker_train
 	get_node("purdue_helmet").visible = !Attributes.purdue_helmet
 	get_node("purdue_cap").visible = !Attributes.purdue_cap
+	get_node("CharacterBody2D/Player/view_suggestions").visible = false
 
 func _on_panel_closed():
 	Attributes.xhousing = $CharacterBody2D.global_position.x
@@ -163,3 +164,9 @@ func _on_noti_close_pressed():
 	
 func _on_day_night_pressed():
 	Attributes.day_night_enabled = ! Attributes.day_night_enabled
+
+func _on_suggestions_pressed():
+	get_node("CharacterBody2D/Player/view_suggestions").visible = true
+
+func _on_close_pressed():
+	get_node("CharacterBody2D/Player/view_suggestions").visible = false
