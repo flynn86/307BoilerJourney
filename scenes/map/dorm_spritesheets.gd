@@ -62,6 +62,7 @@ const bed_spritesheet = {
 }
 
 
+
 const desk_spritesheet = {
 	0 : preload("res://scenes/map/dorm_desk_assets/Bedroom_Singles_429.png"),
 	1 : preload("res://scenes/map/dorm_desk_assets/Bedroom_Singles_430.png"),
