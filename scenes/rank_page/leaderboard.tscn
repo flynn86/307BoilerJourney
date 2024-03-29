@@ -1,0 +1,84 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvgbdgww1tkv2"]
+
+[ext_resource type="Script" path="res://scenes/rank_page/leaderboard.gd" id="1_4csyh"]
+
+[node name="Leaderboard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4csyh")
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 19.0
+offset_right = 161.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 20
+text = "Back"
+
+[node name="Header" type="Label" parent="."]
+layout_mode = 0
+offset_left = 293.0
+offset_top = 64.0
+offset_right = 858.0
+offset_bottom = 147.0
+theme_override_font_sizes/font_size = 45
+text = "XP Leaderboard"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="1st" type="Label" parent="."]
+layout_mode = 0
+offset_left = 397.0
+offset_top = 170.0
+offset_right = 682.0
+offset_bottom = 250.0
+theme_override_font_sizes/font_size = 25
+text = "1. "
+vertical_alignment = 1
+
+[node name="2nd" type="Label" parent="."]
+layout_mode = 0
+offset_left = 398.0
+offset_top = 257.0
+offset_right = 918.0
+offset_bottom = 337.0
+theme_override_font_sizes/font_size = 25
+text = "2. "
+vertical_alignment = 1
+
+[node name="3rd" type="Label" parent="."]
+layout_mode = 0
+offset_left = 399.0
+offset_top = 349.0
+offset_right = 1145.0
+offset_bottom = 429.0
+theme_override_font_sizes/font_size = 25
+text = "3. "
+vertical_alignment = 1
+
+[node name="4th" type="Label" parent="."]
+layout_mode = 0
+offset_left = 397.0
+offset_top = 439.0
+offset_right = 1143.0
+offset_bottom = 519.0
+theme_override_font_sizes/font_size = 25
+text = "4. "
+vertical_alignment = 1
+
+[node name="5th" type="Label" parent="."]
+layout_mode = 0
+offset_left = 396.0
+offset_top = 533.0
+offset_right = 1142.0
+offset_bottom = 613.0
+theme_override_font_sizes/font_size = 25
+text = "5. "
+vertical_alignment = 1
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

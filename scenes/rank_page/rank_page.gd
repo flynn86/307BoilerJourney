@@ -13,3 +13,7 @@ func _ready():
 
 func _on_close_button_pressed():
 	get_tree().change_scene_to_file(Attributes.location)
+
+
+func _on_leaderboard_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/rank_page/leaderboard.tscn")
