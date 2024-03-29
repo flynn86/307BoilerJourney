@@ -130,6 +130,8 @@ radius = 58.0
 script = ExtResource("1_hbowc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -5)
+scale = Vector2(1.86667, 2.14)
 sprite_frames = SubResource("SpriteFrames_s1hm3")
 animation = &"Walking Right"
 frame_progress = 0.922028

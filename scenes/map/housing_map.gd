@@ -21,6 +21,11 @@ func _ready():
 	set_process_input(true)
 	get_node("CharacterBody2D/Panel2").visible = false
 	$CharacterBody2D/Panel.visible = false
+	
+	get_node("basketball").visible = !Attributes.basketball
+	get_node("boilermaker_train").visible = !Attributes.boilermaker_train
+	get_node("purdue_helmet").visible = !Attributes.purdue_helmet
+	get_node("purdue_cap").visible = !Attributes.purdue_cap
 
 func _on_panel_closed():
 	Attributes.xhousing = $CharacterBody2D.global_position.x
