@@ -156,3 +156,5 @@ func _on_rank_pressed():
 func _on_noti_close_pressed():
 	get_node("CharacterBody2D/Panel2").visible = false
 	
+func _on_day_night_pressed():
+	Attributes.day_night_enabled = ! Attributes.day_night_enabled
