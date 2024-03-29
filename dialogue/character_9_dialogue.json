@@ -1,4 +1,6 @@
 [
-	{"name": "Student", "text": "Try viewing the map in different seasons"},
-	{"name": "Student", "text": "All of them are so pretty"},
+	{"name": "Student", "text": "Hi there!"},
+	{"name": "Student", "text": "Did you know that you can customize your dorm?"},
+	{"name": "You", "text": "Really? I can do that?"},
+	{"name": "Student", "text": "Yes, of course! You can change you bed, windows, desk, etc"},
 ]
