@@ -23,7 +23,10 @@ func _ready():
 	(Attributes.database).open_db()
 	var table = {
 		"username" : {"data_type":"text"},
-		"xp" : {"data_type":"int"}
+		"xp" : {"data_type":"int"},
+		"rank" : {"data_type":"text"},
+		"serverName" : {"data_type":"text"},
+		"isHost" : {"data_type":"bool"}
 	}
 	(Attributes.database).create_table("Players", table)
 

@@ -48,13 +48,16 @@ func _on_join_server_button_pressed():
 		#else:
 		#	print("Client good")
 		#enet.create_client(address_entry.text, PORT)
-		Attributes.isServer = false
+		Attributes.isHost = false
 		Attributes.serverName = address_entry.text
 		var data = {
 			"username" = Attributes.username,
-			"isHost" = Attributes.isServer
+			"xp" = Attributes.xp,
+			"rank" = Attributes.rank,
+			"serverName" = Attributes.serverName,
+			"isHost" = Attributes.isHost
 		}
-		(Attributes.database).insert_row(Attributes.serverName, data)
+		(Attributes.database).update_rows("Players", "username == '%s'" % Attributes.username, data)
 		SaveUtils.save()
 
 func _on_host_server_button_pressed():
@@ -71,22 +74,17 @@ func _on_host_server_button_pressed():
 	#multiplayer.multiplayer_peer = enet
 	#serverOn = true
 	#add_client(multiplayer.get_unique_id())
-	Attributes.isServer = true
+	Attributes.isHost = true
 	Attributes.serverName = Attributes.username
-	var table = {
-		"username" : {"data_type":"text"},
-		"isHost" : {"data_type":"bool"}
-	}
 	var data = {
 		"username" = Attributes.username,
-		"isHost" = Attributes.isServer
+		"xp" = Attributes.xp,
+		"rank" = Attributes.rank,
+		"serverName" = Attributes.serverName,
+		"isHost" = Attributes.isHost
 	}
-	(Attributes.database).create_table(Attributes.serverName, table)
-	(Attributes.database).drop_table(Attributes.serverName)
-	(Attributes.database).create_table(Attributes.serverName, table)
-	
-	(Attributes.database).insert_row(Attributes.serverName, data)
-	table = {
+	(Attributes.database).update_rows("Players", "username == '%s'" % Attributes.username, data)
+	var table = {
 		"username" : {"data_type":"text"},
 		"message" : {"data_type":"text"},
 		"time" : {"data_type":"text"},

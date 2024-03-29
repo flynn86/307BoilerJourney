@@ -8,7 +8,7 @@ func _ready():
 	for i in data.size():
 		data_line += "From " + data[i].username + " at " + data[i].time + " on " + data[i].date + ": " + data[i].message + '\n'
 	$Label.text = data_line
-	$ClearButton.visible = Attributes.isServer
+	$ClearButton.visible = Attributes.isHost
 	
 func _process(_delta):
 	_ready()

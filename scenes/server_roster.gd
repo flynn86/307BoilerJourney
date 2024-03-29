@@ -1,15 +1,19 @@
 extends Node2D
 
 func _ready():
-	$ServerDisconnect.visible = Attributes.isServer
-	$ClientDisconnect.visible = !Attributes.isServer
+	$ServerDisconnect.visible = Attributes.isHost
+	$ClientDisconnect.visible = !Attributes.isHost
 	var data_line : String = ""
-	var data : Array = (Attributes.database).select_rows(Attributes.serverName, "isHost == true", ["*"])
-	if (data.size() != 0):
-		data_line += "Host: " + data[0].username + '\n'
-		data = (Attributes.database).select_rows(Attributes.serverName, "isHost == false", ["*"])
+	var data : Array = (Attributes.database).select_rows("Players", "serverName == '%s' and isHost == true" % Attributes.serverName, ["*"])
+	if (data.size() == 0):
+		Attributes.serverName = ""
+		Attributes.isHost = false
+		get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	else:
+		data_line += "Host: " + data[0].username + " , xp: " + str(data[0].xp) + " , class rank: " + data[0].rank + '\n'
+		data = (Attributes.database).select_rows("Players", "serverName == '%s' and isHost == false" % Attributes.serverName, ["*"])
 		for i in data.size():
-			data_line += "Client " + str(i + 1) + ": " + data[i].username + '\n'
+			data_line += "Client " + str(i + 1) + ": " + data[i].username + " , xp: " + str(data[i].xp) + " , class rank: " + data[i].rank + '\n'
 		$Label.text = data_line
 
 func _process(_delta):
@@ -19,9 +23,38 @@ func _on_back_to_menu_pressed():
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
 
 func _on_client_disconnect_pressed():
-	(Attributes.database).delete_rows(Attributes.serverName, "username == '%s'" % Attributes.username)
 	Attributes.serverName = ""
+	var player : Dictionary = {
+		"username" = Attributes.username,
+		"xp" = Attributes.xp,
+		"rank" = Attributes.rank,
+		"serverName" = "",
+		"isHost" = false
+	}
+	(Attributes.database).update_rows("Players", "username == '%s'" % Attributes.username, player) 
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
 
 func _on_server_disconnect_pressed():
-	pass # Replace with function body.
+	var data : Array = (Attributes.database).select_rows("Players", "serverName == '%s' and isHost == false" % Attributes.serverName, ["*"])
+	for i in data:
+		#var player : Array = (Attributes.database).select_rows("Players", "username == '%s'" % i.username, ["*"])
+		var update : Dictionary = {
+			"username" = i.username,
+			"xp" = i.xp,
+			"rank" = i.rank,
+			"serverName" = "",
+			"isHost" = false
+		}
+		(Attributes.database).update_rows("Players", "username == '%s'" % i.username, update)
+	Attributes.serverName = ""
+	Attributes.isHost = false
+	var update : Dictionary = {
+		"username" = Attributes.username,
+		"xp" = Attributes.xp,
+		"rank" = Attributes.rank,
+		"serverName" = "",
+		"isHost" = false
+	}
+	(Attributes.database).update_rows("Players", "username == '%s'" % Attributes.username, update)
+	(Attributes.database).drop_table("%s_Chat" % Attributes.username)
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")

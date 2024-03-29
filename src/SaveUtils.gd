@@ -11,8 +11,6 @@ func save():
 		"yacademic" : Attributes.yacademic,
 		"location" : Attributes.location,
 		"rank" : Attributes.rank,
-		"isServer" : Attributes.isServer,
-		"serverName" : Attributes.serverName,
 		
 		# collectables
 		
@@ -77,8 +75,14 @@ func load(savefile: String):
 			Attributes.yacademic = line["yacademic"]
 			Attributes.location = line["location"]
 			Attributes.rank = line["rank"]
-			Attributes.isServer = line["isServer"]
-			Attributes.serverName = line["serverName"]
+			var player : Array = (Attributes.database).select_rows("Players", "username == '%s'" % Attributes.username, ["*"])
+			if (player.size() != 0):
+				Attributes.serverName = player[0].serverName
+				Attributes.isHost = player[0].isHost
+			else:
+				# this shouldn't happen if player table is managed correctly
+				Attributes.serverName = ""
+				Attributes.isHost = false
 			
 			# collectables
 			

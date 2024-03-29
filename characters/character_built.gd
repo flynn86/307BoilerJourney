@@ -14,7 +14,9 @@ func _on_button_pressed():
 		else:
 			var data = {
 				"username" = Attributes.username,
-				"xp" = 0
+				"xp" = 0,
+				"serverName" = "",
+				"isHost" = false
 			}
 			(Attributes.database).insert_row("Players", data)
 			get_tree().change_scene_to_file("res://characters/select_avatar.tscn")
