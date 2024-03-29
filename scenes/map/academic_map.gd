@@ -259,5 +259,3 @@ func _on_close1_pressed():
 	get_node("CharacterBody2D/Player/view_suggestions").visible = false
 
 
-func _on_rnph_area_body_entered(body):
-	pass # Replace with function body.

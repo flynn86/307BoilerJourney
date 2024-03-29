@@ -332,3 +332,6 @@ func _on_cl_50_area_body_entered(body):
 		
 		
 		header_animation_scene()
+
+
+
