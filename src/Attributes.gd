@@ -46,6 +46,9 @@ var quest2_active: bool = false
 var quest2_completed: bool = false
 var quest3_active: bool = false
 var quest3_completed: bool = false
+var curr_bed: int = 0
+var curr_desk: int = 0
+
 '''
 var course1_name: String = ""
 var course2_name: String = ""
@@ -170,7 +173,8 @@ func reset(file: String):
 	purdue_helmet = false
 	purdue_symbol = false
 	
-	
+	curr_bed = 0
+	curr_desk = 0
 	
 	curr_hair = 0
 	curr_eyes = 0

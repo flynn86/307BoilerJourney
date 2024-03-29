@@ -27,7 +27,8 @@ func save():
 		"purdue_cap" : Attributes.purdue_cap,
 		"purdue_helmet" : Attributes.purdue_helmet,
 		"purdue_symbol" : Attributes.purdue_symbol,
-		
+		"bed" : Attributes.curr_bed,
+		"desk" : Attributes.curr_desk,
 		
 		"hair" : Attributes.curr_hair,
 		"body" : Attributes.curr_body,
@@ -93,7 +94,8 @@ func load(savefile: String):
 			Attributes.purdue_cap = line["purdue_cap"]
 			Attributes.purdue_helmet = line["purdue_helmet"]
 			Attributes.purdue_symbol = line["purdue_symbol"]
-			
+			Attributes.curr_bed = line["bed"]
+			Attributes.curr_desk = line["desk"]
 			
 			Attributes.curr_hair = line["hair"]
 			Attributes.curr_body = line["body"]
