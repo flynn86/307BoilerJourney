@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://cg0juu3d3gepy"]
 
-[ext_resource type="FontFile" uid="uid://cmmr8t0m2myle" path="res://scenes/Inventory/Arcadepix Plus.ttf" id="3_01im4"]
+[ext_resource type="FontFile" uid="uid://ddlwuwgggc0tu" path="res://scenes/Inventory/Arcadepix Plus.ttf" id="3_01im4"]
 [ext_resource type="PackedScene" uid="uid://bf8xjyohll501" path="res://scenes/Inventory/inventory_slot.tscn" id="5_e8yq8"]
-[ext_resource type="Texture2D" uid="uid://cemha5100kjtj" path="res://scenes/Inventory/item_slot.png" id="5_f0cw3"]
-[ext_resource type="Texture2D" uid="uid://ie7bmvpaducq" path="res://scenes/Collectable_scenes/Collectables/Purdue_Helmet_Transparent.png" id="6_xenvh"]
-[ext_resource type="Texture2D" uid="uid://dqcdg4wxms527" path="res://scenes/Inventory/inner_panel.png" id="8_6lvgn"]
-[ext_resource type="Texture2D" uid="uid://dwuoauebb1w68" path="res://scenes/Inventory/bar.png" id="9_2xcfv"]
+[ext_resource type="Texture2D" uid="uid://bun6c5ddurxyx" path="res://scenes/Inventory/item_slot.png" id="5_f0cw3"]
+[ext_resource type="Texture2D" uid="uid://eekofpdtm8rg" path="res://scenes/Collectable_scenes/Collectables/Purdue_Helmet_Transparent.png" id="6_xenvh"]
+[ext_resource type="Texture2D" uid="uid://cb21m0qrijvrm" path="res://scenes/Inventory/inner_panel.png" id="8_6lvgn"]
+[ext_resource type="Texture2D" uid="uid://dqmoenvc5afx" path="res://scenes/Inventory/bar.png" id="9_2xcfv"]
 
 [node name="Inventory" type="NinePatchRect"]
 custom_minimum_size = Vector2(0, 100)

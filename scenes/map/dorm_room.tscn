@@ -1,17 +1,17 @@
-[gd_scene load_steps=20 format=3 uid="uid://rhyb4hih8dsy"]
+[gd_scene load_steps=21 format=3 uid="uid://rhyb4hih8dsy"]
 
-[ext_resource type="Texture2D" uid="uid://d4h8vb2y7ewm" path="res://scenes/map/dorm_room_assets/interior free.png" id="1_a64yr"]
+[ext_resource type="Texture2D" uid="uid://ebidogsxny0h" path="res://scenes/map/dorm_room_assets/interior free.png" id="1_a64yr"]
 [ext_resource type="Script" path="res://scenes/map/dorm_room.gd" id="1_atnno"]
-[ext_resource type="Texture2D" uid="uid://db8ho6uh5d76t" path="res://scenes/map/dorm_room_assets/TopDownHouse_DoorsAndWindows.png" id="2_3spfl"]
-[ext_resource type="Texture2D" uid="uid://coe1c8tpsm64l" path="res://scenes/map/dorm_room_assets/TopDownHouse_FloorsAndWalls.png" id="3_44h8r"]
-[ext_resource type="Texture2D" uid="uid://01whmkchlavh" path="res://scenes/map/dorm_room_assets/TopDownHouse_FurnitureState1.png" id="4_giso6"]
-[ext_resource type="Texture2D" uid="uid://cbbtn554l2nib" path="res://scenes/map/dorm_room_assets/TopDownHouse_FurnitureState2.png" id="5_xbrix"]
-[ext_resource type="Texture2D" uid="uid://cjhj6fs8jqiim" path="res://scenes/map/dorm_room_assets/TopDownHouse_SmallItems.png" id="6_n2m1q"]
-[ext_resource type="Texture2D" uid="uid://wcf78x17gfms" path="res://scenes/map/dorm_bed_assets/Bedroom_Singles_1.png" id="8_3lphc"]
-[ext_resource type="Texture2D" uid="uid://b8ogucjcjkyot" path="res://scenes/map/dorm_desk_assets/Bedroom_Singles_429.png" id="9_w0hcp"]
-[ext_resource type="Texture2D" uid="uid://dwyu6wddajlx7" path="res://scenes/map/dorm_desk_assets/Bedroom_Singles_522.png" id="10_mrmny"]
-[ext_resource type="Texture2D" uid="uid://xn8u11xy12t1" path="res://scenes/map/dorm_window_assets/Bedroom_Singles_421.png" id="11_r6cww"]
-[ext_resource type="Texture2D" uid="uid://cobpkxe0h5slc" path="res://scenes/map/dorm_room_assets/Bedroom_Singles_416.png" id="12_exdnm"]
+[ext_resource type="Texture2D" uid="uid://di8cauipvpgsc" path="res://scenes/map/dorm_room_assets/TopDownHouse_DoorsAndWindows.png" id="2_3spfl"]
+[ext_resource type="Texture2D" uid="uid://djg5f5qpjq2m6" path="res://scenes/map/dorm_room_assets/TopDownHouse_FloorsAndWalls.png" id="3_44h8r"]
+[ext_resource type="Texture2D" uid="uid://d38ae6263f8wi" path="res://scenes/map/dorm_room_assets/TopDownHouse_FurnitureState1.png" id="4_giso6"]
+[ext_resource type="Texture2D" uid="uid://c5i5t68yndpp0" path="res://scenes/map/dorm_room_assets/TopDownHouse_FurnitureState2.png" id="5_xbrix"]
+[ext_resource type="Texture2D" uid="uid://bpmodgm8mbyyb" path="res://scenes/map/dorm_room_assets/TopDownHouse_SmallItems.png" id="6_n2m1q"]
+[ext_resource type="Texture2D" uid="uid://rqmljg6tpacg" path="res://scenes/map/dorm_bed_assets/Bedroom_Singles_1.png" id="8_3lphc"]
+[ext_resource type="Texture2D" uid="uid://dwfff1b8mpnsm" path="res://scenes/map/dorm_desk_assets/Bedroom_Singles_429.png" id="9_w0hcp"]
+[ext_resource type="Texture2D" uid="uid://c25uaivxm8rwj" path="res://scenes/map/dorm_desk_assets/Bedroom_Singles_522.png" id="10_mrmny"]
+[ext_resource type="Texture2D" uid="uid://budbo5itb2urg" path="res://scenes/map/dorm_window_assets/Bedroom_Singles_421.png" id="11_r6cww"]
+[ext_resource type="Texture2D" uid="uid://cops13ndtr6fd" path="res://scenes/map/dorm_room_assets/Bedroom_Singles_416.png" id="12_exdnm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_75iyo"]
 texture = ExtResource("1_a64yr")
@@ -944,6 +944,8 @@ sources/3 = SubResource("TileSetAtlasSource_e4f4t")
 sources/4 = SubResource("TileSetAtlasSource_5hsdc")
 sources/5 = SubResource("TileSetAtlasSource_ohfps")
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2rkfw"]
+
 [node name="DormRoom" type="Node2D"]
 position = Vector2(1, 0)
 script = ExtResource("1_atnno")
@@ -959,21 +961,21 @@ layer_1/tile_data = PackedInt32Array()
 [node name="MenuButton" type="Button" parent="."]
 z_index = 10
 offset_left = 14.0
-offset_top = 16.0
+offset_top = 21.0
 offset_right = 198.0
-offset_bottom = 59.0
-theme_override_font_sizes/font_size = 25
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 20
 text = "Menu
 "
 metadata/_edit_use_anchors_ = true
 
 [node name="ViewSchedule" type="Button" parent="."]
 z_index = 10
-offset_left = 13.0
-offset_top = 70.0
-offset_right = 197.0
-offset_bottom = 113.0
-theme_override_font_sizes/font_size = 25
+offset_left = 12.0
+offset_top = 83.0
+offset_right = 196.0
+offset_bottom = 126.0
+theme_override_font_sizes/font_size = 20
 text = "View Schedule"
 metadata/_edit_use_anchors_ = true
 
@@ -982,13 +984,13 @@ z_index = 10
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 947.0
-offset_top = 31.0
-offset_right = 1131.0
-offset_bottom = 74.0
+offset_left = 951.0
+offset_top = 29.0
+offset_right = 1135.0
+offset_bottom = 72.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 20
 text = "Back to Map
 "
 metadata/_edit_use_anchors_ = true
@@ -1025,14 +1027,16 @@ offset_left = 213.0
 offset_top = 21.0
 offset_right = 373.0
 offset_bottom = 81.0
+theme_override_font_sizes/font_size = 20
 text = "Change Bed"
 metadata/_edit_use_anchors_ = true
 
 [node name="change_desk" type="Button" parent="."]
-offset_left = 756.0
-offset_top = 23.0
-offset_right = 916.0
-offset_bottom = 83.0
+offset_left = 767.0
+offset_top = 22.0
+offset_right = 927.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 20
 text = "Change Desk"
 metadata/_edit_use_anchors_ = true
 
@@ -1041,14 +1045,45 @@ offset_left = 393.0
 offset_top = 21.0
 offset_right = 553.0
 offset_bottom = 81.0
+theme_override_font_sizes/font_size = 20
 text = "Change Window"
 
 [node name="change_sidetable" type="Button" parent="."]
-offset_left = 571.0
-offset_top = 23.0
-offset_right = 731.0
-offset_bottom = 83.0
+offset_left = 572.0
+offset_top = 22.0
+offset_right = 751.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 20
 text = "Change SideTable"
+
+[node name="display_collectable" type="Button" parent="."]
+offset_left = 10.0
+offset_top = 137.0
+offset_right = 201.0
+offset_bottom = 189.0
+theme_override_font_sizes/font_size = 20
+text = "Display Collectable"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 11.8
+offset_top = 4.8
+offset_right = 51.8
+offset_bottom = 44.8
+texture = SubResource("CompressedTexture2D_2rkfw")
+
+[node name="collectable_container" type="CenterContainer" parent="TextureRect"]
+offset_left = 289.2
+offset_top = 316.2
+offset_right = 354.2
+offset_bottom = 379.2
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(49, 38)
+
+[node name="collectable" type="Sprite2D" parent="Node2D"]
+unique_name_in_owner = true
+position = Vector2(295, 311.5)
+scale = Vector2(0.3, 0.3)
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="ViewSchedule" to="." method="_on_view_schedule_pressed"]
@@ -1057,3 +1092,4 @@ text = "Change SideTable"
 [connection signal="pressed" from="change_desk" to="." method="_on_change_desk_pressed"]
 [connection signal="pressed" from="change_window" to="." method="_on_change_window_pressed"]
 [connection signal="pressed" from="change_sidetable" to="." method="_on_change_sidetable_pressed"]
+[connection signal="pressed" from="display_collectable" to="." method="_on_display_collectable_pressed"]

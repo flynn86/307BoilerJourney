@@ -15,7 +15,10 @@ func _ready():
 	deskSprite.texture = dorm_sprites.desk_spritesheet[Attributes.curr_desk]
 	windowSprite.texture = dorm_sprites.window_spritesheet[Attributes.curr_window]
 	sidetableSprite.texture = dorm_sprites.sidetable_spritesheet[Attributes.curr_sidetable]
-
+	
+	if (int(Attributes.display_item_number) != -1):
+		%collectable.texture = ItemManager.icons[Attributes.items[int(Attributes.display_item_number)]]
+		%collectable.scale = Vector2(0.3, 0.3)
 
 func _on_change_bed_pressed():
 	Attributes.curr_bed = (Attributes.curr_bed + 1) % dorm_sprites.bed_spritesheet.size()
@@ -59,3 +62,11 @@ func _on_exit_pressed():
 
 
 
+
+
+
+func _on_display_collectable_pressed():
+	Attributes.dorm_display = true
+	Attributes.location = "res://scenes/map/dorm_room.tscn"
+	SaveUtils.save()
+	get_tree().change_scene_to_file("res://scenes/Inventory/player_inventory.tscn")

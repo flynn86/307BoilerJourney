@@ -7,6 +7,7 @@ var slots : Array = []
 @onready var item_info_icon_slot = item_info.get_child(1).get_child(0).get_child(0)
 @onready var description = item_info.get_child(2).get_child(0)
 @onready var item_info_close_button = item_info.get_child(3)
+@onready var collectable_to_use
 
 func _ready():
 	var main_title = get_child(0)
@@ -31,6 +32,7 @@ func _ready():
 			var final_position = Vector2(10,10)
 			slot_sprite_i.position = final_position
 			slot_sprite_i.visible = true
+	get_node("item_info/dorm_display").visible = false
 
 func _on_close_pressed():
 	item_info.visible = false
@@ -54,8 +56,9 @@ func _on_slot_1_pressed():
 		item_info_icon_slot.position = final_position
 		description.text = "“" + ItemManager.descriptions[Attributes.items[0]] + "\""
 		item_info.visible = true
-
-
+		if (Attributes.dorm_display == true):
+			get_node("item_info/dorm_display").visible = true
+			collectable_to_use = 0
 
 
 func _on_slot_2_pressed():
@@ -69,6 +72,9 @@ func _on_slot_2_pressed():
 		item_info_icon_slot.position = final_position
 		description.text = "“" + ItemManager.descriptions[Attributes.items[1]] + "\""
 		item_info.visible = true
+		if (Attributes.dorm_display == true):
+			get_node("item_info/dorm_display").visible = true
+			collectable_to_use = 1
 
 
 func _on_slot_3_pressed():
@@ -82,6 +88,9 @@ func _on_slot_3_pressed():
 		item_info_icon_slot.position = final_position
 		description.text = "“" + ItemManager.descriptions[Attributes.items[2]] + "\""
 		item_info.visible = true
+		if (Attributes.dorm_display == true):
+			get_node("item_info/dorm_display").visible = true
+			collectable_to_use = 2
 
 
 func _on_slot_4_pressed():
@@ -95,6 +104,9 @@ func _on_slot_4_pressed():
 		item_info_icon_slot.position = final_position
 		description.text = "“" + ItemManager.descriptions[Attributes.items[3]] + "\""
 		item_info.visible = true
+		if (Attributes.dorm_display == true):
+			get_node("item_info/dorm_display").visible = true
+			collectable_to_use = 3
 
 
 func _on_slot_5_pressed():
@@ -108,6 +120,9 @@ func _on_slot_5_pressed():
 		item_info_icon_slot.position = final_position
 		description.text = "“" + ItemManager.descriptions[Attributes.items[4]] + "\""
 		item_info.visible = true
+		if (Attributes.dorm_display == true):
+			get_node("item_info/dorm_display").visible = true
+			collectable_to_use = 4
 
 
 func _on_slot_6_pressed():
@@ -121,6 +136,9 @@ func _on_slot_6_pressed():
 		item_info_icon_slot.position = final_position
 		description.text = "“" + ItemManager.descriptions[Attributes.items[5]] + "\""
 		item_info.visible = true
+		if (Attributes.dorm_display == true):
+			get_node("item_info/dorm_display").visible = true
+			collectable_to_use = 5
 
 
 func _on_slot_7_pressed():
@@ -134,6 +152,9 @@ func _on_slot_7_pressed():
 		item_info_icon_slot.position = final_position
 		description.text = "“" + ItemManager.descriptions[Attributes.items[6]] + "\""
 		item_info.visible = true
+		if (Attributes.dorm_display == true):
+			get_node("item_info/dorm_display").visible = true
+			collectable_to_use = 6
 
 
 func _on_slot_8_pressed():
@@ -147,6 +168,9 @@ func _on_slot_8_pressed():
 		item_info_icon_slot.position = final_position
 		description.text = "“" + ItemManager.descriptions[Attributes.items[7]] + "\""
 		item_info.visible = true
+		if (Attributes.dorm_display == true):
+			get_node("item_info/dorm_display").visible = true
+			collectable_to_use = 7
 
 
 func _on_slot_9_pressed():
@@ -160,6 +184,9 @@ func _on_slot_9_pressed():
 		item_info_icon_slot.position = final_position
 		description.text = "“" + ItemManager.descriptions[Attributes.items[8]] + "\""
 		item_info.visible = true
+		if (Attributes.dorm_display == true):
+			get_node("item_info/dorm_display").visible = true
+			collectable_to_use = 8
 
 
 func _on_slot_10_pressed():
@@ -173,6 +200,9 @@ func _on_slot_10_pressed():
 		item_info_icon_slot.position = final_position
 		description.text = "“" + ItemManager.descriptions[Attributes.items[9]] + "\""
 		item_info.visible = true
+		if (Attributes.dorm_display == true):
+			get_node("item_info/dorm_display").visible = true
+			collectable_to_use = 9
 
 
 func _on_slot_11_pressed():
@@ -186,6 +216,9 @@ func _on_slot_11_pressed():
 		item_info_icon_slot.position = final_position
 		description.text = "“" + ItemManager.descriptions[Attributes.items[10]] + "\""
 		item_info.visible = true
+		if (Attributes.dorm_display == true):
+			get_node("item_info/dorm_display").visible = true
+			collectable_to_use = 10
 
 
 func _on_slot_12_pressed():
@@ -199,6 +232,9 @@ func _on_slot_12_pressed():
 		item_info_icon_slot.position = final_position
 		description.text = "“" + ItemManager.descriptions[Attributes.items[11]] + "\""
 		item_info.visible = true
+		if (Attributes.dorm_display == true):
+			get_node("item_info/dorm_display").visible = true
+			collectable_to_use = 11
 
 
 func _on_slot_13_pressed():
@@ -212,6 +248,9 @@ func _on_slot_13_pressed():
 		item_info_icon_slot.position = final_position
 		description.text = "“" + ItemManager.descriptions[Attributes.items[12]] + "\""
 		item_info.visible = true
+		if (Attributes.dorm_display == true):
+			get_node("item_info/dorm_display").visible = true
+			collectable_to_use = 12
 
 
 func _on_slot_14_pressed():
@@ -225,6 +264,9 @@ func _on_slot_14_pressed():
 		item_info_icon_slot.position = final_position
 		description.text = "“" + ItemManager.descriptions[Attributes.items[13]] + "\""
 		item_info.visible = true
+		if (Attributes.dorm_display == true):
+			get_node("item_info/dorm_display").visible = true
+			collectable_to_use = 13
 
 
 func _on_slot_15_pressed():
@@ -238,3 +280,19 @@ func _on_slot_15_pressed():
 		item_info_icon_slot.position = final_position
 		description.text = "“" + ItemManager.descriptions[Attributes.items[14]] + "\""
 		item_info.visible = true
+		if (Attributes.dorm_display == true):
+			get_node("item_info/dorm_display").visible = true
+			collectable_to_use = 14
+
+
+func _on_dorm_display_pressed():
+	get_node("item_info/dorm_display").visible = false
+	Attributes.dorm_display = false
+	Attributes.display_item_number = collectable_to_use
+	SaveUtils.save()
+	get_tree().change_scene_to_file(Attributes.location)
+	#%collectable.texture = ItemManager.icons[Attributes.items[int(collectable_to_use)]]
+	#get_node("res://scenes/map/dorm_room.tscn/%collectable").texture = ItemManager.icons[Attributes.items[int(collectable_to_use)]]
+	#var final_scale = Vector2(ItemManager.scale[Attributes.items[int(collectable_to_use)]],ItemManager.scale[Attributes.items[int(collectable_to_use)]])
+	#get_node("res://scenes/map/dorm_room.tscn/%collectable").scale = final_scale
+	#get_tree().change_scene_to_file(Attributes.location)

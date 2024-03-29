@@ -28,6 +28,8 @@ var iu_poster: bool = false
 var purdue_cap: bool = false
 var purdue_helmet: bool = false
 var purdue_symbol: bool = false
+var dorm_display: bool = false
+var display_item_number: int = -1
 
 
 var curr_hair: int = 0
@@ -175,6 +177,8 @@ func reset(file: String):
 	purdue_cap = false
 	purdue_helmet = false
 	purdue_symbol = false
+	dorm_display = false
+	display_item_number = -1
 	
 	curr_bed = 0
 	curr_desk = 0

@@ -1,16 +1,16 @@
 [gd_scene load_steps=12 format=3 uid="uid://cc565weox2i2y"]
 
-[ext_resource type="Texture2D" uid="uid://belmqpu4axgsw" path="res://scenes/Inventory/main panel.png" id="1_lr7od"]
+[ext_resource type="Texture2D" uid="uid://6if8bgm37pea" path="res://scenes/Inventory/main panel.png" id="1_lr7od"]
 [ext_resource type="Script" path="res://scenes/Inventory/Inventory_container.gd" id="2_rj2ma"]
-[ext_resource type="Texture2D" uid="uid://ch0e8qbbj0lvj" path="res://scenes/Inventory/title.png" id="3_xg6qk"]
-[ext_resource type="FontFile" uid="uid://cmmr8t0m2myle" path="res://scenes/Inventory/Arcadepix Plus.ttf" id="4_82p0w"]
-[ext_resource type="Texture2D" uid="uid://ba82ekbvbcuqh" path="res://scenes/Inventory/x_normal.png" id="5_8vkhs"]
-[ext_resource type="Texture2D" uid="uid://7b2yukw2qdog" path="res://scenes/Inventory/x_pressed.png" id="6_dvlk2"]
-[ext_resource type="Texture2D" uid="uid://bvvstqfshpv5t" path="res://scenes/Inventory/x_hover.png" id="7_gth37"]
-[ext_resource type="Texture2D" uid="uid://jh1k163wr5jb" path="res://scenes/Inventory/x_disabled.png" id="8_a4mao"]
-[ext_resource type="Texture2D" uid="uid://dqcdg4wxms527" path="res://scenes/Inventory/inner_panel.png" id="9_lfcf2"]
-[ext_resource type="Texture2D" uid="uid://dwuoauebb1w68" path="res://scenes/Inventory/bar.png" id="10_b6qp6"]
-[ext_resource type="Texture2D" uid="uid://cemha5100kjtj" path="res://scenes/Inventory/item_slot.png" id="11_hrwvj"]
+[ext_resource type="Texture2D" uid="uid://b8ndils88tjax" path="res://scenes/Inventory/title.png" id="3_xg6qk"]
+[ext_resource type="FontFile" uid="uid://ddlwuwgggc0tu" path="res://scenes/Inventory/Arcadepix Plus.ttf" id="4_82p0w"]
+[ext_resource type="Texture2D" uid="uid://bnm2x5rs8onk3" path="res://scenes/Inventory/x_normal.png" id="5_8vkhs"]
+[ext_resource type="Texture2D" uid="uid://bs1umumbijf32" path="res://scenes/Inventory/x_pressed.png" id="6_dvlk2"]
+[ext_resource type="Texture2D" uid="uid://dleo2ivgfsvpu" path="res://scenes/Inventory/x_hover.png" id="7_gth37"]
+[ext_resource type="Texture2D" uid="uid://bexqihid2lmut" path="res://scenes/Inventory/x_disabled.png" id="8_a4mao"]
+[ext_resource type="Texture2D" uid="uid://cb21m0qrijvrm" path="res://scenes/Inventory/inner_panel.png" id="9_lfcf2"]
+[ext_resource type="Texture2D" uid="uid://dqmoenvc5afx" path="res://scenes/Inventory/bar.png" id="10_b6qp6"]
+[ext_resource type="Texture2D" uid="uid://bun6c5ddurxyx" path="res://scenes/Inventory/item_slot.png" id="11_hrwvj"]
 
 [node name="Inventory_container" type="NinePatchRect"]
 anchors_preset = 8
@@ -430,6 +430,15 @@ texture_pressed = ExtResource("6_dvlk2")
 texture_hover = ExtResource("7_gth37")
 texture_disabled = ExtResource("8_a4mao")
 
+[node name="dorm_display" type="Button" parent="item_info"]
+layout_mode = 0
+offset_left = -115.6
+offset_top = 10.0
+offset_right = -26.6
+offset_bottom = 32.0
+theme_override_font_sizes/font_size = 10
+text = "Display in dorm"
+
 [connection signal="pressed" from="close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot1" to="." method="_on_slot_1_pressed"]
 [connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot2" to="." method="_on_slot_2_pressed"]
@@ -447,3 +456,4 @@ texture_disabled = ExtResource("8_a4mao")
 [connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot14" to="." method="_on_slot_14_pressed"]
 [connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot15" to="." method="_on_slot_15_pressed"]
 [connection signal="pressed" from="item_info/item_info_close" to="." method="_on_item_info_close_pressed"]
+[connection signal="pressed" from="item_info/dorm_display" to="." method="_on_dorm_display_pressed"]
