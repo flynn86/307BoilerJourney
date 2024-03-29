@@ -41,6 +41,7 @@ func _ready():
 	get_node("Inventory_container").visible = false
 	get_node("Trivia_container").visible = false
 	get_node("day_night").visible = false
+	get_node("CharacterBody2D/Player/location_text")
 
 func _input(event):
 	if event is InputEventMouseMotion or event is InputEventMouseButton:
