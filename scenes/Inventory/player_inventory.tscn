@@ -431,13 +431,29 @@ texture_hover = ExtResource("7_gth37")
 texture_disabled = ExtResource("8_a4mao")
 
 [node name="dorm_display" type="Button" parent="item_info"]
+visible = false
 layout_mode = 0
-offset_left = -115.6
-offset_top = 10.0
-offset_right = -26.6
-offset_bottom = 32.0
-theme_override_font_sizes/font_size = 10
+offset_left = -116.0
+offset_top = 53.0
+offset_right = -32.0
+offset_bottom = 73.0
+theme_override_font_sizes/font_size = 8
 text = "Display in dorm"
+
+[node name="OptionButton" type="OptionButton" parent="item_info"]
+layout_mode = 0
+offset_left = -109.6
+offset_top = 6.6
+offset_right = -29.6
+offset_bottom = 32.6
+theme_override_font_sizes/font_size = 12
+item_count = 3
+popup/item_0/text = "Slot 1"
+popup/item_0/id = 0
+popup/item_1/text = "Slot 2"
+popup/item_1/id = 1
+popup/item_2/text = "Slot 3"
+popup/item_2/id = 2
 
 [connection signal="pressed" from="close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot1" to="." method="_on_slot_1_pressed"]
@@ -457,3 +473,5 @@ text = "Display in dorm"
 [connection signal="pressed" from="Inventory_container/inventory_patch/slot_container/slot15" to="." method="_on_slot_15_pressed"]
 [connection signal="pressed" from="item_info/item_info_close" to="." method="_on_item_info_close_pressed"]
 [connection signal="pressed" from="item_info/dorm_display" to="." method="_on_dorm_display_pressed"]
+[connection signal="item_selected" from="item_info/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="pressed" from="item_info/OptionButton" to="." method="_on_option_button_pressed"]
