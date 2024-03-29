@@ -139,6 +139,7 @@ var day_night_enabled : bool = false
 
 
 
+
 #var walk_right: AnimationPlayer
 
 func reset(file: String):

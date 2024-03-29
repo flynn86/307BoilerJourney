@@ -47,11 +47,8 @@ func _ready():
 
 func _process(delta):
 	time += delta * INGAME_TO_REAL_MINUTE_DURATION * INGAME_SPEED
-	if (minute != past_minute): # So that it saves per in-game minute rather than per delta
-		SaveUtils.save()
 	_recalculate_time()	
 
-		
 func _recalculate_time():
 	# Total in-game minutes
 	total_minutes = int(time / INGAME_TO_REAL_MINUTE_DURATION)
