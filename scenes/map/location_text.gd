@@ -28,10 +28,10 @@ func header_animation_scene():
 	label.visible_characters = -1
 	scale_x = 0
 	label.modulate.a = 0
+	max_scale_x = len(label.text) * scale_x_char_multiplier
 	scale_x_increment = max_scale_x / 20.0
 	label.position.x = 100 - (label.size.x / 2)
 	header.position.x = label.position.x + (label.size.x / 4)
-	max_scale_x = len(label.text) * scale_x_char_multiplier
 	visible = true
 	for i in range(0,20,1):
 		scale_x += scale_x_increment
