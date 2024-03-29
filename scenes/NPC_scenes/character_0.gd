@@ -63,7 +63,7 @@ func _on_chat_detection_area_body_entered(body):
 		player = body
 		player_in_chat_zone = true
 		#print("chatting")
-		$dialogue_character_8.start()
+		$dialogue_character_0.start()
 		is_roaming = false
 		is_chatting = true
 		$AnimatedSprite2D.play("Idle")
@@ -71,12 +71,12 @@ func _on_chat_detection_area_body_entered(body):
 func _on_chat_detection_area_body_exited(body):
 	if body.name == "CharacterBody2D":
 		player_in_chat_zone = false
-		get_node("dialogue_character_8/NinePatchRect").visible = false
-		$dialogue_character_8.d_active = false
-		_on_dialogue_character_8_dialogue_finished()
+		get_node("dialogue_character_0/NinePatchRect").visible = false
+		$dialogue_character_0.d_active = false
+		_on_dialogue_character_0_dialogue_finished()
 
 
 
-func _on_dialogue_character_8_dialogue_finished():
+func _on_dialogue_character_0_dialogue_finished():
 	is_chatting = false
 	is_roaming = true
