@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://c22sy17pks0ji"]
+[gd_scene load_steps=17 format=3 uid="uid://c22sy17pks0ji"]
 
-[ext_resource type="Script" path="res://scenes/NPC_scenes/character_0.gd" id="1_0lwrr"]
+[ext_resource type="Script" path="res://scenes/NPC_scenes/character_4.gd" id="1_hpj7w"]
+[ext_resource type="PackedScene" uid="uid://b8ij2dhet8eo3" path="res://dialogue/dialogue_character_4.tscn" id="2_4x3mm"]
 [ext_resource type="Texture2D" uid="uid://u32h7o4bw72w" path="res://scenes/map/NPCs/characters.png" id="2_qgi30"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i38px"]
@@ -103,7 +104,9 @@ radius = 26.9258
 radius = 58.0
 
 [node name="character_4" type="CharacterBody2D"]
-script = ExtResource("1_0lwrr")
+script = ExtResource("1_hpj7w")
+
+[node name="dialogue_character_4" parent="." instance=ExtResource("2_4x3mm")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_s1hm3")
