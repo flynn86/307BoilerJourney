@@ -17,11 +17,13 @@ func _ready():
 func _on_change_bed_pressed():
 	Attributes.curr_bed = (Attributes.curr_bed + 1) % dorm_sprites.bed_spritesheet.size()
 	bedSprite.texture = dorm_sprites.bed_spritesheet[Attributes.curr_bed]
+	SaveUtils.save()
 
 
 func _on_change_desk_pressed():
 	Attributes.curr_desk = (Attributes.curr_desk + 1) % dorm_sprites.desk_spritesheet.size()
 	deskSprite.texture = dorm_sprites.desk_spritesheet[Attributes.curr_desk]
+	SaveUtils.save()
 
 func _on_view_schedule_pressed():
 	Attributes.location = "res://scenes/map/dorm_room.tscn"
