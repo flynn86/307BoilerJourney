@@ -10,6 +10,7 @@ func _ready():
 	$Player/ChangeEyes.visible = false
 	$Player/ChangeOutfit.visible = false
 	$Player/ChangeHair.visible = false
+	add_to_group("player")
 	'''
 	const composite_sprites = preload("res://characters/assets/CompositeSprites.gd")
 	
