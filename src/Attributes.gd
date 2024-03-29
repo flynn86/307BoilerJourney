@@ -127,6 +127,7 @@ var courseLocations: Dictionary = {
 var course_num: int = 1
 var curr_bed: int = 0
 var curr_desk: int = 0
+var curr_window: int = 0
 
 # Inventory
 var items : Array = []
@@ -176,6 +177,7 @@ func reset(file: String):
 	
 	curr_bed = 0
 	curr_desk = 0
+	curr_window = 0
 	
 	curr_hair = 0
 	curr_eyes = 0

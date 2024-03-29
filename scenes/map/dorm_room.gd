@@ -5,6 +5,7 @@ extends Node2D
 
 @onready var bedSprite = $DormSprites/Bed
 @onready var deskSprite = $DormSprites/Desk
+@onready var windowSprite = $DormSprites/Window
 
 
 const dorm_sprites = preload("res://scenes/map/dorm_spritesheets.gd")
@@ -12,6 +13,7 @@ const dorm_sprites = preload("res://scenes/map/dorm_spritesheets.gd")
 func _ready():
 	bedSprite.texture = dorm_sprites.bed_spritesheet[Attributes.curr_bed]
 	deskSprite.texture = dorm_sprites.desk_spritesheet[Attributes.curr_desk]
+	windowSprite.texture = dorm_sprites.window_spritesheet[Attributes.curr_window]
 
 
 func _on_change_bed_pressed():
@@ -23,6 +25,11 @@ func _on_change_bed_pressed():
 func _on_change_desk_pressed():
 	Attributes.curr_desk = (Attributes.curr_desk + 1) % dorm_sprites.desk_spritesheet.size()
 	deskSprite.texture = dorm_sprites.desk_spritesheet[Attributes.curr_desk]
+	SaveUtils.save()
+
+func _on_change_window_pressed():
+	Attributes.curr_window = (Attributes.curr_window + 1) % dorm_sprites.desk_spritesheet.size()
+	windowSprite.texture = dorm_sprites.window_spritesheet[Attributes.curr_window]
 	SaveUtils.save()
 
 func _on_view_schedule_pressed():

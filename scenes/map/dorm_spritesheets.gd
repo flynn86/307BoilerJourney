@@ -69,3 +69,13 @@ const desk_spritesheet = {
 	2 : preload("res://scenes/map/dorm_desk_assets/Bedroom_Singles_431.png"),
 	3 : preload("res://scenes/map/dorm_desk_assets/Bedroom_Singles_432.png"),
 }
+
+const window_spritesheet = {
+	0 : preload("res://scenes/map/dorm_window_assets/Bedroom_Singles_421.png"),
+	1 : preload("res://scenes/map/dorm_window_assets/Bedroom_Singles_57.png"),
+	2 : preload("res://scenes/map/dorm_window_assets/Bedroom_Singles_58.png"),
+	3 : preload("res://scenes/map/dorm_window_assets/Bedroom_Singles_59.png"),
+	4 : preload("res://scenes/map/dorm_window_assets/Bedroom_Singles_60.png"),
+	5 : preload("res://scenes/map/dorm_window_assets/Bedroom_Singles_61.png"),
+	6 : preload("res://scenes/map/dorm_window_assets/Bedroom_Singles_62.png")
+}

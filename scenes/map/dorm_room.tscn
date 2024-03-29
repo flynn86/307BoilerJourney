@@ -10,8 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://wcf78x17gfms" path="res://scenes/map/dorm_bed_assets/Bedroom_Singles_1.png" id="8_3lphc"]
 [ext_resource type="Texture2D" uid="uid://b8ogucjcjkyot" path="res://scenes/map/dorm_desk_assets/Bedroom_Singles_429.png" id="9_w0hcp"]
 [ext_resource type="Texture2D" uid="uid://dwyu6wddajlx7" path="res://scenes/map/dorm_desk_assets/Bedroom_Singles_522.png" id="10_mrmny"]
-[ext_resource type="Texture2D" uid="uid://xn8u11xy12t1" path="res://scenes/map/dorm_desk_assets/Bedroom_Singles_421.png" id="11_r6cww"]
-[ext_resource type="Texture2D" uid="uid://dxsdjts71vbvx" path="res://scenes/map/dorm_desk_assets/Bedroom_Singles_422.png" id="12_5tufb"]
+[ext_resource type="Texture2D" uid="uid://xn8u11xy12t1" path="res://scenes/map/dorm_window_assets/Bedroom_Singles_421.png" id="11_r6cww"]
+[ext_resource type="Texture2D" uid="uid://dch5ybl4il125" path="res://scenes/map/dorm_room_assets/Bedroom_Singles_396.png" id="12_kvea8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_75iyo"]
 texture = ExtResource("1_a64yr")
@@ -996,13 +996,13 @@ metadata/_edit_use_anchors_ = true
 [node name="DormSprites" type="Node2D" parent="."]
 
 [node name="Bed" type="Sprite2D" parent="DormSprites"]
-position = Vector2(903.5, 461)
+position = Vector2(925, 523)
 scale = Vector2(9.6875, 5.75)
 texture = ExtResource("8_3lphc")
 
 [node name="Desk" type="Sprite2D" parent="DormSprites"]
-position = Vector2(292, 419)
-scale = Vector2(17.3125, 9.8125)
+position = Vector2(355.25, 441)
+scale = Vector2(25.2188, 9.8125)
 texture = ExtResource("9_w0hcp")
 
 [node name="Door" type="Sprite2D" parent="DormSprites"]
@@ -1011,33 +1011,41 @@ scale = Vector2(10.0969, 9.61257)
 texture = ExtResource("10_mrmny")
 
 [node name="Window" type="Sprite2D" parent="DormSprites"]
-position = Vector2(812, 309)
-scale = Vector2(11.6875, 9.51042)
+position = Vector2(1056, 322)
+scale = Vector2(10.6562, 9.51042)
 texture = ExtResource("11_r6cww")
 
-[node name="Window2" type="Sprite2D" parent="DormSprites"]
-position = Vector2(1092, 309)
-scale = Vector2(11.6875, 9.51042)
-texture = ExtResource("12_5tufb")
+[node name="Sidetable" type="Sprite2D" parent="DormSprites"]
+position = Vector2(1064, 418)
+scale = Vector2(4.92188, 4.63542)
+texture = ExtResource("12_kvea8")
 
 [node name="change_bed" type="Button" parent="."]
-offset_left = 326.0
-offset_top = 26.0
-offset_right = 538.0
-offset_bottom = 102.0
+offset_left = 236.0
+offset_top = 29.0
+offset_right = 448.0
+offset_bottom = 105.0
 text = "Change Bed"
 metadata/_edit_use_anchors_ = true
 
 [node name="change_desk" type="Button" parent="."]
-offset_left = 617.0
-offset_top = 27.0
-offset_right = 820.0
-offset_bottom = 99.0
+offset_left = 714.0
+offset_top = 30.0
+offset_right = 917.0
+offset_bottom = 102.0
 text = "Change Desk"
 metadata/_edit_use_anchors_ = true
+
+[node name="change_window" type="Button" parent="."]
+offset_left = 466.0
+offset_top = 29.0
+offset_right = 690.0
+offset_bottom = 106.0
+text = "Change Window"
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="ViewSchedule" to="." method="_on_view_schedule_pressed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="change_bed" to="." method="_on_change_bed_pressed"]
 [connection signal="pressed" from="change_desk" to="." method="_on_change_desk_pressed"]
+[connection signal="pressed" from="change_window" to="." method="_on_change_window_pressed"]
