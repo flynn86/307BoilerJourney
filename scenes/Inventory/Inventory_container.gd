@@ -33,12 +33,15 @@ func _ready():
 			slot_sprite_i.position = final_position
 			slot_sprite_i.visible = true
 	get_node("item_info/dorm_display").visible = false
+	get_node("item_info/OptionButton").visible = false
 
 func _on_close_pressed():
 	item_info.visible = false
 	close()
 	
 func close():
+	Attributes.dorm_display = false
+	SaveUtils.save()
 	var last_location = Attributes.location
 	get_tree().change_scene_to_file(last_location)
 
@@ -287,12 +290,23 @@ func _on_slot_15_pressed():
 
 func _on_dorm_display_pressed():
 	get_node("item_info/dorm_display").visible = false
-	Attributes.dorm_display = false
+	get_node("item_info/OptionButton").visible = true
+	#Attributes.dorm_display = false
 	Attributes.display_item_number = collectable_to_use
 	SaveUtils.save()
-	get_tree().change_scene_to_file(Attributes.location)
-	#%collectable.texture = ItemManager.icons[Attributes.items[int(collectable_to_use)]]
-	#get_node("res://scenes/map/dorm_room.tscn/%collectable").texture = ItemManager.icons[Attributes.items[int(collectable_to_use)]]
-	#var final_scale = Vector2(ItemManager.scale[Attributes.items[int(collectable_to_use)]],ItemManager.scale[Attributes.items[int(collectable_to_use)]])
-	#get_node("res://scenes/map/dorm_room.tscn/%collectable").scale = final_scale
-	#get_tree().change_scene_to_file(Attributes.location)
+	
+
+
+
+func _on_option_button_item_selected(index):
+	print(index)
+	if index == 0:
+		Attributes.display_item_1 = collectable_to_use
+	elif index == 1:
+		Attributes.display_item_2 = collectable_to_use
+	elif index == 2:
+		Attributes.display_item_3 = collectable_to_use
+	SaveUtils.save()
+	get_node("item_info/OptionButton").visible = false
+	
+	
