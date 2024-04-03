@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cplnpdevklo5q"]
+
+[ext_resource type="Script" path="res://scenes/news_page/news_page.gd" id="1_o1anh"]
+
+[node name="NewsPage" type="Panel"]
+custom_minimum_size = Vector2(100, 100)
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.975
+offset_bottom = 8.20001
+script = ExtResource("1_o1anh")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_news_request_completed"]

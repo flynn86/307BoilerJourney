@@ -5,6 +5,7 @@ func _ready():
 		$CharacterBody2D.global_position = Vector2(float(Attributes.xPMU),float(Attributes.yPMU))
 		$CharacterBody2D/clubs_popup.hide()
 		$CharacterBody2D/games_popup.hide()
+		$CharacterBody2D/Popup2.hide()
 	else: 
 		$CharacterBody2D.global_position.x = float(3250)
 		$CharacterBody2D.global_position.y = float(830)
@@ -32,6 +33,7 @@ func _on_close_button_pressed():
 	$CharacterBody2D/Popup.hide()
 	$CharacterBody2D/clubs_popup.hide()
 	$CharacterBody2D/games_popup.hide()
+	$CharacterBody2D/Popup2.hide()
 
 func _on_clubs_pressed():
 	Attributes.xPMU = $CharacterBody2D.global_position.x
@@ -50,4 +52,13 @@ func _on_club_area_entered(area_rid, area, area_shape_index, local_shape_index):
 
 func _on_games_area_entered(area):
 	$CharacterBody2D/games_popup.show()
+	
+func _on_news_area_entered(area):
+	$CharacterBody2D/Popup2.show()
+	
+func _on_news_pressed():
+	Attributes.xPMU = $CharacterBody2D.global_position.x
+	Attributes.yPMU= $CharacterBody2D.global_position.y
+	Attributes.PMU_renter = true
+	get_tree().change_scene_to_file("res://scenes/news_page/news_page.tscn")
 
