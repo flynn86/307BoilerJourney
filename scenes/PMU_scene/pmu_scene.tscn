@@ -174,8 +174,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Popup" type="Popup" parent="CharacterBody2D"]
 initial_position = 1
-size = Vector2i(341, 131)
-max_size = Vector2i(341, 150)
+size = Vector2i(341, 150)
+visible = true
+max_size = Vector2i(341, 170)
 
 [node name="popup_text" type="RichTextLabel" parent="CharacterBody2D/Popup"]
 anchors_preset = 15
@@ -185,7 +186,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(0.686275, 0.564706, 0, 1)
 theme_override_font_sizes/normal_font_size = 20
-text = "Welcome to Purdue's Memorial Union. Pages for Information on Games and Clubs can be Found In the Upper Left Corner! "
+text = "Welcome to Purdue's Memorial Union. Pages for Information on Games, Clubs, and Purdue News can be Found In the Upper Left Corner! "
 
 [node name="Button" type="Button" parent="CharacterBody2D/Popup"]
 anchors_preset = 3

@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://cplnpdevklo5q"]
+[gd_scene load_steps=6 format=3 uid="uid://cplnpdevklo5q"]
 
 [ext_resource type="Script" path="res://scenes/news_page/news_page.gd" id="1_o1anh"]
+[ext_resource type="Theme" uid="uid://d4dv57x0oy02n" path="res://new_theme.tres" id="1_xgb4j"]
+[ext_resource type="Texture2D" uid="uid://c05komaks4nue" path="res://scenes/Collectable_scenes/Collectables/purdue-boilermakers-football-purdue-boilermakers-men-s-basketball-mackey-arena-purdue-pete-university-purdue-boilermakers-women-s-basketball-thumbnail.png" id="3_axs6r"]
+
+[sub_resource type="Theme" id="Theme_c8kis"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7c6d"]
+bg_color = Color(0.631373, 0.596078, 0.541176, 1)
 
 [node name="NewsPage" type="Panel"]
 custom_minimum_size = Vector2(100, 100)
@@ -8,8 +15,89 @@ anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.975
 offset_bottom = 8.20001
+theme = ExtResource("1_xgb4j")
 script = ExtResource("1_o1anh")
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 160.0
+offset_bottom = 64.0
+text = "Return to PMU"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 152.0
+offset_right = 1072.0
+offset_bottom = 544.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 80.0
+offset_right = 1107.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 30
+text = "News Articles: Click on Article to View Description and Link"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -8.0
+offset_top = 528.0
+offset_right = 128.0
+offset_bottom = 648.0
+texture = ExtResource("3_axs6r")
+expand_mode = 3
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 576.0
+offset_right = 720.0
+offset_bottom = 616.0
+text = "Visit Purdue's News Page"
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 280.0
+offset_top = 200.0
+offset_right = 888.0
+offset_bottom = 464.0
+theme = SubResource("Theme_c8kis")
+theme_override_styles/panel = SubResource("StyleBoxFlat_q7c6d")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_right = 608.0
+offset_bottom = 160.0
+theme_override_font_sizes/normal_font_size = 20
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 216.0
+offset_right = 88.0
+offset_bottom = 254.0
+text = "Close"
+
+[node name="Button2" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 216.0
+offset_right = 599.0
+offset_bottom = 254.0
+text = "Visit Article "
+
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_news_request_completed"]
+[connection signal="pressed" from="Button" to="." method="_on_return_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_page_pressed"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_exit_panel_pressed"]
+[connection signal="pressed" from="Panel/Button2" to="." method="_on_link_pressed"]
