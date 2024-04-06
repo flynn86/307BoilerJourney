@@ -79,6 +79,7 @@ func _on_change_spring_pressed():
 func _on_menu_button_pressed():
 	Attributes.xhousing = $CharacterBody2D.global_position.x
 	Attributes.yhousing = $CharacterBody2D.global_position.y
+	Attributes.location = "res://scenes/map/housing_map.tscn"	
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
 
@@ -86,6 +87,7 @@ func _on_menu_button_pressed():
 func _on_questlog_button_pressed():
 	Attributes.xhousing = $CharacterBody2D.global_position.x
 	Attributes.yhousing = $CharacterBody2D.global_position.y
+	Attributes.location = "res://scenes/map/housing_map.tscn"	
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/quests/quest_log.tscn")
 
@@ -163,3 +165,11 @@ func _on_suggestions_pressed():
 
 func _on_close_pressed():
 	get_node("CharacterBody2D/Player/view_suggestions").visible = false
+
+
+func _on_friends_list_pressed():
+	Attributes.xhousing = $CharacterBody2D.global_position.x
+	Attributes.yhousing = $CharacterBody2D.global_position.y
+	Attributes.location = "res://scenes/map/housing_map.tscn"	
+	SaveUtils.save()
+	get_tree().change_scene_to_file("res://scenes/friends_list/friends_list.tscn")

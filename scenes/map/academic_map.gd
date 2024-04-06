@@ -112,6 +112,7 @@ func _on_day_night_button_pressed():
 func _on_menu_button_pressed():
 	Attributes.xacademic = $CharacterBody2D.global_position.x
 	Attributes.yacademic = $CharacterBody2D.global_position.y
+	Attributes.location = "res://scenes/map/academic_map.tscn"
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
 
@@ -119,6 +120,7 @@ func _on_menu_button_pressed():
 func _on_questlog_button_pressed():
 	Attributes.xacademic = $CharacterBody2D.global_position.x
 	Attributes.yacademic = $CharacterBody2D.global_position.y
+	Attributes.location = "res://scenes/map/academic_map.tscn"
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/quests/quest_log.tscn")
 
@@ -239,6 +241,7 @@ func _schedule_for_each_building(building):
 func _on_class_rank_pressed():
 	Attributes.xacademic = $CharacterBody2D.global_position.x
 	Attributes.yacademic = $CharacterBody2D.global_position.y
+	Attributes.location = "res://scenes/map/academic_map.tscn"
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/rank_page/rank_page.tscn")
 
@@ -259,3 +262,11 @@ func _on_close1_pressed():
 	get_node("CharacterBody2D/Player/view_suggestions").visible = false
 
 
+
+
+func _on_friends_list_pressed():
+	Attributes.xacademic = $CharacterBody2D.global_position.x
+	Attributes.yacademic = $CharacterBody2D.global_position.y
+	Attributes.location = "res://scenes/map/academic_map.tscn"
+	SaveUtils.save()
+	get_tree().change_scene_to_file("res://scenes/friends_list/friends_list.tscn")
