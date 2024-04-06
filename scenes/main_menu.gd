@@ -29,6 +29,11 @@ func _ready():
 		"isHost" : {"data_type":"bool"}
 	}
 	(Attributes.database).create_table("Players", table)
+	var friend_reqs = {
+		"sender" : {"data_type":"text"},
+		"recipient" : {"data_type":"text"}
+	}
+	(Attributes.database).create_table("Friend_Reqs", friend_reqs)
 
 func _on_start_new_game_pressed():
 	Attributes.reset("res://savefiles/save1.bin")

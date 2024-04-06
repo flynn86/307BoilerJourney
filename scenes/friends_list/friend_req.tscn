@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyby5uvb3ulkw"]
+
+[ext_resource type="Script" path="res://scenes/friends_list/friend_req.gd" id="1_3dkrk"]
+
+[node name="FriendReq" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 68.0
+offset_top = 297.0
+offset_right = 68.0
+offset_bottom = 417.0
+script = ExtResource("1_3dkrk")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 271.0
+offset_bottom = 123.0
+color = Color(0.388235, 0.388235, 0.388235, 1)
+
+[node name="Username" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_right = 268.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 20
+text = "Username"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Accept" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 61.0
+offset_right = 122.0
+offset_bottom = 102.0
+theme_override_font_sizes/font_size = 20
+text = "Accept"
+
+[node name="Deny" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 61.0
+offset_right = 248.0
+offset_bottom = 102.0
+theme_override_font_sizes/font_size = 20
+text = "Deny
+"
