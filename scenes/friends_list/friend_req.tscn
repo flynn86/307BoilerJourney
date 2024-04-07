@@ -44,3 +44,6 @@ offset_bottom = 102.0
 theme_override_font_sizes/font_size = 20
 text = "Deny
 "
+
+[connection signal="pressed" from="ColorRect/Accept" to="." method="_on_accept_pressed"]
+[connection signal="pressed" from="ColorRect/Deny" to="." method="_on_deny_pressed"]

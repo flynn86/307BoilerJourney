@@ -4,7 +4,14 @@ extends Node2D
 
 
 func _ready():
-	pass
+	(Attributes.database).query("SELECT sender FROM Friend_Reqs WHERE recipient = '" + Attributes.username + "'")
+	for i in (Attributes.database).query_result:
+		var scene = preload("res://scenes/friends_list/friend_req.tscn")
+		var friend_req = scene.instantiate()
+		friend_req.f_sender = i["sender"]
+		friend_req.f_recipient = Attributes.username
+		friend_req.custom_minimum_size = Vector2(0, 135)
+		$ScrollContainer/VBoxContainer.add_child(friend_req)
 
 
 func _on_close_pressed():
@@ -27,8 +34,3 @@ func _on_send_request_pressed():
 			"recipient" = username
 		}
 		(Attributes.database).insert_row("Friend_Reqs", data)
-		var scene = preload("res://scenes/friends_list/friend_req.tscn")
-		var friend_req = scene.instantiate()
-		friend_req.Username = username
-		friend_req.custom_minimum_size = Vector2(0, 135)
-		$ScrollContainer/VBoxContainer.add_child(friend_req)

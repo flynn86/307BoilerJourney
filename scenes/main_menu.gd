@@ -34,6 +34,11 @@ func _ready():
 		"recipient" : {"data_type":"text"}
 	}
 	(Attributes.database).create_table("Friend_Reqs", friend_reqs)
+	var friend_list = {
+		"friend1" : {"data_type":"text"},
+		"friend2" : {"data_type":"text"}
+	}
+	(Attributes.database).create_table("Friend_List", friend_list)
 
 func _on_start_new_game_pressed():
 	Attributes.reset("res://savefiles/save1.bin")
