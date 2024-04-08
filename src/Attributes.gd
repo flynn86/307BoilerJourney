@@ -37,7 +37,6 @@ var curr_hair: int = 0
 var curr_eyes: int = 0
 var curr_body: int = 0
 var curr_outfit: int = 0
-var filename: String = "res://savefiles/save1.bin"
 var season: String = "Summer"
 var night: bool = false
 var PMU_renter: bool = false
@@ -151,8 +150,8 @@ var day_night_enabled : bool = false
 
 #var walk_right: AnimationPlayer
 
-func reset(file: String):
-	username = ""
+func reset(user: String):
+	username = user
 	xhousing = float(256)
 	yhousing = float(256)
 	xacademic = float(-855.100219726562)
@@ -191,7 +190,6 @@ func reset(file: String):
 	curr_eyes = 0
 	curr_body = 0
 	curr_outfit = 0
-	filename = file
 	season = "Summer"
 	night = false
 	PMU_renter = false

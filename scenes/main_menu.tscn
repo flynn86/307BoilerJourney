@@ -6,46 +6,25 @@
 script = ExtResource("1_l8hk8")
 
 [node name="StartNewGame" type="Button" parent="."]
-offset_left = 346.0
-offset_top = 169.0
-offset_right = 540.0
-offset_bottom = 262.0
+offset_left = 468.0
+offset_top = 163.0
+offset_right = 662.0
+offset_bottom = 256.0
 text = "Start New Game 1"
 
-[node name="StartNewGame2" type="Button" parent="."]
-offset_left = 606.0
-offset_top = 169.0
-offset_right = 800.0
-offset_bottom = 262.0
-text = "Start New Game 2"
-
 [node name="DeleteGame" type="Button" parent="."]
-offset_left = 347.0
-offset_top = 454.0
-offset_right = 541.0
-offset_bottom = 547.0
+offset_left = 594.0
+offset_top = 301.0
+offset_right = 788.0
+offset_bottom = 394.0
 text = "Delete Game 1"
 
-[node name="DeleteGame2" type="Button" parent="."]
-offset_left = 607.0
-offset_top = 454.0
-offset_right = 801.0
-offset_bottom = 547.0
-text = "Delete Game 2"
-
 [node name="LoadGame" type="Button" parent="."]
-offset_left = 344.0
-offset_top = 309.0
-offset_right = 538.0
-offset_bottom = 402.0
+offset_left = 343.0
+offset_top = 302.0
+offset_right = 537.0
+offset_bottom = 395.0
 text = "Load Game 1"
-
-[node name="LoadGame2" type="Button" parent="."]
-offset_left = 606.0
-offset_top = 309.0
-offset_right = 800.0
-offset_bottom = 402.0
-text = "Load Game 2"
 
 [node name="Label" type="Label" parent="."]
 offset_left = 430.0
@@ -56,9 +35,25 @@ text = "Welcome to BoilerJourney!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 449.0
+offset_top = 444.0
+offset_right = 684.0
+offset_bottom = 511.0
+placeholder_text = "Enter Username"
+alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+offset_left = 422.512
+offset_top = 549.976
+offset_right = 742.512
+offset_bottom = 609.976
+text = "You must enter a username before proceeding to character customization."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
 [connection signal="pressed" from="StartNewGame" to="." method="_on_start_new_game_pressed"]
-[connection signal="pressed" from="StartNewGame2" to="." method="_on_start_new_game_2_pressed"]
 [connection signal="pressed" from="DeleteGame" to="." method="_on_delete_game_pressed"]
-[connection signal="pressed" from="DeleteGame2" to="." method="_on_delete_game_2_pressed"]
 [connection signal="pressed" from="LoadGame" to="." method="_on_load_game_pressed"]
-[connection signal="pressed" from="LoadGame2" to="." method="_on_load_game_2_pressed"]

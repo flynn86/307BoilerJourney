@@ -1,5 +1,70 @@
 extends Node
 
+func initialize():
+	var data = {
+		"username" = Attributes.username,
+		"xhousing" = Attributes.xhousing,
+		"yhousing" = Attributes.yhousing,
+		"xacademic" = Attributes.xacademic,
+		"yacademic" = Attributes.yacademic,
+		"location" = Attributes.location,
+		"rank" = Attributes.rank,
+		
+		# collectables
+		
+		"numCollected" = Attributes.numCollected,
+		"angry_pete" = Attributes.angry_pete,
+		"basketball" = Attributes.basketball,
+		"bell_tower" = Attributes.bell_tower,
+		"boilermaker_train" = Attributes.boilermaker_train,
+		"go_boilers" = Attributes.go_boilers,
+		"iu_poster" = Attributes.iu_poster,
+		"purdue_cap" = Attributes.purdue_cap,
+		"purdue_helmet" = Attributes.purdue_helmet,
+		"purdue_symbol" = Attributes.purdue_symbol,
+		"dorm_display" = Attributes.dorm_display,
+		"display_item_number" = Attributes.display_item_number,
+		"display_item_1" = Attributes.display_item_1,
+		"display_item_2" = Attributes.display_item_2,
+		"display_item_3" = Attributes.display_item_3,
+		
+		"bed" = Attributes.curr_bed,
+		"desk" = Attributes.curr_desk,
+		"sidetable" = Attributes.curr_sidetable,
+		"window" = Attributes.curr_window,
+		"hair" = Attributes.curr_hair,
+		"body" = Attributes.curr_body,
+		"eyes" = Attributes.curr_eyes,
+		"outfit" = Attributes.curr_outfit,
+		"filename" = Attributes.filename,
+		"season" = Attributes.season,
+		"isNight" = Attributes.night,
+		"engineeringVisited" = Attributes.engineering_ftn_visited,
+		"loebVisited"= Attributes.loeb_ftn_visited,
+		"quest1active" = Attributes.quest1_active,
+		"quest1complete" = Attributes.quest1_completed,
+		"quest2active" = Attributes.quest2_active,
+		"quest2complete" = Attributes.quest2_completed,
+		"quest3active" = Attributes.quest3_active,
+		"quest3complete" = Attributes.quest3_completed,
+		"basics_shown" = Attributes.basics_shown,
+		"courseNames"= Attributes.courseNames,
+		"courseTimes"= Attributes.courseTimes,
+		"courseDays"= Attributes.courseDays,
+		"courseLocations"= Attributes.courseLocations,
+		"coursenum"= Attributes.course_num,
+		# Inventory
+		"items"= Attributes.items,
+		# Daily Question
+		"question_available" = Attributes.question_available,
+		"last_daily_question_time" = Attributes.last_daily_question_time,
+		
+		# Time and Day/Night Cycle
+		"time" = Attributes.time,
+		"day_night_enabled" = Attributes.day_night_enabled
+	}
+	(Attributes.database).insert_row("Players", data)
+
 func save():
 	(Attributes.database).update_rows("Players", "username == '%s'" % Attributes.username, {
 		"username" = Attributes.username,
@@ -77,7 +142,7 @@ func save():
 	file.close()
 
 
-func load(savefile: String):
+func load(user: String):
 	if FileAccess.file_exists(savefile):
 		var file = FileAccess.open(savefile, FileAccess.READ)
 		var line = JSON.parse_string(file.get_line())
@@ -153,6 +218,6 @@ func load(savefile: String):
 			Attributes.day_night_enabled = line["day_night_enabled"]
 		file.close()
 
-func delete(savefile: String):
+func delete(user: String):
 	if FileAccess.file_exists(savefile):
 		FileAccess.open(savefile, FileAccess.WRITE)
