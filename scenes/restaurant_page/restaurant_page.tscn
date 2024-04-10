@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://mhq63m73mxvj"]
+[gd_scene load_steps=9 format=3 uid="uid://mhq63m73mxvj"]
 
 [ext_resource type="Theme" uid="uid://d4dv57x0oy02n" path="res://new_theme.tres" id="1_3s3yi"]
 [ext_resource type="Script" path="res://scenes/restaurant_page/restaurant_page.gd" id="2_8i2x0"]
@@ -6,6 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://ccyy5wuvqcx3u" path="res://images/8_eleven.jpeg" id="4_hwf8q"]
 [ext_resource type="Texture2D" uid="uid://dqkhxc46thfxy" path="res://images/Harrys.jpeg" id="5_ngkfv"]
 [ext_resource type="Texture2D" uid="uid://bh1f48fywcy0j" path="res://images/bru.jpeg" id="6_woact"]
+
+[sub_resource type="Theme" id="Theme_noto5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pvec7"]
+bg_color = Color(0.631373, 0.596078, 0.541176, 1)
 
 [node name="RestaurantPage" type="Panel"]
 custom_minimum_size = Vector2(10, 10)
@@ -25,9 +30,9 @@ offset_bottom = 64.0
 text = "Return to PMU"
 
 [node name="Label" type="Label" parent="."]
-offset_left = 472.0
+offset_left = 440.0
 offset_top = 24.0
-offset_right = 704.0
+offset_right = 672.0
 offset_bottom = 74.0
 theme_override_font_sizes/font_size = 30
 text = "Restaurants"
@@ -159,4 +164,32 @@ theme_override_font_sizes/font_size = 10
 text = "View Information
  and Rating"
 
+[node name="Panel" type="Panel" parent="."]
+offset_left = 280.0
+offset_top = 200.0
+offset_right = 888.0
+offset_bottom = 464.0
+theme = SubResource("Theme_noto5")
+theme_override_styles/panel = SubResource("StyleBoxFlat_pvec7")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_right = 608.0
+offset_bottom = 160.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 15
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 216.0
+offset_right = 88.0
+offset_bottom = 254.0
+text = "Close"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
 [connection signal="pressed" from="Button" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="tripple_XXX/Button" to="." method="_on_trippleXXX_pressed"]
+[connection signal="pressed" from="8_11/Button" to="." method="_on_811_pressed"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_exit_panel_pressed"]
