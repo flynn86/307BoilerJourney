@@ -6,6 +6,7 @@ func _ready():
 		$CharacterBody2D/clubs_popup.hide()
 		$CharacterBody2D/games_popup.hide()
 		$CharacterBody2D/Popup2.hide()
+		$CharacterBody2D/Popup3.hide()
 	else: 
 		$CharacterBody2D.global_position.x = float(3250)
 		$CharacterBody2D.global_position.y = float(830)
@@ -34,6 +35,7 @@ func _on_close_button_pressed():
 	$CharacterBody2D/clubs_popup.hide()
 	$CharacterBody2D/games_popup.hide()
 	$CharacterBody2D/Popup2.hide()
+	$CharacterBody2D/Popup3.hide()
 
 func _on_clubs_pressed():
 	Attributes.xPMU = $CharacterBody2D.global_position.x
@@ -62,3 +64,11 @@ func _on_news_pressed():
 	Attributes.PMU_renter = true
 	get_tree().change_scene_to_file("res://scenes/news_page/news_page.tscn")
 
+func _on_restaurant_body_entered(body):
+	$CharacterBody2D/Popup3.show()
+
+func _on_rest_pressed():
+	Attributes.xPMU = $CharacterBody2D.global_position.x
+	Attributes.yPMU= $CharacterBody2D.global_position.y
+	Attributes.PMU_renter = true
+	get_tree().change_scene_to_file("res://scenes/restaurant_page/restaurant_page.tscn")

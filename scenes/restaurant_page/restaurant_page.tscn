@@ -1,0 +1,162 @@
+[gd_scene load_steps=7 format=3 uid="uid://mhq63m73mxvj"]
+
+[ext_resource type="Theme" uid="uid://d4dv57x0oy02n" path="res://new_theme.tres" id="1_3s3yi"]
+[ext_resource type="Script" path="res://scenes/restaurant_page/restaurant_page.gd" id="2_8i2x0"]
+[ext_resource type="Texture2D" uid="uid://b8ssg3oc30j53" path="res://images/triple-xxx-drive-in.jpeg" id="3_boamj"]
+[ext_resource type="Texture2D" uid="uid://ccyy5wuvqcx3u" path="res://images/8_eleven.jpeg" id="4_hwf8q"]
+[ext_resource type="Texture2D" uid="uid://dqkhxc46thfxy" path="res://images/Harrys.jpeg" id="5_ngkfv"]
+[ext_resource type="Texture2D" uid="uid://bh1f48fywcy0j" path="res://images/bru.jpeg" id="6_woact"]
+
+[node name="RestaurantPage" type="Panel"]
+custom_minimum_size = Vector2(10, 10)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_3s3yi")
+script = ExtResource("2_8i2x0")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 160.0
+offset_bottom = 64.0
+text = "Return to PMU"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 472.0
+offset_top = 24.0
+offset_right = 704.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 30
+text = "Restaurants"
+
+[node name="tripple_XXX" type="Label" parent="."]
+offset_left = 120.0
+offset_top = 96.0
+offset_right = 440.0
+offset_bottom = 121.0
+theme_override_font_sizes/font_size = 15
+text = "Tripple XXX Family ResTaurant"
+
+[node name="TextureRect" type="TextureRect" parent="tripple_XXX"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.023
+anchor_top = 1.2
+anchor_right = 0.986
+anchor_bottom = 7.0
+offset_left = 0.360001
+offset_right = 0.47998
+offset_bottom = 0.999985
+texture = ExtResource("3_boamj")
+expand_mode = 3
+
+[node name="Button" type="Button" parent="tripple_XXX"]
+layout_mode = 0
+offset_left = -7.0
+offset_top = 192.0
+offset_right = 153.0
+offset_bottom = 234.0
+theme_override_font_sizes/font_size = 10
+text = "View Information
+ and Rating"
+
+[node name="8_11" type="Label" parent="."]
+offset_left = 680.0
+offset_top = 96.0
+offset_right = 1039.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 15
+text = "8Eleven Modern Bistro"
+
+[node name="TextureRect" type="TextureRect" parent="8_11"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.023
+anchor_top = 1.2
+anchor_right = 0.986
+anchor_bottom = 7.0
+offset_left = 0.257001
+offset_top = -6.8
+offset_right = -38.974
+offset_bottom = -58.0
+texture = ExtResource("4_hwf8q")
+expand_mode = 3
+
+[node name="Button" type="Button" parent="8_11"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = 192.0
+offset_right = 152.0
+offset_bottom = 234.0
+theme_override_font_sizes/font_size = 10
+text = "View Information
+ and Rating"
+
+[node name="Harrys" type="Label" parent="."]
+offset_left = 112.0
+offset_top = 368.0
+offset_right = 471.0
+offset_bottom = 402.0
+theme_override_font_sizes/font_size = 15
+text = "Harry's Chocolate Shop"
+
+[node name="TextureRect" type="TextureRect" parent="Harrys"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.023
+anchor_top = 1.2
+anchor_right = 0.986
+anchor_bottom = 7.0
+offset_left = 0.257001
+offset_top = -8.8
+offset_right = -38.974
+offset_bottom = -60.0
+texture = ExtResource("5_ngkfv")
+expand_mode = 3
+
+[node name="Button" type="Button" parent="Harrys"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = 192.0
+offset_right = 152.0
+offset_bottom = 234.0
+theme_override_font_sizes/font_size = 10
+text = "View Information
+ and Rating"
+
+[node name="bru" type="Label" parent="."]
+offset_left = 672.0
+offset_top = 368.0
+offset_right = 1031.0
+offset_bottom = 402.0
+theme_override_font_sizes/font_size = 15
+text = "BRU Burger Bar"
+
+[node name="TextureRect" type="TextureRect" parent="bru"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.023
+anchor_top = 1.2
+anchor_right = 0.986
+anchor_bottom = 7.0
+offset_left = 0.257001
+offset_top = -8.8
+offset_right = -38.974
+offset_bottom = -60.0
+texture = ExtResource("6_woact")
+expand_mode = 3
+
+[node name="Button" type="Button" parent="bru"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = 192.0
+offset_right = 152.0
+offset_bottom = 234.0
+theme_override_font_sizes/font_size = 10
+text = "View Information
+ and Rating"
+
+[connection signal="pressed" from="Button" to="." method="_on_return_pressed"]

@@ -50,7 +50,6 @@ func _on_page_pressed():
 func _button_pressed(button):
 	get_node("Panel").visible = true
 	var article_info = article_data_dict[button.text]
-	print(article_info)
 	var article_description = article_info["description"]
 	if article_description == null:
 		$Panel/RichTextLabel.text = "No Description"
