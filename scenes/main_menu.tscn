@@ -14,19 +14,19 @@ text = "Start New Game 1"
 
 [node name="DeleteGame" type="Button" parent="."]
 offset_left = 594.0
-offset_top = 301.0
+offset_top = 305.0
 offset_right = 788.0
-offset_bottom = 394.0
+offset_bottom = 398.0
 text = "Delete Game 1"
 
 [node name="LoadGame" type="Button" parent="."]
 offset_left = 343.0
-offset_top = 302.0
+offset_top = 306.0
 offset_right = 537.0
-offset_bottom = 395.0
+offset_bottom = 399.0
 text = "Load Game 1"
 
-[node name="Label" type="Label" parent="."]
+[node name="Label2" type="Label" parent="."]
 offset_left = 430.0
 offset_top = 66.0
 offset_right = 703.0
@@ -37,19 +37,18 @@ vertical_alignment = 1
 
 [node name="LineEdit" type="LineEdit" parent="."]
 offset_left = 449.0
-offset_top = 444.0
+offset_top = 456.0
 offset_right = 684.0
-offset_bottom = 511.0
+offset_bottom = 523.0
 placeholder_text = "Enter Username"
 alignment = 1
 
-[node name="Label2" type="Label" parent="."]
+[node name="Label" type="Label" parent="."]
 visible = false
 offset_left = 422.512
 offset_top = 549.976
 offset_right = 742.512
 offset_bottom = 609.976
-text = "You must enter a username before proceeding to character customization."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

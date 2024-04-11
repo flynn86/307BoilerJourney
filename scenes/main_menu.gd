@@ -7,11 +7,12 @@ func _ready():
 	(Attributes.database).path = "res://data.db"
 	(Attributes.database).open_db()
 	var table = {
+		"xp" : {"data_type":"int"},
 		"username" : {"data_type":"text"},
-		"xhousing" : {"data_type":"float"},
-		"yhousing" : {"data_type":"float"},
-		"xacademic" : {"data_type":"float"},
-		"yacademic" : {"data_type":"float"},
+		"xhousing" : {"data_type":"real"},
+		"yhousing" : {"data_type":"real"},
+		"xacademic" : {"data_type":"real"},
+		"yacademic" : {"data_type":"real"},
 		"location" : {"data_type":"text"},
 		"rank" : {"data_type":"text"},
 		"serverName" : {"data_type":"text"},
@@ -54,19 +55,44 @@ func _ready():
 		"quest3active" : {"data_type":"bool"},
 		"quest3complete" : {"data_type":"bool"},
 		"basics_shown" : {"data_type":"bool"},
-		"courseNames": {"data_type":"Dictionary"},
-		"courseTimes": {"data_type":"Dictionary"},
-		"courseDays": {"data_type":"Dictionary"},
-		"courseLocations": {"data_type":"Dictionary"},
+		"course1_name" : {"data_type":"text"},
+		"course2_name" : {"data_type":"text"},
+		"course3_name" : {"data_type":"text"},
+		"course4_name" : {"data_type":"text"},
+		"course5_name" : {"data_type":"text"},
+		"course6_name" : {"data_type":"text"},
+		"course7_name" : {"data_type":"text"},
+		"course8_name" : {"data_type":"text"},
+		"course1_time" : {"data_type":"int"},
+		"course2_time" : {"data_type":"int"},
+		"course3_time" : {"data_type":"int"},
+		"course4_time" : {"data_type":"int"},
+		"course5_time" : {"data_type":"int"},
+		"course6_time" : {"data_type":"int"},
+		"course7_time" : {"data_type":"int"},
+		"course8_time" : {"data_type":"int"},
+		"course1_days" : {"data_type":"int"},
+		"course2_days" : {"data_type":"int"},
+		"course3_days" : {"data_type":"int"},
+		"course4_days" : {"data_type":"int"},
+		"course5_days" : {"data_type":"int"},
+		"course6_days" : {"data_type":"int"},
+		"course7_days" : {"data_type":"int"},
+		"course8_days" : {"data_type":"int"},
+		"course1_location" : {"data_type":"text"},
+		"course2_location" : {"data_type":"text"},
+		"course3_location" : {"data_type":"text"},
+		"course4_location" : {"data_type":"text"},
+		"course5_location" : {"data_type":"text"},
+		"course6_location" : {"data_type":"text"},
+		"course7_location" : {"data_type":"text"},
+		"course8_location" : {"data_type":"text"},
 		"coursenum": {"data_type":"int"},
-		# Inventory
-		"items": {"data_type":"Array"},
 		# Daily Question
 		"question_available" : {"data_type":"bool"},
-		"last_daily_question_time" : {"data_type":"Dictionary"},
-		
+		"last_daily_question_time" : {"data_type":"String"},
 		# Time and Day/Night Cycle
-		"time" : {"data_type":"float"},
+		"time" : {"data_type":"real"},
 		"day_night_enabled" : {"data_type":"bool"}
 	}
 	(Attributes.database).create_table("Players", table)
@@ -92,11 +118,12 @@ func _on_start_new_game_pressed():
 			$Label.visible = true
 		else:
 			Attributes.reset(Attributes.username)
+			SaveUtils.initialize()
 			get_tree().change_scene_to_file("res://characters/character_built.tscn")
 
 func _on_load_game_pressed():
 	if username_entry.text == "":
-		$Label.text = "You must enter a username before starting a game."
+		$Label.text = "You must enter the username of the game you want to load."
 		$Label.visible = true
 	else:
 		Attributes.username = username_entry.text
@@ -104,12 +131,12 @@ func _on_load_game_pressed():
 			$Label.text = "Username does not exist."
 			$Label.visible = true
 		else:
-			SaveUtils.load(Attributes.username)
+			SaveUtils.load()
 			get_tree().change_scene_to_file(Attributes.location)
 
 func _on_delete_game_pressed():
 	if username_entry.text == "":
-		$Label.text = "You must enter a username before starting a game."
+		$Label.text = "You must enter the username of the game you want to delete."
 		$Label.visible = true
 	else:
 		Attributes.username = username_entry.text
@@ -117,4 +144,6 @@ func _on_delete_game_pressed():
 			$Label.text = "Username does not exist."
 			$Label.visible = true
 		else:
-			SaveUtils.delete(Attributes.username)
+			SaveUtils.delete()
+			$Label.text = "Game Successfully Deleted."
+			$Label.visible = true

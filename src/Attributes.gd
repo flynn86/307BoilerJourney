@@ -283,4 +283,3 @@ func reset(user: String):
 	last_daily_question_time = {}
 	time = 0.0
 	day_night_enabled = false
-	
