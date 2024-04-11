@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://ti5bj60vbw32"]
+[gd_scene load_steps=17 format=3 uid="uid://ti5bj60vbw32"]
 
 [ext_resource type="TileSet" uid="uid://2ivu5bsdjl4f" path="res://scenes/PMU_scene/pmu_tileset.tres" id="1_e46sw"]
 [ext_resource type="Script" path="res://scenes/PMU_scene/pmu_scene.gd" id="1_t4s1i"]
@@ -98,6 +98,9 @@ size = Vector2(354, 514)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5lovg"]
 size = Vector2(312, 512)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0qy3"]
+size = Vector2(280, 514)
+
 [node name="pmu_node" type="Node2D"]
 script = ExtResource("1_t4s1i")
 
@@ -175,7 +178,6 @@ metadata/_edit_use_anchors_ = true
 [node name="Popup" type="Popup" parent="CharacterBody2D"]
 initial_position = 1
 size = Vector2i(341, 150)
-visible = true
 max_size = Vector2i(341, 170)
 
 [node name="popup_text" type="RichTextLabel" parent="CharacterBody2D/Popup"]
@@ -317,6 +319,46 @@ theme_override_colors/font_color = Color(0.686275, 0.564706, 0, 1)
 text = "Close
 "
 
+[node name="Popup3" type="Popup" parent="CharacterBody2D"]
+initial_position = 1
+size = Vector2i(341, 150)
+visible = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CharacterBody2D/Popup3"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.686275, 0.564706, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Click Enter to See More Information about Restaurant's around Purdue"
+
+[node name="Button" type="Button" parent="CharacterBody2D/Popup3/RichTextLabel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -31.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.686275, 0.564706, 0, 1)
+text = "Close"
+
+[node name="Button2" type="Button" parent="CharacterBody2D/Popup3/RichTextLabel"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+offset_right = 50.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.686275, 0.564706, 0, 1)
+text = "Enter"
+
 [node name="Games_Area" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Games_Area"]
@@ -342,6 +384,13 @@ position = Vector2(40, 336)
 position = Vector2(156, 256)
 shape = SubResource("RectangleShape2D_5lovg")
 
+[node name="restaurant_area" type="Area2D" parent="."]
+position = Vector2(464, 344)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="restaurant_area"]
+position = Vector2(204, 247)
+shape = SubResource("RectangleShape2D_m0qy3")
+
 [connection signal="pressed" from="CharacterBody2D/Player/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="CharacterBody2D/Player/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="CharacterBody2D/Popup/Button" to="." method="_on_close_button_pressed"]
@@ -351,6 +400,8 @@ shape = SubResource("RectangleShape2D_5lovg")
 [connection signal="pressed" from="CharacterBody2D/games_popup/Button2" to="." method="_on_games_pressed"]
 [connection signal="pressed" from="CharacterBody2D/Popup2/RichTextLabel/Button" to="." method="_on_news_pressed"]
 [connection signal="pressed" from="CharacterBody2D/Popup2/RichTextLabel/Button2" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="CharacterBody2D/Popup3/RichTextLabel/Button" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="CharacterBody2D/Popup3/RichTextLabel/Button2" to="." method="_on_rest_pressed"]
 [connection signal="area_entered" from="Games_Area" to="." method="_on_games_area_entered"]
 [connection signal="area_shape_entered" from="Games_Area" to="." method="_on_games_area_entered"]
 [connection signal="body_entered" from="Games_Area" to="." method="_on_games_area_entered"]
@@ -360,3 +411,4 @@ shape = SubResource("RectangleShape2D_5lovg")
 [connection signal="body_entered" from="club_area" to="." method="_on_club_area_entered"]
 [connection signal="body_shape_entered" from="club_area" to="." method="_on_club_area_entered"]
 [connection signal="body_entered" from="News_area" to="." method="_on_news_area_entered"]
+[connection signal="body_entered" from="restaurant_area" to="." method="_on_restaurant_body_entered"]
