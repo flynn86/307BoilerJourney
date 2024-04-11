@@ -85,7 +85,7 @@ func initialize():
 		"coursenum" = Attributes.course_num,
 		# Daily Question
 		"question_available" = Attributes.question_available,
-		"last_daily_question_time" = Time.get_datetime_string_from_datetime_dict(Attributes.last_daily_question_time, false),
+		"last_daily_question_time" = "" if (Attributes.last_daily_question_time.is_empty()) else Time.get_datetime_string_from_datetime_dict(Attributes.last_daily_question_time, false),
 		# Time and Day/Night Cycle
 		"time" = Attributes.time,
 		"day_night_enabled" = Attributes.day_night_enabled
@@ -177,7 +177,7 @@ func save():
 		"coursenum" = Attributes.course_num,
 		# Daily Question
 		"question_available" = Attributes.question_available,
-		"last_daily_question_time" = Time.get_datetime_string_from_datetime_dict(Attributes.last_daily_question_time, false),
+		"last_daily_question_time" = "" if (Attributes.last_daily_question_time.is_empty()) else Time.get_datetime_string_from_datetime_dict(Attributes.last_daily_question_time, false),
 		
 		# Time and Day/Night Cycle
 		"time" = Attributes.time,
@@ -320,7 +320,7 @@ func load():
 	Attributes.course_num = player[0].coursenum 
 	# Daily Question
 	Attributes.question_available = player[0].question_available
-	Attributes.last_daily_question_time = Time.get_datetime_dict_from_datetime_string(player[0].last_daily_question_time, true)
+	Attributes.last_daily_question_time = {} if (player[0].last_daily_question_time.is_empty()) else Time.get_datetime_dict_from_datetime_string(player[0].last_daily_question_time, true)
 	# Time and Day/Night
 	Attributes.time = player[0].time
 	Attributes.day_night_enabled = player[0].day_night_enabled
