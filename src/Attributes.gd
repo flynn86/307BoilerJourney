@@ -49,6 +49,7 @@ var quest2_completed: bool = false
 var quest3_active: bool = false
 var quest3_completed: bool = false
 var basics_shown: bool = false
+var friends_list_changed: bool = false
 
 '''
 var course1_name: String = ""
@@ -202,6 +203,7 @@ func reset(user: String):
 	quest3_active = false
 	quest3_completed = false
 	basics_shown = false
+	friends_list_changed = false
 	
 	'''
 	course1_name = ""

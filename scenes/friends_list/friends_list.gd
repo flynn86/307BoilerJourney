@@ -11,7 +11,15 @@ func _ready():
 		friend_req.f_sender = i["sender"]
 		friend_req.f_recipient = Attributes.username
 		friend_req.custom_minimum_size = Vector2(0, 135)
-		$ScrollContainer/VBoxContainer.add_child(friend_req)
+		$FriendReqList/ScrollContainer/VBoxContainer.add_child(friend_req)
+	(Attributes.database).query("SELECT friend2 FROM Friend_List WHERE friend1 = '" + Attributes.username + "'")
+	for j in (Attributes.database).query_result:
+		var scene = preload("res://scenes/friends_list/friend.tscn")
+		var friend = scene.instantiate()
+		friend.friend = j["friend2"]
+		friend.currentUser = Attributes.username
+		friend.custom_minimum_size = Vector2(0, 60)
+		$Friends/ScrollContainer/VBoxContainer.add_child(friend)
 
 
 func _on_close_pressed():

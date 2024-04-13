@@ -35,7 +35,7 @@ func _ready():
 		"display_item_1" : {"data_type":"int"},
 		"display_item_2" : {"data_type":"int"},
 		"display_item_3" : {"data_type":"int"},
-		
+	
 		"bed" : {"data_type":"int"},
 		"desk" : {"data_type":"int"},
 		"sidetable" : {"data_type":"int"},

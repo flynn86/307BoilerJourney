@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2y53y2nmqelv"]
+
+[ext_resource type="Script" path="res://scenes/friends_list/friend.gd" id="1_e21ls"]
+
+[node name="Friend" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_e21ls")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 9.0
+offset_right = 339.0
+offset_bottom = 57.0
+color = Color(0.388235, 0.388235, 0.388235, 1)
+
+[node name="Username" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 198.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 20
+text = "Username"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Delete" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 7.0
+offset_right = 300.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 16
+text = "Delete"
+
+[connection signal="pressed" from="ColorRect/Delete" to="." method="_on_delete_pressed"]
