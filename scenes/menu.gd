@@ -50,14 +50,6 @@ func _on_join_server_button_pressed():
 		#enet.create_client(address_entry.text, PORT)
 		Attributes.isHost = false
 		Attributes.serverName = address_entry.text
-		var data = {
-			"username" = Attributes.username,
-			"xp" = Attributes.xp,
-			"rank" = Attributes.rank,
-			"serverName" = Attributes.serverName,
-			"isHost" = Attributes.isHost
-		}
-		(Attributes.database).update_rows("Players", "username == '%s'" % Attributes.username, data)
 		SaveUtils.save()
 
 func _on_host_server_button_pressed():
@@ -76,14 +68,6 @@ func _on_host_server_button_pressed():
 	#add_client(multiplayer.get_unique_id())
 	Attributes.isHost = true
 	Attributes.serverName = Attributes.username
-	var data = {
-		"username" = Attributes.username,
-		"xp" = Attributes.xp,
-		"rank" = Attributes.rank,
-		"serverName" = Attributes.serverName,
-		"isHost" = Attributes.isHost
-	}
-	(Attributes.database).update_rows("Players", "username == '%s'" % Attributes.username, data)
 	var table = {
 		"username" : {"data_type":"text"},
 		"message" : {"data_type":"text"},

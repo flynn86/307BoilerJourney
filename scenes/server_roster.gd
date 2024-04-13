@@ -24,37 +24,19 @@ func _on_back_to_menu_pressed():
 
 func _on_client_disconnect_pressed():
 	Attributes.serverName = ""
-	var player : Dictionary = {
-		"username" = Attributes.username,
-		"xp" = Attributes.xp,
-		"rank" = Attributes.rank,
-		"serverName" = "",
-		"isHost" = false
-	}
-	(Attributes.database).update_rows("Players", "username == '%s'" % Attributes.username, player) 
+	Attributes.isHost = false
+	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
 
 func _on_server_disconnect_pressed():
 	var data : Array = (Attributes.database).select_rows("Players", "serverName == '%s' and isHost == false" % Attributes.serverName, ["*"])
 	for i in data:
 		#var player : Array = (Attributes.database).select_rows("Players", "username == '%s'" % i.username, ["*"])
-		var update : Dictionary = {
-			"username" = i.username,
-			"xp" = i.xp,
-			"rank" = i.rank,
-			"serverName" = "",
-			"isHost" = false
-		}
-		(Attributes.database).update_rows("Players", "username == '%s'" % i.username, update)
+		i.serverName = ""
+		i.isHost = false
+		(Attributes.database).update_rows("Players", "username == '%s'" % i.username, i)
 	Attributes.serverName = ""
 	Attributes.isHost = false
-	var update : Dictionary = {
-		"username" = Attributes.username,
-		"xp" = Attributes.xp,
-		"rank" = Attributes.rank,
-		"serverName" = "",
-		"isHost" = false
-	}
-	(Attributes.database).update_rows("Players", "username == '%s'" % Attributes.username, update)
+	SaveUtils.save()
 	(Attributes.database).drop_table("%s_Chat" % Attributes.username)
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
