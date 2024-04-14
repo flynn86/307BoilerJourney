@@ -14,11 +14,11 @@ func _on_customize_character_button_pressed():
 
 func _ready():
 	if (Attributes.serverName != ""):
-		$HostServerButton.visible = false
-		$JoinServerButton.visible = false
-		$LineEdit.visible = false
-		$GlobalChatButton.visible = true
-		$ServerRosterButton.visible = true
+		$Panel/HostServerButton.visible = false
+		$Panel/JoinServerButton.visible = false
+		$Panel/LineEdit.visible = false
+		$Panel/GlobalChatButton.visible = true
+		$Panel/ServerRosterButton.visible = true
 #	multiplayer.peer_connected.connect(add_client)
 #	multiplayer.peer_disconnected.connect(remove_client)
 
@@ -28,7 +28,7 @@ func _ready():
 
 #const PORT = 9999
 
-@onready var address_entry = $LineEdit
+@onready var address_entry = $Panel/LineEdit
 #var enet = ENetMultiplayerPeer.new()
 #var serverOn : bool = false;
 
@@ -37,11 +37,11 @@ func _on_join_server_button_pressed():
 		$Label2.visible = true
 	else:
 		$Label2.visible = false
-		$HostServerButton.visible = false
-		$JoinServerButton.visible = false
-		$LineEdit.visible = false
-		$GlobalChatButton.visible = true
-		$ServerRosterButton.visible = true
+		$Panel/HostServerButton.visible = false
+		$Panel/JoinServerButton.visible = false
+		$Panel/LineEdit.visible = false
+		$Panel/GlobalChatButton.visible = true
+		$Panel/ServerRosterButton.visible = true
 		#multiplayer.multiplayer_peer = enet
 		#if enet.create_client("127.0.0.1", PORT):
 		#	print("Error Client")
@@ -54,11 +54,11 @@ func _on_join_server_button_pressed():
 
 func _on_host_server_button_pressed():
 	$Label2.visible = false
-	$HostServerButton.visible = false
-	$JoinServerButton.visible = false
-	$GlobalChatButton.visible = true
-	$ServerRosterButton.visible = true
-	$LineEdit.visible = false
+	$Panel/HostServerButton.visible = false
+	$Panel/JoinServerButton.visible = false
+	$Panel/GlobalChatButton.visible = true
+	$Panel/ServerRosterButton.visible = true
+	$Panel/LineEdit.visible = false
 	#if enet.create_server(PORT):
 	#	print("Error Host")
 	#else:
