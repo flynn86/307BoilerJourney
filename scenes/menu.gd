@@ -97,3 +97,7 @@ func _on_global_chat_button_pressed():
 
 func _on_server_roster_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/server_roster.tscn")
+
+
+func _on_interests_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/interests.tscn")
