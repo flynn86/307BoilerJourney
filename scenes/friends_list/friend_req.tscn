@@ -13,10 +13,8 @@ script = ExtResource("1_3dkrk")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 35.0
-offset_top = 9.0
-offset_right = 306.0
-offset_bottom = 132.0
+offset_right = 271.0
+offset_bottom = 123.0
 color = Color(0.388235, 0.388235, 0.388235, 1)
 
 [node name="Username" type="Label" parent="ColorRect"]

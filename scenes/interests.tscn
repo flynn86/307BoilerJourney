@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://cnpbl287x1vgp"]
+
+[node name="myInterests" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 447.0
+offset_top = 13.0
+offset_right = 544.0
+offset_bottom = 36.0
+scale = Vector2(3, 3)
+text = "My Interests"
+
+[node name="interest1label" type="Label" parent="."]
+offset_left = 95.0
+offset_top = 148.0
+offset_right = 192.0
+offset_bottom = 171.0
+scale = Vector2(3, 3)
+text = "Interest 1:"
+
+[node name="interest2label" type="Label" parent="."]
+offset_left = 102.0
+offset_top = 296.0
+offset_right = 199.0
+offset_bottom = 319.0
+scale = Vector2(3, 3)
+text = "Interest 2:
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="interest3label" type="Label" parent="."]
+offset_left = 109.0
+offset_top = 438.0
+offset_right = 206.0
+offset_bottom = 461.0
+scale = Vector2(3, 3)
+text = "Interest 3:"
+metadata/_edit_use_anchors_ = true
+
+[node name="interest1" type="TextEdit" parent="."]
+offset_left = 481.0
+offset_top = 155.0
+offset_right = 685.0
+offset_bottom = 193.0
+scale = Vector2(2, 2)
+placeholder_text = "Enter Interest"
+
+[node name="interest2" type="TextEdit" parent="."]
+offset_left = 479.0
+offset_top = 295.0
+offset_right = 683.0
+offset_bottom = 333.0
+scale = Vector2(2, 2)
+placeholder_text = "Enter Interest"
+
+[node name="interest3" type="TextEdit" parent="."]
+offset_left = 482.0
+offset_top = 433.0
+offset_right = 681.0
+offset_bottom = 473.0
+scale = Vector2(2, 2)
+placeholder_text = "Enter Interest"
+
+[node name="save" type="Button" parent="."]
+offset_left = 938.0
+offset_top = 568.0
+offset_right = 1020.0
+offset_bottom = 599.0
+scale = Vector2(2, 2)
+text = "Save "
