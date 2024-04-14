@@ -1,11 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://ncqjl4lat741"]
+[gd_scene load_steps=5 format=3 uid="uid://ncqjl4lat741"]
 
 [ext_resource type="FontFile" uid="uid://7x61o34kfaic" path="res://fonts/KOMIKAX_.ttf" id="1_c6prt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gxea1"]
+bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sskj5"]
 bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Theme" id="Theme_utgnu"]
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/styles/normal = SubResource("StyleBoxFlat_gxea1")
 Panel/styles/panel = SubResource("StyleBoxFlat_sskj5")
 RichTextLabel/font_sizes/normal_font_size = 40
 RichTextLabel/fonts/normal_font = ExtResource("1_c6prt")
@@ -27,40 +37,40 @@ text = "All Stats"
 
 [node name="current_rank" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 23.0
-offset_top = 92.0
-offset_right = 171.0
-offset_bottom = 180.0
+offset_left = 48.0
+offset_top = 152.0
+offset_right = 235.0
+offset_bottom = 215.0
 text = "Current Rank"
 
 [node name="total_xp" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 50.0
-offset_top = 205.0
-offset_right = 121.0
-offset_bottom = 236.0
+offset_left = 48.0
+offset_top = 242.0
+offset_right = 235.0
+offset_bottom = 305.0
 text = "Total XP"
 
 [node name="total_collectables" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 41.0
-offset_top = 278.0
-offset_right = 142.0
-offset_bottom = 309.0
+offset_left = 48.0
+offset_top = 332.0
+offset_right = 235.0
+offset_bottom = 395.0
 text = "Collectables"
 
 [node name="quests_completed" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 36.0
-offset_top = 361.0
-offset_right = 187.0
-offset_bottom = 392.0
+offset_left = 48.0
+offset_top = 422.0
+offset_right = 235.0
+offset_bottom = 485.0
 text = "Quests Completed"
 
 [node name="leaderboard" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 30.0
-offset_top = 432.0
-offset_right = 204.0
-offset_bottom = 463.0
+offset_left = 48.0
+offset_top = 512.0
+offset_right = 235.0
+offset_bottom = 575.0
 text = "Leaderboard Ranking"
