@@ -143,6 +143,10 @@ var last_daily_question_time : Dictionary = Time.get_datetime_dict_from_system()
 # Time and Day/Night Cycle
 var time : float= 0.0
 var day_night_enabled : bool = false
+var interest_1: String = ""
+var interest_2: String = ""
+var interest_3: String = ""
+
 
 
 
@@ -285,3 +289,6 @@ func reset(user: String):
 	last_daily_question_time = {}
 	time = 0.0
 	day_night_enabled = false
+	interest_1 = ""
+	interest_2 = ""
+	interest_3 = ""

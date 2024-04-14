@@ -94,7 +94,11 @@ func _ready():
 		"last_daily_question_time" : {"data_type":"String"},
 		# Time and Day/Night Cycle
 		"time" : {"data_type":"real"},
-		"day_night_enabled" : {"data_type":"bool"}
+		"day_night_enabled" : {"data_type":"bool"},
+		"interest_1" : {"data_type":"text"},
+		"interest_2" : {"data_type":"text"},
+		"interest_3" : {"data_type":"text"}
+		
 	}
 	(Attributes.database).create_table("Players", table)
 	var friend_reqs = {
