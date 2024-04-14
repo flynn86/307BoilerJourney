@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var username_entry = $LineEdit
+@onready var username_entry = $Panel/LineEdit
 
 func _ready():
 	Attributes.database = SQLite.new()
