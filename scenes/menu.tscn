@@ -6,10 +6,10 @@
 script = ExtResource("1_t28md")
 
 [node name="ViewProgressButton" type="Button" parent="."]
-offset_left = 577.0
-offset_top = 120.0
-offset_right = 806.0
-offset_bottom = 235.0
+offset_left = 580.0
+offset_top = 119.0
+offset_right = 809.0
+offset_bottom = 169.0
 text = "View Progress"
 
 [node name="BackToMapButton" type="Button" parent="."]
@@ -92,6 +92,13 @@ offset_top = 440.0
 offset_right = 283.0
 offset_bottom = 555.0
 text = "Server Roster"
+
+[node name="allStats" type="Button" parent="."]
+offset_left = 581.0
+offset_top = 187.0
+offset_right = 813.0
+offset_bottom = 234.0
+text = "View All Stats"
 
 [connection signal="pressed" from="ViewProgressButton" to="." method="_on_view_progress_button_pressed"]
 [connection signal="pressed" from="BackToMapButton" to="." method="_on_back_to_map_button_pressed"]
