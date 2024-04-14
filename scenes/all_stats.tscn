@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://ncqjl4lat741"]
+[gd_scene load_steps=7 format=3 uid="uid://ncqjl4lat741"]
 
 [ext_resource type="FontFile" uid="uid://7x61o34kfaic" path="res://fonts/KOMIKAX_.ttf" id="1_c6prt"]
 
@@ -9,6 +9,12 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_421bd"]
+bg_color = Color(0.141176, 0.141176, 0.141176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0kk8f"]
+bg_color = Color(0.141176, 0.141176, 0.141176, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sskj5"]
 bg_color = Color(0, 0, 0, 1)
 
@@ -16,6 +22,8 @@ bg_color = Color(0, 0, 0, 1)
 Button/constants/outline_size = 0
 Button/font_sizes/font_size = 16
 Button/styles/normal = SubResource("StyleBoxFlat_gxea1")
+Button/styles/pressed = SubResource("StyleBoxFlat_421bd")
+Label/styles/normal = SubResource("StyleBoxFlat_0kk8f")
 Panel/styles/panel = SubResource("StyleBoxFlat_sskj5")
 RichTextLabel/font_sizes/normal_font_size = 40
 RichTextLabel/fonts/normal_font = ExtResource("1_c6prt")
@@ -74,3 +82,33 @@ offset_top = 512.0
 offset_right = 235.0
 offset_bottom = 575.0
 text = "Leaderboard Ranking"
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 149.0
+offset_right = 1082.0
+offset_bottom = 576.0
+
+[node name="close" type="Button" parent="Panel/Label"]
+layout_mode = 0
+offset_left = 749.0
+offset_top = 386.0
+offset_right = 791.0
+offset_bottom = 426.0
+text = "Close"
+
+[node name="info" type="RichTextLabel" parent="Panel/Label"]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 89.0
+offset_right = 638.0
+offset_bottom = 338.0
+
+[node name="Back" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 10.0
+offset_right = 150.0
+offset_bottom = 51.0
+text = "Back"
