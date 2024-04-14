@@ -6,6 +6,7 @@ func _ready():
 	Attributes.database = SQLite.new()
 	(Attributes.database).path = "res://data.db"
 	(Attributes.database).open_db()
+	#(Attributes.database).drop_table("Players")
 	var table = {
 		"xp" : {"data_type":"int"},
 		"username" : {"data_type":"text"},
