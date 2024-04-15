@@ -278,3 +278,41 @@ func _on_trade_pressed():
 	Attributes.location = "res://scenes/map/academic_map.tscn"
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/trading/trade_requests.tscn")
+
+func _on_time_button_pressed():
+	if (Attributes.day_night_ui_toggle == true):
+		time_animation(false)
+		Attributes.day_night_ui_toggle = false;
+		SaveUtils.save()
+	else:
+		time_animation(true)
+		Attributes.day_night_ui_toggle = true;
+		SaveUtils.save()
+		
+func time_animation(toggle : bool):
+	if (toggle == true):
+		get_node("CharacterBody2D/Player/Time Button").rotation = 0
+		get_node("CharacterBody2D/Player/Time Button").position = Vector2(-870, 420)
+		$CharacterBody2D/Player/DayNightCycleUI.position = Vector2(-1125, 372)
+		for i in range(0,20,1):
+			var x1 = $CharacterBody2D/Player/DayNightCycleUI.position.x
+			$CharacterBody2D/Player/DayNightCycleUI.position = Vector2(x1 + 11.5, 372)
+			var x2 = get_node("CharacterBody2D/Player/Time Button").position.x
+			get_node("CharacterBody2D/Player/Time Button").position = Vector2(x2 + 11.5, 420)
+			await get_tree().create_timer(0.01).timeout
+		get_node("CharacterBody2D/Player/Time Button").rotation = 180
+		get_node("CharacterBody2D/Player/Time Button").position = Vector2(-645, 460)
+		$CharacterBody2D/Player/DayNightCycleUI.position = Vector2(-900, 372)
+	else:
+		get_node("CharacterBody2D/Player/Time Button").rotation = 180
+		get_node("CharacterBody2D/Player/Time Button").position = Vector2(-645, 460)
+		$CharacterBody2D/Player/DayNightCycleUI.position = Vector2(-900, 372)
+		for i in range(0,20,1):
+			var x1 = $CharacterBody2D/Player/DayNightCycleUI.position.x
+			$CharacterBody2D/Player/DayNightCycleUI.position = Vector2(x1 - 11.5, 372)
+			var x2 = get_node("CharacterBody2D/Player/Time Button").position.x
+			get_node("CharacterBody2D/Player/Time Button").position = Vector2(x2 - 11.5, 420)
+			await get_tree().create_timer(0.01).timeout
+		get_node("CharacterBody2D/Player/Time Button").rotation = 0
+		get_node("CharacterBody2D/Player/Time Button").position = Vector2(-870, 420)
+		$CharacterBody2D/Player/DayNightCycleUI.position = Vector2(-1125, 372)
