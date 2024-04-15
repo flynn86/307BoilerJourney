@@ -151,6 +151,7 @@ func _on_add_friend_5_pressed():
 		$InvalidUser.visible = true
 	else:
 		$InvalidUser.text = "Request Sent!"
+		$InvalidUser.visible = true
 		var data = {
 			"sender" = Attributes.username,
 			"recipient" = username
