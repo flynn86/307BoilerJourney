@@ -1,0 +1,92 @@
+[gd_scene load_steps=2 format=3 uid="uid://c61nfk285r2c1"]
+
+[ext_resource type="Script" path="res://scenes/suggested_users.gd" id="1_r4o7j"]
+
+[node name="suggestedUsers" type="Node2D"]
+script = ExtResource("1_r4o7j")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 464.0
+offset_top = 19.0
+offset_right = 596.0
+offset_bottom = 50.0
+scale = Vector2(2, 2)
+text = "Suggested users"
+
+[node name="AddFriend" type="Button" parent="."]
+offset_left = 894.0
+offset_top = 123.0
+offset_right = 1007.0
+offset_bottom = 157.0
+scale = Vector2(1.5, 1.5)
+text = "Add Friend"
+
+[node name="suggestion1" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 142.0
+offset_right = 643.0
+offset_bottom = 442.0
+scale = Vector2(1.2, 1.2)
+
+[node name="goBack" type="Button" parent="."]
+offset_left = 954.0
+offset_top = 568.0
+offset_right = 1071.0
+offset_bottom = 606.0
+scale = Vector2(1.5, 1.5)
+text = "Go back"
+
+[node name="refresh" type="Button" parent="."]
+offset_left = 27.0
+offset_top = 563.0
+offset_right = 198.0
+offset_bottom = 601.0
+scale = Vector2(1.5, 1.5)
+text = "Refresh Suggestions"
+
+[node name="InvalidUser" type="Label" parent="."]
+visible = false
+offset_left = 592.0
+offset_top = 567.0
+offset_right = 846.0
+offset_bottom = 611.0
+theme_override_colors/font_color = Color(0.968627, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "User does not exist"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AddFriend2" type="Button" parent="."]
+offset_left = 893.0
+offset_top = 195.0
+offset_right = 1006.0
+offset_bottom = 229.0
+scale = Vector2(1.5, 1.5)
+text = "Add Friend"
+
+[node name="AddFriend3" type="Button" parent="."]
+offset_left = 896.0
+offset_top = 269.0
+offset_right = 1009.0
+offset_bottom = 303.0
+scale = Vector2(1.5, 1.5)
+text = "Add Friend"
+
+[node name="AddFriend4" type="Button" parent="."]
+offset_left = 899.0
+offset_top = 343.0
+offset_right = 1012.0
+offset_bottom = 377.0
+scale = Vector2(1.5, 1.5)
+text = "Add Friend"
+
+[node name="AddFriend5" type="Button" parent="."]
+offset_left = 900.0
+offset_top = 422.0
+offset_right = 1013.0
+offset_bottom = 456.0
+scale = Vector2(1.5, 1.5)
+text = "Add Friend"
+
+[connection signal="pressed" from="AddFriend" to="." method="_on_add_friend_pressed"]
+[connection signal="pressed" from="AddFriend2" to="." method="_on_add_friend_2_pressed"]
