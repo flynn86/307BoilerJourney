@@ -291,8 +291,8 @@ func _on_time_button_pressed():
 		
 func time_animation(toggle : bool):
 	if (toggle == true):
-		get_node("CharacterBody2D/Player/Time Button").rotation = 0
-		get_node("CharacterBody2D/Player/Time Button").position = Vector2(-870, 420)
+		get_node("CharacterBody2D/Player/Time Button").rotation_degrees = 0
+		get_node("CharacterBody2D/Player/Time Button").position = Vector2(-900, 420)
 		$CharacterBody2D/Player/DayNightCycleUI.position = Vector2(-1125, 372)
 		for i in range(0,20,1):
 			var x1 = $CharacterBody2D/Player/DayNightCycleUI.position.x
@@ -300,19 +300,19 @@ func time_animation(toggle : bool):
 			var x2 = get_node("CharacterBody2D/Player/Time Button").position.x
 			get_node("CharacterBody2D/Player/Time Button").position = Vector2(x2 + 11.5, 420)
 			await get_tree().create_timer(0.01).timeout
-		get_node("CharacterBody2D/Player/Time Button").rotation = 180
+		get_node("CharacterBody2D/Player/Time Button").rotation_degrees = 180
 		get_node("CharacterBody2D/Player/Time Button").position = Vector2(-645, 460)
 		$CharacterBody2D/Player/DayNightCycleUI.position = Vector2(-900, 372)
 	else:
-		get_node("CharacterBody2D/Player/Time Button").rotation = 180
+		get_node("CharacterBody2D/Player/Time Button").rotation_degrees = 180
 		get_node("CharacterBody2D/Player/Time Button").position = Vector2(-645, 460)
 		$CharacterBody2D/Player/DayNightCycleUI.position = Vector2(-900, 372)
 		for i in range(0,20,1):
 			var x1 = $CharacterBody2D/Player/DayNightCycleUI.position.x
 			$CharacterBody2D/Player/DayNightCycleUI.position = Vector2(x1 - 11.5, 372)
 			var x2 = get_node("CharacterBody2D/Player/Time Button").position.x
-			get_node("CharacterBody2D/Player/Time Button").position = Vector2(x2 - 11.5, 420)
+			get_node("CharacterBody2D/Player/Time Button").position = Vector2(x2 - 11.5, 460)
 			await get_tree().create_timer(0.01).timeout
-		get_node("CharacterBody2D/Player/Time Button").rotation = 0
-		get_node("CharacterBody2D/Player/Time Button").position = Vector2(-870, 420)
+		get_node("CharacterBody2D/Player/Time Button").rotation_degrees = 0
+		get_node("CharacterBody2D/Player/Time Button").position = Vector2(-900, 420)
 		$CharacterBody2D/Player/DayNightCycleUI.position = Vector2(-1125, 372)

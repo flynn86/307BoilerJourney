@@ -92,7 +92,6 @@ func initialize():
 		"interest_1" = Attributes.interest_1,
 		"interest_2" = Attributes.interest_2,
 		"interest_3" = Attributes.interest_3,
-		
 		# Togglable UI
 		"day_night_ui_toggle" = Attributes.day_night_ui_toggle
 	}
