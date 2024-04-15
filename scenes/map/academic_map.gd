@@ -339,3 +339,25 @@ func ui_toggle_1(toggle : bool):
 	$CharacterBody2D/Player/ViewSchedule.visible = toggle
 	$CharacterBody2D/Player/Inventory.visible = toggle
 	get_node("CharacterBody2D/Player/class rank").visible = toggle
+
+
+func _on_ui_toggle_2_pressed():
+	if (Attributes.ui_toggle_2 == true):
+		Attributes.ui_toggle_2 = false;
+		SaveUtils.save()
+		ui_toggle_2(false)
+	else:
+		Attributes.ui_toggle_2 = true;
+		SaveUtils.save()
+		ui_toggle_2(true)
+		
+func ui_toggle_2(toggle : bool):
+	if (toggle == true):
+		$CharacterBody2D/Player/UIToggle2.text = "Hide"
+	else:
+		$CharacterBody2D/Player/UIToggle2.text = "Show"
+	$CharacterBody2D/Player/Trade.visible = toggle
+	$CharacterBody2D/Player/FriendsList.visible = toggle
+	$CharacterBody2D/Player/Suggestions.visible = toggle
+	$CharacterBody2D/Player/DailyTrivia.visible = toggle
+	$CharacterBody2D/Player/QuestLog.visible = toggle

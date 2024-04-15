@@ -94,7 +94,8 @@ func initialize():
 		"interest_3" = Attributes.interest_3,
 		# Togglable UI
 		"day_night_ui_toggle" = Attributes.day_night_ui_toggle,
-		"ui_toggle_1" = Attributes.ui_toggle_1
+		"ui_toggle_1" = Attributes.ui_toggle_1,
+		"ui_toggle_2" = Attributes.ui_toggle_2
 	}
 	(Attributes.database).insert_row("Players", data)
 
@@ -193,7 +194,8 @@ func save():
 		"interest_2" = Attributes.interest_2,
 		"interest_3" = Attributes.interest_3,
 		"day_night_ui_toggle" = Attributes.day_night_ui_toggle,
-		"ui_toggle_1" = Attributes.ui_toggle_1
+		"ui_toggle_1" = Attributes.ui_toggle_1,
+		"ui_toggle_2" = Attributes.ui_toggle_2
 	})
 
 func load():
@@ -342,6 +344,6 @@ func load():
 	Attributes.interest_3 = player[0].interest_3
 	Attributes.day_night_ui_toggle = player[0].day_night_ui_toggle
 	Attributes.ui_toggle_1 = player[0].ui_toggle_1
-
+	Attributes.ui_toggle_2 = player[0].ui_toggle_2
 func delete():
 	(Attributes.database).delete_rows("Players", "username == '%s'" % Attributes.username)

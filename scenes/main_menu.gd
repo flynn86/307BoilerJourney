@@ -100,7 +100,8 @@ func _ready():
 		"interest_2" : {"data_type":"text"},
 		"interest_3" : {"data_type":"text"},
 		"day_night_ui_toggle" : {"data_type":"bool"},
-		"ui_toggle_1" : {"data_type":"bool"}
+		"ui_toggle_1" : {"data_type":"bool"},
+		"ui_toggle_2" : {"data_type":"bool"}
 	}
 	(Attributes.database).create_table("Players", table)
 	var friend_reqs = {

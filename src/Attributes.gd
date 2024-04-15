@@ -151,7 +151,7 @@ var interest_2: String = ""
 var interest_3: String = ""
 var day_night_ui_toggle : bool = true
 var ui_toggle_1 : bool = true
-
+var ui_toggle_2 : bool = true
 
 
 
@@ -298,3 +298,4 @@ func reset(user: String):
 	interest_3 = ""
 	day_night_ui_toggle = true
 	ui_toggle_1 = true
+	ui_toggle_2 = true
