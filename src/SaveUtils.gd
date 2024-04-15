@@ -156,7 +156,7 @@ func save():
 		"course7_name" = Attributes.courseNames["course7_name"],
 		"course8_name" = Attributes.courseNames["course8_name"],
 		"course1_time" = Attributes.courseTimes["course1_time"],
-		"course2_time" = Attributes.courseTimes["course2_time"i],
+		"course2_time" = Attributes.courseTimes["course2_time"],
 		"course3_time" = Attributes.courseTimes["course3_time"],
 		"course4_time" = Attributes.courseTimes["course4_time"],
 		"course5_time" = Attributes.courseTimes["course5_time"],
