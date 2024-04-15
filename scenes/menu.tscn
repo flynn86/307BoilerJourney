@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b1380ioiemr6n"]
 
 [ext_resource type="Script" path="res://scenes/menu.gd" id="1_t28md"]
-[ext_resource type="FontFile" uid="uid://5lqm3siyw530" path="res://fonts/KOMIKAX_.ttf" id="2_y64a6"]
+[ext_resource type="FontFile" uid="uid://d0q666euopyxv" path="res://fonts/KOMIKAX_.ttf" id="2_y64a6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x0cjc"]
 bg_color = Color(0.266667, 0.266667, 0.266667, 1)
@@ -59,7 +59,7 @@ text = "Back To Map"
 [node name="BackToMainMenuButton" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 315.0
-offset_top = 308.0
+offset_top = 371.0
 offset_right = 547.0
 offset_bottom = 423.0
 text = "Back To Main Menu"
@@ -128,9 +128,9 @@ text = "View All Stats"
 
 [node name="interestsButton" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 585.0
-offset_top = 309.0
-offset_right = 810.0
+offset_left = 317.0
+offset_top = 304.0
+offset_right = 542.0
 offset_bottom = 354.0
 text = "View Interests"
 
@@ -153,6 +153,13 @@ offset_bottom = 625.0
 theme_override_font_sizes/font_size = 16
 text = "Submit a Bug Report"
 
+[node name="findFriends" type="Button" parent="Panel"]
+offset_left = 582.0
+offset_top = 297.0
+offset_right = 812.0
+offset_bottom = 354.0
+text = "Find Friends"
+
 [connection signal="pressed" from="Panel/ViewProgressButton" to="." method="_on_view_progress_button_pressed"]
 [connection signal="pressed" from="Panel/BackToMapButton" to="." method="_on_back_to_map_button_pressed"]
 [connection signal="pressed" from="Panel/BackToMainMenuButton" to="." method="_on_back_to_main_menu_button_pressed"]
@@ -163,3 +170,4 @@ text = "Submit a Bug Report"
 [connection signal="pressed" from="Panel/ServerRosterButton" to="." method="_on_server_roster_button_pressed"]
 [connection signal="pressed" from="Panel/interestsButton" to="." method="_on_interests_button_pressed"]
 [connection signal="pressed" from="Panel/BugReportButton" to="." method="_on_bug_report_button_pressed"]
+[connection signal="pressed" from="Panel/findFriends" to="." method="_on_find_friends_pressed"]

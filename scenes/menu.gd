@@ -105,3 +105,7 @@ func _on_interests_button_pressed():
 
 func _on_bug_report_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/bug_reports/bug_report.tscn")
+
+
+func _on_find_friends_pressed():
+	get_tree().change_scene_to_file("res://scenes/suggested_users.tscn")

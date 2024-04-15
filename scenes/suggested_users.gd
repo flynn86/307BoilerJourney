@@ -142,7 +142,7 @@ func _on_add_friend_5_pressed():
 
 
 func _on_refresh_pressed():
-	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/suggested_users.tscn")
 
 
 func _on_go_back_pressed():
