@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var user = $LineEdit
+@onready var user = $Panel/LineEdit
 
 
 func _process(delta):
@@ -9,12 +9,12 @@ func _process(delta):
 		Attributes.friends_list_changed = 0
 
 func _ready():
-	var children1 = $FriendReqList/ScrollContainer/VBoxContainer.get_children()
-	var children2 = $Friends/ScrollContainer/VBoxContainer.get_children()
+	var children1 = $Panel/FriendReqList/ScrollContainer/VBoxContainer.get_children()
+	var children2 = $Panel/Friends/ScrollContainer/VBoxContainer.get_children()
 	for child in children1:
-		$FriendReqList/ScrollContainer/VBoxContainer.remove_child(child)
+		$Panel/FriendReqList/ScrollContainer/VBoxContainer.remove_child(child)
 	for child in children2:
-		$Friends/ScrollContainer/VBoxContainer.remove_child(child)
+		$Panel/Friends/ScrollContainer/VBoxContainer.remove_child(child)
 	(Attributes.database).query("SELECT sender FROM Friend_Reqs WHERE recipient = '" + Attributes.username + "'")
 	for i in (Attributes.database).query_result:
 		var scene = preload("res://scenes/friends_list/friend_req.tscn")
@@ -22,7 +22,7 @@ func _ready():
 		friend_req.f_sender = i["sender"]
 		friend_req.f_recipient = Attributes.username
 		friend_req.custom_minimum_size = Vector2(0, 135)
-		$FriendReqList/ScrollContainer/VBoxContainer.add_child(friend_req)
+		$Panel/FriendReqList/ScrollContainer/VBoxContainer.add_child(friend_req)
 	(Attributes.database).query("SELECT friend2 FROM Friend_List WHERE friend1 = '" + Attributes.username + "'")
 	for j in (Attributes.database).query_result:
 		var scene = preload("res://scenes/friends_list/friend.tscn")
@@ -30,26 +30,26 @@ func _ready():
 		friend.friend = j["friend2"]
 		friend.currentUser = Attributes.username
 		friend.custom_minimum_size = Vector2(0, 60)
-		$Friends/ScrollContainer/VBoxContainer.add_child(friend)
+		$Panel/Friends/ScrollContainer/VBoxContainer.add_child(friend)
 
 
 func _on_send_request_pressed():
 	var username = user.text
 	if (username == Attributes.username):
-		$InvalidUser.text = "Cannot friend yourself :("
-		$InvalidUser.visible = true
+		$Panel/InvalidUser.text = "Cannot friend yourself :("
+		$Panel/InvalidUser.visible = true
 	elif (!((Attributes.database).select_rows("Players", "username = '" + username + "'", ["*"]))):
-		$InvalidUser.text = "User does not exist"
-		$InvalidUser.visible = true
+		$Panel/InvalidUser.text = "User does not exist"
+		$Panel/InvalidUser.visible = true
 	elif ((Attributes.database).select_rows("Friend_Reqs", "sender = '" + Attributes.username + "' AND recipient = '" + username + "'", ["*"])):
-		$InvalidUser.text = "Already an outgoing request to this user"
-		$InvalidUser.visible = true
+		$Panel/InvalidUser.text = "Already an outgoing request to this user"
+		$Panel/InvalidUser.visible = true
 	elif ((Attributes.database).select_rows("Friend_List", "friend1 = '" + Attributes.username + "' AND friend2 = '" + username + "'", ["*"])):
-		$InvalidUser.text = "Already friends with this user"
-		$InvalidUser.visible = true
+		$Panel/InvalidUser.text = "Already friends with this user"
+		$Panel/InvalidUser.visible = true
 	else:
-		$InvalidUser.visible = false
-		$LineEdit.text = ""
+		$Panel/InvalidUser.visible = false
+		$Panel/LineEdit.text = ""
 		var data = {
 			"sender" = Attributes.username,
 			"recipient" = username
