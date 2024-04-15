@@ -156,7 +156,7 @@ func save():
 		"course7_name" = Attributes.courseNames["course7_name"],
 		"course8_name" = Attributes.courseNames["course8_name"],
 		"course1_time" = Attributes.courseTimes["course1_time"],
-		"course2_time" = Attributes.courseTimes["course2_time"],
+		"course2_time" = Attributes.courseTimes["course2_time"i],
 		"course3_time" = Attributes.courseTimes["course3_time"],
 		"course4_time" = Attributes.courseTimes["course4_time"],
 		"course5_time" = Attributes.courseTimes["course5_time"],
@@ -190,8 +190,6 @@ func save():
 		"interest_1" = Attributes.interest_1,
 		"interest_2" = Attributes.interest_2,
 		"interest_3" = Attributes.interest_3,
-		
-		# Togglable UI
 		"day_night_ui_toggle" = Attributes.day_night_ui_toggle
 	})
 
@@ -338,7 +336,6 @@ func load():
 	Attributes.interest_1 = player[0].interest_1
 	Attributes.interest_2 = player[0].interest_2
 	Attributes.interest_3 = player[0].interest_3
-	# Togglable UI
 	Attributes.day_night_ui_toggle = player[0].day_night_ui_toggle
 	
 
