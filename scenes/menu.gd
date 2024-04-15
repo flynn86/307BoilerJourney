@@ -13,6 +13,7 @@ func _on_customize_character_button_pressed():
 	get_tree().change_scene_to_file("res://characters/Player.tscn")
 
 func _ready():
+	SaveUtils.load()
 	if (Attributes.serverName != ""):
 		$HostServerButton.visible = false
 		$JoinServerButton.visible = false
@@ -48,9 +49,10 @@ func _on_join_server_button_pressed():
 		#else:
 		#	print("Client good")
 		#enet.create_client(address_entry.text, PORT)
-		Attributes.isHost = false
-		Attributes.serverName = address_entry.text
-		SaveUtils.save()
+		if (Attributes.database).select_rows("Players", "serverName == '%s' and isHost == true" % address_entry.text, ["*"]).size() != 0:
+			Attributes.isHost = false
+			Attributes.serverName = address_entry.text
+			SaveUtils.save()
 
 func _on_host_server_button_pressed():
 	$Label2.visible = false
@@ -97,3 +99,6 @@ func _on_global_chat_button_pressed():
 
 func _on_server_roster_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/server_roster.tscn")
+
+func _on_message_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/messages.tscn")

@@ -50,6 +50,13 @@ offset_right = 547.0
 offset_bottom = 555.0
 text = "Host Server"
 
+[node name="MessageButton" type="Button" parent="."]
+offset_left = 835.0
+offset_top = 280.0
+offset_right = 1070.0
+offset_bottom = 395.0
+text = "Messages"
+
 [node name="JoinServerButton" type="Button" parent="."]
 offset_left = 576.0
 offset_top = 505.0
@@ -98,6 +105,7 @@ text = "Server Roster"
 [connection signal="pressed" from="BackToMainMenuButton" to="." method="_on_back_to_main_menu_button_pressed"]
 [connection signal="pressed" from="CustomizeCharacterButton" to="." method="_on_customize_character_button_pressed"]
 [connection signal="pressed" from="HostServerButton" to="." method="_on_host_server_button_pressed"]
+[connection signal="pressed" from="MessageButton" to="." method="_on_message_button_pressed"]
 [connection signal="pressed" from="JoinServerButton" to="." method="_on_join_server_button_pressed"]
 [connection signal="pressed" from="GlobalChatButton" to="." method="_on_global_chat_button_pressed"]
 [connection signal="pressed" from="ServerRosterButton" to="." method="_on_server_roster_button_pressed"]
