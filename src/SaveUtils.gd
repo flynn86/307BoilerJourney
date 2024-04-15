@@ -91,10 +91,8 @@ func initialize():
 		"day_night_enabled" = Attributes.day_night_enabled,
 		"interest_1" = Attributes.interest_1,
 		"interest_2" = Attributes.interest_2,
-		"interest_3" = Attributes.interest_3,
+		"interest_3" = Attributes.interest_3
 		
-		# Togglable UI
-		"day_night_ui_toggle" = Attributes.day_night_ui_toggle
 	}
 	(Attributes.database).insert_row("Players", data)
 
@@ -190,10 +188,8 @@ func save():
 		"day_night_enabled" = Attributes.day_night_enabled,
 		"interest_1" = Attributes.interest_1,
 		"interest_2" = Attributes.interest_2,
-		"interest_3" = Attributes.interest_3,
+		"interest_3" = Attributes.interest_3
 		
-		# Togglable UI
-		"day_night_ui_toggle" = Attributes.day_night_ui_toggle
 	})
 
 func load():
@@ -339,8 +335,6 @@ func load():
 	Attributes.interest_1 = player[0].interest_1
 	Attributes.interest_2 = player[0].interest_2
 	Attributes.interest_3 = player[0].interest_3
-	# Togglable UI
-	Attributes.day_night_ui_toggle = player[0].day_night_ui_toggle
 	
 
 func delete():
