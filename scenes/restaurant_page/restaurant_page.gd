@@ -167,3 +167,8 @@ func display_rating(rating: float) -> void:
 		picture.expand = true
 		
 	$Panel/Label2.text = "%0.1f Stars" % rating
+
+
+func _on_leave_pressed(extra_arg_0):
+	Attributes.currentRest = extra_arg_0
+	get_tree().change_scene_to_file("res://scenes/restaurant_page/review_page.tscn")

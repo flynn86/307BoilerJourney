@@ -14,3 +14,38 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 theme = SubResource("Theme_hff7f")
 script = ExtResource("1_ut2em")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 536.0
+offset_right = 544.0
+offset_bottom = 592.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 536.0
+offset_right = 728.0
+offset_bottom = 592.0
+text = "Leave
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 88.0
+offset_right = 1032.0
+offset_bottom = 456.0
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 296.0
+offset_bottom = 80.0
+text = "Return 
+"
+
+[connection signal="pressed" from="Button" to="." method="_leave_review_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_back_to_menu_pressed"]

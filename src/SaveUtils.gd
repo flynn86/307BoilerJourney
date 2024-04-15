@@ -207,6 +207,7 @@ func load():
 	Attributes.rank = player[0].rank
 	Attributes.serverName = player[0].serverName
 	Attributes.isHost = player[0].isHost
+	Attributes.currentRest = player[0].currentRest
 
 	# collectables
 
