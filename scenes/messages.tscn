@@ -1,0 +1,79 @@
+[gd_scene load_steps=2 format=3 uid="uid://cm0jday5e1aug"]
+
+[ext_resource type="Script" path="res://scenes/messages.gd" id="1_lbfhi"]
+
+[node name="Messages" type="Node2D"]
+script = ExtResource("1_lbfhi")
+
+[node name="BackToMenu" type="Button" parent="."]
+offset_left = 85.0
+offset_top = 32.0
+offset_right = 357.0
+offset_bottom = 95.0
+text = "Back to Menu
+"
+
+[node name="DMButton" type="Button" parent="."]
+offset_left = 109.0
+offset_top = 373.0
+offset_right = 343.0
+offset_bottom = 440.0
+text = "Open Direct Message"
+text_overrun_behavior = 2
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 500.0
+offset_top = 23.0
+offset_right = 704.0
+offset_bottom = 99.0
+theme_override_font_sizes/font_size = 26
+text = "Messages"
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 116.0
+offset_top = 176.0
+offset_right = 339.0
+offset_bottom = 252.0
+theme_override_font_sizes/font_size = 26
+text = "Direct Message"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DMUser" type="LineEdit" parent="."]
+offset_left = 111.0
+offset_top = 281.0
+offset_right = 343.0
+offset_bottom = 331.0
+placeholder_text = "Enter Username"
+alignment = 1
+
+[node name="GCButton" type="Button" parent="."]
+offset_left = 750.0
+offset_top = 371.0
+offset_right = 984.0
+offset_bottom = 438.0
+text = "Open Group Chat"
+text_overrun_behavior = 2
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 757.0
+offset_top = 174.0
+offset_right = 980.0
+offset_bottom = 250.0
+theme_override_font_sizes/font_size = 26
+text = "Group Chat"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GCUsers" type="LineEdit" parent="."]
+offset_left = 712.0
+offset_top = 279.0
+offset_right = 1024.0
+offset_bottom = 329.0
+placeholder_text = "Enter Usernames (Comma Separated)"
+alignment = 1
+
+[connection signal="pressed" from="BackToMenu" to="." method="_on_back_to_menu_pressed"]
+[connection signal="pressed" from="DMButton" to="." method="_on_dm_button_pressed"]
+[connection signal="pressed" from="GCButton" to="." method="_on_gc_button_pressed"]

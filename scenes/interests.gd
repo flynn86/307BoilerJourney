@@ -33,4 +33,4 @@ func _on_interest_3_text_changed():
 
 
 func _on_save_pressed():
-	get_tree().change_scene_to_file(Attributes.location)
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")

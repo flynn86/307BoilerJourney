@@ -22,6 +22,13 @@ bg_color = Color(0.266667, 0.266667, 0.266667, 1)
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_t28md")
 
+[node name="MessageButton" type="Button" parent="."]
+offset_left = 835.0
+offset_top = 280.0
+offset_right = 1070.0
+offset_bottom = 395.0
+text = "Messages"
+
 [node name="Label2" type="Label" parent="."]
 visible = false
 z_index = 1
@@ -165,6 +172,7 @@ text = "Find Friends"
 [connection signal="pressed" from="Panel/BackToMainMenuButton" to="." method="_on_back_to_main_menu_button_pressed"]
 [connection signal="pressed" from="Panel/CustomizeCharacterButton" to="." method="_on_customize_character_button_pressed"]
 [connection signal="pressed" from="Panel/HostServerButton" to="." method="_on_host_server_button_pressed"]
+[connection signal="pressed" from="MessageButton" to="." method="_on_message_button_pressed"]
 [connection signal="pressed" from="Panel/JoinServerButton" to="." method="_on_join_server_button_pressed"]
 [connection signal="pressed" from="Panel/GlobalChatButton" to="." method="_on_global_chat_button_pressed"]
 [connection signal="pressed" from="Panel/ServerRosterButton" to="." method="_on_server_roster_button_pressed"]

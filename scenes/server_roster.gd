@@ -8,6 +8,7 @@ func _ready():
 	if (data.size() == 0):
 		Attributes.serverName = ""
 		Attributes.isHost = false
+		SaveUtils.save()
 		get_tree().change_scene_to_file("res://scenes/menu.tscn")
 	else:
 		data_line += "Host: " + data[0].username + " , xp: " + str(data[0].xp) + " , class rank: " + data[0].rank + '\n'
