@@ -5,9 +5,12 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3vekh"]
 bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+border_color = Color(0.804995, 0.474866, 0.720932, 1)
+border_blend = true
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_30lc2"]
 bg_color = Color(0, 0, 0, 1)
+border_blend = true
 
 [sub_resource type="Theme" id="Theme_f34w2"]
 Button/font_sizes/font_size = 16

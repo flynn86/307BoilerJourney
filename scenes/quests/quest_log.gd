@@ -6,42 +6,42 @@ func _on_back_to_map_pressed():
 
 func _process(delta):
 	if Attributes.quest1_active and !Attributes.quest1_completed:
-		$StartQuest1.visible = false
-		$Quest1Status.visible = true
+		$Panel/StartQuest1.visible = false
+		$Panel/Quest1Status.visible = true
 	elif !Attributes.quest1_active and Attributes.quest1_completed:
-		$StartQuest1.visible = false
-		$Quest1Status.visible = true
-		$Quest1Status.text = "Completed"
+		$Panel/StartQuest1.visible = false
+		$Panel/Quest1Status.visible = true
+		$Panel/Quest1Status.text = "Completed"
 	else:
-		$StartQuest1.visible = true
-		$Quest1Status.visible = false
+		$Panel/StartQuest1.visible = true
+		$Panel/Quest1Status.visible = false
 	
 	if Attributes.quest2_active and !Attributes.quest2_completed:
-		$StartQuest2.visible = false
-		$Quest2Status.visible = true
+		$Panel/StartQuest2.visible = false
+		$Panel/Quest2Status.visible = true
 	elif !Attributes.quest2_active and Attributes.quest2_completed:
-		$StartQuest2.visible = false
-		$Quest2Status.visible = true
-		$Quest2Status.text = "Completed"
+		$Panel/StartQuest2.visible = false
+		$Panel/Quest2Status.visible = true
+		$Panel/Quest2Status.text = "Completed"
 	else:
-		$StartQuest2.visible = true
-		$Quest2Status.visible = false
+		$Panel/StartQuest2.visible = true
+		$Panel/Quest2Status.visible = false
 	
 	if Attributes.quest3_active and !Attributes.quest3_completed:
-		$StartQuest3.visible = false
-		$Quest3Status.visible = true
+		$Panel/StartQuest3.visible = false
+		$Panel/Quest3Status.visible = true
 	elif !Attributes.quest3_active and Attributes.quest3_completed:
-		$StartQuest3.visible = false
-		$Quest3Status.visible = true
-		$Quest3Status.text = "Completed"
+		$Panel/StartQuest3.visible = false
+		$Panel/Quest3Status.visible = true
+		$Panel/Quest3Status.text = "Completed"
 	else:
-		$StartQuest3.visible = true
-		$Quest3Status.visible = false
+		$Panel/StartQuest3.visible = true
+		$Panel/Quest3Status.visible = false
 	
 	if Attributes.quest3_active and Attributes.numCollected >= 3:
-		$StartQuest3.visible = false
-		$Quest3Status.visible = true
-		$Quest3Status.text = "Completed"
+		$Panel/StartQuest3.visible = false
+		$Panel/Quest3Status.visible = true
+		$Panel/Quest3Status.text = "Completed"
 
 
 func _on_start_quest_1_pressed():
