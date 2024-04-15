@@ -3,6 +3,14 @@ extends Panel
 func _ready():
 	if (Attributes.currentRest == "XXX"):
 		$Title.text = "Tripple XXX Family Restaurant: Reviews"
+		var image_path = "res://images/triple-xxx-drive-in.jpeg"
+		var image = load(image_path)
+		$TextureRect.texture = image
+	elif (Attributes.currentRest == "eleven"):
+		$Title.text = "8Eleven Modern Bistro: Reviews"
+		var image_path = "res://images/8_eleven.jpeg"
+		var image = load(image_path)
+		$TextureRect.texture = image
 	else: 
 		$Title.text = Attributes.currentRest
 	var data : Array = (Attributes.database).select_rows("%s_review" % Attributes.currentRest, "username != 'null'", ["*"])
@@ -21,6 +29,8 @@ func _ready():
 		var data_line : String = ""
 		for i in data.size():
 			data_line += "Review From: " + data[i].username + " on " + data[i].date + '\n' + "Description: " + data[i].description + '\n' + "Rating: " + data[i].rating + " Stars" + '\n' + '\n'
+		if data.size() == 0:
+			data_line = "No Reviews"
 		$Reviews.text = data_line
 	
 func _process(_delta):
