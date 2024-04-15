@@ -270,3 +270,11 @@ func _on_friends_list_pressed():
 	Attributes.location = "res://scenes/map/academic_map.tscn"
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/friends_list/friends_list.tscn")
+
+
+func _on_trade_pressed():
+	Attributes.xacademic = $CharacterBody2D.global_position.x
+	Attributes.yacademic = $CharacterBody2D.global_position.y
+	Attributes.location = "res://scenes/map/academic_map.tscn"
+	SaveUtils.save()
+	get_tree().change_scene_to_file("res://scenes/trading/trade_requests.tscn")
