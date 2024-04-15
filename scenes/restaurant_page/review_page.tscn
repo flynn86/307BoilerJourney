@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dko8ljys0vpv0"]
+[gd_scene load_steps=5 format=3 uid="uid://dko8ljys0vpv0"]
 
 [ext_resource type="Script" path="res://scenes/restaurant_page/review_page.gd" id="1_ut2em"]
+[ext_resource type="FontFile" uid="uid://bskrd8ld3mnw3" path="res://fonts/KOMIKAX_.ttf" id="2_k6djd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hupuq"]
 bg_color = Color(0, 0, 0, 1)
@@ -18,34 +19,68 @@ script = ExtResource("1_ut2em")
 [node name="LineEdit" type="LineEdit" parent="."]
 layout_mode = 0
 offset_left = 112.0
-offset_top = 536.0
+offset_top = 560.0
 offset_right = 544.0
-offset_bottom = 592.0
+offset_bottom = 616.0
+placeholder_text = "Enter Description: "
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 600.0
-offset_top = 536.0
-offset_right = 728.0
-offset_bottom = 592.0
-text = "Leave
-"
+offset_left = 888.0
+offset_top = 560.0
+offset_right = 1024.0
+offset_bottom = 616.0
+text = "Leave Review"
 
-[node name="Label" type="Label" parent="."]
+[node name="Reviews" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 88.0
-offset_right = 1032.0
-offset_bottom = 456.0
+offset_left = 88.0
+offset_top = 120.0
+offset_right = 528.0
+offset_bottom = 488.0
+theme_override_fonts/normal_font = ExtResource("2_k6djd")
+theme_override_font_sizes/normal_font_size = 20
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
 offset_left = 24.0
 offset_top = 24.0
-offset_right = 296.0
-offset_bottom = 80.0
+offset_right = 168.0
+offset_bottom = 72.0
 text = "Return 
 "
+
+[node name="LineEdit2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 560.0
+offset_right = 848.0
+offset_bottom = 616.0
+placeholder_text = "Enter Rating (1-5):"
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 32.0
+offset_right = 792.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 25
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 504.0
+offset_right = 688.0
+offset_bottom = 539.0
+theme_override_font_sizes/font_size = 25
+text = "Leave A Review "
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 656.0
+offset_top = 120.0
+offset_right = 1096.0
+offset_bottom = 488.0
 
 [connection signal="pressed" from="Button" to="." method="_leave_review_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_back_to_menu_pressed"]

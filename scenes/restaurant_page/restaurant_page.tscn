@@ -242,7 +242,7 @@ theme_override_font_sizes/font_size = 20
 
 [connection signal="pressed" from="Button" to="." method="_on_return_pressed"]
 [connection signal="pressed" from="tripple_XXX/Button" to="." method="_on_trippleXXX_pressed"]
-[connection signal="pressed" from="tripple_XXX/Button2" to="." method="_on_leave_pressed" binds= ["Tripple XXX Family Restaurant"]]
+[connection signal="pressed" from="tripple_XXX/Button2" to="." method="_on_leave_pressed" binds= ["XXX"]]
 [connection signal="pressed" from="8_11/Button" to="." method="_on_811_pressed"]
 [connection signal="pressed" from="Harrys/Button" to="." method="_on_harrys_pressed"]
 [connection signal="pressed" from="bru/Button" to="." method="_on_bru_pressed"]
