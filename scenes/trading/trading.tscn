@@ -132,7 +132,8 @@ text = "- Your Offer -"
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 161
-visible_ratio = -0.1
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="your_slot_container" type="GridContainer" parent="Inventory_container/Inventory_container/Inventory"]
 layout_mode = 0
@@ -221,7 +222,8 @@ text = "- Their Offer -"
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 161
-visible_ratio = -0.0666667
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="your_slot_container" type="GridContainer" parent="Inventory_container/Inventory_container2/Inventory"]
 layout_mode = 0

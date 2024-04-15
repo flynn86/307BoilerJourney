@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://b50m5g6211mvn"]
 
 [ext_resource type="Script" path="res://scenes/friends_list/friends_list.gd" id="1_p5shr"]
-[ext_resource type="FontFile" uid="uid://7x61o34kfaic" path="res://fonts/KOMIKAX_.ttf" id="2_epl2e"]
+[ext_resource type="FontFile" uid="uid://c6wawxex8md7y" path="res://fonts/KOMIKAX_.ttf" id="2_epl2e"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qqusj"]
 bg_color = Color(0.266667, 0.266667, 0.266667, 1)
@@ -32,6 +32,7 @@ offset_bottom = 657.0
 theme = SubResource("Theme_j4ol6")
 
 [node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 710.0
 offset_top = 460.0
 offset_right = 892.0
@@ -39,6 +40,7 @@ offset_bottom = 505.0
 text = "Send Friend Request"
 
 [node name="LineEdit" type="LineEdit" parent="Panel"]
+layout_mode = 0
 offset_left = 628.0
 offset_top = 506.0
 offset_right = 849.0
@@ -48,6 +50,7 @@ placeholder_text = "Enter Username"
 alignment = 1
 
 [node name="SendRequest" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 878.0
 offset_top = 511.0
 offset_right = 978.0
@@ -56,6 +59,7 @@ text = "Send"
 
 [node name="InvalidUser" type="Label" parent="Panel"]
 visible = false
+layout_mode = 0
 offset_left = 660.0
 offset_top = 585.0
 offset_right = 914.0
@@ -66,6 +70,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 622.0
 offset_top = 89.0
 offset_right = 959.0
@@ -75,6 +80,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 83.0
 offset_top = 33.0
 offset_right = 416.0
@@ -87,6 +93,7 @@ vertical_alignment = 1
 justification_flags = 162
 
 [node name="Close" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 995.0
 offset_top = 16.0
 offset_right = 1132.0
@@ -94,6 +101,7 @@ offset_bottom = 69.0
 text = "Close"
 
 [node name="Refresh" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 845.0
 offset_top = 16.0
 offset_right = 982.0
@@ -101,6 +109,7 @@ offset_bottom = 69.0
 text = "Refresh"
 
 [node name="FriendReqList" type="ColorRect" parent="Panel"]
+layout_mode = 0
 offset_left = 625.0
 offset_top = 160.0
 offset_right = 969.0
@@ -120,6 +129,7 @@ layout_mode = 2
 alignment = 2
 
 [node name="Friends" type="ColorRect" parent="Panel"]
+layout_mode = 0
 offset_left = 56.0
 offset_top = 124.0
 offset_right = 428.0
