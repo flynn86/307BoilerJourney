@@ -1,11 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://mhq63m73mxvj"]
+[gd_scene load_steps=10 format=3 uid="uid://mhq63m73mxvj"]
 
-[ext_resource type="Theme" uid="uid://d4dv57x0oy02n" path="res://new_theme.tres" id="1_3s3yi"]
 [ext_resource type="Script" path="res://scenes/restaurant_page/restaurant_page.gd" id="2_8i2x0"]
 [ext_resource type="Texture2D" uid="uid://b8ssg3oc30j53" path="res://images/triple-xxx-drive-in.jpeg" id="3_boamj"]
 [ext_resource type="Texture2D" uid="uid://ccyy5wuvqcx3u" path="res://images/8_eleven.jpeg" id="4_hwf8q"]
 [ext_resource type="Texture2D" uid="uid://dqkhxc46thfxy" path="res://images/Harrys.jpeg" id="5_ngkfv"]
 [ext_resource type="Texture2D" uid="uid://bh1f48fywcy0j" path="res://images/bru.jpeg" id="6_woact"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hupuq"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_gnbh0"]
+Panel/styles/panel = SubResource("StyleBoxFlat_hupuq")
 
 [sub_resource type="Theme" id="Theme_noto5"]
 
@@ -19,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_3s3yi")
+theme = SubResource("Theme_gnbh0")
 script = ExtResource("2_8i2x0")
 
 [node name="Button" type="Button" parent="."]
@@ -45,8 +50,8 @@ offset_left = 120.0
 offset_top = 96.0
 offset_right = 440.0
 offset_bottom = 121.0
-theme_override_font_sizes/font_size = 15
-text = "Tripple XXX Family ResTaurant"
+theme_override_font_sizes/font_size = 17
+text = "Tripple XXX Family Restaurant"
 
 [node name="TextureRect" type="TextureRect" parent="tripple_XXX"]
 layout_mode = 1
@@ -67,7 +72,7 @@ offset_left = -7.0
 offset_top = 192.0
 offset_right = 153.0
 offset_bottom = 234.0
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 13
 text = "View Information
  and Rating"
 
@@ -77,7 +82,7 @@ offset_left = 680.0
 offset_top = 96.0
 offset_right = 1039.0
 offset_bottom = 130.0
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 17
 text = "8Eleven Modern Bistro"
 
 [node name="TextureRect" type="TextureRect" parent="8_11"]
@@ -100,7 +105,7 @@ offset_left = -8.0
 offset_top = 192.0
 offset_right = 152.0
 offset_bottom = 234.0
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 13
 text = "View Information
  and Rating"
 
@@ -110,7 +115,7 @@ offset_left = 112.0
 offset_top = 368.0
 offset_right = 471.0
 offset_bottom = 402.0
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 17
 text = "Harry's Chocolate Shop"
 
 [node name="TextureRect" type="TextureRect" parent="Harrys"]
@@ -133,7 +138,7 @@ offset_left = -8.0
 offset_top = 192.0
 offset_right = 152.0
 offset_bottom = 234.0
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 13
 text = "View Information
  and Rating"
 
@@ -143,7 +148,7 @@ offset_left = 672.0
 offset_top = 368.0
 offset_right = 1031.0
 offset_bottom = 402.0
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 17
 text = "BRU Burger Bar"
 
 [node name="TextureRect" type="TextureRect" parent="bru"]
@@ -166,7 +171,7 @@ offset_left = -8.0
 offset_top = 192.0
 offset_right = 152.0
 offset_bottom = 234.0
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 13
 text = "View Information
  and Rating"
 

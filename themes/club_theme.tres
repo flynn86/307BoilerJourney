@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=8 format=3 uid="uid://bw38c741am4hj"]
 
-[ext_resource type="FontFile" uid="uid://dfyoo5kj2trpo" path="res://fonts/varsity_regular.ttf" id="1_qwogg"]
+[ext_resource type="FontFile" uid="uid://jgrm0okvvno1" path="res://fonts/varsity_regular.ttf" id="1_qwogg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6dlew"]
 content_margin_left = 4.0
@@ -76,7 +76,7 @@ bg_color = Color(0, 0, 0, 1)
 
 [resource]
 default_font = ExtResource("1_qwogg")
-Button/colors/font_color = Color(0.709804, 0.65098, 0, 1)
+Button/colors/font_color = Color(1, 1, 1, 1)
 Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
 Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
@@ -92,13 +92,13 @@ Button/colors/icon_pressed_color = Color(0, 0, 0, 1)
 Button/constants/h_separation = 4
 Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
-Button/font_sizes/font_size = 20
+Button/font_sizes/font_size = 15
 Button/styles/disabled = SubResource("StyleBoxFlat_6dlew")
 Button/styles/focus = SubResource("StyleBoxFlat_ksfww")
 Button/styles/hover = SubResource("StyleBoxFlat_jodvp")
 Button/styles/normal = SubResource("StyleBoxFlat_vtxho")
 Button/styles/pressed = SubResource("StyleBoxFlat_odnxc")
-Label/colors/font_color = Color(0.709804, 0.65098, 0, 1)
+Label/colors/font_color = Color(1, 1, 1, 1)
 Panel/styles/panel = SubResource("StyleBoxFlat_om0pf")
-RichTextLabel/colors/default_color = Color(0.709804, 0.65098, 0, 1)
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
 RichTextLabel/font_sizes/normal_font_size = 30
