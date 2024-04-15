@@ -282,8 +282,12 @@ func _on_trade_pressed():
 func _on_time_button_pressed():
 	if (Attributes.day_night_ui_toggle == true):
 		time_animation(false)
+		Attributes.day_night_ui_toggle = false;
+		SaveUtils.save()
 	else:
 		time_animation(true)
+		Attributes.day_night_ui_toggle = true;
+		SaveUtils.save()
 		
 func time_animation(toggle : bool):
 	if (toggle == true):
