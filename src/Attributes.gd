@@ -149,7 +149,8 @@ var interest_1: String = ""
 var interest_2: String = ""
 var interest_3: String = ""
 
-
+# Togglable UI
+var day_night_ui_toggle : bool = true
 
 
 
@@ -294,3 +295,4 @@ func reset(user: String):
 	interest_1 = ""
 	interest_2 = ""
 	interest_3 = ""
+	day_night_ui_toggle = true
