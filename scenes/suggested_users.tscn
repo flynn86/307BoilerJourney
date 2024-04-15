@@ -15,9 +15,9 @@ text = "Suggested users"
 
 [node name="suggestion1" type="Label" parent="."]
 offset_left = 32.0
-offset_top = 142.0
-offset_right = 643.0
-offset_bottom = 442.0
+offset_top = 85.0
+offset_right = 654.0
+offset_bottom = 465.0
 scale = Vector2(1.2, 1.2)
 
 [node name="goBack" type="Button" parent="."]
@@ -38,10 +38,10 @@ text = "Refresh Suggestions"
 
 [node name="InvalidUser" type="Label" parent="."]
 visible = false
-offset_left = 592.0
-offset_top = 567.0
-offset_right = 846.0
-offset_bottom = 611.0
+offset_left = 419.0
+offset_top = 564.0
+offset_right = 673.0
+offset_bottom = 608.0
 theme_override_colors/font_color = Color(0.968627, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "User does not exist"
@@ -49,42 +49,42 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="AddFriend1" type="Button" parent="."]
-offset_left = 894.0
-offset_top = 123.0
-offset_right = 1007.0
-offset_bottom = 157.0
+offset_left = 837.0
+offset_top = 105.0
+offset_right = 950.0
+offset_bottom = 139.0
 scale = Vector2(1.5, 1.5)
 text = "Add Friend"
 
 [node name="AddFriend2" type="Button" parent="."]
-offset_left = 893.0
-offset_top = 195.0
-offset_right = 1006.0
-offset_bottom = 229.0
+offset_left = 839.0
+offset_top = 189.0
+offset_right = 952.0
+offset_bottom = 223.0
 scale = Vector2(1.5, 1.5)
 text = "Add Friend"
 
 [node name="AddFriend3" type="Button" parent="."]
-offset_left = 896.0
-offset_top = 269.0
-offset_right = 1009.0
-offset_bottom = 303.0
+offset_left = 843.0
+offset_top = 282.0
+offset_right = 956.0
+offset_bottom = 316.0
 scale = Vector2(1.5, 1.5)
 text = "Add Friend"
 
 [node name="AddFriend4" type="Button" parent="."]
-offset_left = 899.0
-offset_top = 343.0
-offset_right = 1012.0
-offset_bottom = 377.0
+offset_left = 845.0
+offset_top = 385.0
+offset_right = 958.0
+offset_bottom = 419.0
 scale = Vector2(1.5, 1.5)
 text = "Add Friend"
 
 [node name="AddFriend5" type="Button" parent="."]
-offset_left = 900.0
-offset_top = 422.0
-offset_right = 1013.0
-offset_bottom = 456.0
+offset_left = 847.0
+offset_top = 473.0
+offset_right = 960.0
+offset_bottom = 507.0
 scale = Vector2(1.5, 1.5)
 text = "Add Friend"
 
