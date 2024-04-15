@@ -11,8 +11,51 @@ func _ready():
 		var image_path = "res://images/8_eleven.jpeg"
 		var image = load(image_path)
 		$TextureRect.texture = image
+	elif (Attributes.currentRest == "bru"):
+		$Title.text = "Bru Burger Bar: Reviews"
+		var image_path = "res://images/bru_update.jpeg"
+		var image = load(image_path)
+		$TextureRect.texture = image
+	elif (Attributes.currentRest == "WALC"):
+		$Title.text = "Wilmeth Active Learning Center"
+		var image_path = "res://location_information/loc_image/%s.jpeg" % Attributes.currentRest
+		var image = load(image_path)
+		$TextureRect.texture = image
+	elif (Attributes.currentRest == "ARMS"):
+		$Title.text = "Neil Armstrong Hall of Engineering"
+		var image_path = "res://location_information/loc_image/%s.jpeg" % Attributes.currentRest
+		var image = load(image_path)
+		$TextureRect.texture = image
+	elif (Attributes.currentRest == "ELLT"):
+		$Title.text = "Elliot Hall of Music"
+		var image_path = "res://location_information/loc_image/%s.jpeg" % Attributes.currentRest
+		var image = load(image_path)
+		$TextureRect.texture = image
+	elif (Attributes.currentRest == "PHYS"):
+		$Title.text = "Purdue Physics Building"
+		var image_path = "res://location_information/loc_image/%s.jpeg" % Attributes.currentRest
+		var image = load(image_path)
+		$TextureRect.texture = image
+	elif (Attributes.currentRest == "WTHR"):
+		$Title.text = "Wetherill Hall of Chemistry"
+		var image_path = "res://location_information/loc_image/%s.jpeg" % Attributes.currentRest
+		var image = load(image_path)
+		$TextureRect.texture = image
+	elif (Attributes.currentRest == "STEW"):
+		$Title.text = "Stewart Center"
+		var image_path = "res://location_information/loc_image/%s.jpeg" % Attributes.currentRest
+		var image = load(image_path)
+		$TextureRect.texture = image
+	elif (Attributes.currentRest == "HAMP"):
+		$Title.text = "Hampton Hall"
+		var image_path = "res://location_information/loc_image/%s.jpeg" % Attributes.currentRest
+		var image = load(image_path)
+		$TextureRect.texture = image
 	else: 
-		$Title.text = Attributes.currentRest
+		$Title.text = "Harry's Choclate Shop: Reviews"
+		var image_path = "res://images/Harrys.jpeg"
+		var image = load(image_path)
+		$TextureRect.texture = image
 	var data : Array = (Attributes.database).select_rows("%s_review" % Attributes.currentRest, "username != 'null'", ["*"])
 	if (Attributes.database).error_message.contains("no such table:"):
 		var table = {
@@ -55,4 +98,7 @@ func _leave_review_pressed():
 	(Attributes.database).insert_row("%s_review" % Attributes.currentRest, data)
 
 func _on_back_to_menu_pressed():
-	get_tree().change_scene_to_file("res://scenes/restaurant_page/restaurant_page.tscn")
+	if Attributes.currentRest == "XXX" ||  Attributes.currentRest == "eleven" ||   Attributes.currentRest == "bru" ||   Attributes.currentRest == "harrys":
+		get_tree().change_scene_to_file("res://scenes/restaurant_page/restaurant_page.tscn")
+	else: 
+		get_tree().change_scene_to_file("res://scenes/location_tab/location_page.tscn")
