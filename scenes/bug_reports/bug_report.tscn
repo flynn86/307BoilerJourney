@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnxxhsr16r01o"]
+
+[ext_resource type="Script" path="res://scenes/bug_reports/bug_report.gd" id="1_trnte"]
+
+[node name="BugReport" type="Node2D"]
+script = ExtResource("1_trnte")
+
+[node name="Submit" type="Button" parent="."]
+offset_left = 496.0
+offset_top = 491.0
+offset_right = 665.0
+offset_bottom = 553.0
+theme_override_font_sizes/font_size = 24
+text = "Submit"
+
+[node name="Close" type="Button" parent="."]
+offset_left = 882.0
+offset_top = 22.0
+offset_right = 1129.0
+offset_bottom = 84.0
+theme_override_font_sizes/font_size = 24
+text = "Back to Main Menu"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 432.0
+offset_top = 72.0
+offset_right = 771.0
+offset_bottom = 151.0
+theme_override_font_sizes/font_size = 34
+text = "Submit a Bug Report"
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 163.0
+offset_top = 146.0
+offset_right = 997.0
+offset_bottom = 459.0
+theme_override_font_sizes/font_size = 24
+placeholder_text = "   Please describe the bug that was found and the sequence of events 
+   that led to this bug:"
+wrap_mode = 1
+
+[connection signal="pressed" from="Submit" to="." method="_on_submit_pressed"]
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]

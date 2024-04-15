@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://24pr818a6nqn"]
 
 [ext_resource type="Script" path="res://SelectAvatar.gd" id="1_8wdn5"]
-[ext_resource type="Texture2D" uid="uid://35asql5p6n4f" path="res://characters/assets/Bodies/16x16/Body_02.png" id="2_t6tgu"]
+[ext_resource type="Texture2D" uid="uid://c2r70y0lpk83y" path="res://characters/assets/Bodies/16x16/Body_02.png" id="2_t6tgu"]
 
 [node name="SelectAvatar" type="Node2D"]
 position = Vector2(215, 133)

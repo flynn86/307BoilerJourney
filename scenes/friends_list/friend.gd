@@ -9,4 +9,6 @@ func _ready():
 
 
 func _on_delete_pressed():
-	pass # Replace with function body.
+	(Attributes.database).delete_rows("Friend_List", "friend1 = '" + currentUser + "' AND friend2 = '" + friend + "'")
+	(Attributes.database).delete_rows("Friend_List", "friend2 = '" + currentUser + "' AND friend1 = '" + friend + "'")
+	Attributes.friends_list_changed = true

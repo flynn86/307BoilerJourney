@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var username_entry = $LineEdit
+@onready var username_entry = $Panel/LineEdit
 
 func _ready():
 	Attributes.database = SQLite.new()
@@ -94,7 +94,11 @@ func _ready():
 		"last_daily_question_time" : {"data_type":"String"},
 		# Time and Day/Night Cycle
 		"time" : {"data_type":"real"},
-		"day_night_enabled" : {"data_type":"bool"}
+		"day_night_enabled" : {"data_type":"bool"},
+		"interest_1" : {"data_type":"text"},
+		"interest_2" : {"data_type":"text"},
+		"interest_3" : {"data_type":"text"}
+		
 	}
 	(Attributes.database).create_table("Players", table)
 	var friend_reqs = {
@@ -110,13 +114,13 @@ func _ready():
 
 func _on_start_new_game_pressed():
 	if username_entry.text == "":
-		$Label.text = "You must enter a username before starting a game."
-		$Label.visible = true
+		$Panel/Label.text = "You must enter a username before starting a game."
+		$Panel/Label.visible = true
 	else:
 		Attributes.username = username_entry.text
 		if ((Attributes.database).select_rows("Players", "username = '" + Attributes.username + "'", ["*"])):
-			$Label.text = "Username taken."
-			$Label.visible = true
+			$Panel/Label.text = "Username taken."
+			$Panel/Label.visible = true
 		else:
 			Attributes.reset(Attributes.username)
 			SaveUtils.initialize()
@@ -124,27 +128,27 @@ func _on_start_new_game_pressed():
 
 func _on_load_game_pressed():
 	if username_entry.text == "":
-		$Label.text = "You must enter the username of the game you want to load."
-		$Label.visible = true
+		$Panel/Label.text = "You must enter the username of the game you want to load."
+		$Panel/Label.visible = true
 	else:
 		Attributes.username = username_entry.text
 		if (!(Attributes.database).select_rows("Players", "username = '" + Attributes.username + "'", ["*"])):
-			$Label.text = "Username does not exist."
-			$Label.visible = true
+			$Panel/Label.text = "Username does not exist."
+			$Panel/Label.visible = true
 		else:
 			SaveUtils.load()
 			get_tree().change_scene_to_file(Attributes.location)
 
 func _on_delete_game_pressed():
 	if username_entry.text == "":
-		$Label.text = "You must enter the username of the game you want to delete."
-		$Label.visible = true
+		$Panel/Label.text = "You must enter the username of the game you want to delete."
+		$Panel/Label.visible = true
 	else:
 		Attributes.username = username_entry.text
 		if (!(Attributes.database).select_rows("Players", "username = '" + Attributes.username + "'", ["*"])):
-			$Label.text = "Username does not exist."
-			$Label.visible = true
+			$Panel/Label.text = "Username does not exist."
+			$Panel/Label.visible = true
 		else:
 			SaveUtils.delete()
-			$Label.text = "Game Successfully Deleted."
-			$Label.visible = true
+			$Panel/Label.text = "Game Successfully Deleted."
+			$Panel/Label.visible = true

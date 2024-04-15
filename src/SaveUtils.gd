@@ -88,7 +88,11 @@ func initialize():
 		"last_daily_question_time" = "" if (Attributes.last_daily_question_time.is_empty()) else Time.get_datetime_string_from_datetime_dict(Attributes.last_daily_question_time, false),
 		# Time and Day/Night Cycle
 		"time" = Attributes.time,
-		"day_night_enabled" = Attributes.day_night_enabled
+		"day_night_enabled" = Attributes.day_night_enabled,
+		"interest_1" = Attributes.interest_1,
+		"interest_2" = Attributes.interest_2,
+		"interest_3" = Attributes.interest_3
+		
 	}
 	(Attributes.database).insert_row("Players", data)
 
@@ -181,7 +185,11 @@ func save():
 		
 		# Time and Day/Night Cycle
 		"time" = Attributes.time,
-		"day_night_enabled" = Attributes.day_night_enabled
+		"day_night_enabled" = Attributes.day_night_enabled,
+		"interest_1" = Attributes.interest_1,
+		"interest_2" = Attributes.interest_2,
+		"interest_3" = Attributes.interest_3
+		
 	})
 
 func load():
@@ -324,6 +332,10 @@ func load():
 	# Time and Day/Night
 	Attributes.time = player[0].time
 	Attributes.day_night_enabled = player[0].day_night_enabled
+	Attributes.interest_1 = player[0].interest_1
+	Attributes.interest_2 = player[0].interest_2
+	Attributes.interest_3 = player[0].interest_3
+	
 
 func delete():
 	(Attributes.database).delete_rows("Players", "username == '%s'" % Attributes.username)

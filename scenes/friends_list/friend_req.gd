@@ -18,8 +18,10 @@ func _on_accept_pressed():
 		"friend1" = f_recipient,
 		"friend2" = f_sender
 	}
-	(Attributes.database).insert_row("Friend_List", data1)
-	(Attributes.database).insert_row("Friend_List", data2)
+	if (!((Attributes.database).select_rows("Friend_List", "friend1 = '" + f_sender + "' AND friend2 = '" + f_recipient + "'", ["*"]))):
+		(Attributes.database).insert_row("Friend_List", data1)
+		(Attributes.database).insert_row("Friend_List", data2)
+	Attributes.friends_list_changed = true
 	self.visible = false
 	
 
