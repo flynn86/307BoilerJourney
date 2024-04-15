@@ -316,3 +316,26 @@ func time_animation(toggle : bool):
 		get_node("CharacterBody2D/Player/Time Button").rotation_degrees = 0
 		get_node("CharacterBody2D/Player/Time Button").position = Vector2(-900, 420)
 		$CharacterBody2D/Player/DayNightCycleUI.position = Vector2(-1125, 372)
+
+
+func _on_ui_toggle_1_pressed():
+	if (Attributes.ui_toggle_1 == true):
+		Attributes.ui_toggle_1 = false;
+		SaveUtils.save()
+		ui_toggle_1(false)
+	else:
+		Attributes.ui_toggle_1 = true;
+		SaveUtils.save()
+		ui_toggle_1(true)
+		
+func ui_toggle_1(toggle : bool):
+	if (toggle == true):
+		$CharacterBody2D/Player/UIToggle1.text = "Hide"
+	else:
+		$CharacterBody2D/Player/UIToggle1.text = "Show"
+	$CharacterBody2D/Player/Button.visible = toggle
+	$CharacterBody2D/Player/MenuButton.visible = toggle
+	$CharacterBody2D/Player/variants.visible = toggle
+	$CharacterBody2D/Player/ViewSchedule.visible = toggle
+	$CharacterBody2D/Player/Inventory.visible = toggle
+	get_node("CharacterBody2D/Player/class rank").visible = toggle
