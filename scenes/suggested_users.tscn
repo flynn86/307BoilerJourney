@@ -13,14 +13,6 @@ offset_bottom = 50.0
 scale = Vector2(2, 2)
 text = "Suggested users"
 
-[node name="AddFriend" type="Button" parent="."]
-offset_left = 894.0
-offset_top = 123.0
-offset_right = 1007.0
-offset_bottom = 157.0
-scale = Vector2(1.5, 1.5)
-text = "Add Friend"
-
 [node name="suggestion1" type="Label" parent="."]
 offset_left = 32.0
 offset_top = 142.0
@@ -56,6 +48,14 @@ text = "User does not exist"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="AddFriend1" type="Button" parent="."]
+offset_left = 894.0
+offset_top = 123.0
+offset_right = 1007.0
+offset_bottom = 157.0
+scale = Vector2(1.5, 1.5)
+text = "Add Friend"
+
 [node name="AddFriend2" type="Button" parent="."]
 offset_left = 893.0
 offset_top = 195.0
@@ -88,5 +88,10 @@ offset_bottom = 456.0
 scale = Vector2(1.5, 1.5)
 text = "Add Friend"
 
-[connection signal="pressed" from="AddFriend" to="." method="_on_add_friend_pressed"]
+[connection signal="pressed" from="goBack" to="." method="_on_go_back_pressed"]
+[connection signal="pressed" from="refresh" to="." method="_on_refresh_pressed"]
+[connection signal="pressed" from="AddFriend1" to="." method="_on_add_friend_1_pressed"]
 [connection signal="pressed" from="AddFriend2" to="." method="_on_add_friend_2_pressed"]
+[connection signal="pressed" from="AddFriend3" to="." method="_on_add_friend_3_pressed"]
+[connection signal="pressed" from="AddFriend4" to="." method="_on_add_friend_4_pressed"]
+[connection signal="pressed" from="AddFriend5" to="." method="_on_add_friend_5_pressed"]

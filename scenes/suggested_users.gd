@@ -1,24 +1,31 @@
 extends Node2D
+var rng = RandomNumberGenerator.new()
 
-
+var users = []
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	(Attributes.database).query("SELECT username, interest_1, interest_2, interest_3 FROM Players WHERE username != '" + Attributes.username + "'")
+	var randomlist = []
+	var n = 0
+	users = []
+	for i in range(0,5):
+		n = rng.randi_range(0,(Attributes.database).query_result.size())
+		randomlist.append(n)
+	var str = ""
+	for i in (Attributes.database).query_result:
+		users.append(i["username"])
+		str += "Username : " + i["username"] + "\n" + "Interests : " + i["interest_1"] + ", " + i["interest_2"] + ", " + i["interest_3"] + "\n"
+	$suggestion1.text = str
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
-var user1 = ""
-var user2 = ""
-var user3 = ""
-var user4 = ""
-var user5 = ""
 
 
-func _on_add_friend_pressed():
-	var username = user1
+func _on_add_friend_1_pressed():
+	var username = users[0]
 	if (username == Attributes.username):
 		$InvalidUser.text = "Cannot friend yourself :("
 		$InvalidUser.visible = true
@@ -44,7 +51,7 @@ func _on_add_friend_pressed():
 
 
 func _on_add_friend_2_pressed():
-	var username = user1
+	var username = users[1]
 	if (username == Attributes.username):
 		$InvalidUser.text = "Cannot friend yourself :("
 		$InvalidUser.visible = true
@@ -66,7 +73,7 @@ func _on_add_friend_2_pressed():
 		(Attributes.database).insert_row("Friend_Reqs", data)
 		
 func _on_add_friend_3_pressed():
-	var username = user1
+	var username = users[2]
 	if (username == Attributes.username):
 		$InvalidUser.text = "Cannot friend yourself :("
 		$InvalidUser.visible = true
@@ -88,7 +95,7 @@ func _on_add_friend_3_pressed():
 		(Attributes.database).insert_row("Friend_Reqs", data)
 		
 func _on_add_friend_4_pressed():
-	var username = user1
+	var username = users[3]
 	if (username == Attributes.username):
 		$InvalidUser.text = "Cannot friend yourself :("
 		$InvalidUser.visible = true
@@ -110,7 +117,7 @@ func _on_add_friend_4_pressed():
 		(Attributes.database).insert_row("Friend_Reqs", data)
 		
 func _on_add_friend_5_pressed():
-	var username = user1
+	var username = users[4]
 	if (username == Attributes.username):
 		$InvalidUser.text = "Cannot friend yourself :("
 		$InvalidUser.visible = true
@@ -130,3 +137,13 @@ func _on_add_friend_5_pressed():
 			"recipient" = username
 		}
 		(Attributes.database).insert_row("Friend_Reqs", data)
+
+
+
+
+func _on_refresh_pressed():
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+
+
+func _on_go_back_pressed():
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")
