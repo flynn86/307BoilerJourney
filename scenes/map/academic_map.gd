@@ -338,6 +338,7 @@ func ui_toggle_1(toggle : bool):
 	$CharacterBody2D/Player/variants.visible = toggle
 	$CharacterBody2D/Player/ViewSchedule.visible = toggle
 	$CharacterBody2D/Player/Inventory.visible = toggle
+	$CharacterBody2D/Player/DayNight.visible = toggle
 	get_node("CharacterBody2D/Player/class rank").visible = toggle
 
 
@@ -361,3 +362,21 @@ func ui_toggle_2(toggle : bool):
 	$CharacterBody2D/Player/Suggestions.visible = toggle
 	$CharacterBody2D/Player/DailyTrivia.visible = toggle
 	$CharacterBody2D/Player/QuestLog.visible = toggle
+
+
+func _on_minimap_toggle_pressed():
+	if (Attributes.minimap_toggle == true):
+		Attributes.minimap_toggle = false;
+		SaveUtils.save()
+		minimap_toggle(false)
+	else:
+		Attributes.minimap_toggle = true;
+		SaveUtils.save()
+		minimap_toggle(true)
+		
+func minimap_toggle(toggle : bool):
+	if (toggle == true):
+		$CharacterBody2D/Player/MinimapToggle.text = "Hide"
+	else:
+		$CharacterBody2D/Player/MinimapToggle.text = "Show"
+	$CharacterBody2D/Player/SubViewportContainer.visible = toggle
