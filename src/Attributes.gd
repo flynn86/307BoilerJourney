@@ -16,6 +16,7 @@ var location: String = "res://scenes/map/academic_map.tscn"
 var rank: String = "Freshman"
 var serverName: String = ""
 var isHost: bool = false
+var currentRest = ""
 
 # collectables
 var numCollected: int = 0

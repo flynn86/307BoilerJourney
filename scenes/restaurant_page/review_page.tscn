@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dko8ljys0vpv0"]
+
+[ext_resource type="Script" path="res://scenes/restaurant_page/review_page.gd" id="1_ut2em"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hupuq"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_hff7f"]
+Panel/styles/panel = SubResource("StyleBoxFlat_hupuq")
+
+[node name="ReviewPage" type="Panel"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource("Theme_hff7f")
+script = ExtResource("1_ut2em")

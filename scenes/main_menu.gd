@@ -18,6 +18,7 @@ func _ready():
 		"rank" : {"data_type":"text"},
 		"serverName" : {"data_type":"text"},
 		"isHost" : {"data_type":"bool"},
+		"currentRest" : {"data_type":"text"},
 		
 		# collectables
 		

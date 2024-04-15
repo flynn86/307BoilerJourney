@@ -12,7 +12,7 @@ func initialize():
 		"rank" = Attributes.rank,
 		"serverName" = Attributes.serverName,
 		"isHost" = Attributes.isHost,
-		
+		"currentRest" = Attributes.currentRest,
 		# collectables
 		
 		"numCollected" = Attributes.numCollected,
@@ -109,6 +109,7 @@ func save():
 		"rank" = Attributes.rank,
 		"serverName" = Attributes.serverName,
 		"isHost" = Attributes.isHost,
+		"currentRest" = Attributes.currentRest,
 		
 		# collectables
 		
