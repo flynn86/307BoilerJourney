@@ -104,6 +104,8 @@ func _ready():
 		"ui_toggle_2" : {"data_type":"bool"},
 		"minimap_toggle" : {"data_type":"bool"},
 		"trade_req" : {"data_type":"bool"},
+		"trade_sender":{"data_type":"text"},
+		"trade_receiver":{"data_type":"text"}
 	}
 	(Attributes.database).create_table("Players", table)
 	var friend_reqs = {

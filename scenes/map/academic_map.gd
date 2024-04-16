@@ -1,5 +1,7 @@
 extends Node2D
 
+var frame_counter = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$CharacterBody2D.global_position = Vector2(float(Attributes.xacademic),float(Attributes.yacademic))
@@ -180,17 +182,24 @@ func _process(delta):
 		if (Attributes.rank != "Senior"):
 			get_node("CharacterBody2D/Panel2").visible = true
 		Attributes.rank = "Senior"
-	# Checks for trade requests sent to this user
-	if (Attributes.trade_req == false):
-		(Attributes.database).query("SELECT sender FROM Trade_Requests WHERE receiver = '" + Attributes.username + "'" + " AND status = 0")
+	frame_counter += 1
+	
+	if (frame_counter > 20):
+		# Checks for trade requests sent to this user
+		if (Attributes.trade_req == false):
+			(Attributes.database).query("SELECT sender FROM Trade_Requests WHERE receiver = '" + Attributes.username + "'" + " AND status = 0")
+			if ((Attributes.database).query_result):
+				var sender = (Attributes.database).query_result[0]["sender"]
+				$CharacterBody2D/Player/Trade_Request_Notif.send_trade_request(sender)
+		# Checks for trade accepts sent by this user
+		(Attributes.database).query("SELECT * FROM Trade_Requests WHERE sender = '" + Attributes.username + "'" + " AND status = 1")
 		if ((Attributes.database).query_result):
-			var sender = (Attributes.database).query_result[0]["sender"]
-			$CharacterBody2D/Player/Trade_Request_Notif.send_trade_request(sender)
-	# Checks for trade accepts sent by this user
-	(Attributes.database).query("SELECT * FROM Trade_Requests WHERE sender = '" + Attributes.username + "'" + " AND status = 1")
-	if ((Attributes.database).query_result):
-		var receiver = (Attributes.database).query_result[0]["receiver"]
-		get_tree().change_scene_to_file("res://scenes/trading/trading.tscn")
+			var receiver = (Attributes.database).query_result[0]["receiver"]
+			Attributes.trade_sender = Attributes.username
+			Attributes.trade_receiver = receiver
+			Attributes.location = "res://scenes/map/academic_map.tscn"
+			get_tree().change_scene_to_file("res://scenes/trading/trading.tscn")
+		frame_counter = 0
 
 func _on_view_schedule_pressed():
 	Attributes.xacademic = $CharacterBody2D.global_position.x

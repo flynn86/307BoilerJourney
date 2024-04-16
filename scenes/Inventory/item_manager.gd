@@ -42,6 +42,10 @@ enum Items {
 	PURDUE_HELMET
 }
 
+func name_to_index(item : String):
+	for i in range (0, names.size(), 1):
+		if (item == names[i]):
+			return i
 
 
 #func get_item(id : int):

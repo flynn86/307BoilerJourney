@@ -98,6 +98,8 @@ func initialize():
 		"ui_toggle_2" = Attributes.ui_toggle_2,
 		"minimap_toggle" = Attributes.minimap_toggle,
 		"trade_req" = Attributes.trade_req,
+		"trade_sender" = Attributes.trade_sender,
+		"trade_receiver" = Attributes.trade_receiver
 	}
 	(Attributes.database).insert_row("Players", data)
 
@@ -200,6 +202,8 @@ func save():
 		"ui_toggle_2" = Attributes.ui_toggle_2,
 		"minimap_toggle" = Attributes.minimap_toggle,
 		"trade_req" = Attributes.trade_req,
+		"trade_sender" = Attributes.trade_sender,
+		"trade_receiver" = Attributes.trade_receiver
 	})
 
 func load():
@@ -351,5 +355,7 @@ func load():
 	Attributes.ui_toggle_2 = player[0].ui_toggle_2
 	Attributes.minimap_toggle = player[0].minimap_toggle
 	Attributes.trade_req = player[0].trade_req
+	Attributes.trade_sender = player[0].trade_sender
+	Attributes.trade_receiver = player[0].trade_receiver
 func delete():
 	(Attributes.database).delete_rows("Players", "username == '%s'" % Attributes.username)
