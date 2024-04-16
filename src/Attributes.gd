@@ -154,6 +154,8 @@ var ui_toggle_1 : bool = true
 var ui_toggle_2 : bool = true
 var minimap_toggle : bool = true
 var trade_req : bool = false
+var trade_sender : String = ""
+var trade_receiver : String = ""
 
 
 
@@ -302,3 +304,5 @@ func reset(user: String):
 	ui_toggle_2 = true
 	minimap_toggle = true
 	trade_req = false
+	trade_sender = ""
+	trade_receiver = ""
