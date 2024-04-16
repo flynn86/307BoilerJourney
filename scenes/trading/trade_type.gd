@@ -8,4 +8,5 @@ func _ready():
 	online_label.visible_characters = -1
 	offline_label.visible_characters = -1
 
-
+func _on_close_pressed():
+	visible = false

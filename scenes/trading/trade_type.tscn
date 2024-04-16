@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://bmcioega08j7c"]
+[gd_scene load_steps=10 format=3 uid="uid://bmcioega08j7c"]
 
 [ext_resource type="Texture2D" uid="uid://cldjl6vx7u3gx" path="res://scenes/Inventory/main panel.png" id="1_kjyjw"]
 [ext_resource type="Script" path="res://scenes/trading/trade_type.gd" id="1_okfb5"]
 [ext_resource type="Texture2D" uid="uid://ds0l5fe0r5ev0" path="res://scenes/Inventory/inner_panel.png" id="2_nvdl4"]
 [ext_resource type="FontFile" uid="uid://clv208675ouog" path="res://scenes/Inventory/Arcadepix Plus.ttf" id="3_5njs3"]
 [ext_resource type="Texture2D" uid="uid://oqlie3pucsn5" path="res://scenes/Inventory/item_slot.png" id="4_g52t4"]
+[ext_resource type="Texture2D" uid="uid://16q1lg8bon67" path="res://scenes/Inventory/x_normal.png" id="6_n4xr6"]
+[ext_resource type="Texture2D" uid="uid://covydrqnrlapc" path="res://scenes/Inventory/x_pressed.png" id="7_ow65e"]
+[ext_resource type="Texture2D" uid="uid://cguor0b7vrm8d" path="res://scenes/Inventory/x_hover.png" id="8_dj7fb"]
+[ext_resource type="Texture2D" uid="uid://dnxbocukrwpcf" path="res://scenes/Inventory/x_disabled.png" id="9_8mgbj"]
 
 [node name="OnlinePlayersTrade" type="Node2D"]
 script = ExtResource("1_okfb5")
@@ -147,3 +151,16 @@ autowrap_mode = 3
 justification_flags = 161
 visible_characters = 0
 visible_ratio = 0.0
+
+[node name="close" type="TextureButton" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 461.0
+offset_top = 90.0
+offset_right = 470.0
+offset_bottom = 99.0
+grow_horizontal = 2
+texture_normal = ExtResource("6_n4xr6")
+texture_pressed = ExtResource("7_ow65e")
+texture_hover = ExtResource("8_dj7fb")
+texture_disabled = ExtResource("9_8mgbj")

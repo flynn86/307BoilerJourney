@@ -402,3 +402,6 @@ func _notification(notif):
 
 func _on_online_choice_pressed():
 	$CharacterBody2D/Player/OnlinePlayerList.visible = true
+
+func _on_close_trade_type_pressed():
+	$CharacterBody2D/Player/OnlinePlayersTrade.visible = false

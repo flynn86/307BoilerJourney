@@ -29,3 +29,7 @@ func update_player_list():
 		$OnlinePlayerListPanel/OnlinePlayerListInnerPanel.add_child(player_display)
 		y_coord += 20.0
 
+
+
+func _on_close_pressed():
+	visible = false
