@@ -119,6 +119,11 @@ func _ready():
 		"players" : {"data_type":"text"},
 	}
 	(Attributes.database).create_table("Online_Players", online_players)
+	var trade_requests = {
+		"sender" : {"data_type":"text"},
+		"receiver" : {"data_type":"text"}
+	}
+	(Attributes.database).create_table("Trade_Requests", trade_requests)
 
 func _on_start_new_game_pressed():
 	if username_entry.text == "":
