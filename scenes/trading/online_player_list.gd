@@ -1,5 +1,8 @@
 extends Node2D
 
+# Define an online player as a player who is in the academic scene.
+# Define an offline player as otherwise.
+
 func _ready():
 	update_player_list()
 	
