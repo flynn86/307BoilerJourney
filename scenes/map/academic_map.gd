@@ -9,6 +9,7 @@ func _ready():
 	get_node("WinterVariantA").visible = false
 	get_node("CharacterBody2D/Panel2").visible = false
 	$CharacterBody2D/Panel.visible = false
+	get_node("CharacterBody2D/transportation_panel").visible = false
 	if (Attributes.season == "Summer"):
 		get_node("SummerVariantA").visible = true
 	elif (Attributes.season == "Fall"):
@@ -417,3 +418,10 @@ func _on_online_choice_pressed():
 
 func _on_close_trade_type_pressed():
 	$CharacterBody2D/Player/OnlinePlayersTrade.visible = false
+
+func _on_trans_close_pressed():
+	get_node("CharacterBody2D/transportation_panel").visible = false
+
+func _on_bus_entered(body):
+	pass
+

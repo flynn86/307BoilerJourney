@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=8 format=3 uid="uid://bw38c741am4hj"]
 
-[ext_resource type="FontFile" uid="uid://cwnopee8f26ig" path="res://fonts/varsity_regular.ttf" id="1_qwogg"]
+[ext_resource type="FontFile" uid="uid://jgrm0okvvno1" path="res://fonts/varsity_regular.ttf" id="1_qwogg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6dlew"]
 content_margin_left = 4.0
