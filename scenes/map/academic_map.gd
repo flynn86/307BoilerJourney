@@ -39,6 +39,8 @@ func _ready():
 	get_node("CharacterBody2D/Player/location_text")
 	get_node("CharacterBody2D/Player/GameBasics").visible = !Attributes.basics_shown
 	get_node("CharacterBody2D/Player/view_suggestions").visible = false
+	$CharacterBody2D/Player/OnlinePlayersTrade.visible = false
+	$CharacterBody2D/Player/OnlinePlayerList.visible = false
 
 func _input(event):
 	if event is InputEventMouseMotion or event is InputEventMouseButton:
@@ -273,11 +275,11 @@ func _on_friends_list_pressed():
 
 
 func _on_trade_pressed():
-	Attributes.xacademic = $CharacterBody2D.global_position.x
-	Attributes.yacademic = $CharacterBody2D.global_position.y
-	Attributes.location = "res://scenes/map/academic_map.tscn"
-	SaveUtils.save()
-	get_tree().change_scene_to_file("res://scenes/trading/trade_requests.tscn")
+	#Attributes.xacademic = $CharacterBody2D.global_position.x
+	#Attributes.yacademic = $CharacterBody2D.global_position.y
+	#Attributes.location = "res://scenes/map/academic_map.tscn"
+	#SaveUtils.save()
+	$CharacterBody2D/Player/OnlinePlayersTrade.visible = ! $CharacterBody2D/Player/OnlinePlayersTrade.visible
 
 func _on_time_button_pressed():
 	if (Attributes.day_night_ui_toggle == true):
@@ -380,3 +382,23 @@ func minimap_toggle(toggle : bool):
 	else:
 		$CharacterBody2D/Player/MinimapToggle.text = "Show"
 	$CharacterBody2D/Player/SubViewportContainer.visible = toggle
+
+
+func _on_tree_entered():
+	var data = {
+		"players" = Attributes.username
+	}
+	#(Attributes.database).query("SELECT COUNT(*) FROM Online_Players WHERE players = '" + Attributes.username + "'")
+	#if ((Attributes.database).query_result.size() == 0):
+	(Attributes.database).insert_row("Online_Players", data)
+
+
+func _on_tree_exited():
+	(Attributes.database).query("DELETE FROM Online_Players WHERE players = '" + Attributes.username + "'")
+
+func _notification(notif): 
+	if notif == NOTIFICATION_WM_CLOSE_REQUEST: 
+		(Attributes.database).query("DELETE FROM Online_Players WHERE players = '" + Attributes.username + "'")
+
+func _on_online_choice_pressed():
+	$CharacterBody2D/Player/OnlinePlayerList.visible = true

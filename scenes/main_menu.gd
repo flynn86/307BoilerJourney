@@ -115,6 +115,10 @@ func _ready():
 		"friend2" : {"data_type":"text"}
 	}
 	(Attributes.database).create_table("Friend_List", friend_list)
+	var online_players = {
+		"players" : {"data_type":"text"},
+	}
+	(Attributes.database).create_table("Online_Players", online_players)
 
 func _on_start_new_game_pressed():
 	if username_entry.text == "":
