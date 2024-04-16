@@ -41,6 +41,7 @@ func _ready():
 	get_node("CharacterBody2D/Player/view_suggestions").visible = false
 	$CharacterBody2D/Player/OnlinePlayersTrade.visible = false
 	$CharacterBody2D/Player/OnlinePlayerList.visible = false
+	$CharacterBody2D/Player/Trade_Request_Notif.visible = false
 
 func _input(event):
 	if event is InputEventMouseMotion or event is InputEventMouseButton:
@@ -179,6 +180,17 @@ func _process(delta):
 		if (Attributes.rank != "Senior"):
 			get_node("CharacterBody2D/Panel2").visible = true
 		Attributes.rank = "Senior"
+	# Checks for trade requests sent to this user
+	if (Attributes.trade_req == false):
+		(Attributes.database).query("SELECT sender FROM Trade_Requests WHERE receiver = '" + Attributes.username + "'" + " AND status = 0")
+		if ((Attributes.database).query_result):
+			var sender = (Attributes.database).query_result[0]["sender"]
+			$CharacterBody2D/Player/Trade_Request_Notif.send_trade_request(sender)
+	# Checks for trade accepts sent by this user
+	(Attributes.database).query("SELECT * FROM Trade_Requests WHERE sender = '" + Attributes.username + "'" + " AND status = 1")
+	if ((Attributes.database).query_result):
+		var receiver = (Attributes.database).query_result[0]["receiver"]
+		get_tree().change_scene_to_file("res://scenes/trading/trading.tscn")
 
 func _on_view_schedule_pressed():
 	Attributes.xacademic = $CharacterBody2D.global_position.x

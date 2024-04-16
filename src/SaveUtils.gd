@@ -96,7 +96,8 @@ func initialize():
 		"day_night_ui_toggle" = Attributes.day_night_ui_toggle,
 		"ui_toggle_1" = Attributes.ui_toggle_1,
 		"ui_toggle_2" = Attributes.ui_toggle_2,
-		"minimap_toggle" = Attributes.minimap_toggle
+		"minimap_toggle" = Attributes.minimap_toggle,
+		"trade_req" = Attributes.trade_req,
 	}
 	(Attributes.database).insert_row("Players", data)
 
@@ -197,7 +198,8 @@ func save():
 		"day_night_ui_toggle" = Attributes.day_night_ui_toggle,
 		"ui_toggle_1" = Attributes.ui_toggle_1,
 		"ui_toggle_2" = Attributes.ui_toggle_2,
-		"minimap_toggle" = Attributes.minimap_toggle
+		"minimap_toggle" = Attributes.minimap_toggle,
+		"trade_req" = Attributes.trade_req,
 	})
 
 func load():
@@ -348,5 +350,6 @@ func load():
 	Attributes.ui_toggle_1 = player[0].ui_toggle_1
 	Attributes.ui_toggle_2 = player[0].ui_toggle_2
 	Attributes.minimap_toggle = player[0].minimap_toggle
+	Attributes.trade_req = player[0].trade_req
 func delete():
 	(Attributes.database).delete_rows("Players", "username == '%s'" % Attributes.username)

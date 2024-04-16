@@ -102,7 +102,8 @@ func _ready():
 		"day_night_ui_toggle" : {"data_type":"bool"},
 		"ui_toggle_1" : {"data_type":"bool"},
 		"ui_toggle_2" : {"data_type":"bool"},
-		"minimap_toggle" : {"data_type":"bool"}
+		"minimap_toggle" : {"data_type":"bool"},
+		"trade_req" : {"data_type":"bool"},
 	}
 	(Attributes.database).create_table("Players", table)
 	var friend_reqs = {
@@ -121,7 +122,8 @@ func _ready():
 	(Attributes.database).create_table("Online_Players", online_players)
 	var trade_requests = {
 		"sender" : {"data_type":"text"},
-		"receiver" : {"data_type":"text"}
+		"receiver" : {"data_type":"text"},
+		"status" : {"data_type":"int"}
 	}
 	(Attributes.database).create_table("Trade_Requests", trade_requests)
 
