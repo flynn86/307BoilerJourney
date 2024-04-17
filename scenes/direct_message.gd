@@ -1,19 +1,35 @@
 extends Node2D
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var data : Array = (Attributes.database).select_rows(Attributes.dm_temp, "username != 'null'", ["*"])
+	var data_line : String = ""
+	for i in data.size():
+		data_line += "From " + data[i].username + " at " + data[i].time + " on " + data[i].date + ": " + data[i].message + '\n'
+	$Label.text = data_line
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
+func _process(_delta):
+	_ready()
 
 func _on_back_to_menu_pressed():
-	pass # Replace with function body.
-
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")
 
 func _on_send_message_pressed():
-	pass # Replace with function body.
+	var timedate : Dictionary = Time.get_datetime_dict_from_system()
+	var data = {
+		"username" = Attributes.username,
+		"message" = $LineEdit.text,
+		"date" = str(timedate.month) + "-" + str(timedate.day) + "-" + str(timedate.year),
+		"time" = "%02d:%02d:%02d" % [timedate.hour, timedate.minute, timedate.second]
+	}
+	(Attributes.database).insert_row(Attributes.dm_temp, data)
+
+func _on_clear_button_pressed():
+	var table = {
+		"username" : {"data_type":"text"},
+		"message" : {"data_type":"text"},
+		"time" : {"data_type":"text"},
+		"date" : {"data_type":"text"}
+	}
+	(Attributes.database).create_table(Attributes.dm_temp, table)
+	(Attributes.database).drop_table(Attributes.dm_temp)
+	(Attributes.database).create_table(Attributes.dm_temp, table)
