@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bx56psdsqpjwb"]
+
+[ext_resource type="Texture2D" uid="uid://e282qxcjnj2e" path="res://scenes/map/Building and terrain assets/light.png" id="1_i12qa"]
+[ext_resource type="Script" path="res://scenes/light.gd" id="1_krffc"]
+
+[node name="Lighting" type="Node2D"]
+script = ExtResource("1_krffc")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 0.7
+texture = ExtResource("1_i12qa")

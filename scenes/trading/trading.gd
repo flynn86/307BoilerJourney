@@ -86,7 +86,6 @@ func update_trade_slots():
 	var index = 0
 	(Attributes.database).query("SELECT * FROM " + database_table)
 	var trade_slots = (Attributes.database).query_result
-	print(trade_slots)
 	for trade_slot in trade_slots:
 		var your_item : String = trade_slot[your_string]
 		var their_item : String = trade_slot[their_string]
