@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://cyqru62e3i8um"]
+
+[node name="StudyRooms" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 458.0
+offset_top = 14.0
+offset_right = 559.0
+offset_bottom = 37.0
+scale = Vector2(2, 2)
+text = "Study Rooms"
+
+[node name="group1" type="Label" parent="."]
+offset_left = 38.0
+offset_top = 121.0
+offset_right = 426.0
+offset_bottom = 166.0
+
+[node name="group2" type="Label" parent="."]
+offset_left = 39.0
+offset_top = 189.0
+offset_right = 390.0
+offset_bottom = 235.0
+
+[node name="group3" type="Label" parent="."]
+offset_left = 41.0
+offset_top = 251.0
+offset_right = 367.0
+offset_bottom = 294.0
+
+[node name="group4" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 317.0
+offset_right = 376.0
+offset_bottom = 356.0
+
+[node name="group5" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 381.0
+offset_right = 382.0
+offset_bottom = 426.0
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 105.0
+offset_top = 504.0
+offset_right = 301.0
+offset_bottom = 543.0
+scale = Vector2(1.5, 1.5)
+placeholder_text = "Enter study room name"
+
+[node name="goback" type="Button" parent="."]
+offset_left = 1041.0
+offset_top = 590.0
+offset_right = 1141.0
+offset_bottom = 631.0
+text = "Go Back"
+
+[node name="createnew" type="Button" parent="."]
+offset_left = 9.0
+offset_top = 582.0
+offset_right = 259.0
+offset_bottom = 632.0
+text = "Create new study room"
+
+[node name="join" type="Button" parent="."]
+offset_left = 296.0
+offset_top = 579.0
+offset_right = 546.0
+offset_bottom = 629.0
+text = "Join study room"
+
+[node name="chat1" type="Button" parent="."]
+offset_left = 780.0
+offset_top = 93.0
+offset_right = 891.0
+offset_bottom = 132.0
+text = "Chat"
+
+[node name="chat2" type="Button" parent="."]
+offset_left = 781.0
+offset_top = 153.0
+offset_right = 892.0
+offset_bottom = 192.0
+text = "Chat"
+
+[node name="chat3" type="Button" parent="."]
+offset_left = 781.0
+offset_top = 217.0
+offset_right = 892.0
+offset_bottom = 256.0
+text = "Chat"
+
+[node name="chat4" type="Button" parent="."]
+offset_left = 781.0
+offset_top = 285.0
+offset_right = 892.0
+offset_bottom = 324.0
+text = "Chat"
+
+[node name="chat5" type="Button" parent="."]
+offset_left = 779.0
+offset_top = 348.0
+offset_right = 890.0
+offset_bottom = 387.0
+text = "Chat"
