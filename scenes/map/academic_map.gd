@@ -431,6 +431,8 @@ func _on_close_trade_type_pressed():
 func _on_trans_close_pressed():
 	get_node("CharacterBody2D/transportation_panel").visible = false
 
-func _on_bus_entered(body):
-	pass
-
+func _on_bus_input_event(viewport, event, shape_idx):
+	if event is InputEventScreenTouch and event.pressed:
+		get_node("CharacterBody2D/transportation_panel").visible = true
+	elif event is InputEventMouseButton and event.pressed:
+		get_node("CharacterBody2D/transportation_panel").visible = true
