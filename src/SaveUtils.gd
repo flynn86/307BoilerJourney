@@ -97,9 +97,6 @@ func initialize():
 		"ui_toggle_1" = Attributes.ui_toggle_1,
 		"ui_toggle_2" = Attributes.ui_toggle_2,
 		"minimap_toggle" = Attributes.minimap_toggle,
-		"trade_req" = Attributes.trade_req,
-		"trade_sender" = Attributes.trade_sender,
-		"trade_receiver" = Attributes.trade_receiver,
 		"group1" = Attributes.group1,
 		"group2" = Attributes.group2,
 		"group3" = Attributes.group3,
@@ -207,9 +204,6 @@ func save():
 		"ui_toggle_1" = Attributes.ui_toggle_1,
 		"ui_toggle_2" = Attributes.ui_toggle_2,
 		"minimap_toggle" = Attributes.minimap_toggle,
-		"trade_req" = Attributes.trade_req,
-		"trade_sender" = Attributes.trade_sender,
-		"trade_receiver" = Attributes.trade_receiver,
 		"group1" = Attributes.group1,
 		"group2" = Attributes.group2,
 		"group3" = Attributes.group3,
@@ -365,9 +359,9 @@ func load():
 	Attributes.ui_toggle_1 = player[0].ui_toggle_1
 	Attributes.ui_toggle_2 = player[0].ui_toggle_2
 	Attributes.minimap_toggle = player[0].minimap_toggle
-	Attributes.trade_req = player[0].trade_req
-	Attributes.trade_sender = player[0].trade_sender
-	Attributes.trade_receiver = player[0].trade_receiver
+#	Attributes.trade_req = player[0].trade_req
+#	Attributes.trade_sender = player[0].trade_sender
+#	Attributes.trade_receiver = player[0].trade_receiver
 	Attributes.group1 = player[0].group1
 	Attributes.group2 = player[0].group2
 	Attributes.group3 = player[0].group3
