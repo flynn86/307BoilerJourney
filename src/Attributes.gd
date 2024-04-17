@@ -156,7 +156,11 @@ var minimap_toggle : bool = true
 var trade_req : bool = false
 var trade_sender : String = ""
 var trade_receiver : String = ""
-
+var group1 : String = ""
+var group2 : String = ""
+var group3 : String = ""
+var group4 : String = ""
+var group5 : String = ""
 
 
 
@@ -306,3 +310,8 @@ func reset(user: String):
 	trade_req = false
 	trade_sender = ""
 	trade_receiver = ""
+	group1 = ""
+	group2 = ""
+	group3 = ""
+	group4 = ""
+	group5 = ""

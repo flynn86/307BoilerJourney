@@ -105,7 +105,12 @@ func _ready():
 		"minimap_toggle" : {"data_type":"bool"},
 		"trade_req" : {"data_type":"bool"},
 		"trade_sender":{"data_type":"text"},
-		"trade_receiver":{"data_type":"text"}
+		"trade_receiver":{"data_type":"text"},
+		"group1" : {"data_type":"text"},
+		"group2" : {"data_type":"text"},
+		"group3" : {"data_type":"text"},
+		"group4" : {"data_type":"text"},
+		"group5" : {"data_type":"text"},
 	}
 	(Attributes.database).create_table("Players", table)
 	var friend_reqs = {

@@ -99,7 +99,13 @@ func initialize():
 		"minimap_toggle" = Attributes.minimap_toggle,
 		"trade_req" = Attributes.trade_req,
 		"trade_sender" = Attributes.trade_sender,
-		"trade_receiver" = Attributes.trade_receiver
+		"trade_receiver" = Attributes.trade_receiver,
+		"group1" = Attributes.group1,
+		"group2" = Attributes.group2,
+		"group3" = Attributes.group3,
+		"group4" = Attributes.group4,
+		"group5" = Attributes.group5
+		
 	}
 	(Attributes.database).insert_row("Players", data)
 
@@ -203,7 +209,12 @@ func save():
 		"minimap_toggle" = Attributes.minimap_toggle,
 		"trade_req" = Attributes.trade_req,
 		"trade_sender" = Attributes.trade_sender,
-		"trade_receiver" = Attributes.trade_receiver
+		"trade_receiver" = Attributes.trade_receiver,
+		"group1" = Attributes.group1,
+		"group2" = Attributes.group2,
+		"group3" = Attributes.group3,
+		"group4" = Attributes.group4,
+		"group5" = Attributes.group5
 	})
 
 func load():
@@ -357,5 +368,10 @@ func load():
 	Attributes.trade_req = player[0].trade_req
 	Attributes.trade_sender = player[0].trade_sender
 	Attributes.trade_receiver = player[0].trade_receiver
+	Attributes.group1 = player[0].group1
+	Attributes.group2 = player[0].group2
+	Attributes.group3 = player[0].group3
+	Attributes.group4 = player[0].group4
+	Attributes.group5 = player[0].group5
 func delete():
 	(Attributes.database).delete_rows("Players", "username == '%s'" % Attributes.username)
