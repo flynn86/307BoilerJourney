@@ -11,7 +11,9 @@ func _ready():
 	decline_label.visible_characters = -1
 
 func _on_close_pressed():
-	visible = false
+	(Attributes.database).delete_rows("Trade_Requests", "sender = '" + sender_username + "' AND receiver = '" + Attributes.username + "'")
+	self.visible = false
+	Attributes.trade_req = false
 	
 func _on_accept_choice_pressed():
 	var string1 = sender_username + "_offer"
@@ -21,6 +23,7 @@ func _on_accept_choice_pressed():
 		string2 : {"data_type":"text"},
 		"slot" : {"data_type":"int"}
 	}
+	(Attributes.database).query("DROP TABLE " + sender_username + "AND" + Attributes.username)
 	(Attributes.database).create_table(sender_username + "AND" + Attributes.username, trade_table)
 	for i in range(1, 5, 1):
 		var data = {}

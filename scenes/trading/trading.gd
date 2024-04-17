@@ -17,8 +17,8 @@ var their_string : String = ""
 
 var frame_counter = 0
 
-var your_slot_container
-var their_slot_container
+@onready var your_slot_container = $Trading_container/Your_Offer_Container/Your_Offer_Inventory/your_slot_container
+@onready var their_slot_container = $Trading_container/Their_Offer_Container/Their_Offer_Inventory/their_slot_container
 
 func _ready():
 	sender = Attributes.trade_sender
@@ -34,8 +34,10 @@ func _ready():
 	var slot_container = $Temp_Inventory/Inventory_container/inventory_patch/slot_container
 	var your_title = $Trading_container/Your_Offer_Container/Your_Offer_Inventory/your_offer_header/your_title
 	var their_title = $Trading_container/Their_Offer_Container/Their_Offer_Inventory/other_player_offer_header/their_title
-	your_slot_container = $Trading_container/Your_Offer_Container/Your_Offer_Inventory/your_slot_container
-	their_slot_container = $Trading_container/Their_Offer_Container/Their_Offer_Inventory/their_slot_container
+#	your_slot_container = $Trading_container/Your_Offer_Container/Your_Offer_Inventory/your_slot_container
+#	their_slot_container = $Trading_container/Their_Offer_Container/Their_Offer_Inventory/their_slot_container
+	$AcceptButton.modulate.a = 1
+	$DeclineButton.modulate.a = 1
 	your_trade_size = 0
 	vacant_trade.resize(4)
 	vacant_trade.fill(0) # 0 means vacant slot, 1 means occupied slot
@@ -62,12 +64,23 @@ func _ready():
 	trading = true
 
 func _process(_delta):
+#	if (trading == true):
+#		frame_counter += 1
+#		if (frame_counter > 30):
+#			if (trading == true):
+#				check_trade_end()
+#			if (trading == true):
+#				check_trade_accept()
+	#		if (trading == true):
+#				update_trade_slots()
+#			frame_counter = 0
 	if (trading == true):
-		frame_counter += 1
-		if (frame_counter > 30):
-			update_trade_slots()
-			frame_counter = 0
-			check_trade_end()
+		check_trade_end()
+	if (trading == true):
+		check_trade_accept()
+	if (trading == true):
+		update_trade_slots()
+			
 
 func update_trade_slots():
 	var index = 0
@@ -159,14 +172,18 @@ func _on_your_4_pressed():
 func check_trade_end():
 	(Attributes.database).query("SELECT sender FROM Trade_Requests WHERE sender = '" + sender + "' AND receiver = '" + receiver + "'")
 	if ! ((Attributes.database).query_result):
+		trading = false
 		get_tree().change_scene_to_file(Attributes.location)
 		Attributes.database.query("DROP TABLE " + sender + "AND" + receiver)
 
 func _on_close_pressed():
+	trading = false
 	get_tree().change_scene_to_file(Attributes.location)
 	(Attributes.database).delete_rows("Trade_Requests", "sender = '" + sender + "' AND receiver = '" + receiver + "'")
 
 func _on_decline_button_pressed():
+	$DeclineButton.modulate.a = 0.5
+	trading = false
 	get_tree().change_scene_to_file(Attributes.location)
 	(Attributes.database).delete_rows("Trade_Requests", "sender = '" + sender + "' AND receiver = '" + receiver + "'")
 	
@@ -174,3 +191,48 @@ func _notification(notif):
 	if notif == NOTIFICATION_WM_CLOSE_REQUEST: 
 		(Attributes.database).delete_rows("Trade_Requests", "sender = '" + sender + "' AND receiver = '" + receiver + "'")
 		Attributes.database.query("DROP TABLE " + sender + "AND" + receiver)
+
+func check_trade_accept():
+	Attributes.database.query("SELECT status FROM Trade_Requests WHERE sender = '" + sender + "' AND receiver = '" + receiver + "'")
+	var status : int = (Attributes.database).query_result[0]["status"]
+	if (status == 3):
+		trading = false
+		Attributes.database.query("SELECT " + your_string + " FROM " + sender + "AND" + receiver)
+		var your_offers = (Attributes.database).query_result
+		for your_offer in your_offers:
+			if (your_offer[your_string] != "empty"):
+				Attributes.items.erase(ItemManager.name_to_index(your_offer[your_string]))
+		# Add their items
+		Attributes.database.query("SELECT " + their_string + " FROM " + sender + "AND" + receiver)
+		var their_offers = (Attributes.database).query_result
+		for their_offer in their_offers:
+			if (their_offer[their_string] != "empty"):
+				Attributes.items.append(ItemManager.name_to_index(their_offer[their_string]))
+		SaveUtils.save()
+		get_tree().change_scene_to_file(Attributes.location)
+		(Attributes.database).delete_rows("Trade_Requests", "sender = '" + sender + "' AND receiver = '" + receiver + "'")
+		Attributes.database.query("DROP TABLE " + sender + "AND" + receiver)
+
+func _on_accept_button_pressed():
+	$AcceptButton.modulate.a = 0.5
+	Attributes.database.query("SELECT status FROM Trade_Requests WHERE sender = '" + sender + "' AND receiver = '" + receiver + "'")
+	var status : int = (Attributes.database).query_result[0]["status"]
+	if (status == 2):
+		trading = false
+		# Remove your items
+		Attributes.database.query("SELECT " + your_string + " FROM " + sender + "AND" + receiver)
+		var your_offers = (Attributes.database).query_result
+		for your_offer in your_offers:
+			if (your_offer[your_string] != "empty"):
+				Attributes.items.erase(ItemManager.name_to_index(your_offer[your_string]))
+		# Add their items
+		Attributes.database.query("SELECT " + their_string + " FROM " + sender + "AND" + receiver)
+		var their_offers = (Attributes.database).query_result
+		for their_offer in their_offers:
+			if (their_offer[their_string] != "empty"):
+				Attributes.items.append(ItemManager.name_to_index(their_offer[their_string]))
+		SaveUtils.save()
+		get_tree().change_scene_to_file(Attributes.location)
+		(Attributes.database).update_rows("Trade_Requests", "sender = '" + sender + "' AND receiver = '" + receiver + "'", {"status": 3})
+	elif (status == 1):
+		(Attributes.database).update_rows("Trade_Requests", "sender = '" + sender + "' AND receiver = '" + receiver + "'", {"status": 2})

@@ -136,7 +136,8 @@ text = "- Your Offer -"
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 161
-visible_ratio = -0.0714286
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="your_slot_container" type="GridContainer" parent="Trading_container/Your_Offer_Container/Your_Offer_Inventory"]
 layout_mode = 0
@@ -242,7 +243,8 @@ text = "- Their Offer -"
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 161
-visible_ratio = -0.0666667
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="their_slot_container" type="GridContainer" parent="Trading_container/Their_Offer_Container/Their_Offer_Inventory"]
 layout_mode = 0
@@ -737,4 +739,5 @@ texture_normal = ExtResource("15_7frkf")
 [connection signal="pressed" from="Temp_Inventory/Inventory_container/inventory_patch/slot_container/slot13" to="." method="_on_slot_13_pressed"]
 [connection signal="pressed" from="Temp_Inventory/Inventory_container/inventory_patch/slot_container/slot14" to="." method="_on_slot_14_pressed"]
 [connection signal="pressed" from="Temp_Inventory/Inventory_container/inventory_patch/slot_container/slot15" to="." method="_on_slot_15_pressed"]
+[connection signal="pressed" from="AcceptButton" to="." method="_on_accept_button_pressed"]
 [connection signal="pressed" from="DeclineButton" to="." method="_on_decline_button_pressed"]

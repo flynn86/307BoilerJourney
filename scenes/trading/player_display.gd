@@ -18,6 +18,8 @@ func _process(_delta):
 	
 
 func update_trade_button():
+	if (username == Attributes.username):
+		$trade_button.visible = false
 	position = Vector2(position.x, y_coord)
 	(Attributes.database).query("SELECT * FROM Trade_Requests WHERE sender = '" + Attributes.username + "'" + " AND receiver = '" + username + "'")
 	if ! (Attributes.database).query_result:
