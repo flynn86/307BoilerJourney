@@ -35,7 +35,9 @@ func update_player_list():
 	if (player_displays.size() > 0):
 		not_in_string += "("
 		for player_display in player_displays:
-			(Attributes.database).query("SELECT players FROM Online_Players WHERE players = '"  + player_display.username + "'")
+			var ret = (Attributes.database).query("SELECT players FROM Online_Players WHERE players = '"  + player_display.username + "'")
+			if (ret == false):
+				return
 			if ! (Attributes.database).query_result:
 				$OnlinePlayerListPanel/OnlinePlayerListInnerPanel.remove_child(player_display)
 			else:

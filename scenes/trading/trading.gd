@@ -64,27 +64,29 @@ func _ready():
 	trading = true
 
 func _process(_delta):
+	if (trading == true):
+		frame_counter += 1
+		if (frame_counter > 30):
+			if (trading == true):
+				check_trade_end()
+			if (trading == true):
+				check_trade_accept()
+			if (trading == true):
+				update_trade_slots()
+			frame_counter = 0
 #	if (trading == true):
-#		frame_counter += 1
-#		if (frame_counter > 30):
-#			if (trading == true):
-#				check_trade_end()
-#			if (trading == true):
-#				check_trade_accept()
-	#		if (trading == true):
-#				update_trade_slots()
-#			frame_counter = 0
-	if (trading == true):
-		check_trade_end()
-	if (trading == true):
-		check_trade_accept()
-	if (trading == true):
-		update_trade_slots()
+#		check_trade_end()
+#	if (trading == true):
+#		check_trade_accept()
+#	if (trading == true):
+#		update_trade_slots()
 			
 
 func update_trade_slots():
 	var index = 0
-	(Attributes.database).query("SELECT * FROM " + database_table)
+	var ret = (Attributes.database).query("SELECT * FROM " + database_table)
+	if (ret == false):
+		return
 	var trade_slots = (Attributes.database).query_result
 	for trade_slot in trade_slots:
 		var your_item : String = trade_slot[your_string]
@@ -169,7 +171,10 @@ func _on_your_4_pressed():
 	trade_to_inventory(4)
 
 func check_trade_end():
-	(Attributes.database).query("SELECT sender FROM Trade_Requests WHERE sender = '" + sender + "' AND receiver = '" + receiver + "'")
+	var ret = (Attributes.database).query("SELECT sender FROM Trade_Requests WHERE sender = '" + sender + "' AND receiver = '" + receiver + "'")
+	while (ret == false):
+		await get_tree().create_timer(0.01).timeout
+		ret = (Attributes.database).query("SELECT sender FROM Trade_Requests WHERE sender = '" + sender + "' AND receiver = '" + receiver + "'")
 	if ! ((Attributes.database).query_result):
 		trading = false
 		get_tree().change_scene_to_file(Attributes.location)
@@ -192,7 +197,9 @@ func _notification(notif):
 		Attributes.database.query("DROP TABLE " + sender + "AND" + receiver)
 
 func check_trade_accept():
-	Attributes.database.query("SELECT status FROM Trade_Requests WHERE sender = '" + sender + "' AND receiver = '" + receiver + "'")
+	var ret = Attributes.database.query("SELECT status FROM Trade_Requests WHERE sender = '" + sender + "' AND receiver = '" + receiver + "'")
+	if (ret == false):
+		return
 	var status : int = (Attributes.database).query_result[0]["status"]
 	if (status == 3):
 		trading = false
