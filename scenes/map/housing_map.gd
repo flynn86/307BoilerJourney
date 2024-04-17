@@ -1,6 +1,7 @@
 extends Node2D
 
 func _ready():
+	get_node("CharacterBody2D/transportation_panel").visible = false
 	$CharacterBody2D.global_position = Vector2(float(Attributes.xhousing),float(Attributes.yhousing))
 	get_node("SummerVariantH").visible = false
 	get_node("FallVariantH").visible = false
@@ -184,22 +185,22 @@ func _on_bus_input_event(viewport, event, shape_idx):
 		get_node("CharacterBody2D/transportation_panel").visible = true
 
 func _on_bus_button_pressed(extra_arg_0):
-	if (extra_arg_0 == "phys"):
-		$CharacterBody2D.global_position.x = 2113.241699
-		$CharacterBody2D.global_position.y = -5078.95214
-	elif (extra_arg_0 =="army"):
-		$CharacterBody2D.global_position.x = -930.07617187
-		$CharacterBody2D.global_position.y = -2398.39624023438
-	elif (extra_arg_0 =="matt"):
-		$CharacterBody2D.global_position.x = -937.063659667969
-		$CharacterBody2D.global_position.y =  2190.18359375
-	elif (extra_arg_0 =="push"):
-		$CharacterBody2D.global_position.x = -820.384765
-		$CharacterBody2D.global_position.y = -5648.923828
-	elif (extra_arg_0 =="pmu"):
-		$CharacterBody2D.global_position.x = 3122.93627929688
-		$CharacterBody2D.global_position.y = 3090.18359375
-	elif (extra_arg_0 =="ece"):
-		$CharacterBody2D.global_position.x = 3758.2416
-		$CharacterBody2D.global_position.y = -3423.9521
+	if (extra_arg_0 == "ear"):
+		$CharacterBody2D.global_position.x = -1425.212890625
+		$CharacterBody2D.global_position.y = -658.925170898438
+	elif (extra_arg_0 =="mtch"):
+		$CharacterBody2D.global_position.x = 93.06689453125
+		$CharacterBody2D.global_position.y = -4005.8193359375
+	elif (extra_arg_0 =="shr"):
+		$CharacterBody2D.global_position.x = 1394.13037109375
+		$CharacterBody2D.global_position.y = -1744.92529296875
+	elif (extra_arg_0 =="mer"):
+		$CharacterBody2D.global_position.x = 1475.380859375
+		$CharacterBody2D.global_position.y = 1191.18139648438
+	elif (extra_arg_0 =="wil"):
+		$CharacterBody2D.global_position.x = 2722.61743164062
+		$CharacterBody2D.global_position.y = 3213.63916015625
+	elif (extra_arg_0 =="wind"):
+		$CharacterBody2D.global_position.x = -910.77734375
+		$CharacterBody2D.global_position.y = 2684.22827148438
 	get_node("CharacterBody2D/transportation_panel").visible = false
