@@ -23,9 +23,12 @@ func _ready():
 	title.text = "- Collectibles -"
 	title.visible_characters = -1
 	var size = Attributes.items.size()
+	print(size)
+	print(Attributes.items)
 	if (size > 0):
 		for i in range(0, size, 1):
 			var slot_sprite_i = slot_container.get_child(i).get_child(0).get_child(0)
+			print(Attributes.items[i])
 			slot_sprite_i.texture = ItemManager.icons[Attributes.items[i]]
 			var final_scale = Vector2(ItemManager.scale[Attributes.items[i]],ItemManager.scale[Attributes.items[i]])
 			slot_sprite_i.scale = final_scale

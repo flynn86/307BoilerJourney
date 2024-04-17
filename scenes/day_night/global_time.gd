@@ -18,7 +18,7 @@ var hour = 0
 var minute = 0
 
 # Multiplier for time elapse speed. Increase to make time go faster, decrease to make time go slower.
-var INGAME_SPEED = 2.0
+var INGAME_SPEED = 20.0
 
 # Current in-game time
 var time:float= 0.0

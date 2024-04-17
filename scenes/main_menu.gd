@@ -17,6 +17,7 @@ func _ready():
 		"rank" : {"data_type":"text"},
 		"serverName" : {"data_type":"text"},
 		"isHost" : {"data_type":"bool"},
+		"currentRest" : {"data_type":"text"},
 		
 		# collectables
 		
@@ -96,8 +97,19 @@ func _ready():
 		"day_night_enabled" : {"data_type":"bool"},
 		"interest_1" : {"data_type":"text"},
 		"interest_2" : {"data_type":"text"},
-		"interest_3" : {"data_type":"text"}
-		
+		"interest_3" : {"data_type":"text"},
+		"day_night_ui_toggle" : {"data_type":"bool"},
+		"ui_toggle_1" : {"data_type":"bool"},
+		"ui_toggle_2" : {"data_type":"bool"},
+		"minimap_toggle" : {"data_type":"bool"},
+		"trade_req" : {"data_type":"bool"},
+		"trade_sender":{"data_type":"text"},
+		"trade_receiver":{"data_type":"text"},
+		"group1" : {"data_type":"text"},
+		"group2" : {"data_type":"text"},
+		"group3" : {"data_type":"text"},
+		"group4" : {"data_type":"text"},
+		"group5" : {"data_type":"text"},
 	}
 	(Attributes.database).create_table("Players", table)
 	var friend_reqs = {
@@ -110,6 +122,22 @@ func _ready():
 		"friend2" : {"data_type":"text"}
 	}
 	(Attributes.database).create_table("Friend_List", friend_list)
+	var online_players = {
+		"players" : {"data_type":"text"},
+	}
+	(Attributes.database).create_table("Online_Players", online_players)
+	var trade_requests = {
+		"sender" : {"data_type":"text"},
+		"receiver" : {"data_type":"text"},
+		"status" : {"data_type":"int"}
+	}
+	(Attributes.database).create_table("Trade_Requests", trade_requests)
+	var bug_reports = {
+		"username" : {"data_type":"text"},
+		"time" : {"data_type":"text"},
+		"report" : {"data_type":"text"}
+	}
+	(Attributes.database).create_table("Bug_Reports", bug_reports)
 
 func _on_start_new_game_pressed():
 	if username_entry.text == "":

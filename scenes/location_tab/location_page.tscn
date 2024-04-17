@@ -31,10 +31,6 @@ offset_right = -0.128052
 offset_bottom = -0.104004
 grow_horizontal = 2
 theme = SubResource("Theme_lm78v")
-theme_override_colors/default_color = Color(0.690196, 0.54902, 0, 1)
-theme_override_colors/font_selected_color = Color(0.690196, 0.54902, 0, 1)
-theme_override_colors/font_shadow_color = Color(0.690196, 0.54902, 0, 1)
-theme_override_colors/font_outline_color = Color(0.690196, 0.54902, 0, 1)
 theme_override_font_sizes/normal_font_size = 30
 
 [node name="location_picture" type="TextureRect" parent="."]
@@ -61,7 +57,6 @@ offset_top = -0.208008
 offset_right = 0.511963
 offset_bottom = 0.175964
 theme = SubResource("Theme_7jcog")
-theme_override_colors/default_color = Color(0.690196, 0.54902, 0, 1)
 theme_override_font_sizes/normal_font_size = 20
 
 [node name="ReviewRequest" type="HTTPRequest" parent="."]
@@ -89,7 +84,6 @@ offset_left = -0.0640259
 offset_top = 0.143982
 offset_right = 0.383911
 offset_bottom = 0.192017
-theme_override_colors/default_color = Color(0.690196, 0.54902, 0, 1)
 theme_override_font_sizes/normal_font_size = 14
 
 [node name="Button" type="Button" parent="."]
@@ -101,6 +95,14 @@ offset_right = 0.319992
 offset_bottom = -0.152008
 text = "Close"
 
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 968.0
+offset_right = 1152.0
+offset_bottom = 64.0
+text = "Leave/View Reviews"
+
 [connection signal="panel_closed" from="." to="." method="close_panel"]
 [connection signal="request_completed" from="ReviewRequest" to="." method="_on_review_request_request_completed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_leave_pressed"]

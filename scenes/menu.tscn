@@ -45,7 +45,7 @@ layout_mode = 0
 offset_left = 580.0
 offset_top = 119.0
 offset_right = 809.0
-offset_bottom = 197.0
+offset_bottom = 173.0
 text = "View Progress"
 
 [node name="BackToMapButton" type="Button" parent="Panel"]
@@ -121,9 +121,9 @@ text = "Server Roster"
 [node name="allStats" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 580.0
-offset_top = 221.0
+offset_top = 253.0
 offset_right = 812.0
-offset_bottom = 282.0
+offset_bottom = 295.0
 text = "View All Stats"
 
 [node name="interestsButton" type="Button" parent="Panel"]
@@ -156,7 +156,7 @@ text = "Submit a Bug Report"
 [node name="findFriends" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 582.0
-offset_top = 297.0
+offset_top = 310.0
 offset_right = 812.0
 offset_bottom = 354.0
 text = "Find Friends"
@@ -167,6 +167,13 @@ offset_top = 280.0
 offset_right = 1070.0
 offset_bottom = 395.0
 text = "Messages"
+
+[node name="Studyroom" type="Button" parent="Panel"]
+offset_left = 582.0
+offset_top = 186.0
+offset_right = 807.0
+offset_bottom = 236.0
+text = "View Study Rooms"
 
 [connection signal="pressed" from="Panel/ViewProgressButton" to="." method="_on_view_progress_button_pressed"]
 [connection signal="pressed" from="Panel/BackToMapButton" to="." method="_on_back_to_map_button_pressed"]
@@ -180,3 +187,4 @@ text = "Messages"
 [connection signal="pressed" from="Panel/BugReportButton" to="." method="_on_bug_report_button_pressed"]
 [connection signal="pressed" from="Panel/findFriends" to="." method="_on_find_friends_pressed"]
 [connection signal="pressed" from="Panel/MessageButton" to="." method="_on_message_button_pressed"]
+[connection signal="pressed" from="Panel/Studyroom" to="." method="_on_studyroom_pressed"]

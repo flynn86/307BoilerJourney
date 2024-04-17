@@ -1,7 +1,10 @@
 extends Node2D
 
+var frame_counter = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	get_node("CharacterBody2D/transportation_panel").visible = false
 	$CharacterBody2D.global_position = Vector2(float(Attributes.xacademic),float(Attributes.yacademic))
 	get_node("SummerVariantA").visible = false
 	get_node("FallVariantA").visible = false
@@ -9,6 +12,7 @@ func _ready():
 	get_node("WinterVariantA").visible = false
 	get_node("CharacterBody2D/Panel2").visible = false
 	$CharacterBody2D/Panel.visible = false
+	get_node("CharacterBody2D/transportation_panel").visible = false
 	if (Attributes.season == "Summer"):
 		get_node("SummerVariantA").visible = true
 	elif (Attributes.season == "Fall"):
@@ -39,6 +43,9 @@ func _ready():
 	get_node("CharacterBody2D/Player/location_text")
 	get_node("CharacterBody2D/Player/GameBasics").visible = !Attributes.basics_shown
 	get_node("CharacterBody2D/Player/view_suggestions").visible = false
+	$CharacterBody2D/Player/OnlinePlayersTrade.visible = false
+	$CharacterBody2D/Player/OnlinePlayerList.visible = false
+	$CharacterBody2D/Player/Trade_Request_Notif.visible = false
 
 func _input(event):
 	if event is InputEventMouseMotion or event is InputEventMouseButton:
@@ -177,6 +184,24 @@ func _process(delta):
 		if (Attributes.rank != "Senior"):
 			get_node("CharacterBody2D/Panel2").visible = true
 		Attributes.rank = "Senior"
+	frame_counter += 1
+	
+	if (frame_counter > 20):
+		# Checks for trade requests sent to this user
+		if (Attributes.trade_req == false):
+			(Attributes.database).query("SELECT sender FROM Trade_Requests WHERE receiver = '" + Attributes.username + "'" + " AND status = 0")
+			if ((Attributes.database).query_result):
+				var sender = (Attributes.database).query_result[0]["sender"]
+				$CharacterBody2D/Player/Trade_Request_Notif.send_trade_request(sender)
+		# Checks for trade accepts sent by this user
+		(Attributes.database).query("SELECT * FROM Trade_Requests WHERE sender = '" + Attributes.username + "'" + " AND status = 1")
+		if ((Attributes.database).query_result):
+			var receiver = (Attributes.database).query_result[0]["receiver"]
+			Attributes.trade_sender = Attributes.username
+			Attributes.trade_receiver = receiver
+			Attributes.location = "res://scenes/map/academic_map.tscn"
+			get_tree().change_scene_to_file("res://scenes/trading/trading.tscn")
+		frame_counter = 0
 
 func _on_view_schedule_pressed():
 	Attributes.xacademic = $CharacterBody2D.global_position.x
@@ -273,8 +298,163 @@ func _on_friends_list_pressed():
 
 
 func _on_trade_pressed():
-	Attributes.xacademic = $CharacterBody2D.global_position.x
-	Attributes.yacademic = $CharacterBody2D.global_position.y
-	Attributes.location = "res://scenes/map/academic_map.tscn"
-	SaveUtils.save()
-	get_tree().change_scene_to_file("res://scenes/trading/trade_requests.tscn")
+	#Attributes.xacademic = $CharacterBody2D.global_position.x
+	#Attributes.yacademic = $CharacterBody2D.global_position.y
+	#Attributes.location = "res://scenes/map/academic_map.tscn"
+	#SaveUtils.save()
+	$CharacterBody2D/Player/OnlinePlayersTrade.visible = ! $CharacterBody2D/Player/OnlinePlayersTrade.visible
+
+func _on_time_button_pressed():
+	if (Attributes.day_night_ui_toggle == true):
+		time_animation(false)
+		Attributes.day_night_ui_toggle = false;
+		SaveUtils.save()
+	else:
+		time_animation(true)
+		Attributes.day_night_ui_toggle = true;
+		SaveUtils.save()
+		
+func time_animation(toggle : bool):
+	if (toggle == true):
+		get_node("CharacterBody2D/Player/Time Button").rotation_degrees = 0
+		get_node("CharacterBody2D/Player/Time Button").position = Vector2(-900, 420)
+		$CharacterBody2D/Player/DayNightCycleUI.position = Vector2(-1125, 372)
+		for i in range(0,20,1):
+			var x1 = $CharacterBody2D/Player/DayNightCycleUI.position.x
+			$CharacterBody2D/Player/DayNightCycleUI.position = Vector2(x1 + 11.5, 372)
+			var x2 = get_node("CharacterBody2D/Player/Time Button").position.x
+			get_node("CharacterBody2D/Player/Time Button").position = Vector2(x2 + 11.5, 420)
+			await get_tree().create_timer(0.01).timeout
+		get_node("CharacterBody2D/Player/Time Button").rotation_degrees = 180
+		get_node("CharacterBody2D/Player/Time Button").position = Vector2(-645, 460)
+		$CharacterBody2D/Player/DayNightCycleUI.position = Vector2(-900, 372)
+	else:
+		get_node("CharacterBody2D/Player/Time Button").rotation_degrees = 180
+		get_node("CharacterBody2D/Player/Time Button").position = Vector2(-645, 460)
+		$CharacterBody2D/Player/DayNightCycleUI.position = Vector2(-900, 372)
+		for i in range(0,20,1):
+			var x1 = $CharacterBody2D/Player/DayNightCycleUI.position.x
+			$CharacterBody2D/Player/DayNightCycleUI.position = Vector2(x1 - 11.5, 372)
+			var x2 = get_node("CharacterBody2D/Player/Time Button").position.x
+			get_node("CharacterBody2D/Player/Time Button").position = Vector2(x2 - 11.5, 460)
+			await get_tree().create_timer(0.01).timeout
+		get_node("CharacterBody2D/Player/Time Button").rotation_degrees = 0
+		get_node("CharacterBody2D/Player/Time Button").position = Vector2(-900, 420)
+		$CharacterBody2D/Player/DayNightCycleUI.position = Vector2(-1125, 372)
+
+
+func _on_ui_toggle_1_pressed():
+	if (Attributes.ui_toggle_1 == true):
+		Attributes.ui_toggle_1 = false;
+		SaveUtils.save()
+		ui_toggle_1(false)
+	else:
+		Attributes.ui_toggle_1 = true;
+		SaveUtils.save()
+		ui_toggle_1(true)
+		
+func ui_toggle_1(toggle : bool):
+	if (toggle == true):
+		$CharacterBody2D/Player/UIToggle1.text = "Hide"
+	else:
+		$CharacterBody2D/Player/UIToggle1.text = "Show"
+	$CharacterBody2D/Player/Button.visible = toggle
+	$CharacterBody2D/Player/MenuButton.visible = toggle
+	$CharacterBody2D/Player/variants.visible = toggle
+	$CharacterBody2D/Player/ViewSchedule.visible = toggle
+	$CharacterBody2D/Player/Inventory.visible = toggle
+	$CharacterBody2D/Player/DayNight.visible = toggle
+	get_node("CharacterBody2D/Player/class rank").visible = toggle
+
+
+func _on_ui_toggle_2_pressed():
+	if (Attributes.ui_toggle_2 == true):
+		Attributes.ui_toggle_2 = false;
+		SaveUtils.save()
+		ui_toggle_2(false)
+	else:
+		Attributes.ui_toggle_2 = true;
+		SaveUtils.save()
+		ui_toggle_2(true)
+		
+func ui_toggle_2(toggle : bool):
+	if (toggle == true):
+		$CharacterBody2D/Player/UIToggle2.text = "Hide"
+	else:
+		$CharacterBody2D/Player/UIToggle2.text = "Show"
+	$CharacterBody2D/Player/Trade.visible = toggle
+	$CharacterBody2D/Player/FriendsList.visible = toggle
+	$CharacterBody2D/Player/Suggestions.visible = toggle
+	$CharacterBody2D/Player/DailyTrivia.visible = toggle
+	$CharacterBody2D/Player/QuestLog.visible = toggle
+
+
+func _on_minimap_toggle_pressed():
+	if (Attributes.minimap_toggle == true):
+		Attributes.minimap_toggle = false;
+		SaveUtils.save()
+		minimap_toggle(false)
+	else:
+		Attributes.minimap_toggle = true;
+		SaveUtils.save()
+		minimap_toggle(true)
+		
+func minimap_toggle(toggle : bool):
+	if (toggle == true):
+		$CharacterBody2D/Player/MinimapToggle.text = "Hide"
+	else:
+		$CharacterBody2D/Player/MinimapToggle.text = "Show"
+	$CharacterBody2D/Player/SubViewportContainer.visible = toggle
+
+
+func _on_tree_entered():
+	var data = {
+		"players" = Attributes.username
+	}
+	#(Attributes.database).query("SELECT COUNT(*) FROM Online_Players WHERE players = '" + Attributes.username + "'")
+	#if ((Attributes.database).query_result.size() == 0):
+	(Attributes.database).insert_row("Online_Players", data)
+
+
+func _on_tree_exited():
+	(Attributes.database).query("DELETE FROM Online_Players WHERE players = '" + Attributes.username + "'")
+
+func _notification(notif): 
+	if notif == NOTIFICATION_WM_CLOSE_REQUEST: 
+		(Attributes.database).query("DELETE FROM Online_Players WHERE players = '" + Attributes.username + "'")
+
+func _on_online_choice_pressed():
+	$CharacterBody2D/Player/OnlinePlayerList.visible = true
+
+func _on_close_trade_type_pressed():
+	$CharacterBody2D/Player/OnlinePlayersTrade.visible = false
+
+func _on_trans_close_pressed():
+	get_node("CharacterBody2D/transportation_panel").visible = false
+
+func _on_bus_input_event(viewport, event, shape_idx):
+	if event is InputEventScreenTouch and event.pressed:
+		get_node("CharacterBody2D/transportation_panel").visible = true
+	elif event is InputEventMouseButton and event.pressed:
+		get_node("CharacterBody2D/transportation_panel").visible = true
+
+func _on_bus_button_pressed(extra_arg_0):
+	if (extra_arg_0 == "phys"):
+		$CharacterBody2D.global_position.x = 2113.241699
+		$CharacterBody2D.global_position.y = -5078.95214
+	elif (extra_arg_0 =="army"):
+		$CharacterBody2D.global_position.x = -930.07617187
+		$CharacterBody2D.global_position.y = -2398.39624023438
+	elif (extra_arg_0 =="matt"):
+		$CharacterBody2D.global_position.x = -937.063659667969
+		$CharacterBody2D.global_position.y =  2190.18359375
+	elif (extra_arg_0 =="push"):
+		$CharacterBody2D.global_position.x = -820.384765
+		$CharacterBody2D.global_position.y = -5648.923828
+	elif (extra_arg_0 =="pmu"):
+		$CharacterBody2D.global_position.x = 3122.93627929688
+		$CharacterBody2D.global_position.y = 3090.18359375
+	elif (extra_arg_0 =="ece"):
+		$CharacterBody2D.global_position.x = 3758.2416
+		$CharacterBody2D.global_position.y = -3423.9521
+	get_node("CharacterBody2D/transportation_panel").visible = false

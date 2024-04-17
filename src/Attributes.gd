@@ -16,6 +16,7 @@ var location: String = "res://scenes/map/academic_map.tscn"
 var rank: String = "Freshman"
 var serverName: String = ""
 var isHost: bool = false
+var currentRest: String = ""
 
 # collectables
 var numCollected: int = 0
@@ -148,10 +149,18 @@ var day_night_enabled : bool = false
 var interest_1: String = ""
 var interest_2: String = ""
 var interest_3: String = ""
-
-
-
-
+var day_night_ui_toggle : bool = true
+var ui_toggle_1 : bool = true
+var ui_toggle_2 : bool = true
+var minimap_toggle : bool = true
+var trade_req : bool = false
+var trade_sender : String = ""
+var trade_receiver : String = ""
+var group1 : String = ""
+var group2 : String = ""
+var group3 : String = ""
+var group4 : String = ""
+var group5 : String = ""
 
 
 
@@ -294,3 +303,15 @@ func reset(user: String):
 	interest_1 = ""
 	interest_2 = ""
 	interest_3 = ""
+	day_night_ui_toggle = true
+	ui_toggle_1 = true
+	ui_toggle_2 = true
+	minimap_toggle = true
+	trade_req = false
+	trade_sender = ""
+	trade_receiver = ""
+	group1 = ""
+	group2 = ""
+	group3 = ""
+	group4 = ""
+	group5 = ""

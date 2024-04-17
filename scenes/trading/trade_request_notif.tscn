@@ -1,0 +1,170 @@
+[gd_scene load_steps=10 format=3 uid="uid://ued3fftdv1ih"]
+
+[ext_resource type="Script" path="res://Trade_Request_Notif.gd" id="1_rxbhf"]
+[ext_resource type="Texture2D" uid="uid://cldjl6vx7u3gx" path="res://scenes/Inventory/main panel.png" id="2_vb1vq"]
+[ext_resource type="Texture2D" uid="uid://ds0l5fe0r5ev0" path="res://scenes/Inventory/inner_panel.png" id="3_stkqi"]
+[ext_resource type="FontFile" uid="uid://clv208675ouog" path="res://scenes/Inventory/Arcadepix Plus.ttf" id="4_ott2f"]
+[ext_resource type="Texture2D" uid="uid://oqlie3pucsn5" path="res://scenes/Inventory/item_slot.png" id="5_nfaos"]
+[ext_resource type="Texture2D" uid="uid://16q1lg8bon67" path="res://scenes/Inventory/x_normal.png" id="6_1qpkx"]
+[ext_resource type="Texture2D" uid="uid://covydrqnrlapc" path="res://scenes/Inventory/x_pressed.png" id="7_gfjdx"]
+[ext_resource type="Texture2D" uid="uid://cguor0b7vrm8d" path="res://scenes/Inventory/x_hover.png" id="8_kfvua"]
+[ext_resource type="Texture2D" uid="uid://dnxbocukrwpcf" path="res://scenes/Inventory/x_disabled.png" id="9_b5wya"]
+
+[node name="Trade_Request_Notif" type="Node2D"]
+script = ExtResource("1_rxbhf")
+
+[node name="TradeReqPanel" type="NinePatchRect" parent="."]
+offset_left = 358.0
+offset_top = 90.0
+offset_right = 471.0
+offset_bottom = 161.0
+texture = ExtResource("2_vb1vq")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+
+[node name="TradeReqInnerPanel" type="NinePatchRect" parent="TradeReqPanel"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 104.0
+offset_bottom = 62.0
+texture = ExtResource("3_stkqi")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="question_patch" type="NinePatchRect" parent="TradeReqPanel/TradeReqInnerPanel"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 92.0
+offset_bottom = 22.0
+
+[node name="question" type="Label" parent="TradeReqPanel/TradeReqInnerPanel/question_patch"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 120.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+theme_override_colors/font_color = Color(0.301961, 0.34902, 0.4, 1)
+theme_override_fonts/font = ExtResource("4_ott2f")
+text = "Player wants to trade items."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Accept_Choice" type="TextureButton" parent="TradeReqPanel/TradeReqInnerPanel"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 25.0
+offset_right = 45.0
+offset_bottom = 41.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="TradeReqPanel/TradeReqInnerPanel/Accept_Choice"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_nfaos")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Accept_Label" type="Label" parent="TradeReqPanel/TradeReqInnerPanel/Accept_Choice/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 109.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(0.423529, 0.247059, 0.121569, 1)
+theme_override_colors/font_outline_color = Color(0.925353, 0.925353, 0.925353, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("4_ott2f")
+theme_override_font_sizes/font_size = 25
+text = "Accept"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 161
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Decline_choice" type="TextureButton" parent="TradeReqPanel/TradeReqInnerPanel"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 25.0
+offset_right = 91.0
+offset_bottom = 41.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="TradeReqPanel/TradeReqInnerPanel/Decline_choice"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_nfaos")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Decline_Label" type="Label" parent="TradeReqPanel/TradeReqInnerPanel/Decline_choice/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 109.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(0.423529, 0.247059, 0.121569, 1)
+theme_override_colors/font_outline_color = Color(0.925353, 0.925353, 0.925353, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("4_ott2f")
+theme_override_font_sizes/font_size = 25
+text = "Decline"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 161
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="close" type="TextureButton" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 461.0
+offset_top = 90.0
+offset_right = 470.0
+offset_bottom = 99.0
+grow_horizontal = 2
+texture_normal = ExtResource("6_1qpkx")
+texture_pressed = ExtResource("7_gfjdx")
+texture_hover = ExtResource("8_kfvua")
+texture_disabled = ExtResource("9_b5wya")
+
+[connection signal="pressed" from="TradeReqPanel/TradeReqInnerPanel/Accept_Choice" to="." method="_on_accept_choice_pressed"]
+[connection signal="pressed" from="TradeReqPanel/TradeReqInnerPanel/Decline_choice" to="." method="_on_decline_choice_pressed"]
+[connection signal="pressed" from="close" to="." method="_on_close_pressed"]

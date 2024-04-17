@@ -12,7 +12,7 @@ func initialize():
 		"rank" = Attributes.rank,
 		"serverName" = Attributes.serverName,
 		"isHost" = Attributes.isHost,
-		
+		"currentRest" = Attributes.currentRest,
 		# collectables
 		
 		"numCollected" = Attributes.numCollected,
@@ -91,7 +91,17 @@ func initialize():
 		"day_night_enabled" = Attributes.day_night_enabled,
 		"interest_1" = Attributes.interest_1,
 		"interest_2" = Attributes.interest_2,
-		"interest_3" = Attributes.interest_3
+		"interest_3" = Attributes.interest_3,
+		# Togglable UI
+		"day_night_ui_toggle" = Attributes.day_night_ui_toggle,
+		"ui_toggle_1" = Attributes.ui_toggle_1,
+		"ui_toggle_2" = Attributes.ui_toggle_2,
+		"minimap_toggle" = Attributes.minimap_toggle,
+		"group1" = Attributes.group1,
+		"group2" = Attributes.group2,
+		"group3" = Attributes.group3,
+		"group4" = Attributes.group4,
+		"group5" = Attributes.group5
 		
 	}
 	(Attributes.database).insert_row("Players", data)
@@ -108,6 +118,7 @@ func save():
 		"rank" = Attributes.rank,
 		"serverName" = Attributes.serverName,
 		"isHost" = Attributes.isHost,
+		"currentRest" = Attributes.currentRest,
 		
 		# collectables
 		
@@ -188,8 +199,16 @@ func save():
 		"day_night_enabled" = Attributes.day_night_enabled,
 		"interest_1" = Attributes.interest_1,
 		"interest_2" = Attributes.interest_2,
-		"interest_3" = Attributes.interest_3
-		
+		"interest_3" = Attributes.interest_3,
+		"day_night_ui_toggle" = Attributes.day_night_ui_toggle,
+		"ui_toggle_1" = Attributes.ui_toggle_1,
+		"ui_toggle_2" = Attributes.ui_toggle_2,
+		"minimap_toggle" = Attributes.minimap_toggle,
+		"group1" = Attributes.group1,
+		"group2" = Attributes.group2,
+		"group3" = Attributes.group3,
+		"group4" = Attributes.group4,
+		"group5" = Attributes.group5
 	})
 
 func load():
@@ -205,6 +224,7 @@ func load():
 	Attributes.rank = player[0].rank
 	Attributes.serverName = player[0].serverName
 	Attributes.isHost = player[0].isHost
+	Attributes.currentRest = player[0].currentRest
 
 	# collectables
 
@@ -335,7 +355,17 @@ func load():
 	Attributes.interest_1 = player[0].interest_1
 	Attributes.interest_2 = player[0].interest_2
 	Attributes.interest_3 = player[0].interest_3
-	
-
+	Attributes.day_night_ui_toggle = player[0].day_night_ui_toggle
+	Attributes.ui_toggle_1 = player[0].ui_toggle_1
+	Attributes.ui_toggle_2 = player[0].ui_toggle_2
+	Attributes.minimap_toggle = player[0].minimap_toggle
+#	Attributes.trade_req = player[0].trade_req
+#	Attributes.trade_sender = player[0].trade_sender
+#	Attributes.trade_receiver = player[0].trade_receiver
+	Attributes.group1 = player[0].group1
+	Attributes.group2 = player[0].group2
+	Attributes.group3 = player[0].group3
+	Attributes.group4 = player[0].group4
+	Attributes.group5 = player[0].group5
 func delete():
 	(Attributes.database).delete_rows("Players", "username == '%s'" % Attributes.username)

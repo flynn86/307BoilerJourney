@@ -1,11 +1,37 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnxxhsr16r01o"]
+[gd_scene load_steps=7 format=3 uid="uid://dnxxhsr16r01o"]
 
 [ext_resource type="Script" path="res://scenes/bug_reports/bug_report.gd" id="1_trnte"]
+[ext_resource type="FontFile" uid="uid://5lqm3siyw530" path="res://fonts/KOMIKAX_.ttf" id="2_oyacu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7d34t"]
+bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lb0i2"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgboq"]
+bg_color = Color(0.141176, 0.141176, 0.141176, 1)
+
+[sub_resource type="Theme" id="Theme_dtyae"]
+Button/font_sizes/font_size = 16
+Button/styles/normal = SubResource("StyleBoxFlat_7d34t")
+Label/font_sizes/font_size = 40
+Label/fonts/font = ExtResource("2_oyacu")
+Label/styles/normal = null
+Panel/styles/panel = SubResource("StyleBoxFlat_lb0i2")
+TextEdit/font_sizes/font_size = 16
+TextEdit/styles/normal = SubResource("StyleBoxFlat_pgboq")
 
 [node name="BugReport" type="Node2D"]
 script = ExtResource("1_trnte")
 
-[node name="Submit" type="Button" parent="."]
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1152.0
+offset_bottom = 642.0
+theme = SubResource("Theme_dtyae")
+
+[node name="Submit" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 496.0
 offset_top = 491.0
 offset_right = 665.0
@@ -13,7 +39,8 @@ offset_bottom = 553.0
 theme_override_font_sizes/font_size = 24
 text = "Submit"
 
-[node name="Close" type="Button" parent="."]
+[node name="Close" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 882.0
 offset_top = 22.0
 offset_right = 1129.0
@@ -21,23 +48,65 @@ offset_bottom = 84.0
 theme_override_font_sizes/font_size = 24
 text = "Back to Main Menu"
 
-[node name="Label" type="Label" parent="."]
-offset_left = 432.0
-offset_top = 72.0
-offset_right = 771.0
-offset_bottom = 151.0
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 70.0
+offset_right = 779.0
+offset_bottom = 149.0
 theme_override_font_sizes/font_size = 34
 text = "Submit a Bug Report"
 
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 163.0
+[node name="TextEdit" type="TextEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 166.0
 offset_top = 146.0
-offset_right = 997.0
+offset_right = 1000.0
 offset_bottom = 459.0
 theme_override_font_sizes/font_size = 24
-placeholder_text = "   Please describe the bug that was found and the sequence of events 
-   that led to this bug:"
+placeholder_text = " Please describe the bug that was found and the sequence of events 
+ that led to this bug:"
 wrap_mode = 1
 
-[connection signal="pressed" from="Submit" to="." method="_on_submit_pressed"]
-[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
+[node name="Left" type="ColorRect" parent="Panel"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 146.0
+offset_right = 166.0
+offset_bottom = 459.0
+color = Color(0.141176, 0.141176, 0.141176, 1)
+
+[node name="Hole1" type="ColorRect" parent="Panel"]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 146.0
+offset_right = 167.0
+offset_bottom = 147.0
+color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+
+[node name="Hole2" type="ColorRect" parent="Panel"]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 458.0
+offset_right = 167.0
+offset_bottom = 459.0
+color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+
+[node name="Hole3" type="ColorRect" parent="Panel"]
+layout_mode = 0
+offset_left = 999.0
+offset_top = 146.0
+offset_right = 1000.0
+offset_bottom = 147.0
+color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+
+[node name="Hole4" type="ColorRect" parent="Panel"]
+layout_mode = 0
+offset_left = 999.0
+offset_top = 458.0
+offset_right = 1000.0
+offset_bottom = 459.0
+color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+
+[connection signal="pressed" from="Panel/Submit" to="." method="_on_submit_pressed"]
+[connection signal="pressed" from="Panel/Close" to="." method="_on_close_pressed"]

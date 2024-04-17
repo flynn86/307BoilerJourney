@@ -112,3 +112,7 @@ func _on_bug_report_button_pressed():
 
 func _on_find_friends_pressed():
 	get_tree().change_scene_to_file("res://scenes/suggested_users.tscn")
+
+
+func _on_studyroom_pressed():
+	get_tree().change_scene_to_file("res://scenes/study_rooms.tscn")

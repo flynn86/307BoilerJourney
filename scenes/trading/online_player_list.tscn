@@ -1,0 +1,86 @@
+[gd_scene load_steps=10 format=3 uid="uid://bwq8eq8d6ou8w"]
+
+[ext_resource type="Texture2D" uid="uid://cldjl6vx7u3gx" path="res://scenes/Inventory/main panel.png" id="1_27uvs"]
+[ext_resource type="Script" path="res://scenes/trading/online_player_list.gd" id="1_pmj7m"]
+[ext_resource type="Texture2D" uid="uid://dcc6kfgxemxbq" path="res://scenes/Inventory/title.png" id="2_c258o"]
+[ext_resource type="Texture2D" uid="uid://ds0l5fe0r5ev0" path="res://scenes/Inventory/inner_panel.png" id="2_mybu7"]
+[ext_resource type="FontFile" uid="uid://clv208675ouog" path="res://scenes/Inventory/Arcadepix Plus.ttf" id="3_nf6nd"]
+[ext_resource type="Texture2D" uid="uid://16q1lg8bon67" path="res://scenes/Inventory/x_normal.png" id="6_yhm7c"]
+[ext_resource type="Texture2D" uid="uid://covydrqnrlapc" path="res://scenes/Inventory/x_pressed.png" id="7_w0n4m"]
+[ext_resource type="Texture2D" uid="uid://cguor0b7vrm8d" path="res://scenes/Inventory/x_hover.png" id="8_48bpa"]
+[ext_resource type="Texture2D" uid="uid://dnxbocukrwpcf" path="res://scenes/Inventory/x_disabled.png" id="9_hib0l"]
+
+[node name="OnlinePlayerList" type="Node2D"]
+script = ExtResource("1_pmj7m")
+
+[node name="OnlinePlayerListPanel" type="NinePatchRect" parent="."]
+offset_left = 150.0
+offset_top = 41.0
+offset_right = 275.0
+offset_bottom = 186.0
+texture = ExtResource("1_27uvs")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+
+[node name="OnlinePlayerTitle" type="NinePatchRect" parent="OnlinePlayerListPanel"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = -13.0
+offset_right = 107.0
+offset_bottom = 9.0
+texture = ExtResource("2_c258o")
+patch_margin_left = 8
+patch_margin_top = 6
+patch_margin_right = 8
+patch_margin_bottom = 2
+
+[node name="OnlinePlayerLabel" type="Label" parent="OnlinePlayerListPanel/OnlinePlayerTitle"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.677966
+anchor_bottom = 1.53333
+offset_left = 7.0
+offset_top = 8.0
+offset_right = 95.339
+offset_bottom = -3.73326
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.301961, 0.34902, 0.4, 1)
+theme_override_fonts/font = ExtResource("3_nf6nd")
+theme_override_font_sizes/font_size = 25
+text = "Online Players"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OnlinePlayerListInnerPanel" type="NinePatchRect" parent="OnlinePlayerListPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -9.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mybu7")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="close" type="TextureButton" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 265.0
+offset_top = 41.0
+offset_right = 274.0
+offset_bottom = 50.0
+grow_horizontal = 2
+texture_normal = ExtResource("6_yhm7c")
+texture_pressed = ExtResource("7_w0n4m")
+texture_hover = ExtResource("8_48bpa")
+texture_disabled = ExtResource("9_hib0l")
+
+[connection signal="pressed" from="close" to="." method="_on_close_pressed"]

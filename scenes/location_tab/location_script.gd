@@ -3,6 +3,7 @@ extends Panel
 const API_KEY = "AIzaSyBL6GUlNHADw9doUkqDTruMpd_isSYmX4k"
 const GOOGLE_PLACES_URL = "https://maps.googleapis.com/maps/api/place/details/json"
 signal panel_closed
+var cur_name = ""
 
 var name_to_place_id = {
 	"WALC": "ChIJBwU-Qjf9EogRcxMcZBGjqzY",  
@@ -15,6 +16,7 @@ var name_to_place_id = {
 }
 
 func display_content(name: String) -> void:
+	Attributes.currentRest = name
 	var name_label = get_node("location_name") as RichTextLabel
 	var picture = get_node("location_picture") as TextureRect
 	var info_text = get_node("location_information") as RichTextLabel 
@@ -158,3 +160,6 @@ func _ready():
 	
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/map/academic_map.tscn")
+
+func _on_leave_pressed(): 
+	get_tree().change_scene_to_file("res://scenes/restaurant_page/review_page.tscn")
