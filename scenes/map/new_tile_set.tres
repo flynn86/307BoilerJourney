@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=54 format=3 uid="uid://dfhx1ytk7y0ei"]
+[gd_resource type="TileSet" load_steps=55 format=3 uid="uid://dfhx1ytk7y0ei"]
 
 [ext_resource type="Texture2D" uid="uid://blvbwa0dac6h2" path="res://scenes/map/Building and terrain assets/plants.png" id="1_0b1i2"]
 [ext_resource type="Texture2D" uid="uid://6fbuxdx1yltl" path="res://scenes/map/Building and terrain assets/victorian-streets.png" id="1_6oomi"]
@@ -63,6 +63,9 @@ tile_data = PackedInt32Array(0, 262157, 4, 65536, 262157, 5, 1, 327693, 4, 65537
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_1eo7g"]
 tile_data = PackedInt32Array(0, 10, 15, 65536, 262154, 6, 131072, 262154, 7)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_fvh64"]
+tile_data = PackedInt32Array(0, 458762, 17, 65536, 262154, 6, 131072, 262154, 7)
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_vuspo"]
 tile_data = PackedInt32Array(0, 3, 101, 65536, 3, 102, 131072, 3, 102, 196608, 3, 103, 1, 65539, 101, 65537, 65539, 102, 131073, 65539, 102, 196609, 65539, 103)
@@ -62061,3 +62064,4 @@ pattern_19 = SubResource("TileMapPattern_btjjh")
 pattern_20 = SubResource("TileMapPattern_5s3fu")
 pattern_21 = SubResource("TileMapPattern_ptauv")
 pattern_22 = SubResource("TileMapPattern_1eo7g")
+pattern_23 = SubResource("TileMapPattern_fvh64")
