@@ -133,6 +133,12 @@ func _ready():
 		"status" : {"data_type":"int"}
 	}
 	(Attributes.database).create_table("Trade_Requests", trade_requests)
+	var bug_reports = {
+		"username" : {"data_type":"text"},
+		"time" : {"data_type":"text"},
+		"report" : {"data_type":"text"}
+	}
+	(Attributes.database).create_table("Bug_Reports", bug_reports)
 
 func _on_start_new_game_pressed():
 	if username_entry.text == "":
