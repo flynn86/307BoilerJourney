@@ -5,11 +5,20 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3vekh"]
 bg_color = Color(0.266667, 0.266667, 0.266667, 1)
-border_color = Color(0.804995, 0.474866, 0.720932, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.843137, 0, 1)
 border_blend = true
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_30lc2"]
 bg_color = Color(0, 0, 0, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(1, 0.843137, 0, 1)
 border_blend = true
 
 [sub_resource type="Theme" id="Theme_f34w2"]
@@ -27,6 +36,7 @@ offset_bottom = 648.0
 theme = SubResource("Theme_f34w2")
 
 [node name="BackToMap" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 459.0
 offset_top = 549.0
 offset_right = 657.0
@@ -35,47 +45,58 @@ theme_override_font_sizes/font_size = 20
 text = "Back to Map"
 
 [node name="MainLabel" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 455.0
 offset_top = 35.0
 offset_right = 644.0
 offset_bottom = 95.0
+theme_override_colors/font_shadow_color = Color(0.541176, 0.45098, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 5
 theme_override_fonts/font = ExtResource("2_bdi0c")
 theme_override_font_sizes/font_size = 40
 text = "Quest Log"
 
 [node name="QuestLabel1" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 244.0
 offset_top = 147.0
 offset_right = 684.0
 offset_bottom = 237.0
+theme_override_colors/font_shadow_color = Color(1, 0.843137, 0, 1)
 theme_override_font_sizes/font_size = 20
-text = "Quest 1:  visit the Engineering
+text = "Quest 1:  Visit the Engineering
 Fountain and Loeb Fountain
 Reward: 10 XP"
 horizontal_alignment = 1
 
 [node name="QuestLabel2" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 269.0
 offset_top = 288.0
 offset_right = 651.0
 offset_bottom = 348.0
+theme_override_colors/font_shadow_color = Color(1, 0.843137, 0, 1)
 theme_override_font_sizes/font_size = 20
-text = "Quest 2:  ring the Bell Tower
+text = "Quest 2:  Ring the Bell Tower
 Reward: 5 XP"
 horizontal_alignment = 1
 
 [node name="QuestLabel3" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 274.0
 offset_top = 411.0
 offset_right = 656.0
 offset_bottom = 501.0
+theme_override_colors/font_shadow_color = Color(1, 0.843137, 0, 1)
 theme_override_font_sizes/font_size = 20
-text = "Quest 3:  have collected at least 3
+text = "Quest 3: Collect at least 3
 collectibles
 Reward: 15 XP"
 horizontal_alignment = 1
 
 [node name="StartQuest1" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 654.0
 offset_top = 158.0
 offset_right = 794.0
@@ -84,6 +105,7 @@ theme_override_font_sizes/font_size = 18
 text = "Start Quest"
 
 [node name="StartQuest2" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 654.0
 offset_top = 297.0
 offset_right = 794.0
@@ -92,6 +114,7 @@ theme_override_font_sizes/font_size = 18
 text = "Start Quest"
 
 [node name="StartQuest3" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 655.0
 offset_top = 427.0
 offset_right = 795.0
@@ -101,6 +124,7 @@ text = "Start Quest"
 
 [node name="Quest1Status" type="Label" parent="Panel"]
 visible = false
+layout_mode = 0
 offset_left = 665.0
 offset_top = 170.0
 offset_right = 799.0
@@ -110,6 +134,7 @@ text = "In Progress"
 
 [node name="Quest2Status" type="Label" parent="Panel"]
 visible = false
+layout_mode = 0
 offset_left = 665.0
 offset_top = 309.0
 offset_right = 789.0
@@ -119,6 +144,7 @@ text = "In Progress"
 
 [node name="Quest3Status" type="Label" parent="Panel"]
 visible = false
+layout_mode = 0
 offset_left = 668.0
 offset_top = 439.0
 offset_right = 802.0

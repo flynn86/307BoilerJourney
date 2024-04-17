@@ -3,7 +3,6 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	(Attributes.database).query("SELECT group1, group2, group3, group4, group5 FROM Players WHERE username = '" + Attributes.username + "'")
 	$group1.visible = false
 	$group2.visible = false
 	$group3.visible = false
@@ -14,29 +13,30 @@ func _ready():
 	$chat3.visible = false
 	$chat4.visible = false
 	$chat5.visible = false
-	if (Attributes.database).query_result[0]["group1"] != "":
+	
+	if Attributes.group1 != "":
 		$group1.visible = true
-		$group1.text = (Attributes.database).query_result[0]["group1"]
+		$group1.text = Attributes.group1
 		$chat1.visible = true
 
-	if (Attributes.database).query_result[0]["group2"] != "":
+	if Attributes.group2 != "":
 		$group2.visible = true
-		$group2.text = (Attributes.database).query_result[0]["group2"]
+		$group2.text = Attributes.group2
 		$chat2.visible = true
 	
-	if (Attributes.database).query_result[0]["group3"] != "":
+	if Attributes.group3 != "":
 		$group3.visible = true
-		$group3.text = (Attributes.database).query_result[0]["group3"]
+		$group3.text = Attributes.group3
 		$chat3.visible = true
 		
-	if (Attributes.database).query_result[0]["group4"] != "":
+	if Attributes.group4 != "":
 		$group4.visible = true
-		$group4.text = (Attributes.database).query_result[0]["group4"]
+		$group4.text = Attributes.group4
 		$chat4.visible = true
 		
-	if (Attributes.database).query_result[0]["group5"] != "":
+	if Attributes.group5 != "":
 		$group5.visible = true
-		$group5.text = (Attributes.database).query_result[0]["group5"]
+		$group5.text = Attributes.group5
 		$chat5.visible = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -45,17 +45,17 @@ func _process(delta):
 
 
 func _on_createnew_pressed():
-	(Attributes.database).query("SELECT group1, group2, group3, group4, group5 FROM Players WHERE username = '" + Attributes.username + "'")
-	if (Attributes.database).query_result[0]["group1"] == "":
-			Attributes.group1 = $TextEdit.text
-	elif (Attributes.database).query_result[0]["group2"] == "":
-			Attributes.group2 = $TextEdit.text
-	elif (Attributes.database).query_result[0]["group3"] == "":
-			Attributes.group3 = $TextEdit.text
-	elif (Attributes.database).query_result[0]["group4"] == "":
-			Attributes.group4 = $TextEdit.text
-	elif (Attributes.database).query_result[0]["group5"] == "":
-			Attributes.group5 = $TextEdit.text
+	if Attributes.group1 == "":
+		Attributes.group1 = $TextEdit.text
+	elif Attributes.group2 == "":
+		Attributes.group2 = $TextEdit.text
+	elif Attributes.group3 == "":
+		Attributes.group3 = $TextEdit.text
+	elif Attributes.group4 == "":
+		Attributes.group4 = $TextEdit.text
+	elif Attributes.group5 == "":
+		Attributes.group5 = $TextEdit.text
+	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/study_rooms.tscn")
 
 
@@ -83,16 +83,17 @@ func _on_join_pressed():
 	
 	if check == 1:
 		(Attributes.database).query("SELECT group1, group2, group3, group4, group5 FROM Players WHERE username = '" + Attributes.username + "'")
-		if (Attributes.database).query_result[0]["group1"] == "":
+		if Attributes.group1 == "":
 			Attributes.group1 = $TextEdit.text
-		elif (Attributes.database).query_result[0]["group2"] == "":
+		elif Attributes.group2 == "":
 			Attributes.group2 = $TextEdit.text
-		elif (Attributes.database).query_result[0]["group3"] == "":
+		elif Attributes.group3 == "":
 			Attributes.group3 = $TextEdit.text
-		elif (Attributes.database).query_result[0]["group4"] == "":
+		elif Attributes.group4 == "":
 			Attributes.group4 = $TextEdit.text
-		elif (Attributes.database).query_result[0]["group5"] == "":
+		elif Attributes.group5 == "":
 			Attributes.group5 = $TextEdit.text
+		SaveUtils.save()
 		get_tree().change_scene_to_file("res://scenes/study_rooms.tscn")
 	if check == 0:
 		$InvalidUser.visible = true
@@ -100,3 +101,27 @@ func _on_join_pressed():
 
 func _on_goback_pressed():
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+
+
+func _on_chat_1_pressed():
+	get_tree().change_scene_to_file("res://scenes/study_room1.tscn")
+
+
+func _on_chat_2_pressed():
+	get_tree().change_scene_to_file("res://scenes/study_room2.tscn")
+	pass # Replace with function body.
+
+
+func _on_chat_3_pressed():
+	get_tree().change_scene_to_file("res://scenes/study_room3.tscn")
+	pass # Replace with function body.
+
+
+func _on_chat_4_pressed():
+	get_tree().change_scene_to_file("res://scenes/study_room4.tscn")
+	pass # Replace with function body.
+
+
+func _on_chat_5_pressed():
+	get_tree().change_scene_to_file("res://scenes/study_room5.tscn")
+	pass # Replace with function body.

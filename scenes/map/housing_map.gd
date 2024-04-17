@@ -1,6 +1,7 @@
 extends Node2D
 
 func _ready():
+	get_node("CharacterBody2D/transportation_panel").visible = false
 	$CharacterBody2D.global_position = Vector2(float(Attributes.xhousing),float(Attributes.yhousing))
 	get_node("SummerVariantH").visible = false
 	get_node("FallVariantH").visible = false
@@ -173,3 +174,33 @@ func _on_friends_list_pressed():
 	Attributes.location = "res://scenes/map/housing_map.tscn"	
 	SaveUtils.save()
 	get_tree().change_scene_to_file("res://scenes/friends_list/friends_list.tscn")
+	
+func _on_trans_close_pressed():
+	get_node("CharacterBody2D/transportation_panel").visible = false
+
+func _on_bus_input_event(viewport, event, shape_idx):
+	if event is InputEventScreenTouch and event.pressed:
+		get_node("CharacterBody2D/transportation_panel").visible = true
+	elif event is InputEventMouseButton and event.pressed:
+		get_node("CharacterBody2D/transportation_panel").visible = true
+
+func _on_bus_button_pressed(extra_arg_0):
+	if (extra_arg_0 == "ear"):
+		$CharacterBody2D.global_position.x = -1425.212890625
+		$CharacterBody2D.global_position.y = -658.925170898438
+	elif (extra_arg_0 =="mtch"):
+		$CharacterBody2D.global_position.x = 93.06689453125
+		$CharacterBody2D.global_position.y = -4005.8193359375
+	elif (extra_arg_0 =="shr"):
+		$CharacterBody2D.global_position.x = 1394.13037109375
+		$CharacterBody2D.global_position.y = -1744.92529296875
+	elif (extra_arg_0 =="mer"):
+		$CharacterBody2D.global_position.x = 1475.380859375
+		$CharacterBody2D.global_position.y = 1191.18139648438
+	elif (extra_arg_0 =="wil"):
+		$CharacterBody2D.global_position.x = 2722.61743164062
+		$CharacterBody2D.global_position.y = 3213.63916015625
+	elif (extra_arg_0 =="wind"):
+		$CharacterBody2D.global_position.x = -910.77734375
+		$CharacterBody2D.global_position.y = 2684.22827148438
+	get_node("CharacterBody2D/transportation_panel").visible = false

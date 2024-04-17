@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://ca427ga7h2m1v"]
+
+[ext_resource type="Script" path="res://scenes/study_room2.gd" id="1_36502"]
+
+[node name="studyroom2" type="Node2D"]
+script = ExtResource("1_36502")
+
+[node name="SendMessage" type="Button" parent="."]
+offset_left = 85.0
+offset_top = 551.0
+offset_right = 357.0
+offset_bottom = 614.0
+text = "Send Message
+"
+
+[node name="BackToMenu" type="Button" parent="."]
+offset_left = 85.0
+offset_top = 32.0
+offset_right = 357.0
+offset_bottom = 95.0
+text = "Go Back
+"
+
+[node name="ClearButton" type="Button" parent="."]
+offset_left = 760.0
+offset_top = 32.0
+offset_right = 1032.0
+offset_bottom = 95.0
+text = "Clear Messages
+"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 13.0
+offset_top = 116.0
+offset_right = 1138.0
+offset_bottom = 536.0
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 500.0
+offset_top = 23.0
+offset_right = 704.0
+offset_bottom = 99.0
+theme_override_font_sizes/font_size = 26
+text = "Study Room Chat"
+vertical_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 399.0
+offset_top = 551.0
+offset_right = 1051.0
+offset_bottom = 613.0
+placeholder_text = "Enter Message"
+alignment = 1
+
+[connection signal="pressed" from="SendMessage" to="." method="_on_send_message_pressed"]
+[connection signal="pressed" from="BackToMenu" to="." method="_on_back_to_menu_pressed"]
+[connection signal="pressed" from="ClearButton" to="." method="_on_clear_button_pressed"]
