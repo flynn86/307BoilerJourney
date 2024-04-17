@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://cyqru62e3i8um"]
+[gd_scene load_steps=2 format=3 uid="uid://cyqru62e3i8um"]
+
+[ext_resource type="Script" path="res://scenes/study_rooms.gd" id="1_lp26l"]
 
 [node name="StudyRooms" type="Node2D"]
+script = ExtResource("1_lp26l")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 458.0
@@ -103,3 +106,19 @@ offset_top = 348.0
 offset_right = 890.0
 offset_bottom = 387.0
 text = "Chat"
+
+[node name="InvalidUser" type="Label" parent="."]
+visible = false
+offset_left = 638.0
+offset_top = 583.0
+offset_right = 892.0
+offset_bottom = 627.0
+theme_override_colors/font_color = Color(0.968627, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Room does not exist"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="goback" to="." method="_on_goback_pressed"]
+[connection signal="pressed" from="createnew" to="." method="_on_createnew_pressed"]
+[connection signal="pressed" from="join" to="." method="_on_join_pressed"]
