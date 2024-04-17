@@ -154,15 +154,15 @@ offset_bottom = 483.0
 theme_override_font_sizes/font_size = 20
 text = "In Progress"
 
-[node name="Sprite2D2" type="Sprite2D" parent="Panel"]
-position = Vector2(172, 519)
-scale = Vector2(0.0986667, 0.084)
-texture = ExtResource("4_nawlj")
-
 [node name="BoilermakersBackgroundRemoved" type="Sprite2D" parent="."]
 position = Vector2(998, 118)
 scale = Vector2(0.74, 0.732673)
 texture = ExtResource("4_ffepf")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(172, 519)
+scale = Vector2(0.0986667, 0.084)
+texture = ExtResource("4_nawlj")
 
 [connection signal="pressed" from="Panel/BackToMap" to="." method="_on_back_to_map_pressed"]
 [connection signal="pressed" from="Panel/StartQuest1" to="." method="_on_start_quest_1_pressed"]
