@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://dagnqomham3f1"]
+[gd_scene load_steps=14 format=3 uid="uid://dagnqomham3f1"]
 
 [ext_resource type="FontFile" uid="uid://7x61o34kfaic" path="res://fonts/KOMIKAX_.ttf" id="1_er143"]
 [ext_resource type="Script" path="res://scenes/progress_page_stats.gd" id="1_rpcx8"]
 [ext_resource type="Script" path="res://scenes/progress_page.gd" id="2_1dahq"]
 [ext_resource type="Script" path="res://scenes/ProgressBar.gd" id="3_fh5r3"]
+[ext_resource type="Texture2D" uid="uid://cm21amxhx0f0b" path="res://scenes/Collectable_scenes/Collectables/go_boilers_sticker.webp" id="5_hqdta"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cxbb3"]
 bg_color = Color(0.266667, 0.266667, 0.266667, 1)
@@ -124,5 +125,15 @@ offset_right = 756.0
 offset_bottom = 499.0
 text = "Back To Menu"
 script = ExtResource("2_1dahq")
+
+[node name="GoBoilersSticker" type="Sprite2D" parent="Panel"]
+position = Vector2(955, 514)
+scale = Vector2(0.66875, 0.708333)
+texture = ExtResource("5_hqdta")
+
+[node name="GoBoilersSticker" type="Sprite2D" parent="."]
+position = Vector2(179, 517)
+scale = Vector2(0.66875, 0.708333)
+texture = ExtResource("5_hqdta")
 
 [connection signal="pressed" from="Panel/BackToMenuButton" to="Panel/BackToMenuButton" method="_on_pressed"]
