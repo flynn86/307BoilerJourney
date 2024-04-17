@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cplnpdevklo5q"]
 
 [ext_resource type="Script" path="res://scenes/news_page/news_page.gd" id="1_o1anh"]
-[ext_resource type="Texture2D" uid="uid://c05komaks4nue" path="res://scenes/Collectable_scenes/Collectables/purdue-boilermakers-football-purdue-boilermakers-men-s-basketball-mackey-arena-purdue-pete-university-purdue-boilermakers-women-s-basketball-thumbnail.png" id="3_axs6r"]
+[ext_resource type="Texture2D" uid="uid://bgpw1vd1ygp8k" path="res://scenes/Collectable_scenes/Collectables/purdue-boilermakers-football-purdue-boilermakers-men-s-basketball-mackey-arena-purdue-pete-university-purdue-boilermakers-women-s-basketball-thumbnail.png" id="3_axs6r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gj5gu"]
 bg_color = Color(0, 0, 0, 1)

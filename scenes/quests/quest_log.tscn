@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dwpf262662vbj"]
+[gd_scene load_steps=8 format=3 uid="uid://dwpf262662vbj"]
 
 [ext_resource type="Script" path="res://scenes/quests/quest_log.gd" id="1_qb26r"]
 [ext_resource type="FontFile" uid="uid://7x61o34kfaic" path="res://fonts/KOMIKAX_.ttf" id="2_bdi0c"]
+[ext_resource type="Texture2D" uid="uid://dau1bccvpeix3" path="res://scenes/Collectable_scenes/Collectables/boilermakers Background Removed.png" id="4_ffepf"]
+[ext_resource type="Texture2D" uid="uid://cu1huyfwso8xr" path="res://scenes/Collectable_scenes/Collectables/purdue-university-boilermakers-logo-png-transparent.png" id="4_nawlj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3vekh"]
 bg_color = Color(0.266667, 0.266667, 0.266667, 1)
@@ -151,6 +153,16 @@ offset_right = 802.0
 offset_bottom = 483.0
 theme_override_font_sizes/font_size = 20
 text = "In Progress"
+
+[node name="Sprite2D2" type="Sprite2D" parent="Panel"]
+position = Vector2(172, 519)
+scale = Vector2(0.0986667, 0.084)
+texture = ExtResource("4_nawlj")
+
+[node name="BoilermakersBackgroundRemoved" type="Sprite2D" parent="."]
+position = Vector2(998, 118)
+scale = Vector2(0.74, 0.732673)
+texture = ExtResource("4_ffepf")
 
 [connection signal="pressed" from="Panel/BackToMap" to="." method="_on_back_to_map_pressed"]
 [connection signal="pressed" from="Panel/StartQuest1" to="." method="_on_start_quest_1_pressed"]
