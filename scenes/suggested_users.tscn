@@ -22,6 +22,7 @@ border_color = Color(1, 0.843137, 0, 1)
 border_blend = true
 
 [sub_resource type="Theme" id="Theme_6psof"]
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
 Button/font_sizes/font_size = 18
 Button/styles/normal = SubResource("StyleBoxFlat_81s15")
 Panel/styles/panel = SubResource("StyleBoxFlat_h3opk")
@@ -56,21 +57,22 @@ offset_top = 112.0
 offset_right = 655.0
 offset_bottom = 478.0
 scale = Vector2(1.2, 1.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_fp2ud")
 
 [node name="goBack" type="Button" parent="Panel"]
-offset_left = 954.0
-offset_top = 568.0
-offset_right = 1071.0
-offset_bottom = 606.0
+offset_left = 970.0
+offset_top = 583.0
+offset_right = 1087.0
+offset_bottom = 629.0
 scale = Vector2(1.5, 1.5)
 text = "Go back"
 
 [node name="refresh" type="Button" parent="Panel"]
-offset_left = 27.0
-offset_top = 563.0
-offset_right = 198.0
-offset_bottom = 601.0
+offset_left = 4.0
+offset_top = 581.0
+offset_right = 200.0
+offset_bottom = 627.0
 scale = Vector2(1.5, 1.5)
 text = "Refresh Suggestions"
 
