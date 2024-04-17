@@ -123,3 +123,7 @@ vertical_alignment = 1
 [connection signal="pressed" from="createnew" to="." method="_on_createnew_pressed"]
 [connection signal="pressed" from="join" to="." method="_on_join_pressed"]
 [connection signal="pressed" from="chat1" to="." method="_on_chat_1_pressed"]
+[connection signal="pressed" from="chat2" to="." method="_on_chat_2_pressed"]
+[connection signal="pressed" from="chat3" to="." method="_on_chat_3_pressed"]
+[connection signal="pressed" from="chat4" to="." method="_on_chat_4_pressed"]
+[connection signal="pressed" from="chat5" to="." method="_on_chat_5_pressed"]

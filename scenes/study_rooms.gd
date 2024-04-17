@@ -105,3 +105,23 @@ func _on_goback_pressed():
 
 func _on_chat_1_pressed():
 	get_tree().change_scene_to_file("res://scenes/study_room1.tscn")
+
+
+func _on_chat_2_pressed():
+	get_tree().change_scene_to_file("res://scenes/study_room2.tscn")
+	pass # Replace with function body.
+
+
+func _on_chat_3_pressed():
+	get_tree().change_scene_to_file("res://scenes/study_room3.tscn")
+	pass # Replace with function body.
+
+
+func _on_chat_4_pressed():
+	get_tree().change_scene_to_file("res://scenes/study_room4.tscn")
+	pass # Replace with function body.
+
+
+func _on_chat_5_pressed():
+	get_tree().change_scene_to_file("res://scenes/study_room5.tscn")
+	pass # Replace with function body.
