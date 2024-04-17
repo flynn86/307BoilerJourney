@@ -24,7 +24,8 @@ func _on_accept_choice_pressed():
 		"slot" : {"data_type":"int"}
 	}
 	(Attributes.database).query("DROP TABLE " + sender_username + "AND" + Attributes.username)
-	(Attributes.database).create_table(sender_username + "AND" + Attributes.username, trade_table)
+	var ret = (Attributes.database).create_table(sender_username + "AND" + Attributes.username, trade_table)
+	print(ret)
 	for i in range(1, 5, 1):
 		var data = {}
 		data[string1] = "empty"

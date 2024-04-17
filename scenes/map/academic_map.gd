@@ -186,7 +186,7 @@ func _process(delta):
 		Attributes.rank = "Senior"
 	frame_counter += 1
 	
-	if (frame_counter > 20):
+	if (frame_counter > 30):
 		# Checks for trade requests sent to this user
 		if (Attributes.trade_req == false):
 			(Attributes.database).query("SELECT sender FROM Trade_Requests WHERE receiver = '" + Attributes.username + "'" + " AND status = 0")
@@ -413,15 +413,25 @@ func _on_tree_entered():
 	}
 	#(Attributes.database).query("SELECT COUNT(*) FROM Online_Players WHERE players = '" + Attributes.username + "'")
 	#if ((Attributes.database).query_result.size() == 0):
-	(Attributes.database).insert_row("Online_Players", data)
+	var ret = (Attributes.database).insert_row("Online_Players", data)
+	while (ret == false):
+		await get_tree().create_timer(0.01).timeout
+		ret = (Attributes.database).insert_row("Online_Players", data)
 
 
 func _on_tree_exited():
-	(Attributes.database).query("DELETE FROM Online_Players WHERE players = '" + Attributes.username + "'")
+	var ret = (Attributes.database).query("DELETE FROM Online_Players WHERE players = '" + Attributes.username + "'")
+	while (ret == false):
+		await get_tree().create_timer(0.01).timeout
+		ret = (Attributes.database).query("DELETE FROM Online_Players WHERE players = '" + Attributes.username + "'")
+
 
 func _notification(notif): 
 	if notif == NOTIFICATION_WM_CLOSE_REQUEST: 
-		(Attributes.database).query("DELETE FROM Online_Players WHERE players = '" + Attributes.username + "'")
+		var ret = (Attributes.database).query("DELETE FROM Online_Players WHERE players = '" + Attributes.username + "'")
+		while (ret == false):
+			await get_tree().create_timer(0.01).timeout
+			ret = (Attributes.database).query("DELETE FROM Online_Players WHERE players = '" + Attributes.username + "'")
 
 func _on_online_choice_pressed():
 	$CharacterBody2D/Player/OnlinePlayerList.visible = true
