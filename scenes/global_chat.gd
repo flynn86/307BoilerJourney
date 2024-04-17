@@ -22,7 +22,6 @@ func _on_send_message_pressed():
 		"time" = "%02d:%02d:%02d" % [timedate.hour, timedate.minute, timedate.second]
 	}
 	(Attributes.database).insert_row("%s_Chat" % Attributes.serverName, data)
-	#_ready()
 
 func _on_back_to_menu_pressed():
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
