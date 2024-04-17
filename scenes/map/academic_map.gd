@@ -4,6 +4,7 @@ var frame_counter = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	get_node("CharacterBody2D/transportation_panel").visible = false
 	$CharacterBody2D.global_position = Vector2(float(Attributes.xacademic),float(Attributes.yacademic))
 	get_node("SummerVariantA").visible = false
 	get_node("FallVariantA").visible = false
@@ -436,3 +437,24 @@ func _on_bus_input_event(viewport, event, shape_idx):
 		get_node("CharacterBody2D/transportation_panel").visible = true
 	elif event is InputEventMouseButton and event.pressed:
 		get_node("CharacterBody2D/transportation_panel").visible = true
+
+func _on_bus_button_pressed(extra_arg_0):
+	if (extra_arg_0 == "phys"):
+		$CharacterBody2D.global_position.x = 2113.241699
+		$CharacterBody2D.global_position.y = -5078.95214
+	elif (extra_arg_0 =="army"):
+		$CharacterBody2D.global_position.x = -930.07617187
+		$CharacterBody2D.global_position.y = -2398.39624023438
+	elif (extra_arg_0 =="matt"):
+		$CharacterBody2D.global_position.x = -937.063659667969
+		$CharacterBody2D.global_position.y =  2190.18359375
+	elif (extra_arg_0 =="push"):
+		$CharacterBody2D.global_position.x = -820.384765
+		$CharacterBody2D.global_position.y = -5648.923828
+	elif (extra_arg_0 =="pmu"):
+		$CharacterBody2D.global_position.x = 3122.93627929688
+		$CharacterBody2D.global_position.y = 3090.18359375
+	elif (extra_arg_0 =="ece"):
+		$CharacterBody2D.global_position.x = 3758.2416
+		$CharacterBody2D.global_position.y = -3423.9521
+	get_node("CharacterBody2D/transportation_panel").visible = false
