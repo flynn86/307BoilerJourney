@@ -4,6 +4,12 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gxea1"]
 bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -17,10 +23,16 @@ bg_color = Color(0.141176, 0.141176, 0.141176, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sskj5"]
 bg_color = Color(0, 0, 0, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
 
 [sub_resource type="Theme" id="Theme_utgnu"]
 Button/constants/outline_size = 0
-Button/font_sizes/font_size = 16
+Button/font_sizes/font_size = 18
 Button/styles/normal = SubResource("StyleBoxFlat_gxea1")
 Button/styles/pressed = SubResource("StyleBoxFlat_421bd")
 Label/styles/normal = SubResource("StyleBoxFlat_0kk8f")
@@ -41,6 +53,11 @@ offset_left = 465.0
 offset_top = 27.0
 offset_right = 758.0
 offset_bottom = 147.0
+theme_override_colors/font_shadow_color = Color(0.541176, 0.45098, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/normal_font = ExtResource("1_c6prt")
+theme_override_font_sizes/normal_font_size = 40
 text = "All Stats"
 
 [node name="current_rank" type="Button" parent="Panel"]
@@ -77,10 +94,10 @@ text = "Quests Completed"
 
 [node name="leaderboard" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 48.0
-offset_top = 512.0
-offset_right = 235.0
-offset_bottom = 575.0
+offset_left = 42.0
+offset_top = 511.0
+offset_right = 249.0
+offset_bottom = 574.0
 text = "Leaderboard Ranking"
 
 [node name="Label" type="Label" parent="Panel"]
@@ -92,10 +109,10 @@ offset_bottom = 576.0
 
 [node name="close" type="Button" parent="Panel/Label"]
 layout_mode = 0
-offset_left = 749.0
-offset_top = 386.0
-offset_right = 791.0
-offset_bottom = 426.0
+offset_left = 721.0
+offset_top = 379.0
+offset_right = 788.0
+offset_bottom = 425.0
 text = "Close"
 
 [node name="info" type="RichTextLabel" parent="Panel/Label"]

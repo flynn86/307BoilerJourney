@@ -19,7 +19,7 @@ func _ready():
 				
 			else:
 				num-=1
-	print(str)
+	print(users.size())
 	$Panel/suggestion1.text = str
 	$Panel/AddFriend1.visible = true
 	$Panel/AddFriend2.visible = true
