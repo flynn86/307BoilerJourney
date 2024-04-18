@@ -4,13 +4,13 @@ func _on_back_to_menu_pressed():
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
 
 func _on_dm_button_pressed():
-	if ($DMUser.text == ""):
-		$Label5.text = "Please Enter the Username of the Player you Would Like to Start a Direct Message Chat with"
+	if ($Panel/DMUser.text == ""):
+		$Panel/Label5.text = "Please Enter the Username of the Player you Would Like to Start a Direct Message Chat with"
 	else:
-		if ($DMUser.text < Attributes.username):
-			Attributes.dm_temp = "%s_%s_Chat" % [$DMUser.text, Attributes.username];
+		if ($Panel/DMUser.text < Attributes.username):
+			Attributes.dm_temp = "%s_%s_Chat" % [$Panel/DMUser.text, Attributes.username];
 		else:
-			Attributes.dm_temp = "%s_%s_Chat" % [Attributes.username, $DMUser.text];
+			Attributes.dm_temp = "%s_%s_Chat" % [Attributes.username, $Panel/DMUser.text];
 		var table = {
 			"username" : {"data_type":"text"},
 			"message" : {"data_type":"text"},
@@ -21,10 +21,10 @@ func _on_dm_button_pressed():
 		get_tree().change_scene_to_file("res://scenes/direct_message.tscn")
 
 func _on_gc_button_pressed():
-	if not ($GCUsers.text.contains(",")):
-		$Label5.text = "Please Enter the Usernames of the Players you Would Like to Start a Group Chat with"
+	if not ($Panel/GCUsers.text.contains(",")):
+		$Panel/Label5.text = "Please Enter the Usernames of the Players you Would Like to Start a Group Chat with"
 	else:
-		var arr : Array = ("%s,%s" % [$GCUsers.text, Attributes.username]).split(",")
+		var arr : Array = ("%s,%s" % [$Panel/GCUsers.text, Attributes.username]).split(",")
 		arr.sort()
 		Attributes.gc_temp = "";
 		for i in arr:
