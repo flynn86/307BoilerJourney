@@ -33,7 +33,7 @@ Panel/styles/panel = SubResource("StyleBoxFlat_30lc2")
 script = ExtResource("1_qb26r")
 
 [node name="Panel" type="Panel" parent="."]
-offset_right = 1147.0
+offset_right = 1153.0
 offset_bottom = 648.0
 theme = SubResource("Theme_f34w2")
 
