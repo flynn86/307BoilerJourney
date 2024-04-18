@@ -24,7 +24,7 @@ border_blend = true
 [sub_resource type="Theme" id="Theme_cnf0t"]
 Button/font_sizes/font_size = 18
 Button/styles/normal = SubResource("StyleBoxFlat_ikh3q")
-Label/font_sizes/font_size = 18
+Label/font_sizes/font_size = 20
 Panel/styles/panel = SubResource("StyleBoxFlat_axra2")
 
 [node name="Leaderboard" type="Control"]

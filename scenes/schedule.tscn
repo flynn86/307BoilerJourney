@@ -127,7 +127,7 @@ offset_top = 585.0
 offset_right = 704.0
 offset_bottom = 636.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 20
 text = "Error: Can't add more than 8 courses!"
 
 [node name="go_back_to_map" type="Button" parent="Panel"]
