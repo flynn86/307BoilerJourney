@@ -14,12 +14,11 @@ func _on_customize_character_button_pressed():
 
 func _ready():
 	SaveUtils.load()
-	if (Attributes.serverName != ""):
-		$Panel/HostServerButton.visible = false
-		$Panel/JoinServerButton.visible = false
-		$Panel/LineEdit.visible = false
-		$Panel/GlobalChatButton.visible = true
-		$Panel/ServerRosterButton.visible = true
+	$Panel/HostServerButton.visible = !(Attributes.serverName != "")
+	$Panel/JoinServerButton.visible = !(Attributes.serverName != "")
+	$Panel/LineEdit.visible = !(Attributes.serverName != "")
+	$Panel/GlobalChatButton.visible = (Attributes.serverName != "")
+	$Panel/ServerRosterButton.visible = (Attributes.serverName != "")
 #	multiplayer.peer_connected.connect(add_client)
 #	multiplayer.peer_disconnected.connect(remove_client)
 

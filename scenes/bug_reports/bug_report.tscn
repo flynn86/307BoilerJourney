@@ -1,19 +1,31 @@
 [gd_scene load_steps=7 format=3 uid="uid://dnxxhsr16r01o"]
 
 [ext_resource type="Script" path="res://scenes/bug_reports/bug_report.gd" id="1_trnte"]
-[ext_resource type="FontFile" uid="uid://5lqm3siyw530" path="res://fonts/KOMIKAX_.ttf" id="2_oyacu"]
+[ext_resource type="FontFile" uid="uid://7x61o34kfaic" path="res://fonts/KOMIKAX_.ttf" id="2_oyacu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7d34t"]
 bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lb0i2"]
 bg_color = Color(0, 0, 0, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgboq"]
 bg_color = Color(0.141176, 0.141176, 0.141176, 1)
 
 [sub_resource type="Theme" id="Theme_dtyae"]
-Button/font_sizes/font_size = 16
+Button/font_sizes/font_size = 18
 Button/styles/normal = SubResource("StyleBoxFlat_7d34t")
 Label/font_sizes/font_size = 40
 Label/fonts/font = ExtResource("2_oyacu")
@@ -41,20 +53,23 @@ text = "Submit"
 
 [node name="Close" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 882.0
-offset_top = 22.0
-offset_right = 1129.0
-offset_bottom = 84.0
+offset_left = 886.0
+offset_top = 24.0
+offset_right = 1128.0
+offset_bottom = 87.0
 theme_override_font_sizes/font_size = 24
 text = "Back to Main Menu"
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
-offset_left = 376.0
-offset_top = 70.0
-offset_right = 779.0
-offset_bottom = 149.0
-theme_override_font_sizes/font_size = 34
+offset_left = 353.0
+offset_top = 43.0
+offset_right = 825.0
+offset_bottom = 122.0
+theme_override_colors/font_shadow_color = Color(0.541176, 0.45098, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 5
+theme_override_font_sizes/font_size = 40
 text = "Submit a Bug Report"
 
 [node name="TextEdit" type="TextEdit" parent="Panel"]

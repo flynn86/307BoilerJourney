@@ -10,7 +10,7 @@ func _ready():
 	
 func _process(_delta):
 	frame_counter += 1
-	if (frame_counter > 30):
+	if (frame_counter > 120):
 		update_player_list()
 		frame_counter = 0
 	

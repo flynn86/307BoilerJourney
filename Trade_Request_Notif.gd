@@ -25,7 +25,10 @@ func _on_accept_choice_pressed():
 	}
 	(Attributes.database).query("DROP TABLE " + sender_username + "AND" + Attributes.username)
 	var ret = (Attributes.database).create_table(sender_username + "AND" + Attributes.username, trade_table)
-	print(ret)
+	if (ret == true):
+		print("true")
+	else:
+		print("false")
 	for i in range(1, 5, 1):
 		var data = {}
 		data[string1] = "empty"

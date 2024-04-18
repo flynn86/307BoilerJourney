@@ -162,6 +162,7 @@ offset_bottom = 354.0
 text = "Find Friends"
 
 [node name="MessageButton" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 835.0
 offset_top = 280.0
 offset_right = 1070.0
@@ -169,6 +170,7 @@ offset_bottom = 395.0
 text = "Messages"
 
 [node name="Studyroom" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 582.0
 offset_top = 186.0
 offset_right = 807.0

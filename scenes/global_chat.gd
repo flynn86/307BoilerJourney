@@ -4,6 +4,16 @@ var start = true
 
 func _ready():
 	var data : Array = (Attributes.database).select_rows("%s_Chat" % Attributes.serverName, "username != 'null'", ["*"])
+	if (Attributes.database.error_message.contains("no such table")):
+		var table = {
+			"username" : {"data_type":"text"},
+			"message" : {"data_type":"text"},
+			"time" : {"data_type":"text"},
+			"date" : {"data_type":"text"}
+		}
+		(Attributes.database).create_table("%s_Chat" % Attributes.serverName, table)
+		(Attributes.database).drop_table("%s_Chat" % Attributes.serverName)
+		(Attributes.database).create_table("%s_Chat" % Attributes.serverName, table)
 	var data_line : String = ""
 	for i in data.size():
 		data_line += "From " + data[i].username + " at " + data[i].time + " on " + data[i].date + ": " + data[i].message + '\n'

@@ -1,13 +1,25 @@
 [gd_scene load_steps=9 format=3 uid="uid://bbgynlv8qgelb"]
 
 [ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_l8hk8"]
-[ext_resource type="FontFile" uid="uid://d0q666euopyxv" path="res://fonts/KOMIKAX_.ttf" id="2_ucegh"]
+[ext_resource type="FontFile" uid="uid://7x61o34kfaic" path="res://fonts/KOMIKAX_.ttf" id="2_ucegh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8bc1y"]
 bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dxcv4"]
 bg_color = Color(0, 0, 0, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
 
 [sub_resource type="Theme" id="Theme_tvx0f"]
 Button/font_sizes/font_size = 16
@@ -20,6 +32,12 @@ Panel/styles/panel = SubResource("StyleBoxFlat_dxcv4")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r3n38"]
 bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
 
 [sub_resource type="FontVariation" id="FontVariation_373rn"]
 
@@ -60,10 +78,14 @@ text = "Load Game"
 
 [node name="Label2" type="Label" parent="Panel"]
 layout_mode = 0
-offset_left = 265.0
-offset_top = 52.0
-offset_right = 887.0
-offset_bottom = 136.0
+offset_left = 270.0
+offset_top = 43.0
+offset_right = 892.0
+offset_bottom = 127.0
+theme_override_colors/font_shadow_color = Color(0.541176, 0.45098, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 5
+theme_override_font_sizes/font_size = 40
 text = "Welcome to BoilerJourney!"
 horizontal_alignment = 1
 vertical_alignment = 1

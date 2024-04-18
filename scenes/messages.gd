@@ -21,10 +21,10 @@ func _on_dm_button_pressed():
 		get_tree().change_scene_to_file("res://scenes/direct_message.tscn")
 
 func _on_gc_button_pressed():
-	var arr : Array = ("%s,%s" % [$GCUsers.text, Attributes.username]).split(",")
-	if (arr.size() < 2):
+	if not ($GCUsers.text.contains(",")):
 		$Label5.text = "Please Enter the Usernames of the Players you Would Like to Start a Group Chat with"
 	else:
+		var arr : Array = ("%s,%s" % [$GCUsers.text, Attributes.username]).split(",")
 		arr.sort()
 		Attributes.gc_temp = "";
 		for i in arr:

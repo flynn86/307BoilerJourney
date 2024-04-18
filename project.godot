@@ -26,6 +26,10 @@ GlobalTime="*res://scenes/day_night/global_time.gd"
 
 window/size/mode=1
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot-sqlite/plugin.cfg")
+
 [input]
 
 right={

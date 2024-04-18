@@ -3,31 +3,31 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Label2.visible = false
-	$Button1.visible = false
-	$Button2.visible = false
-	$Button3.visible = false
-	$Button4.visible = false
-	$Button5.visible = false
-	$Button6.visible = false
-	$Button7.visible = false
-	$Button8.visible = false
+	$Panel/Label2.visible = false
+	$Panel/Button1.visible = false
+	$Panel/Button2.visible = false
+	$Panel/Button3.visible = false
+	$Panel/Button4.visible = false
+	$Panel/Button5.visible = false
+	$Panel/Button6.visible = false
+	$Panel/Button7.visible = false
+	$Panel/Button8.visible = false
 	if (Attributes.course_num >= 2):
-		$Button1.visible = true
+		$Panel/Button1.visible = true
 	if (Attributes.course_num >= 3):
-		$Button2.visible = true
+		$Panel/Button2.visible = true
 	if (Attributes.course_num >= 4):
-		$Button3.visible = true
+		$Panel/Button3.visible = true
 	if (Attributes.course_num >= 5):
-		$Button4.visible = true
+		$Panel/Button4.visible = true
 	if (Attributes.course_num >= 6):
-		$Button5.visible = true
+		$Panel/Button5.visible = true
 	if (Attributes.course_num >= 7):
-		$Button6.visible = true
+		$Panel/Button6.visible = true
 	if (Attributes.course_num >= 8):
-		$Button7.visible = true
+		$Panel/Button7.visible = true
 	if (Attributes.course_num >= 9):
-		$Button8.visible = true
+		$Panel/Button8.visible = true
 	var complete_string = ""
 	if (Attributes.course_num == 1) :
 		complete_string = "No Courses Added yet. Please add a course first"
@@ -48,7 +48,7 @@ func _ready():
 			var format_string = "| Course Name: %s | Time: %s | Days: %s | Location: %s |\n\n"
 			var actual_string = format_string % [courseName, courseTime, courseDays, courseLocation]
 			complete_string += actual_string
-	$Label.text = complete_string
+	$Panel/Label.text = complete_string
 			
 
 
@@ -59,7 +59,7 @@ func _process(delta):
 
 func _on_add_pressed():
 	if (Attributes.course_num >= 9):
-		$Label2.visible = true
+		$Panel/Label2.visible = true
 	else:
 		get_tree().change_scene_to_file("res://scenes/addschedule.tscn")
 
