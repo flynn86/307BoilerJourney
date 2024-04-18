@@ -32,7 +32,6 @@ func _on_client_disconnect_pressed():
 func _on_server_disconnect_pressed():
 	var data : Array = (Attributes.database).select_rows("Players", "serverName == '%s' and isHost == false" % Attributes.serverName, ["*"])
 	for i in data:
-		#var player : Array = (Attributes.database).select_rows("Players", "username == '%s'" % i.username, ["*"])
 		i.serverName = ""
 		i.isHost = false
 		(Attributes.database).update_rows("Players", "username == '%s'" % i.username, i)

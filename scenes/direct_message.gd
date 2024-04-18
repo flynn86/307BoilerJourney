@@ -2,6 +2,16 @@ extends Node2D
 
 func _ready():
 	var data : Array = (Attributes.database).select_rows(Attributes.dm_temp, "username != 'null'", ["*"])
+	if (Attributes.database.error_message.contains("no such table")):
+		var table = {
+			"username" : {"data_type":"text"},
+			"message" : {"data_type":"text"},
+			"time" : {"data_type":"text"},
+			"date" : {"data_type":"text"}
+		}
+		(Attributes.database).create_table(Attributes.dm_temp, table)
+		(Attributes.database).drop_table(Attributes.dm_temp)
+		(Attributes.database).create_table(Attributes.dm_temp, table)
 	var data_line : String = ""
 	for i in data.size():
 		data_line += "From " + data[i].username + " at " + data[i].time + " on " + data[i].date + ": " + data[i].message + '\n'

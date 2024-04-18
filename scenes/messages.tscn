@@ -67,12 +67,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label5" type="Label" parent="."]
-offset_left = 447.0
+offset_left = 200.0
 offset_top = 497.0
-offset_right = 670.0
+offset_right = 925.0
 offset_bottom = 573.0
-theme_override_font_sizes/font_size = 26
-text = "Group Chat"
+theme_override_font_sizes/font_size = 16
 horizontal_alignment = 1
 vertical_alignment = 1
 
