@@ -468,3 +468,42 @@ func _on_bus_button_pressed(extra_arg_0):
 		$CharacterBody2D.global_position.x = 3758.2416
 		$CharacterBody2D.global_position.y = -3423.9521
 	get_node("CharacterBody2D/transportation_panel").visible = false
+
+
+func _on_academy_park_area_body_entered(body):
+	if (body.name == "CharacterBody2D"):
+		$BGRButton.visible = true
+
+func _on_academy_park_area_body_exited(body):
+	if (body.name == "CharacterBody2D"):
+		$BGRButton.visible = false
+
+func _on_bgr_button_pressed():
+	$CharacterBody2D/BoilerGoldRush.visible = true
+	if Attributes.quest4_active:
+		Attributes.quest4_active = false
+		Attributes.quest4_completed = true
+		Attributes.xp = Attributes.xp + 5
+		(Attributes.database).update_rows("Players", "username = '" + Attributes.username + "'", {"xp": Attributes.xp})
+
+func _on_close_bgr_pressed():
+	$CharacterBody2D/BoilerGoldRush.visible = false
+
+func _on_armstrong_entrance_area_body_entered(body):
+	if (body.name == "CharacterBody2D"):
+		$NeilButton.visible = true
+
+func _on_armstrong_entrance_area_body_exited(body):
+	if (body.name == "CharacterBody2D"):
+		$NeilButton.visible = false
+
+func _on_neil_button_pressed():
+	$CharacterBody2D/NeilArmstrong.visible = true
+	if Attributes.quest5_active:
+		Attributes.quest5_active = false
+		Attributes.quest5_completed = true
+		Attributes.xp = Attributes.xp + 5
+		(Attributes.database).update_rows("Players", "username = '" + Attributes.username + "'", {"xp": Attributes.xp})
+
+func _on_close_neil_pressed():
+	$CharacterBody2D/NeilArmstrong.visible = false

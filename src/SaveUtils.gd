@@ -215,7 +215,8 @@ func load():
 	var player : Array
 	while (true):
 		player = (Attributes.database).select_rows("Players", "username == '%s'" % Attributes.username, ["*"])
-		if (Attributes.database.error_message == ""):
+		print(Attributes.database.error_message)
+		if (Attributes.database.error_message == "not an error"):
 			break
 		await get_tree().create_timer(1.0).timeout
 	Attributes.xp = player[0].xp
