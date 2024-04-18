@@ -3,7 +3,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Panel/nterest1.text = Attributes.interest_1
+	$Panel/interest1.text = Attributes.interest_1
 	$Panel/interest2.text = Attributes.interest_2
 	$Panel/interest3.text = Attributes.interest_3
 	
