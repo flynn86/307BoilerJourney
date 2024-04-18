@@ -94,10 +94,10 @@ text = "Quests Completed"
 
 [node name="leaderboard" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 48.0
-offset_top = 512.0
-offset_right = 235.0
-offset_bottom = 575.0
+offset_left = 42.0
+offset_top = 511.0
+offset_right = 249.0
+offset_bottom = 574.0
 text = "Leaderboard Ranking"
 
 [node name="Label" type="Label" parent="Panel"]

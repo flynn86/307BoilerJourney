@@ -61,18 +61,18 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_fp2ud")
 
 [node name="goBack" type="Button" parent="Panel"]
-offset_left = 970.0
-offset_top = 583.0
-offset_right = 1087.0
-offset_bottom = 629.0
+offset_left = 968.0
+offset_top = 577.0
+offset_right = 1085.0
+offset_bottom = 623.0
 scale = Vector2(1.5, 1.5)
 text = "Go back"
 
 [node name="refresh" type="Button" parent="Panel"]
-offset_left = 4.0
-offset_top = 581.0
-offset_right = 200.0
-offset_bottom = 627.0
+offset_left = 10.0
+offset_top = 576.0
+offset_right = 206.0
+offset_bottom = 622.0
 scale = Vector2(1.5, 1.5)
 text = "Refresh Suggestions"
 
