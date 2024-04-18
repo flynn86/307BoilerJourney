@@ -61,48 +61,48 @@ theme_override_font_sizes/font_size = 40
 text = "My Interests"
 
 [node name="interest1label" type="Label" parent="Panel"]
-offset_left = 366.0
-offset_top = 169.0
-offset_right = 455.0
-offset_bottom = 195.0
+offset_left = 368.0
+offset_top = 170.0
+offset_right = 457.0
+offset_bottom = 196.0
 text = "Interest 1:"
 
 [node name="interest2label" type="Label" parent="Panel"]
-offset_left = 366.0
-offset_top = 317.0
-offset_right = 455.0
-offset_bottom = 343.0
+offset_left = 368.0
+offset_top = 310.0
+offset_right = 457.0
+offset_bottom = 336.0
 text = "Interest 2:
 "
 metadata/_edit_use_anchors_ = true
 
 [node name="interest3label" type="Label" parent="Panel"]
-offset_left = 366.0
-offset_top = 459.0
-offset_right = 455.0
-offset_bottom = 485.0
+offset_left = 368.0
+offset_top = 450.0
+offset_right = 457.0
+offset_bottom = 476.0
 text = "Interest 3:"
 metadata/_edit_use_anchors_ = true
 
 [node name="interest1" type="TextEdit" parent="Panel"]
-offset_left = 554.0
-offset_top = 166.0
-offset_right = 758.0
-offset_bottom = 208.0
+offset_left = 556.0
+offset_top = 167.0
+offset_right = 760.0
+offset_bottom = 209.0
 placeholder_text = "Enter Interest"
 
 [node name="interest2" type="TextEdit" parent="Panel"]
-offset_left = 554.0
-offset_top = 306.0
-offset_right = 758.0
-offset_bottom = 348.0
+offset_left = 556.0
+offset_top = 307.0
+offset_right = 760.0
+offset_bottom = 349.0
 placeholder_text = "Enter Interest"
 
 [node name="interest3" type="TextEdit" parent="Panel"]
-offset_left = 554.0
-offset_top = 444.0
-offset_right = 758.0
-offset_bottom = 486.0
+offset_left = 556.0
+offset_top = 445.0
+offset_right = 760.0
+offset_bottom = 487.0
 placeholder_text = "Enter Interest"
 
 [node name="save" type="Button" parent="Panel"]
