@@ -173,7 +173,7 @@ func _on_your_4_pressed():
 func check_trade_end():
 	var ret = (Attributes.database).query("SELECT sender FROM Trade_Requests WHERE sender = '" + sender + "' AND receiver = '" + receiver + "'")
 	while (ret == false):
-		await get_tree().create_timer(0.01).timeout
+		await get_tree().create_timer(0.02).timeout
 		ret = (Attributes.database).query("SELECT sender FROM Trade_Requests WHERE sender = '" + sender + "' AND receiver = '" + receiver + "'")
 	if ! ((Attributes.database).query_result):
 		trading = false
@@ -221,7 +221,10 @@ func check_trade_accept():
 
 func _on_accept_button_pressed():
 	$AcceptButton.modulate.a = 0.5
-	Attributes.database.query("SELECT status FROM Trade_Requests WHERE sender = '" + sender + "' AND receiver = '" + receiver + "'")
+	var ret = Attributes.database.query("SELECT status FROM Trade_Requests WHERE sender = '" + sender + "' AND receiver = '" + receiver + "'")
+	while (ret == false):
+		await get_tree().create_timer(0.01).timeout
+		ret = Attributes.database.query("SELECT status FROM Trade_Requests WHERE sender = '" + sender + "' AND receiver = '" + receiver + "'")
 	var status : int = (Attributes.database).query_result[0]["status"]
 	if (status == 2):
 		trading = false
