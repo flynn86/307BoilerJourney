@@ -234,6 +234,7 @@ func load():
 	# collectables
 
 	Attributes.numCollected = player[0].numCollected
+	Attributes.items.clear()
 	Attributes.angry_pete = player[0].angry_pete
 	if (Attributes.angry_pete):
 		Attributes.items.append(ItemManager.Items.ANGRY_PETE)
