@@ -65,7 +65,6 @@ offset_left = 244.0
 offset_top = 147.0
 offset_right = 684.0
 offset_bottom = 237.0
-theme_override_colors/font_shadow_color = Color(1, 0.843137, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "Quest 1:  Visit the Engineering
 Fountain and Loeb Fountain
@@ -78,7 +77,6 @@ offset_left = 269.0
 offset_top = 288.0
 offset_right = 651.0
 offset_bottom = 348.0
-theme_override_colors/font_shadow_color = Color(1, 0.843137, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "Quest 2:  Ring the Bell Tower
 Reward: 5 XP"
@@ -90,7 +88,6 @@ offset_left = 274.0
 offset_top = 411.0
 offset_right = 656.0
 offset_bottom = 501.0
-theme_override_colors/font_shadow_color = Color(1, 0.843137, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "Quest 3: Collect at least 3
 collectibles
