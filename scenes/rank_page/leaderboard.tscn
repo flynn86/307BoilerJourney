@@ -44,10 +44,10 @@ theme = SubResource("Theme_cnf0t")
 
 [node name="BackButton" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 11.0
-offset_top = 12.0
-offset_right = 128.0
-offset_bottom = 67.0
+offset_left = 26.0
+offset_top = 26.0
+offset_right = 143.0
+offset_bottom = 81.0
 theme_override_font_sizes/font_size = 20
 text = "Back"
 

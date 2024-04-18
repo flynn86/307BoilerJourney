@@ -106,10 +106,10 @@ offset_bottom = 487.0
 placeholder_text = "Enter Interest"
 
 [node name="save" type="Button" parent="Panel"]
-offset_left = 1054.0
-offset_top = 587.0
-offset_right = 1136.0
-offset_bottom = 633.0
+offset_left = 1033.0
+offset_top = 574.0
+offset_right = 1115.0
+offset_bottom = 620.0
 text = "Save "
 
 [connection signal="text_changed" from="Panel/interest1" to="." method="_on_interest_1_text_changed"]

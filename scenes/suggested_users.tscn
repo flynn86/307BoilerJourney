@@ -60,17 +60,17 @@ theme_override_font_sizes/font_size = 18
 theme_override_styles/normal = SubResource("StyleBoxFlat_fp2ud")
 
 [node name="goBack" type="Button" parent="Panel"]
-offset_left = 1018.0
-offset_top = 591.0
-offset_right = 1135.0
-offset_bottom = 637.0
+offset_left = 1001.0
+offset_top = 583.0
+offset_right = 1118.0
+offset_bottom = 629.0
 text = "Go back"
 
 [node name="refresh" type="Button" parent="Panel"]
-offset_left = 11.0
-offset_top = 598.0
-offset_right = 207.0
-offset_bottom = 644.0
+offset_left = 26.0
+offset_top = 583.0
+offset_right = 222.0
+offset_bottom = 629.0
 text = "Refresh Suggestions"
 
 [node name="InvalidUser" type="Label" parent="Panel"]
@@ -93,30 +93,30 @@ offset_bottom = 168.0
 text = "Add Friend"
 
 [node name="AddFriend2" type="Button" parent="Panel"]
-offset_left = 915.0
+offset_left = 913.0
 offset_top = 214.0
-offset_right = 1030.0
+offset_right = 1028.0
 offset_bottom = 260.0
 text = "Add Friend"
 
 [node name="AddFriend3" type="Button" parent="Panel"]
-offset_left = 918.0
+offset_left = 913.0
 offset_top = 305.0
-offset_right = 1033.0
+offset_right = 1028.0
 offset_bottom = 351.0
 text = "Add Friend"
 
 [node name="AddFriend4" type="Button" parent="Panel"]
-offset_left = 920.0
+offset_left = 913.0
 offset_top = 397.0
-offset_right = 1035.0
+offset_right = 1028.0
 offset_bottom = 443.0
 text = "Add Friend"
 
 [node name="AddFriend5" type="Button" parent="Panel"]
-offset_left = 921.0
+offset_left = 913.0
 offset_top = 487.0
-offset_right = 1036.0
+offset_right = 1028.0
 offset_bottom = 533.0
 theme_override_font_sizes/font_size = 18
 text = "Add Friend"

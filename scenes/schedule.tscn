@@ -50,10 +50,10 @@ theme_override_font_sizes/normal_font_size = 40
 text = "Your Weekly Schedule"
 
 [node name="Add" type="Button" parent="Panel"]
-offset_left = 12.0
-offset_top = 577.0
-offset_right = 284.0
-offset_bottom = 640.0
+offset_left = 26.0
+offset_top = 571.0
+offset_right = 245.0
+offset_bottom = 625.0
 text = "Add Course"
 
 [node name="Label" type="Label" parent="Panel"]
@@ -131,10 +131,10 @@ theme_override_font_sizes/font_size = 18
 text = "Error: Can't add more than 8 courses!"
 
 [node name="go_back_to_map" type="Button" parent="Panel"]
-offset_left = 854.0
-offset_top = 574.0
-offset_right = 1140.0
-offset_bottom = 639.0
+offset_left = 924.0
+offset_top = 571.0
+offset_right = 1123.0
+offset_bottom = 626.0
 text = "Go back to Map"
 
 [connection signal="pressed" from="Panel/Add" to="." method="_on_add_pressed"]
