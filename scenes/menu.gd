@@ -48,7 +48,7 @@ func _on_join_server_button_pressed():
 		#else:
 		#	print("Client good")
 		#enet.create_client(address_entry.text, PORT)
-		if (Attributes.database).select_rows("Players", "serverName == '%s' and isHost == true" % address_entry.text, ["*"]).size() != 0:
+		if ((Attributes.database).select_rows("Players", "serverName == '%s' and isHost == true" % address_entry.text, ["*"]).size() != 0) && !Attributes.database.error_message.contains("database is locked"):
 			Attributes.isHost = false
 			Attributes.serverName = address_entry.text
 			SaveUtils.save()
@@ -112,12 +112,8 @@ func _on_bug_report_button_pressed():
 func _on_find_friends_pressed():
 	get_tree().change_scene_to_file("res://scenes/suggested_users.tscn")
 
-
 func _on_studyroom_pressed():
 	get_tree().change_scene_to_file("res://scenes/study_rooms.tscn")
-	
-
-
 
 func _on_all_stats_pressed():
 	get_tree().change_scene_to_file("res://scenes/all_stats.tscn")
