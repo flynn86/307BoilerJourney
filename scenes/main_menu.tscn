@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bbgynlv8qgelb"]
+[gd_scene load_steps=11 format=3 uid="uid://bbgynlv8qgelb"]
 
 [ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_l8hk8"]
-[ext_resource type="FontFile" uid="uid://db3m053aj7ck8" path="res://fonts/KOMIKAX_.ttf" id="2_ucegh"]
+[ext_resource type="FontFile" uid="uid://5lqm3siyw530" path="res://fonts/KOMIKAX_.ttf" id="2_ucegh"]
+[ext_resource type="Texture2D" uid="uid://d0tielwklerf" path="res://scenes/Collectable_scenes/Collectables/purdue-boilermakers-football-purdue-boilermakers-men-s-basketball-mackey-arena-purdue-pete-university-purdue-boilermakers-women-s-basketball-thumbnail.png" id="3_js7s2"]
+[ext_resource type="Texture2D" uid="uid://bswi55jcx2ivs" path="res://images/purdue-university-logo-png-transparent.png" id="4_60vvt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8bc1y"]
 bg_color = Color(0.266667, 0.266667, 0.266667, 1)
@@ -114,6 +116,22 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_mb5p1")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+offset_left = 56.0
+offset_top = 407.0
+offset_right = 298.0
+offset_bottom = 633.0
+texture = ExtResource("3_js7s2")
+expand_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="Panel"]
+offset_left = 892.0
+offset_top = 414.0
+offset_right = 1118.0
+offset_bottom = 623.0
+texture = ExtResource("4_60vvt")
+expand_mode = 3
 
 [connection signal="pressed" from="Panel/StartNewGame" to="." method="_on_start_new_game_pressed"]
 [connection signal="pressed" from="Panel/DeleteGame" to="." method="_on_delete_game_pressed"]

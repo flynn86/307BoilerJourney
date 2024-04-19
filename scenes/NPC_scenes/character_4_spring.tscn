@@ -1,0 +1,132 @@
+[gd_scene load_steps=17 format=3 uid="uid://vphs2vi0xobu"]
+
+[ext_resource type="Script" path="res://scenes/NPC_scenes/character_4_spring.gd" id="1_5a4g5"]
+[ext_resource type="Texture2D" uid="uid://ba51vup7xuafq" path="res://scenes/map/NPCs/characters.png" id="3_c2usx"]
+[ext_resource type="PackedScene" uid="uid://dfv73qbv85kod" path="res://dialogue/dialogue_character_4_spring.tscn" id="3_rn05o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i38px"]
+atlas = ExtResource("3_c2usx")
+region = Rect2(640, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_faenj"]
+atlas = ExtResource("3_c2usx")
+region = Rect2(576, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3aey"]
+atlas = ExtResource("3_c2usx")
+region = Rect2(640, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjcb0"]
+atlas = ExtResource("3_c2usx")
+region = Rect2(704, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6e4fc"]
+atlas = ExtResource("3_c2usx")
+region = Rect2(576, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43ote"]
+atlas = ExtResource("3_c2usx")
+region = Rect2(640, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4871"]
+atlas = ExtResource("3_c2usx")
+region = Rect2(704, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iu7q2"]
+atlas = ExtResource("3_c2usx")
+region = Rect2(576, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rbsy"]
+atlas = ExtResource("3_c2usx")
+region = Rect2(640, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hasxb"]
+atlas = ExtResource("3_c2usx")
+region = Rect2(704, 384, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s1hm3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i38px")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_faenj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3aey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjcb0")
+}],
+"loop": true,
+"name": &"Walking Forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6e4fc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43ote")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4871")
+}],
+"loop": true,
+"name": &"Walking Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iu7q2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2rbsy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hasxb")
+}],
+"loop": true,
+"name": &"Walking Right",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g0fie"]
+radius = 26.9258
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xy03m"]
+radius = 58.0
+
+[node name="character_4_spring" type="CharacterBody2D"]
+script = ExtResource("1_5a4g5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_s1hm3")
+animation = &"Walking Right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 7)
+shape = SubResource("CircleShape2D_g0fie")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="chat_detection_area" type="Area2D" parent="."]
+position = Vector2(1, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
+position = Vector2(1, 2)
+shape = SubResource("CircleShape2D_xy03m")
+
+[node name="dialogue_character_4_spring" parent="." instance=ExtResource("3_rn05o")]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
+[connection signal="dialogue_finished" from="dialogue_character_4_spring" to="." method="_on_dialogue_character_4_spring_dialogue_finished"]

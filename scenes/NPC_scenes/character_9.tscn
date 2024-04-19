@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://dm7pocwldw8m6"]
 
 [ext_resource type="Script" path="res://scenes/NPC_scenes/character_9.gd" id="1_jdqt0"]
-[ext_resource type="Texture2D" uid="uid://u32h7o4bw72w" path="res://scenes/map/NPCs/characters.png" id="2_ygv1x"]
+[ext_resource type="Texture2D" uid="uid://ba51vup7xuafq" path="res://scenes/map/NPCs/characters.png" id="2_ygv1x"]
 [ext_resource type="PackedScene" uid="uid://mddbl7vdjdx1" path="res://dialogue/dialogue_character_9.tscn" id="3_ct8mf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s518o"]

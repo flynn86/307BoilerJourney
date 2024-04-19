@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/NPC_scenes/character_4.gd" id="1_hpj7w"]
 [ext_resource type="PackedScene" uid="uid://b8ij2dhet8eo3" path="res://dialogue/dialogue_character_4.tscn" id="2_4x3mm"]
-[ext_resource type="Texture2D" uid="uid://u32h7o4bw72w" path="res://scenes/map/NPCs/characters.png" id="2_qgi30"]
+[ext_resource type="Texture2D" uid="uid://ba51vup7xuafq" path="res://scenes/map/NPCs/characters.png" id="2_qgi30"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i38px"]
 atlas = ExtResource("2_qgi30")

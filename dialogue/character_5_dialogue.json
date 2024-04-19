@@ -1,4 +1,6 @@
 [
-	{"name": "Student", "text": "You can click on buildings to view their details"},
-	{"name": "Student", "text": "You'll get their description and even be able to see their rating directly from google"},
+	{"name": "Student", "text": "Summer at Purdue is quiet but nice. Have you visited any local summer events?"},
+	{"name": "You", "text": "Not yet, I’m still figuring out what’s around. What’s good?"},
+	{"name": "Student", "text": "You should try the Taste of Tippecanoe; it’s a great way to try local foods and enjoy live music."},
+	{"name": "You", "text": "Sounds like a blast! I'll definitely check it out. Thanks!"}
 ]

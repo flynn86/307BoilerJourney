@@ -1,0 +1,132 @@
+[gd_scene load_steps=17 format=3 uid="uid://bysn6m2wnpiw2"]
+
+[ext_resource type="Script" path="res://scenes/NPC_scenes/character_0_winter.gd" id="1_c8ryj"]
+[ext_resource type="Texture2D" uid="uid://ba51vup7xuafq" path="res://scenes/map/NPCs/characters.png" id="2_aj4fp"]
+[ext_resource type="PackedScene" uid="uid://donbdgwwe471u" path="res://dialogue/dialogue_character_0_winter.tscn" id="3_hkqjn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpfuk"]
+atlas = ExtResource("2_aj4fp")
+region = Rect2(448, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdkgj"]
+atlas = ExtResource("2_aj4fp")
+region = Rect2(384, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1qtb"]
+atlas = ExtResource("2_aj4fp")
+region = Rect2(448, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cioby"]
+atlas = ExtResource("2_aj4fp")
+region = Rect2(512, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3xtn"]
+atlas = ExtResource("2_aj4fp")
+region = Rect2(384, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwqxb"]
+atlas = ExtResource("2_aj4fp")
+region = Rect2(448, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvjge"]
+atlas = ExtResource("2_aj4fp")
+region = Rect2(512, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1cqna"]
+atlas = ExtResource("2_aj4fp")
+region = Rect2(384, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0htn"]
+atlas = ExtResource("2_aj4fp")
+region = Rect2(448, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5hog"]
+atlas = ExtResource("2_aj4fp")
+region = Rect2(512, 384, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s1hm3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xpfuk")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdkgj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1qtb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cioby")
+}],
+"loop": true,
+"name": &"Walking Forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3xtn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwqxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvjge")
+}],
+"loop": true,
+"name": &"Walking Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1cqna")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0htn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5hog")
+}],
+"loop": true,
+"name": &"Walking Right",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g0fie"]
+radius = 26.9258
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xy03m"]
+radius = 58.0
+
+[node name="character_0_winter" type="CharacterBody2D"]
+script = ExtResource("1_c8ryj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_s1hm3")
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 7)
+shape = SubResource("CircleShape2D_g0fie")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="chat_detection_area" type="Area2D" parent="."]
+position = Vector2(1, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
+position = Vector2(1, 2)
+shape = SubResource("CircleShape2D_xy03m")
+
+[node name="dialogue_character_0_winter" parent="." instance=ExtResource("3_hkqjn")]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
+[connection signal="dialogue_finished" from="dialogue_character_0_winter" to="." method="_on_dialogue_character_0_winter_dialogue_finished"]

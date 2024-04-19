@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b7pkvn71gd0bl"]
 
 [ext_resource type="Script" path="res://dialogue/dialogue_character_10.gd" id="1_4n0oa"]
-[ext_resource type="Texture2D" uid="uid://bev4l4hl5mhcv" path="res://scenes/map/NPCs/kisspng-computer-icons-facebook-like-button-like-share-comment-5ae2b6d968f1e3 Background Removed.5552742615248073854299.png" id="2_2thle"]
+[ext_resource type="Texture2D" uid="uid://daoi76vmhrxd7" path="res://scenes/map/NPCs/kisspng-computer-icons-facebook-like-button-like-share-comment-5ae2b6d968f1e3 Background Removed.5552742615248073854299.png" id="2_2thle"]
 
 [node name="dialogue_character_10" type="Control"]
 layout_mode = 3
