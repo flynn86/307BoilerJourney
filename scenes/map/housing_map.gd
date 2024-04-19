@@ -29,6 +29,7 @@ func _ready():
 	get_node("CharacterBody2D/Player/view_suggestions").visible = false
 	get_node("Inventory_container").visible = false
 	get_node("Trivia_container").visible = false
+	
 
 func _on_panel_closed():
 	Attributes.xhousing = $CharacterBody2D.global_position.x

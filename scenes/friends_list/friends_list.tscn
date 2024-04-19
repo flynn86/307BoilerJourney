@@ -1,21 +1,17 @@
-[gd_scene load_steps=9 format=3 uid="uid://b50m5g6211mvn"]
+[gd_scene load_steps=7 format=3 uid="uid://b50m5g6211mvn"]
 
 [ext_resource type="Script" path="res://scenes/friends_list/friends_list.gd" id="1_p5shr"]
-[ext_resource type="FontFile" uid="uid://c6wawxex8md7y" path="res://fonts/KOMIKAX_.ttf" id="2_epl2e"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xpx77"]
-bg_color = Color(0.266667, 0.266667, 0.266667, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n8825"]
-bg_color = Color(0, 0, 0, 1)
-
-[sub_resource type="Theme" id="Theme_j4ol6"]
-Button/font_sizes/font_size = 16
-Button/styles/normal = SubResource("StyleBoxFlat_xpx77")
-Panel/styles/panel = SubResource("StyleBoxFlat_n8825")
+[ext_resource type="FontFile" uid="uid://7x61o34kfaic" path="res://fonts/KOMIKAX_.ttf" id="2_epl2e"]
+[ext_resource type="Theme" uid="uid://ce7gdo6lqyra0" path="res://study room theme.tres" id="2_vqnk5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6u46j"]
 bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ie6b5"]
 bg_color = Color(0.141176, 0.141176, 0.141176, 1)
@@ -29,7 +25,7 @@ script = ExtResource("1_p5shr")
 [node name="Panel" type="Panel" parent="."]
 offset_right = 1149.0
 offset_bottom = 657.0
-theme = SubResource("Theme_j4ol6")
+theme = ExtResource("2_vqnk5")
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
@@ -37,6 +33,7 @@ offset_left = 710.0
 offset_top = 460.0
 offset_right = 892.0
 offset_bottom = 505.0
+theme_override_font_sizes/font_size = 18
 text = "Send Friend Request"
 
 [node name="LineEdit" type="LineEdit" parent="Panel"]
@@ -45,16 +42,17 @@ offset_left = 628.0
 offset_top = 506.0
 offset_right = 849.0
 offset_bottom = 567.0
+theme_override_font_sizes/font_size = 18
 theme_override_styles/normal = SubResource("StyleBoxFlat_6u46j")
 placeholder_text = "Enter Username"
 alignment = 1
 
 [node name="SendRequest" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 878.0
-offset_top = 511.0
-offset_right = 978.0
-offset_bottom = 563.0
+offset_left = 873.0
+offset_top = 506.0
+offset_right = 981.0
+offset_bottom = 567.0
 text = "Send"
 
 [node name="InvalidUser" type="Label" parent="Panel"]
@@ -75,6 +73,7 @@ offset_left = 622.0
 offset_top = 89.0
 offset_right = 959.0
 offset_bottom = 149.0
+theme_override_font_sizes/font_size = 18
 text = "Incoming Friend Requests"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -85,6 +84,9 @@ offset_left = 83.0
 offset_top = 33.0
 offset_right = 416.0
 offset_bottom = 103.0
+theme_override_colors/font_shadow_color = Color(0.541176, 0.45098, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 5
 theme_override_fonts/font = ExtResource("2_epl2e")
 theme_override_font_sizes/font_size = 40
 text = "Friends"
@@ -94,18 +96,18 @@ justification_flags = 162
 
 [node name="Close" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 995.0
-offset_top = 16.0
-offset_right = 1132.0
-offset_bottom = 69.0
+offset_left = 986.0
+offset_top = 25.0
+offset_right = 1123.0
+offset_bottom = 78.0
 text = "Close"
 
 [node name="Refresh" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 845.0
-offset_top = 16.0
-offset_right = 982.0
-offset_bottom = 69.0
+offset_left = 839.0
+offset_top = 25.0
+offset_right = 976.0
+offset_bottom = 78.0
 text = "Refresh"
 
 [node name="FriendReqList" type="ColorRect" parent="Panel"]

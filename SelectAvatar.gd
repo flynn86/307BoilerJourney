@@ -83,6 +83,7 @@ func _ready():
 	eyesSprite8.texture = composite_sprites.eyes_spritesheet[0]
 	hairstylesSprite8.texture = composite_sprites.hairstyles_spritesheet[199]
 	outfitSprite8.texture = composite_sprites.outfit_spritesheet[70]
+	$Panel.visible = true
 
 
 
@@ -98,8 +99,10 @@ func _on_button_1_pressed():
 	Attributes.curr_eyes = 0
 	Attributes.curr_hair = 0
 	Attributes.curr_outfit = 0
+	$Panel.visible = false
 	SaveUtils.save()
 	get_tree().change_scene_to_file(Attributes.location)
+	
 
 
 func _on_button_2_pressed():
@@ -107,6 +110,7 @@ func _on_button_2_pressed():
 	Attributes.curr_eyes = 1
 	Attributes.curr_hair = 30
 	Attributes.curr_outfit = 10
+	$Panel.visible = false
 	SaveUtils.save()
 	get_tree().change_scene_to_file(Attributes.location)
 
@@ -116,6 +120,7 @@ func _on_button_3_pressed():
 	Attributes.curr_eyes = 2
 	Attributes.curr_hair = 60
 	Attributes.curr_outfit = 20
+	$Panel.visible = false
 	SaveUtils.save()
 	get_tree().change_scene_to_file(Attributes.location)
 
@@ -125,6 +130,7 @@ func _on_button_4_pressed():
 	Attributes.curr_eyes = 3
 	Attributes.curr_hair = 90
 	Attributes.curr_outfit = 30
+	$Panel.visible = false
 	SaveUtils.save()
 	get_tree().change_scene_to_file(Attributes.location)
 
@@ -134,6 +140,7 @@ func _on_button_5_pressed():
 	Attributes.curr_eyes = 4
 	Attributes.curr_hair = 120
 	Attributes.curr_outfit = 40
+	$Panel.visible = false
 	SaveUtils.save()
 	get_tree().change_scene_to_file(Attributes.location)
 
@@ -143,6 +150,7 @@ func _on_button_6_pressed():
 	Attributes.curr_eyes = 5
 	Attributes.curr_hair = 150
 	Attributes.curr_outfit = 50
+	$Panel.visible = false
 	SaveUtils.save()
 	get_tree().change_scene_to_file(Attributes.location)
 
@@ -152,6 +160,7 @@ func _on_button_7_pressed():
 	Attributes.curr_eyes = 5
 	Attributes.curr_hair = 180
 	Attributes.curr_outfit = 60
+	$Panel.visible = false
 	SaveUtils.save()
 	get_tree().change_scene_to_file(Attributes.location)
 
@@ -161,5 +170,6 @@ func _on_button_8_pressed():
 	Attributes.curr_eyes = 0
 	Attributes.curr_hair = 199
 	Attributes.curr_outfit = 70
+	$Panel.visible = false
 	SaveUtils.save()
 	get_tree().change_scene_to_file(Attributes.location)

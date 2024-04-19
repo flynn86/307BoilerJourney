@@ -81,6 +81,7 @@ libraries = {
 
 [node name="Panel" type="Panel" parent="."]
 unique_name_in_owner = true
+visible = false
 z_index = -1
 offset_left = -70.0
 offset_top = -89.0

@@ -13,6 +13,7 @@ const composite_sprites = preload("res://characters/assets/CompositeSprites.gd")
 @onready var changbody = $Player/ChangeBody
 
 
+
 '''
 var hair = player.curr_hair
 var body = player.curr_body
@@ -22,6 +23,7 @@ var outfit = player.outfit
 
 
 func _ready():
+	$Player/Panel.visible = true
 	'''
 	bodySprite.texture = composite_sprites.body_spritesheet[8]
 	eyesSprite.texture = composite_sprites.eyes_spritesheet[5]

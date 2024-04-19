@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhecpmwku78bj"]
+[gd_scene load_steps=5 format=3 uid="uid://dhecpmwku78bj"]
 
-[ext_resource type="Theme" uid="uid://bw38c741am4hj" path="res://themes/club_theme.tres" id="1_k6vey"]
+[ext_resource type="Theme" uid="uid://ce7gdo6lqyra0" path="res://study room theme.tres" id="1_jdkra"]
 [ext_resource type="Script" path="res://scenes/games_page/game_page.gd" id="2_usu7o"]
+[ext_resource type="FontFile" uid="uid://7x61o34kfaic" path="res://fonts/KOMIKAX_.ttf" id="3_by5aj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lccg5"]
+bg_color = Color(0.141176, 0.141176, 0.141176, 1)
 
 [node name="GamePage" type="Panel"]
 custom_minimum_size = Vector2(10, 10)
@@ -10,21 +14,25 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_k6vey")
+theme = ExtResource("1_jdkra")
 script = ExtResource("2_usu7o")
 
 [node name="page_name" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.34
+anchor_left = 0.26
 anchor_top = 0.086
-anchor_right = 0.633
+anchor_right = 0.592
 anchor_bottom = 0.148
-offset_left = 0.320007
-offset_top = -7.728
-offset_right = -0.216003
-offset_bottom = 7.09601
-theme_override_font_sizes/font_size = 45
+offset_left = 38.48
+offset_top = -15.728
+offset_right = 38.016
+offset_bottom = 11.096
+theme_override_colors/font_shadow_color = Color(0.541176, 0.45098, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = ExtResource("3_by5aj")
+theme_override_font_sizes/font_size = 40
 text = "Upcoming Games"
 
 [node name="MB_title" type="Label" parent="."]
@@ -194,7 +202,7 @@ layout_mode = 2
 
 [node name="Popup" type="Popup" parent="."]
 position = Vector2i(400, 250)
-size = Vector2i(341, 131)
+size = Vector2i(349, 131)
 visible = true
 
 [node name="popup_text" type="RichTextLabel" parent="Popup"]
@@ -204,6 +212,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_lccg5")
 
 [node name="Button" type="Button" parent="Popup"]
 anchors_preset = 3
@@ -222,8 +231,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.056
 anchor_bottom = 0.086
-offset_right = -0.512001
-offset_bottom = 0.271999
+offset_left = 26.0
+offset_top = 21.0
+offset_right = 28.488
+offset_bottom = 21.272
 text = "Close"
 
 [node name="Button" type="Button" parent="."]
@@ -233,10 +244,10 @@ anchor_left = 0.743
 anchor_top = 0.062
 anchor_right = 0.965
 anchor_bottom = 0.111
-offset_left = -7.93604
-offset_top = -8.176
-offset_right = 8.31995
-offset_bottom = 8.07199
+offset_left = -79.936
+offset_top = -14.176
+offset_right = 17.32
+offset_bottom = 2.07199
 text = "Open Purdue's Upcoming Games Page"
 
 [connection signal="pressed" from="Popup/Button" to="." method="_on_button_pressed"]
