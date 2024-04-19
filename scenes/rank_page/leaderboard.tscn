@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cvgbdgww1tkv2"]
 
 [ext_resource type="Script" path="res://scenes/rank_page/leaderboard.gd" id="1_4csyh"]
-[ext_resource type="FontFile" uid="uid://7x61o34kfaic" path="res://fonts/KOMIKAX_.ttf" id="2_mmcri"]
+[ext_resource type="FontFile" uid="uid://dis5kj2s7vfny" path="res://fonts/KOMIKAX_.ttf" id="2_mmcri"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ikh3q"]
 bg_color = Color(0.266667, 0.266667, 0.266667, 1)
