@@ -115,3 +115,9 @@ func _on_find_friends_pressed():
 
 func _on_studyroom_pressed():
 	get_tree().change_scene_to_file("res://scenes/study_rooms.tscn")
+	
+
+
+
+func _on_all_stats_pressed():
+	get_tree().change_scene_to_file("res://scenes/all_stats.tscn")

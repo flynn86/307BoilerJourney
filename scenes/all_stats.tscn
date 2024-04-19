@@ -175,3 +175,4 @@ offset_bottom = 305.0
 [connection signal="pressed" from="Panel/quests_completed" to="." method="_on_quests_completed_pressed"]
 [connection signal="pressed" from="Panel/leaderboard" to="." method="_on_leaderboard_pressed"]
 [connection signal="pressed" from="Panel/Label/close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Panel/Back" to="." method="_on_back_pressed"]
