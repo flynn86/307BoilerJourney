@@ -57,6 +57,13 @@ var quest5_active: bool = false
 var quest5_completed: bool = false
 var quest6_active: bool = false
 var quest6_completed: bool = false
+var walc: bool = false
+var arms: bool = false
+var ellt: bool = false
+var phys: bool = false
+var wthr: bool = false
+var stew: bool = false
+var hamp: bool = false
 var basics_shown: bool = false
 var friends_list_changed: bool = false
 
@@ -229,6 +236,13 @@ func reset(user: String):
 	quest5_completed = false
 	quest6_active = false
 	quest6_completed = false
+	walc = false
+	arms = false
+	ellt = false
+	phys = false
+	wthr = false
+	stew = false
+	hamp = false
 	basics_shown = false
 	friends_list_changed = false
 	
