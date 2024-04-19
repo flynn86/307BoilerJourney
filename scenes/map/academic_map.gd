@@ -46,6 +46,7 @@ func _ready():
 	$CharacterBody2D/Player/OnlinePlayersTrade.visible = false
 	$CharacterBody2D/Player/OnlinePlayerList.visible = false
 	$CharacterBody2D/Player/Trade_Request_Notif.visible = false
+	
 
 func _input(event):
 	if event is InputEventMouseMotion or event is InputEventMouseButton:

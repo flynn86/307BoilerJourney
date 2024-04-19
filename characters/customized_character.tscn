@@ -12,6 +12,7 @@ script = ExtResource("1_j0gwa")
 position = Vector2(1, 0)
 
 [node name="Body" type="Sprite2D" parent="CompositeSprites"]
+position = Vector2(-58, -26)
 scale = Vector2(2, 2)
 texture = ExtResource("1_oxv8e")
 hframes = 58
