@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cvjbfijhlka84"]
+[gd_scene load_steps=6 format=3 uid="uid://cvjbfijhlka84"]
 
 [ext_resource type="Script" path="res://characters/Player.gd" id="1_susai"]
-[ext_resource type="Texture2D" uid="uid://cj8flyl04qlnf" path="res://characters/assets/Bodies/16x16/Body_02.png" id="1_wrlsq"]
-[ext_resource type="Theme" uid="uid://ce7gdo6lqyra0" path="res://study room theme.tres" id="2_u8pdn"]
+[ext_resource type="Texture2D" uid="uid://bdnj757xaegyw" path="res://characters/assets/Bodies/16x16/Body_02.png" id="1_wrlsq"]
 
 [sub_resource type="Animation" id="Animation_1gtpf"]
 length = 0.001
@@ -47,132 +46,88 @@ position = Vector2(210.171, 266.012)
 scale = Vector2(3, 3)
 script = ExtResource("1_susai")
 
-[node name="Panel" type="Panel" parent="."]
-offset_left = -70.0
-offset_top = -88.0
-offset_right = 314.0
-offset_bottom = 127.0
-theme = ExtResource("2_u8pdn")
-
-[node name="CompositeSprites" type="Node2D" parent="Panel"]
-position = Vector2(70, 88)
+[node name="CompositeSprites" type="Node2D" parent="."]
 scale = Vector2(2, 2)
 
-[node name="Body" type="Sprite2D" parent="Panel/CompositeSprites"]
-position = Vector2(0.638161, -7.66867)
+[node name="Body" type="Sprite2D" parent="CompositeSprites"]
+position = Vector2(2.2, 2.08165e-12)
 scale = Vector2(2, 2)
 texture = ExtResource("1_wrlsq")
 hframes = 58
 vframes = 20
 
-[node name="Eyes" type="Sprite2D" parent="Panel/CompositeSprites"]
+[node name="Eyes" type="Sprite2D" parent="CompositeSprites"]
 scale = Vector2(2, 2)
 hframes = 58
 vframes = 20
 frame = 116
 
-[node name="Hairstyles" type="Sprite2D" parent="Panel/CompositeSprites"]
+[node name="Hairstyles" type="Sprite2D" parent="CompositeSprites"]
 scale = Vector2(2, 2)
 hframes = 58
 vframes = 20
 
-[node name="Outfit" type="Sprite2D" parent="Panel/CompositeSprites"]
+[node name="Outfit" type="Sprite2D" parent="CompositeSprites"]
 scale = Vector2(2, 2)
 hframes = 58
 vframes = 20
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/CompositeSprites"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CompositeSprites"]
 libraries = {
 "": SubResource("AnimationLibrary_id76m")
 }
 
-[node name="ChangeHair" type="Button" parent="Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.006622
-anchor_top = 0.0030827
-anchor_right = 0.0482887
-anchor_bottom = 0.0728501
-offset_left = 104.61
-offset_top = 96.3292
-offset_right = 160.61
-offset_bottom = 127.329
+[node name="ChangeHair" type="Button" parent="."]
+offset_left = 34.6098
+offset_top = 8.3292
+offset_right = 75.6098
+offset_bottom = 39.3292
 text = "Hair"
 metadata/_edit_use_anchors_ = true
 
-[node name="ChangeEyes" type="Button" parent="Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0751982
-anchor_top = -0.0728862
-anchor_right = 0.116865
-anchor_bottom = -0.00311883
-offset_left = 154.943
-offset_top = 62.3292
-offset_right = 210.943
-offset_bottom = 93.3292
+[node name="ChangeEyes" type="Button" parent="."]
+offset_left = 84.9432
+offset_top = -25.6708
+offset_right = 127.943
+offset_bottom = 5.3292
 text = "Eyes"
 metadata/_edit_use_anchors_ = true
 
-[node name="ChangeOutfit" type="Button" parent="Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0890871
-anchor_top = 0.0046331
-anchor_right = 0.135962
-anchor_bottom = 0.0744005
-offset_left = 149.943
-offset_top = 95.6625
-offset_right = 203.943
-offset_bottom = 126.663
+[node name="ChangeOutfit" type="Button" parent="."]
+offset_left = 79.9432
+offset_top = 7.66254
+offset_right = 133.943
+offset_bottom = 38.6625
 text = "Outfit"
 metadata/_edit_use_anchors_ = true
 
-[node name="ChangeBody" type="Button" parent="Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.00575393
-anchor_top = -0.0682352
-anchor_right = 0.0500247
-anchor_bottom = 0.00153227
-offset_left = 103.61
-offset_top = 60.9959
-offset_right = 158.61
-offset_bottom = 91.9959
+[node name="ChangeBody" type="Button" parent="."]
+offset_left = 33.6098
+offset_top = -27.0041
+offset_right = 80.6098
+offset_bottom = 3.99587
 text = "Body"
 metadata/_edit_use_anchors_ = true
 
-[node name="Random" type="Button" parent="Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0578373
-anchor_top = 0.0914547
-anchor_right = 0.10992
-anchor_bottom = 0.161222
-offset_left = 113.61
-offset_top = 128.996
-offset_right = 186.61
-offset_bottom = 159.996
+[node name="Random" type="Button" parent="."]
+offset_left = 43.6098
+offset_top = 40.9959
+offset_right = 116.61
+offset_bottom = 71.9959
 text = "Random"
 metadata/_edit_use_anchors_ = true
 
-[node name="Continue" type="Button" parent="Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0873506
-anchor_top = -0.243429
-anchor_right = 0.142038
-anchor_bottom = -0.173661
-offset_left = 228.61
-offset_top = 129.329
-offset_right = 307.61
-offset_bottom = 160.329
+[node name="Continue" type="Button" parent="."]
+offset_left = 158.61
+offset_top = 41.3292
+offset_right = 237.61
+offset_bottom = 72.3292
 text = "Continue"
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="Panel/ChangeHair" to="." method="_on_change_hair_pressed"]
-[connection signal="pressed" from="Panel/ChangeEyes" to="." method="_on_change_eyes_pressed"]
-[connection signal="pressed" from="Panel/ChangeOutfit" to="." method="_on_change_outfit_pressed"]
-[connection signal="pressed" from="Panel/ChangeBody" to="." method="_on_change_body_pressed"]
-[connection signal="pressed" from="Panel/Random" to="." method="_on_random_pressed"]
-[connection signal="pressed" from="Panel/Continue" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ChangeHair" to="." method="_on_change_hair_pressed"]
+[connection signal="pressed" from="ChangeEyes" to="." method="_on_change_eyes_pressed"]
+[connection signal="pressed" from="ChangeOutfit" to="." method="_on_change_outfit_pressed"]
+[connection signal="pressed" from="ChangeBody" to="." method="_on_change_body_pressed"]
+[connection signal="pressed" from="Random" to="." method="_on_random_pressed"]
+[connection signal="pressed" from="Continue" to="." method="_on_button_pressed"]

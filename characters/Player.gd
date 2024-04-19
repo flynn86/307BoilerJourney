@@ -1,9 +1,9 @@
 extends Node2D
 
-@onready var bodySprite = $Player/CompositeSprites/Body
-@onready var eyesSprite = $Player/CompositeSprites/Eyes
-@onready var hairstylesSprite = $Player/CompositeSprites/Hairstyles
-@onready var outfitSprite = $Player/CompositeSprites/Outfit
+@onready var bodySprite = $CompositeSprites/Body
+@onready var eyesSprite = $CompositeSprites/Eyes
+@onready var hairstylesSprite = $CompositeSprites/Hairstyles
+@onready var outfitSprite = $CompositeSprites/Outfit
 
 const composite_sprites = preload("res://characters/assets/CompositeSprites.gd")
 
