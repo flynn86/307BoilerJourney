@@ -36,9 +36,11 @@ border_blend = true
 [sub_resource type="Theme" id="Theme_u8ne5"]
 Button/font_sizes/font_size = 18
 Button/styles/normal = SubResource("StyleBoxFlat_ce41w")
+Label/colors/font_color = Color(1, 1, 1, 1)
 Label/font_sizes/font_size = 18
 Label/styles/normal = SubResource("StyleBoxFlat_18dpk")
 Panel/styles/panel = SubResource("StyleBoxFlat_2ml5w")
+TextEdit/colors/font_color = Color(0.875, 0.875, 0.875, 1)
 TextEdit/font_sizes/font_size = 18
 TextEdit/styles/normal = SubResource("StyleBoxFlat_e1n4y")
 

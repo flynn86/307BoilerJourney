@@ -124,6 +124,7 @@ offset_left = 35.0
 offset_top = 78.0
 offset_right = 492.0
 offset_bottom = 327.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
 
 [node name="Back" type="Button" parent="Panel"]
 layout_mode = 0
@@ -163,3 +164,10 @@ offset_left = 315.0
 offset_top = 242.0
 offset_right = 522.0
 offset_bottom = 305.0
+
+[connection signal="pressed" from="Panel/current_rank" to="." method="_on_current_rank_pressed"]
+[connection signal="pressed" from="Panel/total_xp" to="." method="_on_total_xp_pressed"]
+[connection signal="pressed" from="Panel/total_collectables" to="." method="_on_total_collectables_pressed"]
+[connection signal="pressed" from="Panel/quests_completed" to="." method="_on_quests_completed_pressed"]
+[connection signal="pressed" from="Panel/leaderboard" to="." method="_on_leaderboard_pressed"]
+[connection signal="pressed" from="Panel/Label/close" to="." method="_on_close_pressed"]

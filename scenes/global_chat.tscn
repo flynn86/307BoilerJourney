@@ -33,6 +33,7 @@ border_blend = true
 [sub_resource type="Theme" id="Theme_mygvp"]
 Button/font_sizes/font_size = 18
 Button/styles/normal = SubResource("StyleBoxFlat_e8xi0")
+LineEdit/colors/font_color = Color(0.875, 0.875, 0.875, 1)
 LineEdit/font_sizes/font_size = 18
 LineEdit/styles/normal = SubResource("StyleBoxFlat_1jtem")
 Panel/styles/panel = SubResource("StyleBoxFlat_a0e2j")
@@ -78,6 +79,7 @@ offset_left = 84.0
 offset_top = 116.0
 offset_right = 1050.0
 offset_bottom = 536.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 18
 theme_override_styles/normal = SubResource("StyleBoxFlat_i5bgj")
 autowrap_mode = 2

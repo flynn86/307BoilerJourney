@@ -161,6 +161,7 @@ offset_left = 583.0
 offset_top = 371.0
 offset_right = 815.0
 offset_bottom = 421.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 18
 theme_override_styles/normal = SubResource("StyleBoxFlat_y4t3n")
 placeholder_text = "Enter Server Host Name"
