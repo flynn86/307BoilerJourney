@@ -41,6 +41,8 @@ func initialize():
 		"outfit" = Attributes.curr_outfit,
 		"season" = Attributes.season,
 		"isNight" = Attributes.night,
+		
+		"questsCompleted" = Attributes.questsCompleted,
 		"engineeringVisited" = Attributes.engineering_ftn_visited,
 		"loebVisited"= Attributes.loeb_ftn_visited,
 		"quest1active" = Attributes.quest1_active,
@@ -161,6 +163,8 @@ func save():
 		"outfit" = Attributes.curr_outfit,
 		"season" = Attributes.season,
 		"isNight" = Attributes.night,
+		
+		"questsCompleted" = Attributes.questsCompleted,
 		"engineeringVisited" = Attributes.engineering_ftn_visited,
 		"loebVisited"= Attributes.loeb_ftn_visited,
 		"quest1active" = Attributes.quest1_active,
@@ -304,6 +308,8 @@ func load():
 	Attributes.curr_outfit = player[0].outfit
 	Attributes.season = player[0].season
 	Attributes.night = player[0].isNight
+	
+	Attributes.questsCompleted = player[0].questsCompleted
 	Attributes.engineering_ftn_visited = player[0].engineeringVisited
 	Attributes.loeb_ftn_visited = player[0].loebVisited
 	Attributes.quest1_active = player[0].quest1active

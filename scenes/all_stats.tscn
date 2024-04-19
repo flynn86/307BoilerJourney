@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://ncqjl4lat741"]
+[gd_scene load_steps=8 format=3 uid="uid://ncqjl4lat741"]
 
 [ext_resource type="FontFile" uid="uid://7x61o34kfaic" path="res://fonts/KOMIKAX_.ttf" id="1_c6prt"]
+[ext_resource type="Script" path="res://scenes/all_stats.gd" id="1_mv4a4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gxea1"]
 bg_color = Color(0.266667, 0.266667, 0.266667, 1)
@@ -42,6 +43,7 @@ RichTextLabel/font_sizes/normal_font_size = 40
 RichTextLabel/fonts/normal_font = ExtResource("1_c6prt")
 
 [node name="All Stats" type="Node2D"]
+script = ExtResource("1_mv4a4")
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 1148.0

@@ -43,6 +43,8 @@ var curr_outfit: int = 0
 var season: String = "Summer"
 var night: bool = false
 var PMU_renter: bool = false
+
+var questsCompleted: int = 0
 var engineering_ftn_visited: bool = false
 var loeb_ftn_visited: bool = false
 var quest1_active: bool = false
@@ -222,6 +224,8 @@ func reset(user: String):
 	season = "Summer"
 	night = false
 	PMU_renter = false
+	
+	questsCompleted = 0
 	engineering_ftn_visited = false
 	loeb_ftn_visited = false
 	quest1_active = false
