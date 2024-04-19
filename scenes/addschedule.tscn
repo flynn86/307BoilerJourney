@@ -1,97 +1,154 @@
-[gd_scene load_steps=2 format=3 uid="uid://cv6mupakqs063"]
+[gd_scene load_steps=8 format=3 uid="uid://j0b14gvftfh1"]
 
 [ext_resource type="Script" path="res://scenes/addschedule.gd" id="1_4lj8b"]
+[ext_resource type="FontFile" uid="uid://7x61o34kfaic" path="res://fonts/KOMIKAX_.ttf" id="2_fc6ky"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3cdpn"]
+bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8w3qu"]
+bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hn67r"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s21qi"]
+bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
+
+[sub_resource type="Theme" id="Theme_sey74"]
+Button/font_sizes/font_size = 18
+Button/styles/normal = SubResource("StyleBoxFlat_3cdpn")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_8w3qu")
+Panel/styles/panel = SubResource("StyleBoxFlat_hn67r")
+TextEdit/font_sizes/font_size = 18
+TextEdit/styles/normal = SubResource("StyleBoxFlat_s21qi")
 
 [node name="Add Schedule" type="Node2D"]
 script = ExtResource("1_4lj8b")
-dropdown_path = NodePath("buildingDropdown")
+dropdown_path = NodePath("Panel/buildingDropdown")
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="."]
-offset_left = 495.0
-offset_top = 114.0
-offset_right = 742.0
-offset_bottom = 137.0
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme = SubResource("Theme_sey74")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Panel"]
+offset_left = 443.0
+offset_top = 77.0
+offset_right = 781.0
+offset_bottom = 147.0
+theme_override_colors/font_shadow_color = Color(0.541176, 0.45098, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/normal_font = ExtResource("2_fc6ky")
+theme_override_font_sizes/normal_font_size = 40
 text = "Add Courses"
 
-[node name="Course Name" type="TextEdit" parent="."]
-offset_left = 8.0
+[node name="Course Name" type="TextEdit" parent="Panel"]
+offset_left = 26.0
 offset_top = 199.0
-offset_right = 214.0
+offset_right = 232.0
 offset_bottom = 243.0
 placeholder_text = "Course Name"
 
-[node name="Course Time" type="TextEdit" parent="."]
-offset_left = 227.0
+[node name="Course Time" type="TextEdit" parent="Panel"]
+offset_left = 238.0
 offset_top = 198.0
-offset_right = 484.0
-offset_bottom = 242.0
+offset_right = 536.0
+offset_bottom = 244.0
 placeholder_text = "Course Time (in 24 hour format)"
 
-[node name="Monday" type="Button" parent="."]
-offset_left = 507.0
-offset_top = 200.0
-offset_right = 552.0
+[node name="Monday" type="Button" parent="Panel"]
+offset_left = 545.0
+offset_top = 198.0
+offset_right = 590.0
 offset_bottom = 244.0
 text = "M"
 
-[node name="Tuesday" type="Button" parent="."]
-offset_left = 566.0
+[node name="Tuesday" type="Button" parent="Panel"]
+offset_left = 599.0
 offset_top = 199.0
-offset_right = 611.0
-offset_bottom = 243.0
+offset_right = 644.0
+offset_bottom = 245.0
 text = "T"
 
-[node name="Wednesday" type="Button" parent="."]
-offset_left = 630.0
+[node name="Wednesday" type="Button" parent="Panel"]
+offset_left = 653.0
 offset_top = 199.0
-offset_right = 675.0
-offset_bottom = 243.0
+offset_right = 698.0
+offset_bottom = 245.0
 text = "W"
 
-[node name="Thursday" type="Button" parent="."]
-offset_left = 694.0
-offset_top = 200.0
-offset_right = 739.0
-offset_bottom = 244.0
+[node name="Thursday" type="Button" parent="Panel"]
+offset_left = 707.0
+offset_top = 199.0
+offset_right = 752.0
+offset_bottom = 245.0
 text = "R"
 
-[node name="Friday" type="Button" parent="."]
-offset_left = 755.0
-offset_top = 201.0
-offset_right = 800.0
-offset_bottom = 245.0
+[node name="Friday" type="Button" parent="Panel"]
+offset_left = 761.0
+offset_top = 200.0
+offset_right = 806.0
+offset_bottom = 246.0
 text = "F"
 
-[node name="buildingDropdown" type="OptionButton" parent="."]
-offset_left = 825.0
+[node name="buildingDropdown" type="OptionButton" parent="Panel"]
+offset_left = 819.0
 offset_top = 200.0
-offset_right = 996.0
+offset_right = 1006.0
 offset_bottom = 248.0
 
-[node name="submit" type="Button" parent="."]
-offset_left = 1010.0
-offset_top = 200.0
-offset_right = 1120.0
-offset_bottom = 248.0
+[node name="submit" type="Button" parent="Panel"]
+offset_left = 1018.0
+offset_top = 201.0
+offset_right = 1128.0
+offset_bottom = 249.0
 text = "Submit"
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="Panel"]
 visible = false
 offset_left = 373.0
 offset_top = 504.0
 offset_right = 693.0
 offset_bottom = 564.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
 text = "You must enter a all fields before submitting"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[connection signal="text_changed" from="Course Name" to="." method="_on_course_name_text_changed"]
-[connection signal="text_changed" from="Course Time" to="." method="_on_course_time_text_changed"]
-[connection signal="pressed" from="Monday" to="." method="_on_monday_pressed"]
-[connection signal="pressed" from="Tuesday" to="." method="_on_tuesday_pressed"]
-[connection signal="pressed" from="Wednesday" to="." method="_on_wednesday_pressed"]
-[connection signal="pressed" from="Thursday" to="." method="_on_thursday_pressed"]
-[connection signal="pressed" from="Friday" to="." method="_on_friday_pressed"]
-[connection signal="item_selected" from="buildingDropdown" to="." method="_on_building_dropdown_item_selected"]
-[connection signal="pressed" from="submit" to="." method="_on_submit_pressed"]
+[connection signal="text_changed" from="Panel/Course Name" to="." method="_on_course_name_text_changed"]
+[connection signal="text_changed" from="Panel/Course Time" to="." method="_on_course_time_text_changed"]
+[connection signal="pressed" from="Panel/Monday" to="." method="_on_monday_pressed"]
+[connection signal="pressed" from="Panel/Tuesday" to="." method="_on_tuesday_pressed"]
+[connection signal="pressed" from="Panel/Wednesday" to="." method="_on_wednesday_pressed"]
+[connection signal="pressed" from="Panel/Thursday" to="." method="_on_thursday_pressed"]
+[connection signal="pressed" from="Panel/Friday" to="." method="_on_friday_pressed"]
+[connection signal="item_selected" from="Panel/buildingDropdown" to="." method="_on_building_dropdown_item_selected"]
+[connection signal="pressed" from="Panel/submit" to="." method="_on_submit_pressed"]
