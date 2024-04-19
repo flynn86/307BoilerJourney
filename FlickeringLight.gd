@@ -18,7 +18,6 @@ func _process(_delta):
 	elif (GlobalTime.hour >= 19) || (GlobalTime.hour <= 4):
 		visible = true
 		frame_counter += 1
-		print(light.energy)
 		if (frame_counter > flicker_start_frame + flicker_duration):
 			light.energy = max_energy
 			frame_counter = 0
