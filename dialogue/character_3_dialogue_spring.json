@@ -1,7 +1,8 @@
 [
-	{"name": "Student", "text": "Woah! Didn't see you there!"},
-	{"name": "Student", "text": "It's nice to meet you"},
-	{"name": "Student", "text": "Did you know you can ring the bell tower?"},
-	{"name": "You", "text": "Haha, that sounds fun!"},
-	{"name": "You", "text": "Hope my graduation time remains the same"},
+	{"name": "Student", "text": "Ah! It's that time of the year again!"},
+	{"name": "Student", "text": "Cozying up with some cats would be so good right now"},
+	{"name": "You", "text": "Where can you find cats around here?"},
+	{"name": "Student", "text": "There's a very cute cat cafe in Lafayette"},
+	{"name": "You", "text": "What is it called?"},
+	{"name": "student", "text": "Lazy Cat Lounge!"},
 ]

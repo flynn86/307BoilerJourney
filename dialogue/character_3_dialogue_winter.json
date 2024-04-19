@@ -1,7 +1,7 @@
 [
-	{"name": "Student", "text": "Woah! Didn't see you there!"},
-	{"name": "Student", "text": "It's nice to meet you"},
-	{"name": "Student", "text": "Did you know you can ring the bell tower?"},
-	{"name": "You", "text": "Haha, that sounds fun!"},
-	{"name": "You", "text": "Hope my graduation time remains the same"},
+	{"name": "You", "text": "Something warm would be so perfect right now?"},
+	{"name": "Student", "text": "Oh! There's so many options for a hot beverage!"},
+	{"name": "You", "text": "Really?"},
+	{"name": "Student", "text": "Yeah! There's starbucks at third street and even Greyhouse which has amazing coffees."},
+	{"name": "You", "text": "Thanks for the information!"},
 ]
