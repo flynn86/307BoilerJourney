@@ -110,6 +110,11 @@ func _ready():
 		"group3" : {"data_type":"text"},
 		"group4" : {"data_type":"text"},
 		"group5" : {"data_type":"text"},
+		"abc_group" : {"data_type":"bool"},
+		"printing_3d_group" : {"data_type":"bool"},
+		"asme_group" : {"data_type":"bool"},
+		"acm_group" : {"data_type":"bool"},
+		"bgc_group" : {"data_type":"bool"},
 	}
 	(Attributes.database).create_table("Players", table)
 	var friend_reqs = {

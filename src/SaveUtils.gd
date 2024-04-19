@@ -101,8 +101,12 @@ func initialize():
 		"group2" = Attributes.group2,
 		"group3" = Attributes.group3,
 		"group4" = Attributes.group4,
-		"group5" = Attributes.group5
-		
+		"group5" = Attributes.group5,
+		"abc_group" = Attributes.abc_group,
+		"printing_3d_group" = Attributes.printing_3d_group,
+		"asme_group" = Attributes.asme_group,
+		"acm_group" = Attributes.acm_group,
+		"bgc_group" = Attributes.bgc_group
 	}
 	(Attributes.database).insert_row("Players", data)
 
@@ -208,7 +212,12 @@ func save():
 		"group2" = Attributes.group2,
 		"group3" = Attributes.group3,
 		"group4" = Attributes.group4,
-		"group5" = Attributes.group5
+		"group5" = Attributes.group5,
+		"abc_group" = Attributes.abc_group,
+		"printing_3d_group" = Attributes.printing_3d_group,
+		"asme_group" = Attributes.asme_group,
+		"acm_group" = Attributes.acm_group,
+		"bgc_group" = Attributes.bgc_group
 	})
 
 func load():
@@ -373,5 +382,10 @@ func load():
 	Attributes.group3 = player[0].group3
 	Attributes.group4 = player[0].group4
 	Attributes.group5 = player[0].group5
+	Attributes.abc_group = player[0].abc_group
+	Attributes.printing_3d_group = player[0].printing_3d_group
+	Attributes.asme_group = player[0].asme_group
+	Attributes.acm_group = player[0].acm_group
+	Attributes.bgc_group = player[0].bgc_group
 func delete():
 	(Attributes.database).delete_rows("Players", "username == '%s'" % Attributes.username)

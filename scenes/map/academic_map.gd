@@ -364,6 +364,7 @@ func ui_toggle_1(toggle : bool):
 	$CharacterBody2D/Player/ViewSchedule.visible = toggle
 	$CharacterBody2D/Player/Inventory.visible = toggle
 	$CharacterBody2D/Player/DayNight.visible = toggle
+	$CharacterBody2D/Player/Group.visible = toggle
 	get_node("CharacterBody2D/Player/class rank").visible = toggle
 
 
@@ -544,3 +545,11 @@ func _on_show_all_ui_pressed():
 		time_animation(true)
 		Attributes.day_night_ui_toggle = true;
 		SaveUtils.save()
+
+
+func _on_group_pressed():
+	Attributes.xacademic = $CharacterBody2D.global_position.x
+	Attributes.yacademic = $CharacterBody2D.global_position.y
+	Attributes.location = "res://scenes/map/academic_map.tscn"
+	SaveUtils.save()
+	get_tree().change_scene_to_file("res://scenes/groups.tscn")

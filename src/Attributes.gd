@@ -167,7 +167,11 @@ var group2 : String = ""
 var group3 : String = ""
 var group4 : String = ""
 var group5 : String = ""
-
+var abc_group : bool = false
+var printing_3d_group : bool = false
+var asme_group : bool = false
+var acm_group : bool = false
+var bgc_group : bool = false
 
 
 #var walk_right: AnimationPlayer
@@ -327,3 +331,8 @@ func reset(user: String):
 	group3 = ""
 	group4 = ""
 	group5 = ""
+	abc_group = false
+	printing_3d_group = false
+	asme_group = false
+	acm_group = false
+	bgc_group = false

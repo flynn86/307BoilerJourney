@@ -3,16 +3,16 @@
 [ext_resource type="Script" path="res://scenes/friends_list/friends_list.gd" id="1_p5shr"]
 [ext_resource type="FontFile" uid="uid://c6wawxex8md7y" path="res://fonts/KOMIKAX_.ttf" id="2_epl2e"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qqusj"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xpx77"]
 bg_color = Color(0.266667, 0.266667, 0.266667, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4cl8"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n8825"]
 bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Theme" id="Theme_j4ol6"]
 Button/font_sizes/font_size = 16
-Button/styles/normal = SubResource("StyleBoxFlat_qqusj")
-Panel/styles/panel = SubResource("StyleBoxFlat_x4cl8")
+Button/styles/normal = SubResource("StyleBoxFlat_xpx77")
+Panel/styles/panel = SubResource("StyleBoxFlat_n8825")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6u46j"]
 bg_color = Color(0.266667, 0.266667, 0.266667, 1)

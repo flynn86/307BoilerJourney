@@ -1,0 +1,346 @@
+[gd_scene load_steps=6 format=3 uid="uid://ctt35tvwc7p4h"]
+
+[ext_resource type="FontFile" uid="uid://c6wawxex8md7y" path="res://fonts/KOMIKAX_.ttf" id="1_58bny"]
+[ext_resource type="Script" path="res://scenes/groups.gd" id="1_kyv6d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qqusj"]
+bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4cl8"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_sras2"]
+Button/font_sizes/font_size = 16
+Button/styles/normal = SubResource("StyleBoxFlat_qqusj")
+Panel/styles/panel = SubResource("StyleBoxFlat_x4cl8")
+
+[node name="Groups" type="Node2D"]
+script = ExtResource("1_kyv6d")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1149.0
+offset_bottom = 657.0
+theme = SubResource("Theme_sras2")
+
+[node name="InvalidUser" type="Label" parent="Panel"]
+visible = false
+layout_mode = 0
+offset_left = 660.0
+offset_top = 585.0
+offset_right = 914.0
+offset_bottom = 629.0
+theme_override_colors/font_color = Color(0.968627, 0, 0, 1)
+text = "User does not exist"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Member List" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 473.0
+offset_right = 962.0
+offset_bottom = 508.0
+theme_override_font_sizes/font_size = 25
+text = "Member List"
+horizontal_alignment = 1
+
+[node name="Info" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 860.0
+offset_top = 106.0
+offset_right = 919.0
+offset_bottom = 142.0
+theme_override_font_sizes/font_size = 25
+text = "Info"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 33.0
+offset_right = 483.0
+offset_bottom = 103.0
+theme_override_fonts/font = ExtResource("1_58bny")
+theme_override_font_sizes/font_size = 40
+text = "Groups"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="Close" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 995.0
+offset_top = 16.0
+offset_right = 1132.0
+offset_bottom = 69.0
+text = "Close"
+
+[node name="Group Member List" type="ColorRect" parent="Panel"]
+layout_mode = 0
+offset_left = 650.0
+offset_top = 525.0
+offset_right = 1100.0
+offset_bottom = 625.0
+color = Color(0.184314, 0.184314, 0.184314, 1)
+
+[node name="MemberListText" type="Label" parent="Panel/Group Member List"]
+layout_mode = 2
+offset_left = 25.0
+offset_top = 20.0
+offset_right = 425.0
+offset_bottom = 80.0
+text = "Member List"
+autowrap_mode = 3
+
+[node name="InfoDisplay" type="ColorRect" parent="Panel"]
+layout_mode = 0
+offset_left = 650.0
+offset_top = 160.0
+offset_right = 1100.0
+offset_bottom = 435.0
+color = Color(0.184314, 0.184314, 0.184314, 1)
+
+[node name="InfoText" type="Label" parent="Panel/InfoDisplay"]
+z_index = 10
+layout_mode = 2
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 425.0
+offset_bottom = 250.0
+text = "Group Description"
+autowrap_mode = 3
+
+[node name="GroupList" type="ColorRect" parent="Panel"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 124.0
+offset_right = 596.0
+offset_bottom = 601.0
+color = Color(0.184314, 0.184314, 0.184314, 1)
+
+[node name="Group1" type="Node2D" parent="Panel/GroupList"]
+
+[node name="Label" type="Label" parent="Panel/GroupList/Group1"]
+offset_left = 17.0
+offset_top = 31.0
+offset_right = 247.0
+offset_bottom = 54.0
+theme_override_font_sizes/font_size = 16
+text = "\"ABC\" - The Art of Bonsai Club"
+
+[node name="g1join" type="Button" parent="Panel/GroupList/Group1"]
+z_index = 10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 268.0
+offset_top = 17.0
+offset_right = 358.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Join
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="g1desc" type="Button" parent="Panel/GroupList/Group1"]
+z_index = 10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 375.0
+offset_top = 17.0
+offset_right = 521.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Description
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Group2" type="Node2D" parent="Panel/GroupList"]
+position = Vector2(0, 75)
+
+[node name="Label" type="Label" parent="Panel/GroupList/Group2"]
+offset_left = 17.0
+offset_top = 31.0
+offset_right = 247.0
+offset_bottom = 54.0
+theme_override_font_sizes/font_size = 16
+text = "3D Printing Club"
+
+[node name="g2join" type="Button" parent="Panel/GroupList/Group2"]
+z_index = 10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 268.0
+offset_top = 17.0
+offset_right = 358.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Join
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="g2desc" type="Button" parent="Panel/GroupList/Group2"]
+z_index = 10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 375.0
+offset_top = 17.0
+offset_right = 521.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Description
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Group3" type="Node2D" parent="Panel/GroupList"]
+position = Vector2(0, 150)
+
+[node name="Label" type="Label" parent="Panel/GroupList/Group3"]
+offset_left = 17.0
+offset_top = 15.0
+offset_right = 247.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 16
+text = "American Society of Mechanical Engineers"
+autowrap_mode = 3
+
+[node name="g3join" type="Button" parent="Panel/GroupList/Group3"]
+z_index = 10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 268.0
+offset_top = 17.0
+offset_right = 358.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Join
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="g3desc" type="Button" parent="Panel/GroupList/Group3"]
+z_index = 10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 375.0
+offset_top = 17.0
+offset_right = 521.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Description
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Group4" type="Node2D" parent="Panel/GroupList"]
+position = Vector2(0, 225)
+
+[node name="Label" type="Label" parent="Panel/GroupList/Group4"]
+offset_left = 17.0
+offset_top = 31.0
+offset_right = 247.0
+offset_bottom = 54.0
+theme_override_font_sizes/font_size = 16
+text = "ACM Purdue Chapter"
+
+[node name="g4join" type="Button" parent="Panel/GroupList/Group4"]
+z_index = 10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 268.0
+offset_top = 17.0
+offset_right = 358.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Join
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="g4desc" type="Button" parent="Panel/GroupList/Group4"]
+z_index = 10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 375.0
+offset_top = 17.0
+offset_right = 521.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Description
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Group5" type="Node2D" parent="Panel/GroupList"]
+position = Vector2(0, 300)
+
+[node name="Label" type="Label" parent="Panel/GroupList/Group5"]
+offset_left = 17.0
+offset_top = 31.0
+offset_right = 247.0
+offset_bottom = 54.0
+theme_override_font_sizes/font_size = 16
+text = "Board Games Club"
+
+[node name="g5join" type="Button" parent="Panel/GroupList/Group5"]
+z_index = 10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 268.0
+offset_top = 17.0
+offset_right = 358.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Join
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="g5desc" type="Button" parent="Panel/GroupList/Group5"]
+z_index = 10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 375.0
+offset_top = 17.0
+offset_right = 521.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Description
+"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Panel/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Panel/GroupList/Group1/g1join" to="." method="_on_g_1_join_pressed"]
+[connection signal="pressed" from="Panel/GroupList/Group1/g1desc" to="." method="_on_g_1_desc_pressed"]
+[connection signal="pressed" from="Panel/GroupList/Group2/g2join" to="." method="_on_g_2_join_pressed"]
+[connection signal="pressed" from="Panel/GroupList/Group2/g2desc" to="." method="_on_g_2_desc_pressed"]
+[connection signal="pressed" from="Panel/GroupList/Group3/g3join" to="." method="_on_g_3_join_pressed"]
+[connection signal="pressed" from="Panel/GroupList/Group3/g3desc" to="." method="_on_g_3_desc_pressed"]
+[connection signal="pressed" from="Panel/GroupList/Group4/g4join" to="." method="_on_g_4_join_pressed"]
+[connection signal="pressed" from="Panel/GroupList/Group4/g4desc" to="." method="_on_g_4_desc_pressed"]
+[connection signal="pressed" from="Panel/GroupList/Group5/g5join" to="." method="_on_g_5_join_pressed"]
+[connection signal="pressed" from="Panel/GroupList/Group5/g5desc" to="." method="_on_g_5_desc_pressed"]
