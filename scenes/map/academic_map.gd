@@ -116,6 +116,10 @@ func _on_change_spring_pressed():
 
 func _on_day_night_button_pressed():
 	Attributes.day_night_enabled = ! Attributes.day_night_enabled
+	if (Attributes.day_night_enabled == true):
+		$CharacterBody2D/Player/DayNight.modulate.a = 0.5
+	else:
+		$CharacterBody2D/Player/DayNight.modulate.a = 1
 
 func _on_menu_button_pressed():
 	Attributes.xacademic = $CharacterBody2D.global_position.x
