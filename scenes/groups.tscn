@@ -1,18 +1,98 @@
-[gd_scene load_steps=6 format=3 uid="uid://ctt35tvwc7p4h"]
+[gd_scene load_steps=14 format=3 uid="uid://ctt35tvwc7p4h"]
 
-[ext_resource type="FontFile" uid="uid://c6wawxex8md7y" path="res://fonts/KOMIKAX_.ttf" id="1_58bny"]
+[ext_resource type="FontFile" uid="uid://dis5kj2s7vfny" path="res://fonts/KOMIKAX_.ttf" id="1_58bny"]
 [ext_resource type="Script" path="res://scenes/groups.gd" id="1_kyv6d"]
+[ext_resource type="Theme" uid="uid://ce7gdo6lqyra0" path="res://study room theme.tres" id="2_c7cbf"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qqusj"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vjld"]
 bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4cl8"]
-bg_color = Color(0, 0, 0, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xyitu"]
+bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
 
-[sub_resource type="Theme" id="Theme_sras2"]
-Button/font_sizes/font_size = 16
-Button/styles/normal = SubResource("StyleBoxFlat_qqusj")
-Panel/styles/panel = SubResource("StyleBoxFlat_x4cl8")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iax0y"]
+bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7y6te"]
+bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rx645"]
+bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ab0m0"]
+bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q56rh"]
+bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g3dmp"]
+bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7bejq"]
+bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fu51t"]
+bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
 
 [node name="Groups" type="Node2D"]
 script = ExtResource("1_kyv6d")
@@ -20,7 +100,7 @@ script = ExtResource("1_kyv6d")
 [node name="Panel" type="Panel" parent="."]
 offset_right = 1149.0
 offset_bottom = 657.0
-theme = SubResource("Theme_sras2")
+theme = ExtResource("2_c7cbf")
 
 [node name="InvalidUser" type="Label" parent="Panel"]
 visible = false
@@ -30,6 +110,7 @@ offset_top = 585.0
 offset_right = 914.0
 offset_bottom = 629.0
 theme_override_colors/font_color = Color(0.968627, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
 text = "User does not exist"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -60,6 +141,9 @@ offset_left = 150.0
 offset_top = 33.0
 offset_right = 483.0
 offset_bottom = 103.0
+theme_override_colors/font_shadow_color = Color(0.541176, 0.45098, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 5
 theme_override_fonts/font = ExtResource("1_58bny")
 theme_override_font_sizes/font_size = 40
 text = "Groups"
@@ -81,14 +165,15 @@ offset_left = 650.0
 offset_top = 525.0
 offset_right = 1100.0
 offset_bottom = 625.0
-color = Color(0.184314, 0.184314, 0.184314, 1)
+color = Color(0.141176, 0.141176, 0.141176, 1)
 
 [node name="MemberListText" type="Label" parent="Panel/Group Member List"]
 layout_mode = 2
-offset_left = 25.0
-offset_top = 20.0
-offset_right = 425.0
-offset_bottom = 80.0
+offset_left = 11.0
+offset_top = 15.0
+offset_right = 411.0
+offset_bottom = 75.0
+theme_override_font_sizes/font_size = 18
 text = "Member List"
 autowrap_mode = 3
 
@@ -98,7 +183,7 @@ offset_left = 650.0
 offset_top = 160.0
 offset_right = 1100.0
 offset_bottom = 435.0
-color = Color(0.184314, 0.184314, 0.184314, 1)
+color = Color(0.141176, 0.141176, 0.141176, 1)
 
 [node name="InfoText" type="Label" parent="Panel/InfoDisplay"]
 z_index = 10
@@ -107,6 +192,7 @@ offset_left = 25.0
 offset_top = 25.0
 offset_right = 425.0
 offset_bottom = 250.0
+theme_override_font_sizes/font_size = 18
 text = "Group Description"
 autowrap_mode = 3
 
@@ -116,16 +202,16 @@ offset_left = 56.0
 offset_top = 124.0
 offset_right = 596.0
 offset_bottom = 601.0
-color = Color(0.184314, 0.184314, 0.184314, 1)
+color = Color(0.141176, 0.141176, 0.141176, 1)
 
 [node name="Group1" type="Node2D" parent="Panel/GroupList"]
 
 [node name="Label" type="Label" parent="Panel/GroupList/Group1"]
-offset_left = 17.0
+offset_left = -1.0
 offset_top = 31.0
-offset_right = 247.0
-offset_bottom = 54.0
-theme_override_font_sizes/font_size = 16
+offset_right = 258.0
+offset_bottom = 57.0
+theme_override_font_sizes/font_size = 18
 text = "\"ABC\" - The Art of Bonsai Club"
 
 [node name="g1join" type="Button" parent="Panel/GroupList/Group1"]
@@ -139,7 +225,8 @@ offset_right = 358.0
 offset_bottom = 67.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_8vjld")
 text = "Join
 "
 metadata/_edit_use_anchors_ = true
@@ -155,7 +242,8 @@ offset_right = 521.0
 offset_bottom = 67.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_xyitu")
 text = "Description
 "
 metadata/_edit_use_anchors_ = true
@@ -168,7 +256,7 @@ offset_left = 17.0
 offset_top = 31.0
 offset_right = 247.0
 offset_bottom = 54.0
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 18
 text = "3D Printing Club"
 
 [node name="g2join" type="Button" parent="Panel/GroupList/Group2"]
@@ -182,7 +270,8 @@ offset_right = 358.0
 offset_bottom = 67.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_iax0y")
 text = "Join
 "
 metadata/_edit_use_anchors_ = true
@@ -198,7 +287,8 @@ offset_right = 521.0
 offset_bottom = 67.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_7y6te")
 text = "Description
 "
 metadata/_edit_use_anchors_ = true
@@ -211,7 +301,7 @@ offset_left = 17.0
 offset_top = 15.0
 offset_right = 247.0
 offset_bottom = 64.0
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 18
 text = "American Society of Mechanical Engineers"
 autowrap_mode = 3
 
@@ -226,7 +316,8 @@ offset_right = 358.0
 offset_bottom = 67.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_rx645")
 text = "Join
 "
 metadata/_edit_use_anchors_ = true
@@ -242,7 +333,8 @@ offset_right = 521.0
 offset_bottom = 67.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_ab0m0")
 text = "Description
 "
 metadata/_edit_use_anchors_ = true
@@ -255,7 +347,7 @@ offset_left = 17.0
 offset_top = 31.0
 offset_right = 247.0
 offset_bottom = 54.0
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 18
 text = "ACM Purdue Chapter"
 
 [node name="g4join" type="Button" parent="Panel/GroupList/Group4"]
@@ -269,7 +361,8 @@ offset_right = 358.0
 offset_bottom = 67.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_q56rh")
 text = "Join
 "
 metadata/_edit_use_anchors_ = true
@@ -285,7 +378,8 @@ offset_right = 521.0
 offset_bottom = 67.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_g3dmp")
 text = "Description
 "
 metadata/_edit_use_anchors_ = true
@@ -298,7 +392,7 @@ offset_left = 17.0
 offset_top = 31.0
 offset_right = 247.0
 offset_bottom = 54.0
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 18
 text = "Board Games Club"
 
 [node name="g5join" type="Button" parent="Panel/GroupList/Group5"]
@@ -312,7 +406,8 @@ offset_right = 358.0
 offset_bottom = 67.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_7bejq")
 text = "Join
 "
 metadata/_edit_use_anchors_ = true
@@ -328,7 +423,8 @@ offset_right = 521.0
 offset_bottom = 67.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_fu51t")
 text = "Description
 "
 metadata/_edit_use_anchors_ = true

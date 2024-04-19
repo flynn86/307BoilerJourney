@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://cuj33sfs675d5"]
+[gd_scene load_steps=7 format=3 uid="uid://cuj33sfs675d5"]
 
+[ext_resource type="Theme" uid="uid://ce7gdo6lqyra0" path="res://study room theme.tres" id="1_21s30"]
 [ext_resource type="Theme" uid="uid://bw38c741am4hj" path="res://themes/club_theme.tres" id="1_n6xp0"]
 [ext_resource type="Script" path="res://scenes/club_page/club_page.gd" id="1_rd165"]
 [ext_resource type="Theme" uid="uid://bb68irp7tpd2r" path="res://themes/popup.tres" id="3_uo67m"]
+[ext_resource type="FontFile" uid="uid://dis5kj2s7vfny" path="res://fonts/KOMIKAX_.ttf" id="4_j14l6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_afurd"]
+bg_color = Color(0.141176, 0.141176, 0.141176, 1)
 
 [node name="club_page" type="Panel"]
 anchors_preset = 15
@@ -11,7 +16,7 @@ anchor_bottom = 1.0
 offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_n6xp0")
+theme = ExtResource("1_21s30")
 script = ExtResource("1_rd165")
 
 [node name="ClubRequest" type="HTTPRequest" parent="."]
@@ -23,12 +28,17 @@ anchor_left = 0.312
 anchor_top = 0.062
 anchor_right = 0.715
 anchor_bottom = 0.136
-offset_left = 0.575989
-offset_top = -16.176
-offset_right = 0.319885
-offset_bottom = -16.128
+offset_left = -259.424
+offset_top = -14.672
+offset_right = 81.32
+offset_bottom = 85.784
 grow_horizontal = 2
 theme = ExtResource("1_n6xp0")
+theme_override_colors/font_shadow_color = Color(0.541176, 0.45098, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/normal_font = ExtResource("4_j14l6")
+theme_override_font_sizes/normal_font_size = 40
 text = "Clubs and Student Organizations
 "
 
@@ -39,11 +49,11 @@ anchor_left = 0.083
 anchor_top = 0.198
 anchor_right = 0.163
 anchor_bottom = 0.231
-offset_left = 8.384
-offset_top = -32.304
-offset_right = 8.224
-offset_bottom = -10.688
-theme = ExtResource("1_n6xp0")
+offset_left = 10.384
+offset_top = -35.888
+offset_right = 19.224
+offset_bottom = -2.536
+theme_override_font_sizes/font_size = 18
 text = "Fraternities
 
 "
@@ -81,11 +91,11 @@ anchor_left = 0.264
 anchor_top = 0.198
 anchor_right = 0.329
 anchor_bottom = 0.222
-offset_left = -0.127991
-offset_top = -32.304
-offset_right = -0.00799561
-offset_bottom = -4.85599
-theme = ExtResource("1_n6xp0")
+offset_left = -6.128
+offset_top = -33.888
+offset_right = 2.992
+offset_bottom = 5.368
+theme_override_font_sizes/font_size = 18
 text = "Sororities
 
 "
@@ -128,7 +138,7 @@ offset_left = 0.575989
 offset_top = -32.304
 offset_right = -0.263977
 offset_bottom = -4.85599
-theme = ExtResource("1_n6xp0")
+theme_override_font_sizes/font_size = 18
 text = "Sports
 
 "
@@ -167,11 +177,11 @@ anchor_left = 0.653
 anchor_top = 0.198
 anchor_right = 0.731
 anchor_bottom = 0.222
-offset_left = -0.255981
-offset_top = -25.304
-offset_right = -0.111938
-offset_bottom = 2.14401
-theme = ExtResource("1_n6xp0")
+offset_left = -6.256
+offset_top = -28.888
+offset_right = 7.88799
+offset_bottom = 10.368
+theme_override_font_sizes/font_size = 18
 text = "Other Clubs
 
 "
@@ -205,8 +215,7 @@ layout_mode = 2
 
 [node name="Popup" type="Popup" parent="."]
 position = Vector2i(400, 250)
-size = Vector2i(300, 111)
-visible = true
+size = Vector2i(306, 111)
 theme = ExtResource("3_uo67m")
 
 [node name="popup_text" type="RichTextLabel" parent="Popup"]
@@ -216,6 +225,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_afurd")
 scroll_active = false
 
 [node name="Button" type="Button" parent="Popup"]
@@ -235,8 +245,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.056
 anchor_bottom = 0.086
-offset_right = -0.512001
-offset_bottom = 0.271999
+offset_left = 19.0
+offset_top = 19.0
+offset_right = 21.488
+offset_bottom = 19.272
 text = "Close"
 
 [node name="Button" type="Button" parent="."]
@@ -246,10 +258,10 @@ anchor_left = 0.785
 anchor_top = 0.037
 anchor_right = 0.972
 anchor_bottom = 0.123
-offset_left = -16.32
-offset_top = 0.0240002
-offset_right = 25.256
-offset_bottom = 0.295998
+offset_left = -31.32
+offset_top = 0.728
+offset_right = 10.256
+offset_bottom = 1.0
 text = "Visit Pudue's Club Website"
 
 [connection signal="request_completed" from="ClubRequest" to="." method="_on_club_request_request_completed"]
