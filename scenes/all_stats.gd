@@ -5,10 +5,10 @@ extends Node2D
 func _ready():
 	$Panel/Label.visible = false
 	$Panel/Label2.text = Attributes.rank
-	$Panel/Label6.text = Attributes.xp
-	$Panel/Label5.text = Attributes.numCollected
-	$Panel/Label4.text = Attributes.questsCompleted
-	$Panel/Label3.text = 0
+	$Panel/Label6.text = str(Attributes.xp)
+	$Panel/Label5.text = str(Attributes.numCollected)
+	$Panel/Label4.text = str(Attributes.questsCompleted)
+	$Panel/Label3.text = ""
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -48,3 +48,7 @@ func _on_quests_completed_pressed():
 func _on_leaderboard_pressed():
 	$Panel/Label.visible = true
 	$Panel/Label/info.text = ""
+
+
+func _on_back_pressed():
+	get_tree().change_scene_to_file(Attributes.location)

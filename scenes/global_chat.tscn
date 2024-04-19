@@ -50,6 +50,7 @@ offset_bottom = 648.0
 theme = SubResource("Theme_mygvp")
 
 [node name="SendMessage" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 85.0
 offset_top = 551.0
 offset_right = 357.0
@@ -58,6 +59,7 @@ text = "Send Message
 "
 
 [node name="BackToMenu" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 46.0
 offset_top = 36.0
 offset_right = 318.0
@@ -67,6 +69,7 @@ text = "Back to Menu
 
 [node name="ClearButton" type="Button" parent="Panel"]
 visible = false
+layout_mode = 0
 offset_left = 760.0
 offset_top = 32.0
 offset_right = 1032.0
@@ -75,6 +78,7 @@ text = "Clear Messages
 "
 
 [node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 84.0
 offset_top = 116.0
 offset_right = 1050.0
@@ -85,6 +89,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_i5bgj")
 autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 457.0
 offset_top = 21.0
 offset_right = 736.0
@@ -98,6 +103,7 @@ text = "Server Chat"
 vertical_alignment = 1
 
 [node name="LineEdit" type="LineEdit" parent="Panel"]
+layout_mode = 0
 offset_left = 399.0
 offset_top = 551.0
 offset_right = 1051.0

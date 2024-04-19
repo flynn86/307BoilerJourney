@@ -140,30 +140,44 @@ offset_left = 315.0
 offset_top = 152.0
 offset_right = 522.0
 offset_bottom = 215.0
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 315.0
 offset_top = 510.0
 offset_right = 522.0
 offset_bottom = 573.0
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label4" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 315.0
 offset_top = 422.0
 offset_right = 522.0
 offset_bottom = 485.0
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label5" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 315.0
 offset_top = 332.0
 offset_right = 522.0
 offset_bottom = 395.0
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label6" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 315.0
 offset_top = 242.0
 offset_right = 522.0
 offset_bottom = 305.0
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Panel/current_rank" to="." method="_on_current_rank_pressed"]
 [connection signal="pressed" from="Panel/total_xp" to="." method="_on_total_xp_pressed"]
@@ -171,3 +185,4 @@ offset_bottom = 305.0
 [connection signal="pressed" from="Panel/quests_completed" to="." method="_on_quests_completed_pressed"]
 [connection signal="pressed" from="Panel/leaderboard" to="." method="_on_leaderboard_pressed"]
 [connection signal="pressed" from="Panel/Label/close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Panel/Back" to="." method="_on_back_pressed"]

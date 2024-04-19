@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://dwpf262662vbj"]
 
 [ext_resource type="Script" path="res://scenes/quests/quest_log.gd" id="1_qb26r"]
-[ext_resource type="FontFile" uid="uid://5lqm3siyw530" path="res://fonts/KOMIKAX_.ttf" id="2_bdi0c"]
-[ext_resource type="Texture2D" uid="uid://c1h2xd7fv72fn" path="res://scenes/Collectable_scenes/Collectables/boilermakers Background Removed.png" id="4_ffepf"]
-[ext_resource type="Texture2D" uid="uid://dygfbetks4no" path="res://scenes/Collectable_scenes/Collectables/purdue-university-boilermakers-logo-png-transparent.png" id="4_nawlj"]
+[ext_resource type="FontFile" uid="uid://7x61o34kfaic" path="res://fonts/KOMIKAX_.ttf" id="2_bdi0c"]
+[ext_resource type="Texture2D" uid="uid://dau1bccvpeix3" path="res://scenes/Collectable_scenes/Collectables/boilermakers Background Removed.png" id="4_ffepf"]
+[ext_resource type="Texture2D" uid="uid://cu1huyfwso8xr" path="res://scenes/Collectable_scenes/Collectables/purdue-university-boilermakers-logo-png-transparent.png" id="4_nawlj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3vekh"]
 bg_color = Color(0.266667, 0.266667, 0.266667, 1)
@@ -177,7 +177,6 @@ offset_left = 273.0
 offset_top = 140.0
 offset_right = 747.0
 offset_bottom = 243.0
-theme_override_colors/font_shadow_color = Color(1, 0.843137, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "Quest 4: Travel to the circle in Academy Park 
 to learn about Boiler Gold Rush
@@ -191,7 +190,6 @@ offset_left = 273.0
 offset_top = 277.0
 offset_right = 735.0
 offset_bottom = 383.0
-theme_override_colors/font_shadow_color = Color(1, 0.843137, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "Quest 5: Travel to the entrance of Armstrong 
 Hall to learn about Neil Armstrong
@@ -205,7 +203,6 @@ offset_left = 257.0
 offset_top = 411.0
 offset_right = 735.0
 offset_bottom = 501.0
-theme_override_colors/font_shadow_color = Color(1, 0.843137, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "Quest 6: Click on all 7 buildings that have location
 pages to learn more about those buildings

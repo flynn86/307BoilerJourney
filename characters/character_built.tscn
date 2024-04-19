@@ -1,23 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0vstrfin6khf"]
+[gd_scene load_steps=3 format=3 uid="uid://c0vstrfin6khf"]
 
 [ext_resource type="Script" path="res://characters/character_built.gd" id="1_bpakt"]
+[ext_resource type="Theme" uid="uid://ce7gdo6lqyra0" path="res://study room theme.tres" id="2_41ukg"]
 
 [node name="CharacterBuilt" type="Node2D"]
 script = ExtResource("1_bpakt")
 
-[node name="Button" type="Button" parent="."]
-offset_left = 409.0
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme = ExtResource("2_41ukg")
+
+[node name="Button" type="Button" parent="Panel"]
+offset_left = 436.0
 offset_top = 149.0
-offset_right = 640.0
+offset_right = 667.0
 offset_bottom = 252.0
 text = "Select a Character"
 
-[node name="Button2" type="Button" parent="."]
-offset_left = 410.0
+[node name="Button2" type="Button" parent="Panel"]
+offset_left = 431.0
 offset_top = 378.0
-offset_right = 645.0
+offset_right = 683.0
 offset_bottom = 483.0
 text = "Create your own character"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]
