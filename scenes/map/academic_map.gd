@@ -216,6 +216,8 @@ func _process(delta):
 			Attributes.trade_sender = Attributes.username
 			Attributes.trade_receiver = receiver
 			Attributes.location = "res://scenes/map/academic_map.tscn"
+			Attributes.xacademic = $CharacterBody2D.global_position.x
+			Attributes.yacademic = $CharacterBody2D.global_position.y
 			get_tree().change_scene_to_file("res://scenes/trading/trading.tscn")
 		frame_counter = 0
 
