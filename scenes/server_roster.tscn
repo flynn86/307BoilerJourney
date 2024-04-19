@@ -1,26 +1,58 @@
-[gd_scene load_steps=2 format=3 uid="uid://bv4rsplutn86b"]
+[gd_scene load_steps=7 format=3 uid="uid://bv4rsplutn86b"]
 
 [ext_resource type="Script" path="res://scenes/server_roster.gd" id="1_r0i4t"]
+[ext_resource type="FontFile" uid="uid://7x61o34kfaic" path="res://fonts/KOMIKAX_.ttf" id="2_g15tr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nshrw"]
+bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7pd8"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(1, 0.843137, 0, 1)
+border_blend = true
+
+[sub_resource type="Theme" id="Theme_3q8un"]
+Button/font_sizes/font_size = 18
+Button/styles/normal = SubResource("StyleBoxFlat_nshrw")
+Panel/styles/panel = SubResource("StyleBoxFlat_c7pd8")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_is28s"]
+bg_color = Color(0.141176, 0.141176, 0.141176, 1)
 
 [node name="ServerRoster" type="Node2D"]
 script = ExtResource("1_r0i4t")
 
-[node name="BackToMenu" type="Button" parent="."]
-offset_left = 85.0
-offset_top = 32.0
-offset_right = 357.0
-offset_bottom = 95.0
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme = SubResource("Theme_3q8un")
+
+[node name="BackToMenu" type="Button" parent="Panel"]
+offset_left = 34.0
+offset_top = 31.0
+offset_right = 306.0
+offset_bottom = 94.0
 text = "Back to Menu
 "
 
-[node name="ClientDisconnect" type="Button" parent="."]
-offset_left = 85.0
-offset_top = 573.0
-offset_right = 652.0
-offset_bottom = 636.0
+[node name="ClientDisconnect" type="Button" parent="Panel"]
+offset_left = 313.0
+offset_top = 562.0
+offset_right = 880.0
+offset_bottom = 625.0
 text = "Disconnect from Server"
 
-[node name="ServerDisconnect" type="Button" parent="."]
+[node name="ServerDisconnect" type="Button" parent="Panel"]
 visible = false
 offset_left = 85.0
 offset_top = 573.0
@@ -28,22 +60,29 @@ offset_right = 652.0
 offset_bottom = 636.0
 text = "Close the Server"
 
-[node name="Label" type="Label" parent="."]
-offset_left = 13.0
+[node name="Label" type="Label" parent="Panel"]
+offset_left = 85.0
 offset_top = 116.0
-offset_right = 1138.0
+offset_right = 1088.0
 offset_bottom = 536.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_is28s")
 autowrap_mode = 2
 
-[node name="Label2" type="Label" parent="."]
-offset_left = 500.0
-offset_top = 23.0
-offset_right = 704.0
-offset_bottom = 99.0
-theme_override_font_sizes/font_size = 26
+[node name="Label2" type="Label" parent="Panel"]
+offset_left = 418.0
+offset_top = 24.0
+offset_right = 748.0
+offset_bottom = 100.0
+theme_override_colors/font_shadow_color = Color(0.541176, 0.45098, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = ExtResource("2_g15tr")
+theme_override_font_sizes/font_size = 40
 text = "Server Roster"
 vertical_alignment = 1
 
-[connection signal="pressed" from="BackToMenu" to="." method="_on_back_to_menu_pressed"]
-[connection signal="pressed" from="ClientDisconnect" to="." method="_on_client_disconnect_pressed"]
-[connection signal="pressed" from="ServerDisconnect" to="." method="_on_server_disconnect_pressed"]
+[connection signal="pressed" from="Panel/BackToMenu" to="." method="_on_back_to_menu_pressed"]
+[connection signal="pressed" from="Panel/ClientDisconnect" to="." method="_on_client_disconnect_pressed"]
+[connection signal="pressed" from="Panel/ServerDisconnect" to="." method="_on_server_disconnect_pressed"]

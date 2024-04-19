@@ -9,11 +9,15 @@ func _process(delta):
 	if !next_quests:
 		if Attributes.quest1_active and !Attributes.quest1_completed:
 			$Panel/StartQuest1.visible = false
+			var total = 0
+			if (Attributes.engineering_ftn_visited or Attributes.loeb_ftn_visited):
+				total = 1
+			$Panel/Quest1Status.text = "In Progress: " + str(total) + "/2"
 			$Panel/Quest1Status.visible = true
 		elif !Attributes.quest1_active and Attributes.quest1_completed:
 			$Panel/StartQuest1.visible = false
-			$Panel/Quest1Status.visible = true
 			$Panel/Quest1Status.text = "Completed"
+			$Panel/Quest1Status.visible = true
 		else:
 			$Panel/StartQuest1.visible = true
 			$Panel/Quest1Status.visible = false
@@ -23,35 +27,36 @@ func _process(delta):
 			$Panel/Quest2Status.visible = true
 		elif !Attributes.quest2_active and Attributes.quest2_completed:
 			$Panel/StartQuest2.visible = false
-			$Panel/Quest2Status.visible = true
 			$Panel/Quest2Status.text = "Completed"
+			$Panel/Quest2Status.visible = true
 		else:
 			$Panel/StartQuest2.visible = true
 			$Panel/Quest2Status.visible = false
 		
 		if Attributes.quest3_active and !Attributes.quest3_completed:
 			$Panel/StartQuest3.visible = false
+			$Panel/Quest3Status.text = "In Progress: " + str(Attributes.numCollected) + "/3"
 			$Panel/Quest3Status.visible = true
 		elif !Attributes.quest3_active and Attributes.quest3_completed:
 			$Panel/StartQuest3.visible = false
-			$Panel/Quest3Status.visible = true
 			$Panel/Quest3Status.text = "Completed"
+			$Panel/Quest3Status.visible = true
 		else:
 			$Panel/StartQuest3.visible = true
 			$Panel/Quest3Status.visible = false
 		
 		if Attributes.quest3_active and Attributes.numCollected >= 3:
 			$Panel/StartQuest3.visible = false
-			$Panel/Quest3Status.visible = true
 			$Panel/Quest3Status.text = "Completed"
+			$Panel/Quest3Status.visible = true
 	else:
 		if Attributes.quest4_active and !Attributes.quest4_completed:
 			$Panel/StartQuest4.visible = false
 			$Panel/Quest4Status.visible = true
 		elif !Attributes.quest4_active and Attributes.quest4_completed:
 			$Panel/StartQuest4.visible = false
-			$Panel/Quest4Status.visible = true
 			$Panel/Quest4Status.text = "Completed"
+			$Panel/Quest4Status.visible = true
 		else:
 			$Panel/StartQuest4.visible = true
 			$Panel/Quest4Status.visible = false
@@ -61,19 +66,21 @@ func _process(delta):
 			$Panel/Quest5Status.visible = true
 		elif !Attributes.quest5_active and Attributes.quest5_completed:
 			$Panel/StartQuest5.visible = false
-			$Panel/Quest5Status.visible = true
 			$Panel/Quest5Status.text = "Completed"
+			$Panel/Quest5Status.visible = true
 		else:
 			$Panel/StartQuest5.visible = true
 			$Panel/Quest5Status.visible = false
 		
 		if Attributes.quest6_active and !Attributes.quest6_completed:
 			$Panel/StartQuest6.visible = false
+			var total = int(Attributes.walc) + int(Attributes.arms) + int(Attributes.phys) + int(Attributes.ellt) + int(Attributes.stew) + int(Attributes.hamp) + int(Attributes.wthr)
+			$Panel/Quest6Status.text = "In Progress: " + str(total) + "/7"
 			$Panel/Quest6Status.visible = true
 		elif !Attributes.quest6_active and Attributes.quest6_completed:
 			$Panel/StartQuest6.visible = false
-			$Panel/Quest6Status.visible = true
 			$Panel/Quest6Status.text = "Completed"
+			$Panel/Quest6Status.visible = true
 		else:
 			$Panel/StartQuest6.visible = true
 			$Panel/Quest6Status.visible = false

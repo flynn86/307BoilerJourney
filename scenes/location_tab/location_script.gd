@@ -23,18 +23,25 @@ func display_content(name: String) -> void:
 	
 	if (name == "WALC"):
 		name_label.text = "Wilmeth Active Learning Center"
+		Attributes.walc = 1
 	elif (name == "ARMS"):
 		name_label.text = "Neil Armstrong Hall of Engineering"
+		Attributes.arms = 1
 	elif (name == "ELLT"):
 		name_label.text = "Elliot Hall of Music"
+		Attributes.ellt = 1
 	elif (name == "PHYS"):
 		name_label.text = "Purdue Physics Building"
+		Attributes.phys = 1
 	elif (name == "WTHR"):
 		name_label.text = "Wetherill Hall of Chemistry"
+		Attributes.wthr = 1
 	elif (name == "STEW"):
 		name_label.text = "Stewart Center"
+		Attributes.stew = 1
 	elif (name == "HAMP"):
 		name_label.text = "Hampton Hall"
+		Attributes.hamp = 1
 	else:
 		name_label.text = name
 	

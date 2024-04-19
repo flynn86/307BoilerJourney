@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://ncqjl4lat741"]
+[gd_scene load_steps=8 format=3 uid="uid://ncqjl4lat741"]
 
 [ext_resource type="FontFile" uid="uid://7x61o34kfaic" path="res://fonts/KOMIKAX_.ttf" id="1_c6prt"]
+[ext_resource type="Script" path="res://scenes/all_stats.gd" id="1_mv4a4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gxea1"]
 bg_color = Color(0.266667, 0.266667, 0.266667, 1)
@@ -35,12 +36,14 @@ Button/constants/outline_size = 0
 Button/font_sizes/font_size = 18
 Button/styles/normal = SubResource("StyleBoxFlat_gxea1")
 Button/styles/pressed = SubResource("StyleBoxFlat_421bd")
+Label/font_sizes/font_size = 18
 Label/styles/normal = SubResource("StyleBoxFlat_0kk8f")
 Panel/styles/panel = SubResource("StyleBoxFlat_sskj5")
 RichTextLabel/font_sizes/normal_font_size = 40
 RichTextLabel/fonts/normal_font = ExtResource("1_c6prt")
 
 [node name="All Stats" type="Node2D"]
+script = ExtResource("1_mv4a4")
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 1148.0
@@ -64,7 +67,7 @@ text = "All Stats"
 layout_mode = 0
 offset_left = 48.0
 offset_top = 152.0
-offset_right = 235.0
+offset_right = 255.0
 offset_bottom = 215.0
 text = "Current Rank"
 
@@ -72,7 +75,7 @@ text = "Current Rank"
 layout_mode = 0
 offset_left = 48.0
 offset_top = 242.0
-offset_right = 235.0
+offset_right = 255.0
 offset_bottom = 305.0
 text = "Total XP"
 
@@ -80,7 +83,7 @@ text = "Total XP"
 layout_mode = 0
 offset_left = 48.0
 offset_top = 332.0
-offset_right = 235.0
+offset_right = 255.0
 offset_bottom = 395.0
 text = "Collectables"
 
@@ -88,39 +91,40 @@ text = "Collectables"
 layout_mode = 0
 offset_left = 48.0
 offset_top = 422.0
-offset_right = 235.0
+offset_right = 255.0
 offset_bottom = 485.0
 text = "Quests Completed"
 
 [node name="leaderboard" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 42.0
-offset_top = 511.0
-offset_right = 249.0
-offset_bottom = 574.0
+offset_left = 48.0
+offset_top = 510.0
+offset_right = 255.0
+offset_bottom = 573.0
 text = "Leaderboard Ranking"
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
-offset_left = 290.0
+offset_left = 557.0
 offset_top = 149.0
-offset_right = 1082.0
+offset_right = 1096.0
 offset_bottom = 576.0
 
 [node name="close" type="Button" parent="Panel/Label"]
 layout_mode = 0
-offset_left = 721.0
-offset_top = 379.0
-offset_right = 788.0
-offset_bottom = 425.0
+offset_left = 465.0
+offset_top = 375.0
+offset_right = 532.0
+offset_bottom = 421.0
 text = "Close"
 
 [node name="info" type="RichTextLabel" parent="Panel/Label"]
 layout_mode = 0
-offset_left = 143.0
-offset_top = 89.0
-offset_right = 638.0
-offset_bottom = 338.0
+offset_left = 35.0
+offset_top = 78.0
+offset_right = 492.0
+offset_bottom = 327.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
 
 [node name="Back" type="Button" parent="Panel"]
 layout_mode = 0
@@ -129,3 +133,41 @@ offset_top = 24.0
 offset_right = 139.0
 offset_bottom = 70.0
 text = "Back"
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 152.0
+offset_right = 522.0
+offset_bottom = 215.0
+
+[node name="Label3" type="Label" parent="Panel"]
+offset_left = 315.0
+offset_top = 510.0
+offset_right = 522.0
+offset_bottom = 573.0
+
+[node name="Label4" type="Label" parent="Panel"]
+offset_left = 315.0
+offset_top = 422.0
+offset_right = 522.0
+offset_bottom = 485.0
+
+[node name="Label5" type="Label" parent="Panel"]
+offset_left = 315.0
+offset_top = 332.0
+offset_right = 522.0
+offset_bottom = 395.0
+
+[node name="Label6" type="Label" parent="Panel"]
+offset_left = 315.0
+offset_top = 242.0
+offset_right = 522.0
+offset_bottom = 305.0
+
+[connection signal="pressed" from="Panel/current_rank" to="." method="_on_current_rank_pressed"]
+[connection signal="pressed" from="Panel/total_xp" to="." method="_on_total_xp_pressed"]
+[connection signal="pressed" from="Panel/total_collectables" to="." method="_on_total_collectables_pressed"]
+[connection signal="pressed" from="Panel/quests_completed" to="." method="_on_quests_completed_pressed"]
+[connection signal="pressed" from="Panel/leaderboard" to="." method="_on_leaderboard_pressed"]
+[connection signal="pressed" from="Panel/Label/close" to="." method="_on_close_pressed"]

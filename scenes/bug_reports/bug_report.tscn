@@ -78,6 +78,7 @@ offset_left = 166.0
 offset_top = 146.0
 offset_right = 1000.0
 offset_bottom = 459.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
 placeholder_text = " Please describe the bug that was found and the sequence of events 
  that led to this bug:"

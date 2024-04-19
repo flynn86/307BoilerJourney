@@ -33,6 +33,7 @@ border_blend = true
 [sub_resource type="Theme" id="Theme_mvewn"]
 Button/font_sizes/font_size = 18
 Button/styles/normal = SubResource("StyleBoxFlat_w23ji")
+LineEdit/colors/font_color = Color(0.875, 0.875, 0.875, 1)
 LineEdit/font_sizes/font_size = 18
 LineEdit/styles/normal = SubResource("StyleBoxFlat_diwke")
 Panel/styles/panel = SubResource("StyleBoxFlat_k27ni")
@@ -69,6 +70,7 @@ offset_left = 86.0
 offset_top = 116.0
 offset_right = 1046.0
 offset_bottom = 536.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 18
 theme_override_styles/normal = SubResource("StyleBoxFlat_80rbb")
 autowrap_mode = 2
