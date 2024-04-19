@@ -1,10 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://1egfkkafsgpl"]
 
-[ext_resource type="Theme" uid="uid://c1kv8oho47wpe" path="res://secondary_theme.tres" id="1_o8rie"]
+[ext_resource type="Theme" uid="uid://ce7gdo6lqyra0" path="res://study room theme.tres" id="1_spnoi"]
 [ext_resource type="Script" path="res://scenes/location_tab/location_script.gd" id="1_u6sgc"]
-[ext_resource type="FontFile" uid="uid://cd8x8dvv0llq4" path="res://fonts/Louis George Cafe.ttf" id="3_vhjev"]
-
-[sub_resource type="Theme" id="Theme_lm78v"]
+[ext_resource type="FontFile" uid="uid://dis5kj2s7vfny" path="res://fonts/KOMIKAX_.ttf" id="3_8hlew"]
+[ext_resource type="FontFile" uid="uid://cbiw803j5las3" path="res://fonts/Louis George Cafe.ttf" id="3_vhjev"]
 
 [sub_resource type="Theme" id="Theme_7jcog"]
 default_font = ExtResource("3_vhjev")
@@ -15,7 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_o8rie")
+theme = ExtResource("1_spnoi")
 script = ExtResource("1_u6sgc")
 
 [node name="location_name" type="RichTextLabel" parent="."]
@@ -25,12 +24,15 @@ anchor_left = 0.326
 anchor_top = 0.049
 anchor_right = 0.889
 anchor_bottom = 0.173
-offset_left = 0.447998
-offset_top = 8.248
-offset_right = -0.128052
-offset_bottom = -0.104004
+offset_left = -166.552
+offset_top = 6.248
+offset_right = -167.128
+offset_bottom = -2.104
 grow_horizontal = 2
-theme = SubResource("Theme_lm78v")
+theme_override_colors/font_shadow_color = Color(0.541176, 0.45098, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/normal_font = ExtResource("3_8hlew")
 theme_override_font_sizes/normal_font_size = 30
 
 [node name="location_picture" type="TextureRect" parent="."]
@@ -91,15 +93,18 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.09
 anchor_bottom = 0.099
-offset_right = 0.319992
-offset_bottom = -0.152008
+offset_left = 26.0
+offset_top = 25.0
+offset_right = 26.32
+offset_bottom = 24.848
 text = "Close"
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 968.0
-offset_right = 1152.0
-offset_bottom = 64.0
+offset_left = 925.0
+offset_top = 28.0
+offset_right = 1119.0
+offset_bottom = 92.0
 text = "Leave/View Reviews"
 
 [connection signal="panel_closed" from="." to="." method="close_panel"]
