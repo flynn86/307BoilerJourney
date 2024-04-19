@@ -1,12 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://nw0xjqcm5igh"]
+[gd_scene load_steps=5 format=3 uid="uid://nw0xjqcm5igh"]
 
 [ext_resource type="Script" path="res://studyroom4.gd" id="1_2ogha"]
 [ext_resource type="FontFile" uid="uid://7x61o34kfaic" path="res://fonts/KOMIKAX_.ttf" id="2_ehvey"]
+[ext_resource type="Theme" uid="uid://ce7gdo6lqyra0" path="res://study room theme.tres" id="2_yq05m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sj3ho"]
+bg_color = Color(0.141176, 0.141176, 0.141176, 1)
 
 [node name="studyroom4" type="Node2D"]
 script = ExtResource("1_2ogha")
 
-[node name="SendMessage" type="Button" parent="."]
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme = ExtResource("2_yq05m")
+
+[node name="SendMessage" type="Button" parent="Panel"]
 offset_left = 85.0
 offset_top = 551.0
 offset_right = 357.0
@@ -14,34 +23,36 @@ offset_bottom = 614.0
 text = "Send Message
 "
 
-[node name="BackToMenu" type="Button" parent="."]
-offset_left = 85.0
-offset_top = 32.0
-offset_right = 357.0
-offset_bottom = 95.0
+[node name="BackToMenu" type="Button" parent="Panel"]
+offset_left = 28.0
+offset_top = 27.0
+offset_right = 300.0
+offset_bottom = 90.0
 text = "Go Back
 "
 
-[node name="ClearButton" type="Button" parent="."]
-offset_left = 760.0
-offset_top = 32.0
-offset_right = 1032.0
-offset_bottom = 95.0
+[node name="ClearButton" type="Button" parent="Panel"]
+offset_left = 856.0
+offset_top = 26.0
+offset_right = 1128.0
+offset_bottom = 89.0
 text = "Clear Messages
 "
 
-[node name="Label" type="Label" parent="."]
-offset_left = 13.0
+[node name="Label" type="Label" parent="Panel"]
+offset_left = 83.0
 offset_top = 116.0
-offset_right = 1138.0
+offset_right = 1052.0
 offset_bottom = 536.0
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_sj3ho")
 autowrap_mode = 2
 
-[node name="Label2" type="Label" parent="."]
-offset_left = 340.0
-offset_top = 22.0
-offset_right = 732.0
-offset_bottom = 98.0
+[node name="Label2" type="Label" parent="Panel"]
+offset_left = 381.0
+offset_top = 23.0
+offset_right = 773.0
+offset_bottom = 99.0
 theme_override_colors/font_shadow_color = Color(0.541176, 0.45098, 0, 1)
 theme_override_constants/shadow_offset_x = 4
 theme_override_constants/shadow_offset_y = 5
@@ -50,7 +61,7 @@ theme_override_font_sizes/font_size = 40
 text = "Study Room Chat"
 vertical_alignment = 1
 
-[node name="LineEdit" type="LineEdit" parent="."]
+[node name="LineEdit" type="LineEdit" parent="Panel"]
 offset_left = 399.0
 offset_top = 551.0
 offset_right = 1051.0
@@ -58,6 +69,6 @@ offset_bottom = 613.0
 placeholder_text = "Enter Message"
 alignment = 1
 
-[connection signal="pressed" from="SendMessage" to="." method="_on_send_message_pressed"]
-[connection signal="pressed" from="BackToMenu" to="." method="_on_back_to_menu_pressed"]
-[connection signal="pressed" from="ClearButton" to="." method="_on_clear_button_pressed"]
+[connection signal="pressed" from="Panel/SendMessage" to="." method="_on_send_message_pressed"]
+[connection signal="pressed" from="Panel/BackToMenu" to="." method="_on_back_to_menu_pressed"]
+[connection signal="pressed" from="Panel/ClearButton" to="." method="_on_clear_button_pressed"]
