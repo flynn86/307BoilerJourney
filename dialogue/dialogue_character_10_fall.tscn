@@ -1,14 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://dub7pgyu46kfu"]
 
-[ext_resource type="Script" path="res://dialogue/dialogue_character_10.gd" id="1_4bidd"]
+[ext_resource type="Script" path="res://dialogue/dialogue_character_10_fall.gd" id="1_001uf"]
 [ext_resource type="Texture2D" uid="uid://daoi76vmhrxd7" path="res://scenes/map/NPCs/kisspng-computer-icons-facebook-like-button-like-share-comment-5ae2b6d968f1e3 Background Removed.5552742615248073854299.png" id="2_iooqa"]
 
-[node name="dialogue_character_10" type="Control"]
+[node name="dialogue_character_10_fall" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_4bidd")
+script = ExtResource("1_001uf")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 z_index = 10

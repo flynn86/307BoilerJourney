@@ -1,14 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://mw5wu4si6rr4"]
 
-[ext_resource type="Script" path="res://dialogue/dialogue_character_8.gd" id="1_7axw5"]
+[ext_resource type="Script" path="res://dialogue/dialogue_character_8_winter.gd" id="1_jpile"]
 [ext_resource type="Texture2D" uid="uid://daoi76vmhrxd7" path="res://scenes/map/NPCs/kisspng-computer-icons-facebook-like-button-like-share-comment-5ae2b6d968f1e3 Background Removed.5552742615248073854299.png" id="2_fx5vb"]
 
-[node name="dialogue_character_8" type="Control"]
+[node name="dialogue_character_8_winter" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_7axw5")
+script = ExtResource("1_jpile")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 z_index = 10
