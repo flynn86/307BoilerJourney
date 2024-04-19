@@ -47,6 +47,7 @@ script = ExtResource("1_0j6lh")
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 material = SubResource("CanvasItemMaterial_k77u2")
 scale = Vector2(2, 2)
+emitting = false
 amount = 12
 process_material = SubResource("ParticleProcessMaterial_uyfd5")
 texture = ExtResource("1_aun6q")
