@@ -414,3 +414,5 @@ func load():
 	Attributes.group5 = player[0].group5
 func delete():
 	(Attributes.database).delete_rows("Players", "username == '%s'" % Attributes.username)
+	(Attributes.database).delete_rows("Friend_List", "friend1 = '" + Attributes.username + "' OR friend2 = '" + Attributes.username + "'")
+	(Attributes.database).delete_rows("Friend_Reqs", "sender = '" + Attributes.username + "' OR recipient = '" + Attributes.username + "'")
