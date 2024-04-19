@@ -3,6 +3,8 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Attributes.questsCompleted = (int(Attributes.quest1_completed) + int(Attributes.quest2_completed) + int(Attributes.quest3_completed)
+		 + int(Attributes.quest4_completed) + int(Attributes.quest5_completed) + int(Attributes.quest6_completed))
 	$Panel/Label.visible = false
 	$Panel/Label2.text = Attributes.rank
 	$Panel/Label6.text = str(Attributes.xp)
