@@ -1,5 +1,6 @@
 [
-	{"name": "Professor", "text": "Did you visit the housing map yet?"},
-	{"name": "You", "text": "Not yet, unfortunately"},
-	{"name": "Professor", "text": "I've heard it has some amazing features"},
+	{"name": "Student", "text": "Summer’s quiet around here, huh? Have you explored any summer courses or workshops?"},
+	{"name": "You", "text": "I’ve been considering it. Do you have any recommendations?"},
+	{"name": "Student", "text": "The summer workshops in robotics are really cool, especially if you like hands-on projects."},
+	{"name": "You", "text": "That’s right up my alley! I'll look into those workshops. Thanks for the suggestion!"}
 ]

@@ -1,5 +1,6 @@
 [
-	{"name": "Student", "text": "Did you visit the housing map yet?"},
-	{"name": "You", "text": "Not yet, unfortunately"},
-	{"name": "Student", "text": "I've heard it has some amazing features"},
+	{"name": "Student", "text": "It's freezing today! Do you know any good indoor places on campus to study?"},
+	{"name": "You", "text": "Yeah, the Hicks Undergraduate Library is really cozy. Have you been there?"},
+	{"name": "Student", "text": "I have, but I usually go to the WALC. I’ll check out Hicks next time!"},
+	{"name": "You", "text": "Great choice! It's nice and quiet, perfect for studying."}
 ]

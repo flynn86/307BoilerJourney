@@ -1,4 +1,6 @@
 [
-	{"name": "Student", "text": "You can click on buildings to view their details"},
-	{"name": "Student", "text": "You'll get their description and even be able to see their rating directly from google"},
+	{"name": "Student", "text": "Hello! Have you attended any football games this fall at Ross-Ade Stadium?"},
+	{"name": "You", "text": "I haven't yet, but I hear the atmosphere is electric! Planning to go soon."},
+	{"name": "Student", "text": "Definitely worth it! Maybe we’ll run into each other at a game."},
+	{"name": "You", "text": "That would be great! I'll look forward to experiencing my first Purdue game."}
 ]

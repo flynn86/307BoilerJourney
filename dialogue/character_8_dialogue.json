@@ -1,3 +1,6 @@
 [
-	{"name": "Student", "text": "Try displaying a collectable in your dorm"},
+	{"name": "Student", "text": "Summer here is so relaxed. Have you been to any of the summer concerts in Lafayette?"},
+	{"name": "You", "text": "Not yet, but I've been meaning to check them out. Are they any good?"},
+	{"name": "Student", "text": "Yeah, they’re a lot of fun! Great music and food trucks too."},
+	{"name": "You", "text": "That sounds awesome. I'll definitely go to the next one. Thanks for the tip!"}
 ]

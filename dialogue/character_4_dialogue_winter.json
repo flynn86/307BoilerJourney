@@ -1,4 +1,6 @@
 [
-	{"name": "Student", "text": "Did you know that you can complete quests to gain XP!"},
-	{"name": "Student", "text": "They are lots of fun too!"},
+	{"name": "Student", "text": "Staying warm? The Engineering Mall looks beautiful with all the lights. Have you seen it at night?"},
+	{"name": "You", "text": "I walked by last night, and it was stunning! Do they do this every year?"},
+	{"name": "Student", "text": "Yes, they light it up every winter. It’s worth checking out a few times."},
+	{"name": "You", "text": "I’ll make sure to pass by more often then. It really lights up the winter nights."}
 ]
