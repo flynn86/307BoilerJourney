@@ -1,19 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://dko8ljys0vpv0"]
+[gd_scene load_steps=4 format=3 uid="uid://dko8ljys0vpv0"]
 
+[ext_resource type="Theme" uid="uid://ce7gdo6lqyra0" path="res://study room theme.tres" id="1_2kjtq"]
 [ext_resource type="Script" path="res://scenes/restaurant_page/review_page.gd" id="1_ut2em"]
-[ext_resource type="FontFile" uid="uid://bskrd8ld3mnw3" path="res://fonts/KOMIKAX_.ttf" id="2_k6djd"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hupuq"]
-bg_color = Color(0, 0, 0, 1)
-
-[sub_resource type="Theme" id="Theme_hff7f"]
-Panel/styles/panel = SubResource("StyleBoxFlat_hupuq")
+[ext_resource type="FontFile" uid="uid://dis5kj2s7vfny" path="res://fonts/KOMIKAX_.ttf" id="2_k6djd"]
 
 [node name="ReviewPage" type="Panel"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = SubResource("Theme_hff7f")
+theme = ExtResource("1_2kjtq")
 script = ExtResource("1_ut2em")
 
 [node name="LineEdit" type="LineEdit" parent="."]
@@ -38,7 +33,6 @@ offset_left = 88.0
 offset_top = 120.0
 offset_right = 528.0
 offset_bottom = 488.0
-theme_override_fonts/normal_font = ExtResource("2_k6djd")
 theme_override_font_sizes/normal_font_size = 20
 
 [node name="Button2" type="Button" parent="."]
@@ -60,18 +54,22 @@ placeholder_text = "Enter Rating (1-5):"
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
-offset_left = 328.0
-offset_top = 32.0
-offset_right = 792.0
-offset_bottom = 96.0
-theme_override_font_sizes/font_size = 30
+offset_left = 345.0
+offset_top = 41.0
+offset_right = 809.0
+offset_bottom = 108.0
+theme_override_colors/font_shadow_color = Color(0.541176, 0.45098, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = ExtResource("2_k6djd")
+theme_override_font_sizes/font_size = 40
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 496.0
-offset_top = 520.0
-offset_right = 688.0
-offset_bottom = 555.0
+offset_left = 488.0
+offset_top = 509.0
+offset_right = 680.0
+offset_bottom = 544.0
 theme_override_font_sizes/font_size = 25
 text = "Leave A Review "
 
