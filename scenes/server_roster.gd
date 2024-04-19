@@ -6,10 +6,11 @@ func _ready():
 	var data_line : String = ""
 	var data : Array = (Attributes.database).select_rows("Players", "serverName == '%s' and isHost == true" % Attributes.serverName, ["*"])
 	if (data.size() == 0):
-		Attributes.serverName = ""
-		Attributes.isHost = false
-		SaveUtils.save()
-		get_tree().change_scene_to_file("res://scenes/menu.tscn")
+		if (!Attributes.database.error_message.contains("database is locked")):
+			Attributes.serverName = ""
+			Attributes.isHost = false
+			SaveUtils.save()
+			get_tree().change_scene_to_file("res://scenes/menu.tscn")
 	else:
 		data_line += "Host: " + data[0].username + " , xp: " + str(data[0].xp) + " , class rank: " + data[0].rank + '\n'
 		data = (Attributes.database).select_rows("Players", "serverName == '%s' and isHost == false" % Attributes.serverName, ["*"])
