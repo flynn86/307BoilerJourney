@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dc76j7tl6u5oo"]
+[gd_scene load_steps=3 format=3 uid="uid://cmdgmy7hc4ypg"]
 
 [ext_resource type="Script" path="res://studyroom5.gd" id="1_lalby"]
+[ext_resource type="FontFile" uid="uid://7x61o34kfaic" path="res://fonts/KOMIKAX_.ttf" id="2_vm525"]
 
 [node name="studyroom5" type="Node2D"]
 script = ExtResource("1_lalby")
@@ -37,11 +38,15 @@ offset_bottom = 536.0
 autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 500.0
-offset_top = 23.0
-offset_right = 704.0
-offset_bottom = 99.0
-theme_override_font_sizes/font_size = 26
+offset_left = 340.0
+offset_top = 26.0
+offset_right = 732.0
+offset_bottom = 102.0
+theme_override_colors/font_shadow_color = Color(0.541176, 0.45098, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = ExtResource("2_vm525")
+theme_override_font_sizes/font_size = 40
 text = "Study Room Chat"
 vertical_alignment = 1
 
