@@ -220,28 +220,29 @@ func check_trade_accept():
 		Attributes.database.query("DROP TABLE " + sender + "AND" + receiver)
 
 func _on_accept_button_pressed():
-	$AcceptButton.modulate.a = 0.5
-	var ret = Attributes.database.query("SELECT status FROM Trade_Requests WHERE sender = '" + sender + "' AND receiver = '" + receiver + "'")
-	while (ret == false):
-		await get_tree().create_timer(0.01).timeout
-		ret = Attributes.database.query("SELECT status FROM Trade_Requests WHERE sender = '" + sender + "' AND receiver = '" + receiver + "'")
-	var status : int = (Attributes.database).query_result[0]["status"]
-	if (status == 2):
-		trading = false
-		# Remove your items
-		Attributes.database.query("SELECT " + your_string + " FROM " + sender + "AND" + receiver)
-		var your_offers = (Attributes.database).query_result
-		for your_offer in your_offers:
-			if (your_offer[your_string] != "empty"):
-				Attributes.items.erase(ItemManager.name_to_index(your_offer[your_string]))
-		# Add their items
-		Attributes.database.query("SELECT " + their_string + " FROM " + sender + "AND" + receiver)
-		var their_offers = (Attributes.database).query_result
-		for their_offer in their_offers:
-			if (their_offer[their_string] != "empty"):
-				Attributes.items.append(ItemManager.name_to_index(their_offer[their_string]))
-		SaveUtils.save()
-		get_tree().change_scene_to_file(Attributes.location)
-		(Attributes.database).update_rows("Trade_Requests", "sender = '" + sender + "' AND receiver = '" + receiver + "'", {"status": 3})
-	elif (status == 1):
-		(Attributes.database).update_rows("Trade_Requests", "sender = '" + sender + "' AND receiver = '" + receiver + "'", {"status": 2})
+	if ($AcceptButton.modulate.a == 1):
+		$AcceptButton.modulate.a = 0.5
+		var ret = Attributes.database.query("SELECT status FROM Trade_Requests WHERE sender = '" + sender + "' AND receiver = '" + receiver + "'")
+		while (ret == false):
+			await get_tree().create_timer(0.01).timeout
+			ret = Attributes.database.query("SELECT status FROM Trade_Requests WHERE sender = '" + sender + "' AND receiver = '" + receiver + "'")
+		var status : int = (Attributes.database).query_result[0]["status"]
+		if (status == 2):
+			trading = false
+			# Remove your items
+			Attributes.database.query("SELECT " + your_string + " FROM " + sender + "AND" + receiver)
+			var your_offers = (Attributes.database).query_result
+			for your_offer in your_offers:
+				if (your_offer[your_string] != "empty"):
+					Attributes.items.erase(ItemManager.name_to_index(your_offer[your_string]))
+			# Add their items
+			Attributes.database.query("SELECT " + their_string + " FROM " + sender + "AND" + receiver)
+			var their_offers = (Attributes.database).query_result
+			for their_offer in their_offers:
+				if (their_offer[their_string] != "empty"):
+					Attributes.items.append(ItemManager.name_to_index(their_offer[their_string]))
+			SaveUtils.save()
+			get_tree().change_scene_to_file(Attributes.location)
+			(Attributes.database).update_rows("Trade_Requests", "sender = '" + sender + "' AND receiver = '" + receiver + "'", {"status": 3})
+		elif (status == 1):
+			(Attributes.database).update_rows("Trade_Requests", "sender = '" + sender + "' AND receiver = '" + receiver + "'", {"status": 2})
