@@ -47,6 +47,7 @@ offset_left = 234.0
 offset_top = 584.0
 offset_right = 894.0
 offset_bottom = 609.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
 text = "You must enter the name of host of the server you want to join before you can join it."
 horizontal_alignment = 1
 vertical_alignment = 1

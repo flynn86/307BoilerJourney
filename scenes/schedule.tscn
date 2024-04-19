@@ -38,6 +38,7 @@ offset_bottom = 648.0
 theme = SubResource("Theme_uwvh7")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
 offset_left = 268.0
 offset_top = 12.0
 offset_right = 859.0
@@ -50,6 +51,7 @@ theme_override_font_sizes/normal_font_size = 40
 text = "Your Weekly Schedule"
 
 [node name="Add" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 26.0
 offset_top = 571.0
 offset_right = 245.0
@@ -57,6 +59,7 @@ offset_bottom = 625.0
 text = "Add Course"
 
 [node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 112.0
 offset_top = 95.0
 offset_right = 836.0
@@ -66,6 +69,7 @@ theme_override_font_sizes/font_size = 18
 theme_override_styles/normal = SubResource("StyleBoxFlat_a64dq")
 
 [node name="Button1" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 859.0
 offset_top = 94.0
 offset_right = 1016.0
@@ -73,6 +77,7 @@ offset_bottom = 140.0
 text = "Delete Course 1"
 
 [node name="Button2" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 859.0
 offset_top = 150.0
 offset_right = 1016.0
@@ -80,6 +85,7 @@ offset_bottom = 196.0
 text = "Delete Course 2"
 
 [node name="Button3" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 859.0
 offset_top = 205.0
 offset_right = 1016.0
@@ -87,6 +93,7 @@ offset_bottom = 251.0
 text = "Delete Course 3"
 
 [node name="Button4" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 859.0
 offset_top = 260.0
 offset_right = 1016.0
@@ -94,6 +101,7 @@ offset_bottom = 306.0
 text = "Delete Course 4"
 
 [node name="Button5" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 859.0
 offset_top = 315.0
 offset_right = 1016.0
@@ -101,6 +109,7 @@ offset_bottom = 361.0
 text = "Delete Course 5"
 
 [node name="Button6" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 859.0
 offset_top = 370.0
 offset_right = 1016.0
@@ -108,6 +117,7 @@ offset_bottom = 416.0
 text = "Delete Course 6"
 
 [node name="Button7" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 859.0
 offset_top = 424.0
 offset_right = 1016.0
@@ -115,6 +125,7 @@ offset_bottom = 470.0
 text = "Delete Course 7"
 
 [node name="Button8" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 859.0
 offset_top = 477.0
 offset_right = 1016.0
@@ -122,6 +133,7 @@ offset_bottom = 523.0
 text = "Delete Course 8"
 
 [node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 380.0
 offset_top = 585.0
 offset_right = 704.0
@@ -131,6 +143,7 @@ theme_override_font_sizes/font_size = 20
 text = "Error: Can't add more than 8 courses!"
 
 [node name="go_back_to_map" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 924.0
 offset_top = 571.0
 offset_right = 1123.0

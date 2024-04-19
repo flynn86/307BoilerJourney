@@ -47,6 +47,7 @@ func _ready():
 		"outfit" : {"data_type":"int"},
 		"season" : {"data_type":"text"},
 		"isNight" : {"data_type":"bool"},
+		"questsCompleted" : {"data_type":"int"},
 		"engineeringVisited" : {"data_type":"bool"},
 		"loebVisited": {"data_type":"bool"},
 		"quest1active" : {"data_type":"bool"},

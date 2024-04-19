@@ -10,7 +10,7 @@ func _ready():
 	$Panel/group5.visible = false
 	$Panel/chat1.visible = false
 	$Panel/chat2.visible = false
-	$panel/chat3.visible = false
+	$Panel/chat3.visible = false
 	$Panel/chat4.visible = false
 	$Panel/chat5.visible = false
 	
