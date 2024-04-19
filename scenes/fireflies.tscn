@@ -17,8 +17,8 @@ gradient = SubResource("Gradient_42tm4")
 [sub_resource type="CurveXYZTexture" id="CurveXYZTexture_13xqx"]
 
 [sub_resource type="Curve" id="Curve_bu4in"]
-_data = [Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
-point_count = 2
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.12, 0.626374), 0.0, 0.0, 0, 0, Vector2(0.24, 1), 0.0, 0.0, 0, 0, Vector2(0.253333, 1), 0.0, 0.0, 0, 0, Vector2(0.393333, 0.626374), 0.0, 0.0, 0, 0, Vector2(0.506667, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 7
 
 [sub_resource type="CurveTexture" id="CurveTexture_s36x1"]
 curve = SubResource("Curve_bu4in")
@@ -27,7 +27,7 @@ curve = SubResource("Curve_bu4in")
 particle_flag_disable_z = true
 emission_shape_scale = Vector3(0.05, 0.05, 0.05)
 emission_shape = 3
-emission_box_extents = Vector3(5000, 5000, 5000)
+emission_box_extents = Vector3(7500, 5000, 5000)
 spread = 180.0
 flatness = 1.0
 initial_velocity_min = 5.0
