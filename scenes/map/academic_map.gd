@@ -507,3 +507,40 @@ func _on_neil_button_pressed():
 
 func _on_close_neil_pressed():
 	$CharacterBody2D/NeilArmstrong.visible = false
+
+func _on_hide_all_ui_pressed():
+	if (Attributes.ui_toggle_1 == true):
+		Attributes.ui_toggle_1 = false;
+		SaveUtils.save()
+		ui_toggle_1(false)
+	if (Attributes.ui_toggle_2 == true):
+		Attributes.ui_toggle_2 = false;
+		SaveUtils.save()
+		ui_toggle_2(false)
+	if (Attributes.minimap_toggle == true):
+		Attributes.minimap_toggle = false;
+		SaveUtils.save()
+		minimap_toggle(false)
+	if (Attributes.day_night_ui_toggle == true):
+		time_animation(false)
+		Attributes.day_night_ui_toggle = false;
+		SaveUtils.save()
+
+
+func _on_show_all_ui_pressed():
+	if (Attributes.ui_toggle_1 == false):
+		Attributes.ui_toggle_1 = true;
+		SaveUtils.save()
+		ui_toggle_1(true)
+	if (Attributes.ui_toggle_2 == false):
+		Attributes.ui_toggle_2 = true;
+		SaveUtils.save()
+		ui_toggle_2(true)
+	if (Attributes.minimap_toggle == false):
+		Attributes.minimap_toggle = true;
+		SaveUtils.save()
+		minimap_toggle(true)
+	if (Attributes.day_night_ui_toggle == false):
+		time_animation(true)
+		Attributes.day_night_ui_toggle = true;
+		SaveUtils.save()
