@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://ncqjl4lat741"]
 
-[ext_resource type="FontFile" uid="uid://dis5kj2s7vfny" path="res://fonts/KOMIKAX_.ttf" id="1_c6prt"]
+[ext_resource type="FontFile" uid="uid://5lqm3siyw530" path="res://fonts/KOMIKAX_.ttf" id="1_c6prt"]
 [ext_resource type="Script" path="res://scenes/all_stats.gd" id="1_mv4a4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gxea1"]
@@ -120,11 +120,12 @@ text = "Close"
 
 [node name="info" type="Label" parent="Panel/Label"]
 layout_mode = 0
-offset_left = 35.0
-offset_top = 78.0
-offset_right = 492.0
-offset_bottom = 327.0
-theme_override_font_sizes/font_size = 40
+offset_left = 40.0
+offset_top = 43.0
+offset_right = 497.0
+offset_bottom = 292.0
+theme_override_font_sizes/font_size = 30
+autowrap_mode = 2
 
 [node name="Back" type="Button" parent="Panel"]
 layout_mode = 0
