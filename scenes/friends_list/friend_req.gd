@@ -10,17 +10,18 @@ func _ready():
 
 func _on_accept_pressed():
 	(Attributes.database).query("DELETE FROM Friend_Reqs WHERE sender = '" + f_sender + "' AND recipient = '" + f_recipient + "'")
-	var data1 = {
-		"friend1" = f_sender,
-		"friend2" = f_recipient
-	}
-	var data2 = {
-		"friend1" = f_recipient,
-		"friend2" = f_sender
-	}
-	if (!((Attributes.database).select_rows("Friend_List", "friend1 = '" + f_sender + "' AND friend2 = '" + f_recipient + "'", ["*"]))):
-		(Attributes.database).insert_row("Friend_List", data1)
-		(Attributes.database).insert_row("Friend_List", data2)
+	if ((Attributes.database).select_rows("Players", "username = '" + f_sender + "'", ["*"])):
+		var data1 = {
+			"friend1" = f_sender,
+			"friend2" = f_recipient
+		}
+		var data2 = {
+			"friend1" = f_recipient,
+			"friend2" = f_sender
+		}
+		if (!((Attributes.database).select_rows("Friend_List", "friend1 = '" + f_sender + "' AND friend2 = '" + f_recipient + "'", ["*"]))):
+			(Attributes.database).insert_row("Friend_List", data1)
+			(Attributes.database).insert_row("Friend_List", data2)
 	Attributes.friends_list_changed = true
 	self.visible = false
 	
