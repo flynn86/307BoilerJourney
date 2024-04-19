@@ -1,8 +1,8 @@
 [gd_scene load_steps=21 format=3 uid="uid://7x3k0igel1g2"]
 
-[ext_resource type="Script" path="res://scenes/NPC_scenes/character_7.gd" id="1_5x8oi"]
+[ext_resource type="Script" path="res://scenes/NPC_scenes/character_7_fall.gd" id="1_2xrg4"]
 [ext_resource type="Texture2D" uid="uid://b5mlcdyf078lu" path="res://scenes/map/NPCs/npcs.png" id="2_up5uk"]
-[ext_resource type="PackedScene" uid="uid://cm5pl6rt57fsa" path="res://dialogue/dialogue_character_7.tscn" id="3_cqqwj"]
+[ext_resource type="PackedScene" uid="uid://bdycmuut8kmu2" path="res://dialogue/dialogue_character_7_fall.tscn" id="3_qgbls"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sjmp0"]
 atlas = ExtResource("2_up5uk")
@@ -126,8 +126,8 @@ radius = 26.9258
 [sub_resource type="CircleShape2D" id="CircleShape2D_xy03m"]
 radius = 58.0
 
-[node name="character_7" type="CharacterBody2D"]
-script = ExtResource("1_5x8oi")
+[node name="character_7_fall" type="CharacterBody2D"]
+script = ExtResource("1_2xrg4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -5)
@@ -150,8 +150,9 @@ position = Vector2(1, 5)
 position = Vector2(1, 2)
 shape = SubResource("CircleShape2D_xy03m")
 
-[node name="dialogue_character_7" parent="." instance=ExtResource("3_cqqwj")]
+[node name="dialogue_character_7_fall" parent="." instance=ExtResource("3_qgbls")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
 [connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
+[connection signal="dialogue_finished" from="dialogue_character_7_fall" to="." method="_on_dialogue_character_7_fall_dialogue_finished"]

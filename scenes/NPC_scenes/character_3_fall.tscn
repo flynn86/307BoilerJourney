@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=3 uid="uid://budnkde4owahq"]
 
-[ext_resource type="Script" path="res://scenes/NPC_scenes/character_3.gd" id="1_om7fr"]
+[ext_resource type="Script" path="res://scenes/NPC_scenes/character_3_fall.gd" id="1_5cw12"]
 [ext_resource type="Texture2D" uid="uid://ba51vup7xuafq" path="res://scenes/map/NPCs/characters.png" id="2_3lv27"]
-[ext_resource type="PackedScene" uid="uid://bva6kdf7bi2jp" path="res://dialogue/dialogue_character_3.tscn" id="3_d4t3i"]
+[ext_resource type="PackedScene" uid="uid://d4lb0cu2qkjs6" path="res://dialogue/dialogue_character_3_fall.tscn" id="3_atu82"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ln5nm"]
 atlas = ExtResource("2_3lv27")
@@ -103,9 +103,9 @@ radius = 41.2311
 [sub_resource type="CircleShape2D" id="CircleShape2D_knyfd"]
 radius = 64.0078
 
-[node name="character_3" type="CharacterBody2D"]
+[node name="character_3_fall" type="CharacterBody2D"]
 y_sort_enabled = true
-script = ExtResource("1_om7fr")
+script = ExtResource("1_5cw12")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
@@ -124,9 +124,9 @@ autostart = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
 shape = SubResource("CircleShape2D_knyfd")
 
-[node name="dialogue_character_3" parent="." instance=ExtResource("3_d4t3i")]
+[node name="dialogue_character_3_fall" parent="." instance=ExtResource("3_atu82")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
 [connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
-[connection signal="dialogue_finished" from="dialogue_character_3" to="." method="_on_dialogue_character_3_dialogue_finished"]
+[connection signal="dialogue_finished" from="dialogue_character_3_fall" to="." method="_on_dialogue_character_3_fall_dialogue_finished"]

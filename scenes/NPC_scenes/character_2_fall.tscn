@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=3 uid="uid://lid18rfi67ed"]
 
-[ext_resource type="Script" path="res://scenes/NPC_scenes/squirrel.gd" id="1_x14g5"]
+[ext_resource type="Script" path="res://scenes/NPC_scenes/character_2_fall.gd" id="1_ievyn"]
 [ext_resource type="Texture2D" uid="uid://ba51vup7xuafq" path="res://scenes/map/NPCs/characters.png" id="2_6xlng"]
-[ext_resource type="PackedScene" uid="uid://c7va0wjcrgypl" path="res://dialogue/dialogue_character_2.tscn" id="3_vl0xq"]
+[ext_resource type="PackedScene" uid="uid://bx1qn0k2csy0h" path="res://dialogue/dialogue_character_2_fall.tscn" id="3_8454a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6ivre"]
 atlas = ExtResource("2_6xlng")
@@ -103,9 +103,9 @@ radius = 44.7772
 [sub_resource type="CircleShape2D" id="CircleShape2D_n3658"]
 radius = 67.0075
 
-[node name="character_2" type="CharacterBody2D"]
+[node name="character_2_fall" type="CharacterBody2D"]
 y_sort_enabled = true
-script = ExtResource("1_x14g5")
+script = ExtResource("1_ievyn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_5fvha")
@@ -124,9 +124,9 @@ autostart = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
 shape = SubResource("CircleShape2D_n3658")
 
-[node name="dialogue_character_2" parent="." instance=ExtResource("3_vl0xq")]
+[node name="dialogue_character_2_fall" parent="." instance=ExtResource("3_8454a")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
 [connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
-[connection signal="dialogue_finished" from="dialogue_character_2" to="." method="_on_dialogue_character_2_dialogue_finished"]
+[connection signal="dialogue_finished" from="dialogue_character_2_fall" to="." method="_on_dialogue_character_2_fall_dialogue_finished"]

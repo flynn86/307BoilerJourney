@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=3 uid="uid://c7ir8d20jg5cf"]
 
-[ext_resource type="Script" path="res://scenes/NPC_scenes/character_10.gd" id="1_4ys1l"]
+[ext_resource type="Script" path="res://scenes/NPC_scenes/character_10_fall.gd" id="1_e1f7h"]
 [ext_resource type="Texture2D" uid="uid://ba51vup7xuafq" path="res://scenes/map/NPCs/characters.png" id="2_drlwn"]
-[ext_resource type="PackedScene" uid="uid://b7pkvn71gd0bl" path="res://dialogue/dialogue_character_10.tscn" id="3_gc3l5"]
+[ext_resource type="PackedScene" uid="uid://dub7pgyu46kfu" path="res://dialogue/dialogue_character_10_fall.tscn" id="3_l82r7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6ivre"]
 atlas = ExtResource("2_drlwn")
@@ -103,9 +103,9 @@ radius = 44.7772
 [sub_resource type="CircleShape2D" id="CircleShape2D_n3658"]
 radius = 67.0075
 
-[node name="character_10" type="CharacterBody2D"]
+[node name="character_10_fall" type="CharacterBody2D"]
 y_sort_enabled = true
-script = ExtResource("1_4ys1l")
+script = ExtResource("1_e1f7h")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_5fvha")
@@ -124,9 +124,9 @@ autostart = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
 shape = SubResource("CircleShape2D_n3658")
 
-[node name="dialogue_character_10" parent="." instance=ExtResource("3_gc3l5")]
+[node name="dialogue_character_10_fall" parent="." instance=ExtResource("3_l82r7")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
 [connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
-[connection signal="dialogue_finished" from="dialogue_character_10" to="." method="_on_dialogue_character_10_dialogue_finished"]
+[connection signal="dialogue_finished" from="dialogue_character_10_fall" to="." method="_on_dialogue_character_10_fall_dialogue_finished"]

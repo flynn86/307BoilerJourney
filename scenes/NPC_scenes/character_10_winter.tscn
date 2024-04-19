@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=3 uid="uid://dxl8lhygutwc1"]
 
-[ext_resource type="Script" path="res://scenes/NPC_scenes/character_10.gd" id="1_f1saa"]
+[ext_resource type="Script" path="res://scenes/NPC_scenes/character_10_winter.gd" id="1_ya4sb"]
 [ext_resource type="Texture2D" uid="uid://ba51vup7xuafq" path="res://scenes/map/NPCs/characters.png" id="2_5tomc"]
-[ext_resource type="PackedScene" uid="uid://b7pkvn71gd0bl" path="res://dialogue/dialogue_character_10.tscn" id="3_sju6r"]
+[ext_resource type="PackedScene" uid="uid://dmhvn816kdq6x" path="res://dialogue/dialogue_character_10_winter.tscn" id="3_hkpi0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6ivre"]
 atlas = ExtResource("2_5tomc")
@@ -103,9 +103,9 @@ radius = 44.7772
 [sub_resource type="CircleShape2D" id="CircleShape2D_n3658"]
 radius = 67.0075
 
-[node name="character_10" type="CharacterBody2D"]
+[node name="character_10_winter" type="CharacterBody2D"]
 y_sort_enabled = true
-script = ExtResource("1_f1saa")
+script = ExtResource("1_ya4sb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_5fvha")
@@ -124,9 +124,9 @@ autostart = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
 shape = SubResource("CircleShape2D_n3658")
 
-[node name="dialogue_character_10" parent="." instance=ExtResource("3_sju6r")]
+[node name="dialogue_character_10_winter" parent="." instance=ExtResource("3_hkpi0")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
 [connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
-[connection signal="dialogue_finished" from="dialogue_character_10" to="." method="_on_dialogue_character_10_dialogue_finished"]
+[connection signal="dialogue_finished" from="dialogue_character_10_winter" to="." method="_on_dialogue_character_10_winter_dialogue_finished"]

@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=3 uid="uid://b21fualcbfop8"]
 
-[ext_resource type="Script" path="res://scenes/NPC_scenes/character_3.gd" id="1_mo3mj"]
+[ext_resource type="Script" path="res://scenes/NPC_scenes/character_3_winter.gd" id="1_qulil"]
 [ext_resource type="Texture2D" uid="uid://ba51vup7xuafq" path="res://scenes/map/NPCs/characters.png" id="2_in76t"]
-[ext_resource type="PackedScene" uid="uid://bva6kdf7bi2jp" path="res://dialogue/dialogue_character_3.tscn" id="3_232qt"]
+[ext_resource type="PackedScene" uid="uid://c41bvweu3ctsv" path="res://dialogue/dialogue_character_3_winter.tscn" id="3_gq44s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ln5nm"]
 atlas = ExtResource("2_in76t")
@@ -103,9 +103,9 @@ radius = 41.2311
 [sub_resource type="CircleShape2D" id="CircleShape2D_knyfd"]
 radius = 64.0078
 
-[node name="character_3" type="CharacterBody2D"]
+[node name="character_3_winter" type="CharacterBody2D"]
 y_sort_enabled = true
-script = ExtResource("1_mo3mj")
+script = ExtResource("1_qulil")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
@@ -124,9 +124,9 @@ autostart = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
 shape = SubResource("CircleShape2D_knyfd")
 
-[node name="dialogue_character_3" parent="." instance=ExtResource("3_232qt")]
+[node name="dialogue_character_3_winter" parent="." instance=ExtResource("3_gq44s")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
 [connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
-[connection signal="dialogue_finished" from="dialogue_character_3" to="." method="_on_dialogue_character_3_dialogue_finished"]
+[connection signal="dialogue_finished" from="dialogue_character_3_winter" to="." method="_on_dialogue_character_3_winter_dialogue_finished"]

@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=3 uid="uid://vphs2vi0xobu"]
 
-[ext_resource type="Script" path="res://scenes/NPC_scenes/character_4.gd" id="1_w5nxf"]
-[ext_resource type="PackedScene" uid="uid://b8ij2dhet8eo3" path="res://dialogue/dialogue_character_4.tscn" id="2_ert7q"]
+[ext_resource type="Script" path="res://scenes/NPC_scenes/character_4_spring.gd" id="1_5a4g5"]
 [ext_resource type="Texture2D" uid="uid://ba51vup7xuafq" path="res://scenes/map/NPCs/characters.png" id="3_c2usx"]
+[ext_resource type="PackedScene" uid="uid://dfv73qbv85kod" path="res://dialogue/dialogue_character_4_spring.tscn" id="3_rn05o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i38px"]
 atlas = ExtResource("3_c2usx")
@@ -103,10 +103,8 @@ radius = 26.9258
 [sub_resource type="CircleShape2D" id="CircleShape2D_xy03m"]
 radius = 58.0
 
-[node name="character_4" type="CharacterBody2D"]
-script = ExtResource("1_w5nxf")
-
-[node name="dialogue_character_4" parent="." instance=ExtResource("2_ert7q")]
+[node name="character_4_spring" type="CharacterBody2D"]
+script = ExtResource("1_5a4g5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_s1hm3")
@@ -126,6 +124,9 @@ position = Vector2(1, 5)
 position = Vector2(1, 2)
 shape = SubResource("CircleShape2D_xy03m")
 
+[node name="dialogue_character_4_spring" parent="." instance=ExtResource("3_rn05o")]
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
 [connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
+[connection signal="dialogue_finished" from="dialogue_character_4_spring" to="." method="_on_dialogue_character_4_spring_dialogue_finished"]

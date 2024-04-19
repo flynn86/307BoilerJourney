@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=3 uid="uid://bwjcgniia28pj"]
 
-[ext_resource type="Script" path="res://scenes/NPC_scenes/squirrel.gd" id="1_cy43p"]
+[ext_resource type="Script" path="res://scenes/NPC_scenes/character_2_winter.gd" id="1_3xch8"]
 [ext_resource type="Texture2D" uid="uid://ba51vup7xuafq" path="res://scenes/map/NPCs/characters.png" id="2_x7rd2"]
-[ext_resource type="PackedScene" uid="uid://c7va0wjcrgypl" path="res://dialogue/dialogue_character_2.tscn" id="3_548ql"]
+[ext_resource type="PackedScene" uid="uid://bwuc6oyviyjww" path="res://dialogue/dialogue_character_2_winter.tscn" id="3_a050y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6ivre"]
 atlas = ExtResource("2_x7rd2")
@@ -103,9 +103,9 @@ radius = 44.7772
 [sub_resource type="CircleShape2D" id="CircleShape2D_n3658"]
 radius = 67.0075
 
-[node name="character_2" type="CharacterBody2D"]
+[node name="character_2_winter" type="CharacterBody2D"]
 y_sort_enabled = true
-script = ExtResource("1_cy43p")
+script = ExtResource("1_3xch8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_5fvha")
@@ -124,9 +124,9 @@ autostart = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
 shape = SubResource("CircleShape2D_n3658")
 
-[node name="dialogue_character_2" parent="." instance=ExtResource("3_548ql")]
+[node name="dialogue_character_2_winter" parent="." instance=ExtResource("3_a050y")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
 [connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
-[connection signal="dialogue_finished" from="dialogue_character_2" to="." method="_on_dialogue_character_2_dialogue_finished"]
+[connection signal="dialogue_finished" from="dialogue_character_2_winter" to="." method="_on_dialogue_character_2_winter_dialogue_finished"]

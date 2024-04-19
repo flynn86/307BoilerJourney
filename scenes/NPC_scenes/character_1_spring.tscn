@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=3 uid="uid://cytvgwqelnieo"]
 
-[ext_resource type="Script" path="res://scenes/NPC_scenes/character_1.gd" id="1_tfqk0"]
+[ext_resource type="Script" path="res://scenes/NPC_scenes/character_1_spring.gd" id="1_w0x71"]
 [ext_resource type="Texture2D" uid="uid://ba51vup7xuafq" path="res://scenes/map/NPCs/characters.png" id="2_8g5au"]
-[ext_resource type="PackedScene" uid="uid://dnuofbl6cjimv" path="res://dialogue/dialogue_character_1.tscn" id="3_h4p6t"]
+[ext_resource type="PackedScene" uid="uid://btm426sudl6e0" path="res://dialogue/dialogue_character_1_spring.tscn" id="3_6gapn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s518o"]
 atlas = ExtResource("2_8g5au")
@@ -103,8 +103,8 @@ radius = 39.0128
 [sub_resource type="CircleShape2D" id="CircleShape2D_dpdmh"]
 radius = 71.0282
 
-[node name="character_1" type="CharacterBody2D"]
-script = ExtResource("1_tfqk0")
+[node name="character_1_spring" type="CharacterBody2D"]
+script = ExtResource("1_w0x71")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
@@ -119,15 +119,15 @@ shape = SubResource("CircleShape2D_ekrc1")
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
-[node name="dialogue_character_1" parent="." instance=ExtResource("3_h4p6t")]
-
 [node name="chat_detection_area" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
 position = Vector2(1, 4)
 shape = SubResource("CircleShape2D_dpdmh")
 
+[node name="dialogue_character_1_spring" parent="." instance=ExtResource("3_6gapn")]
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="dialogue_finished" from="dialogue_character_1" to="." method="_on_dialogue_character_1_dialogue_finished"]
 [connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
 [connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
+[connection signal="dialogue_finished" from="dialogue_character_1_spring" to="." method="_on_dialogue_character_1_spring_dialogue_finished"]
