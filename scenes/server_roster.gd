@@ -1,8 +1,8 @@
 extends Node2D
 
 func _ready():
-	$Panel/ServerDisconnect.visible = Attributes.isHost
-	$Panel/ClientDisconnect.visible = !Attributes.isHost
+	$ServerDisconnect.visible = Attributes.isHost
+	$ClientDisconnect.visible = !Attributes.isHost
 	var data_line : String = ""
 	var data : Array = (Attributes.database).select_rows("Players", "serverName == '%s' and isHost == true" % Attributes.serverName, ["*"])
 	if (data.size() == 0):
@@ -15,7 +15,7 @@ func _ready():
 		data = (Attributes.database).select_rows("Players", "serverName == '%s' and isHost == false" % Attributes.serverName, ["*"])
 		for i in data.size():
 			data_line += "Client " + str(i + 1) + ": " + data[i].username + " , xp: " + str(data[i].xp) + " , class rank: " + data[i].rank + '\n'
-		$Panel/Label.text = data_line
+		$Label.text = data_line
 
 func _process(_delta):
 	_ready()

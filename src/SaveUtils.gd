@@ -41,8 +41,6 @@ func initialize():
 		"outfit" = Attributes.curr_outfit,
 		"season" = Attributes.season,
 		"isNight" = Attributes.night,
-		
-		"questsCompleted" = Attributes.questsCompleted,
 		"engineeringVisited" = Attributes.engineering_ftn_visited,
 		"loebVisited"= Attributes.loeb_ftn_visited,
 		"quest1active" = Attributes.quest1_active,
@@ -51,19 +49,6 @@ func initialize():
 		"quest2complete" = Attributes.quest2_completed,
 		"quest3active" = Attributes.quest3_active,
 		"quest3complete" = Attributes.quest3_completed,
-		"quest4active" = Attributes.quest4_active,
-		"quest4complete" = Attributes.quest4_completed,
-		"quest5active" = Attributes.quest5_active,
-		"quest5complete" = Attributes.quest5_completed,
-		"quest6active" = Attributes.quest6_active,
-		"quest6complete" = Attributes.quest6_completed,
-		"walc" = Attributes.walc,
-		"arms" = Attributes.arms,
-		"ellt" = Attributes.ellt,
-		"phys" = Attributes.phys,
-		"wthr" = Attributes.wthr,
-		"stew" = Attributes.stew,
-		"hamp" = Attributes.hamp,
 		"basics_shown" = Attributes.basics_shown,
 		"course1_name" = Attributes.courseNames["course1_name"],
 		"course2_name" = Attributes.courseNames["course2_name"],
@@ -167,8 +152,6 @@ func save():
 		"outfit" = Attributes.curr_outfit,
 		"season" = Attributes.season,
 		"isNight" = Attributes.night,
-		
-		"questsCompleted" = Attributes.questsCompleted,
 		"engineeringVisited" = Attributes.engineering_ftn_visited,
 		"loebVisited"= Attributes.loeb_ftn_visited,
 		"quest1active" = Attributes.quest1_active,
@@ -177,19 +160,6 @@ func save():
 		"quest2complete" = Attributes.quest2_completed,
 		"quest3active" = Attributes.quest3_active,
 		"quest3complete" = Attributes.quest3_completed,
-		"quest4active" = Attributes.quest4_active,
-		"quest4complete" = Attributes.quest4_completed,
-		"quest5active" = Attributes.quest5_active,
-		"quest5complete" = Attributes.quest5_completed,
-		"quest6active" = Attributes.quest6_active,
-		"quest6complete" = Attributes.quest6_completed,
-		"walc" = Attributes.walc,
-		"arms" = Attributes.arms,
-		"ellt" = Attributes.ellt,
-		"phys" = Attributes.phys,
-		"wthr" = Attributes.wthr,
-		"stew" = Attributes.stew,
-		"hamp" = Attributes.hamp,
 		"basics_shown" = Attributes.basics_shown,
 		"course1_name" = Attributes.courseNames["course1_name"],
 		"course2_name" = Attributes.courseNames["course2_name"],
@@ -317,8 +287,6 @@ func load():
 	Attributes.curr_outfit = player[0].outfit
 	Attributes.season = player[0].season
 	Attributes.night = player[0].isNight
-	
-	Attributes.questsCompleted = player[0].questsCompleted
 	Attributes.engineering_ftn_visited = player[0].engineeringVisited
 	Attributes.loeb_ftn_visited = player[0].loebVisited
 	Attributes.quest1_active = player[0].quest1active
@@ -327,19 +295,6 @@ func load():
 	Attributes.quest2_completed = player[0].quest2complete
 	Attributes.quest3_active = player[0].quest3active
 	Attributes.quest3_completed = player[0].quest3complete
-	Attributes.quest4_active = player[0].quest4active
-	Attributes.quest4_completed = player[0].quest4complete
-	Attributes.quest5_active = player[0].quest5active
-	Attributes.quest5_completed = player[0].quest5complete
-	Attributes.quest6_active = player[0].quest6active
-	Attributes.quest6_completed = player[0].quest6complete
-	Attributes.walc = player[0].walc
-	Attributes.arms = player[0].arms
-	Attributes.ellt = player[0].ellt
-	Attributes.phys = player[0].phys
-	Attributes.wthr = player[0].wthr
-	Attributes.stew = player[0].stew
-	Attributes.hamp = player[0].hamp
 	Attributes.basics_shown = player[0].basics_shown
 	Attributes.courseNames = { "course1_name" : player[0].course1_name,
 							   "course2_name" : player[0].course2_name,
@@ -434,5 +389,3 @@ func load():
 	Attributes.bgc_group = player[0].bgc_group
 func delete():
 	(Attributes.database).delete_rows("Players", "username == '%s'" % Attributes.username)
-	(Attributes.database).delete_rows("Friend_List", "friend1 = '" + Attributes.username + "' OR friend2 = '" + Attributes.username + "'")
-	(Attributes.database).delete_rows("Friend_Reqs", "sender = '" + Attributes.username + "' OR recipient = '" + Attributes.username + "'")

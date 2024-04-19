@@ -1,6 +1,9 @@
 # Singleton Script for global time
 extends Node
 
+# Multiplier for time elapse speed. Increase to make time go faster, decrease to make time go slower.
+var INGAME_SPEED = 20.0
+
 const MINUTES_PER_DAY = 1440
 const MINUTES_PER_HOUR = 60
 
@@ -17,8 +20,7 @@ var hour = 0
 # In-game minutes elapsed for current day only
 var minute = 0
 
-# Multiplier for time elapse speed. Increase to make time go faster, decrease to make time go slower.
-var INGAME_SPEED = 20.0
+
 
 # Current in-game time
 var time:float= 0.0

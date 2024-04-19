@@ -170,13 +170,6 @@ func _process(delta):
 			Attributes.quest3_active = false
 			Attributes.xp = Attributes.xp + 15
 			(Attributes.database).update_rows("Players", "username = '" + Attributes.username + "'", {"xp": Attributes.xp})
-	if (Attributes.quest6_active):
-		var total = int(Attributes.walc) + int(Attributes.arms) + int(Attributes.phys) + int(Attributes.ellt) + int(Attributes.stew) + int(Attributes.hamp) + int(Attributes.wthr)
-		if (total == 7):
-			Attributes.quest6_completed = true
-			Attributes.quest6_active = false
-			Attributes.xp = Attributes.xp + 15
-			(Attributes.database).update_rows("Players", "username = '" + Attributes.username + "'", {"xp": Attributes.xp})
 	if Attributes.xp <= 29:
 		Attributes.rank = "Freshman"
 	elif Attributes.xp <= 59: 

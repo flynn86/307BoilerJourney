@@ -1,0 +1,58 @@
+[gd_scene load_steps=10 format=3 uid="uid://r8itqyqxsn3k"]
+
+[ext_resource type="Script" path="res://scenes/fireflies.gd" id="1_0j6lh"]
+[ext_resource type="Texture2D" uid="uid://mnfy10v76aee" path="res://scenes/map/Building and terrain assets/glow-points-of-light-effects-transparent-png-12.png" id="1_aun6q"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_k77u2"]
+light_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_42tm4"]
+offsets = PackedFloat32Array(0.2, 0.6, 1)
+colors = PackedColorArray(0.756863, 0.882353, 0.639216, 1, 1, 1, 1, 1, 0, 0, 0, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_tqfg6"]
+gradient = SubResource("Gradient_42tm4")
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_13xqx"]
+
+[sub_resource type="Curve" id="Curve_bu4in"]
+_data = [Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_s36x1"]
+curve = SubResource("Curve_bu4in")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_uyfd5"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(0.05, 0.05, 0.05)
+emission_shape = 3
+emission_box_extents = Vector3(5000, 5000, 5000)
+spread = 180.0
+flatness = 1.0
+initial_velocity_min = 5.0
+initial_velocity_max = 5.0
+directional_velocity_min = 10.0
+directional_velocity_max = 10.0
+directional_velocity_curve = SubResource("CurveXYZTexture_13xqx")
+gravity = Vector3(0, 2, 0)
+scale_min = 0.02
+scale_max = 0.03
+scale_curve = SubResource("CurveTexture_s36x1")
+color_ramp = SubResource("GradientTexture1D_tqfg6")
+
+[node name="Fireflies" type="Node2D"]
+script = ExtResource("1_0j6lh")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_k77u2")
+scale = Vector2(2, 2)
+emitting = false
+amount = 12
+process_material = SubResource("ParticleProcessMaterial_uyfd5")
+texture = ExtResource("1_aun6q")
+lifetime = 10.0
+preprocess = 0.1
+randomness = 1.0
+visibility_rect = Rect2(-100, -100, 5000, 5000)
+trail_lifetime = 0.2
