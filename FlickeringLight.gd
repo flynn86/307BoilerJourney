@@ -21,8 +21,9 @@ func _process(_delta):
 		if (frame_counter > flicker_start_frame + flicker_duration):
 			light.energy = max_energy
 			frame_counter = 0
-			flicker_start_frame = randi_range(30, 1800)
+			flicker_start_frame = randi_range(30, 300)
 			min_energy = randf_range(0.1, 0.4)
+			flicker_duration = randi_range(2, 5)
 		elif (frame_counter >= flicker_start_frame):
 			light.energy = min_energy
 		else:
