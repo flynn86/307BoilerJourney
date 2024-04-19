@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cvjbfijhlka84"]
+[gd_scene load_steps=7 format=3 uid="uid://cvjbfijhlka84"]
 
 [ext_resource type="Script" path="res://characters/Player.gd" id="1_susai"]
-[ext_resource type="Texture2D" uid="uid://bdnj757xaegyw" path="res://characters/assets/Bodies/16x16/Body_02.png" id="1_wrlsq"]
+[ext_resource type="Texture2D" uid="uid://cj8flyl04qlnf" path="res://characters/assets/Bodies/16x16/Body_02.png" id="1_wrlsq"]
+[ext_resource type="Theme" uid="uid://ce7gdo6lqyra0" path="res://study room theme.tres" id="3_frils"]
 
 [sub_resource type="Animation" id="Animation_1gtpf"]
 length = 0.001
@@ -47,6 +48,7 @@ scale = Vector2(3, 3)
 script = ExtResource("1_susai")
 
 [node name="CompositeSprites" type="Node2D" parent="."]
+position = Vector2(-0.0570018, -9.004)
 scale = Vector2(2, 2)
 
 [node name="Body" type="Sprite2D" parent="CompositeSprites"]
@@ -77,57 +79,96 @@ libraries = {
 "": SubResource("AnimationLibrary_id76m")
 }
 
-[node name="ChangeHair" type="Button" parent="."]
-offset_left = 34.6098
-offset_top = 8.3292
-offset_right = 75.6098
-offset_bottom = 39.3292
+[node name="Panel" type="Panel" parent="."]
+unique_name_in_owner = true
+z_index = -1
+offset_left = -70.0
+offset_top = -89.0
+offset_right = 314.0
+offset_bottom = 128.0
+theme = ExtResource("3_frils")
+
+[node name="ChangeHair" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00347185
+anchor_top = 0.0537641
+anchor_right = 0.00347185
+anchor_bottom = 0.053764
+offset_left = 104.276
+offset_top = 81.3292
+offset_right = 176.276
+offset_bottom = 127.329
 text = "Hair"
-metadata/_edit_use_anchors_ = true
 
-[node name="ChangeEyes" type="Button" parent="."]
-offset_left = 84.9432
-offset_top = -25.6708
-offset_right = 127.943
-offset_bottom = 5.3292
+[node name="ChangeEyes" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0763884
+anchor_top = -0.0168965
+anchor_right = 0.118055
+anchor_bottom = 0.052228
+offset_left = 154.61
+offset_top = 47.3292
+offset_right = 210.61
+offset_bottom = 78.3292
 text = "Eyes"
-metadata/_edit_use_anchors_ = true
 
-[node name="ChangeOutfit" type="Button" parent="."]
-offset_left = 79.9432
-offset_top = 7.66254
-offset_right = 133.943
-offset_bottom = 38.6625
+[node name="ChangeOutfit" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.086805
+anchor_top = 0.0568362
+anchor_right = 0.13368
+anchor_bottom = 0.125961
+offset_left = 149.61
+offset_top = 80.6626
+offset_right = 203.61
+offset_bottom = 111.663
 text = "Outfit"
-metadata/_edit_use_anchors_ = true
 
-[node name="ChangeBody" type="Button" parent="."]
-offset_left = 33.6098
-offset_top = -27.0041
-offset_right = 80.6098
-offset_bottom = 3.99587
+[node name="ChangeBody" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00868018
+anchor_top = -0.0153605
+anchor_right = 0.00868018
+anchor_bottom = -0.0153605
+offset_left = 103.276
+offset_top = 45.9959
+offset_right = 175.276
+offset_bottom = 91.9959
 text = "Body"
-metadata/_edit_use_anchors_ = true
 
-[node name="Random" type="Button" parent="."]
-offset_left = 43.6098
-offset_top = 40.9959
-offset_right = 116.61
-offset_bottom = 71.9959
+[node name="Random" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0564232
+anchor_top = 0.135177
+anchor_right = 0.108506
+anchor_bottom = 0.204302
+offset_left = 113.276
+offset_top = 113.996
+offset_right = 186.277
+offset_bottom = 144.996
 text = "Random"
-metadata/_edit_use_anchors_ = true
 
-[node name="Continue" type="Button" parent="."]
-offset_left = 158.61
-offset_top = 41.3292
-offset_right = 237.61
-offset_bottom = 72.3292
+[node name="Continue" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0850685
+anchor_top = -0.188939
+anchor_right = 0.139756
+anchor_bottom = -0.119815
+offset_left = 228.277
+offset_top = 114.329
+offset_right = 307.277
+offset_bottom = 145.329
 text = "Continue"
-metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="ChangeHair" to="." method="_on_change_hair_pressed"]
-[connection signal="pressed" from="ChangeEyes" to="." method="_on_change_eyes_pressed"]
-[connection signal="pressed" from="ChangeOutfit" to="." method="_on_change_outfit_pressed"]
-[connection signal="pressed" from="ChangeBody" to="." method="_on_change_body_pressed"]
-[connection signal="pressed" from="Random" to="." method="_on_random_pressed"]
-[connection signal="pressed" from="Continue" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/ChangeHair" to="." method="_on_change_hair_pressed"]
+[connection signal="pressed" from="Panel/ChangeEyes" to="." method="_on_change_eyes_pressed"]
+[connection signal="pressed" from="Panel/ChangeOutfit" to="." method="_on_change_outfit_pressed"]
+[connection signal="pressed" from="Panel/ChangeBody" to="." method="_on_change_body_pressed"]
+[connection signal="pressed" from="Panel/Random" to="." method="_on_random_pressed"]
+[connection signal="pressed" from="Panel/Continue" to="." method="_on_button_pressed"]

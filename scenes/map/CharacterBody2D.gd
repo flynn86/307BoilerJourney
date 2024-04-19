@@ -4,12 +4,12 @@ extends CharacterBody2D
 @export var move_speed : float = 300
 func _ready():
 	
-	$Player/ChangeBody.visible = false
-	$Player/Continue.visible = false
-	$Player/Random.visible = false
-	$Player/ChangeEyes.visible = false
-	$Player/ChangeOutfit.visible = false
-	$Player/ChangeHair.visible = false
+	$Player/Panel/ChangeBody.visible = false
+	$Player/Panel/Continue.visible = false
+	$Player/Panel/Random.visible = false
+	$Player/Panel/ChangeEyes.visible = false
+	$Player/Panel/ChangeOutfit.visible = false
+	$Player/Panel/ChangeHair.visible = false
 	add_to_group("player")
 	'''
 	const composite_sprites = preload("res://characters/assets/CompositeSprites.gd")
