@@ -1,19 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://cplnpdevklo5q"]
+[gd_scene load_steps=6 format=3 uid="uid://cplnpdevklo5q"]
 
 [ext_resource type="Script" path="res://scenes/news_page/news_page.gd" id="1_o1anh"]
-[ext_resource type="Texture2D" uid="uid://bgpw1vd1ygp8k" path="res://scenes/Collectable_scenes/Collectables/purdue-boilermakers-football-purdue-boilermakers-men-s-basketball-mackey-arena-purdue-pete-university-purdue-boilermakers-women-s-basketball-thumbnail.png" id="3_axs6r"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gj5gu"]
-bg_color = Color(0, 0, 0, 1)
-
-[sub_resource type="Theme" id="Theme_xloi3"]
-Button/font_sizes/font_size = 20
-Panel/styles/panel = SubResource("StyleBoxFlat_gj5gu")
-
-[sub_resource type="Theme" id="Theme_c8kis"]
+[ext_resource type="Theme" uid="uid://ce7gdo6lqyra0" path="res://study room theme.tres" id="1_qgbru"]
+[ext_resource type="Texture2D" uid="uid://ckjwrov611wks" path="res://scenes/Collectable_scenes/Collectables/purdue-boilermakers-football-purdue-boilermakers-men-s-basketball-mackey-arena-purdue-pete-university-purdue-boilermakers-women-s-basketball-thumbnail.png" id="3_axs6r"]
+[ext_resource type="FontFile" uid="uid://dis5kj2s7vfny" path="res://fonts/KOMIKAX_.ttf" id="3_vrrxc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7c6d"]
-bg_color = Color(0.631373, 0.596078, 0.541176, 1)
+bg_color = Color(0.141176, 0.141176, 0.141176, 1)
 
 [node name="NewsPage" type="Panel"]
 custom_minimum_size = Vector2(100, 100)
@@ -21,7 +14,7 @@ anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.975
 offset_bottom = 8.20001
-theme = SubResource("Theme_xloi3")
+theme = ExtResource("1_qgbru")
 script = ExtResource("1_o1anh")
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
@@ -46,19 +39,23 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 120.0
-offset_top = 80.0
-offset_right = 1155.0
-offset_bottom = 130.0
+offset_left = 64.0
+offset_top = 93.0
+offset_right = 1099.0
+offset_bottom = 143.0
+theme_override_colors/font_shadow_color = Color(0.541176, 0.45098, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = ExtResource("3_vrrxc")
 theme_override_font_sizes/font_size = 30
 text = "News Articles: Click on Article to View Description and Link"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -8.0
-offset_top = 528.0
-offset_right = 128.0
-offset_bottom = 648.0
+offset_left = 17.0
+offset_top = 533.0
+offset_right = 138.0
+offset_bottom = 646.0
 texture = ExtResource("3_axs6r")
 expand_mode = 3
 
@@ -77,7 +74,6 @@ offset_left = 280.0
 offset_top = 200.0
 offset_right = 888.0
 offset_bottom = 464.0
-theme = SubResource("Theme_c8kis")
 theme_override_styles/panel = SubResource("StyleBoxFlat_q7c6d")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
@@ -88,18 +84,18 @@ theme_override_font_sizes/normal_font_size = 20
 
 [node name="Button" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 16.0
+offset_left = 3.0
 offset_top = 216.0
-offset_right = 88.0
-offset_bottom = 254.0
+offset_right = 75.0
+offset_bottom = 262.0
 text = "Close"
 
 [node name="Button2" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 456.0
-offset_top = 216.0
-offset_right = 599.0
-offset_bottom = 254.0
+offset_left = 463.0
+offset_top = 217.0
+offset_right = 606.0
+offset_bottom = 263.0
 text = "Visit Article "
 
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_news_request_completed"]
