@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cvgbdgww1tkv2"]
+[gd_scene load_steps=8 format=3 uid="uid://cvgbdgww1tkv2"]
 
 [ext_resource type="Script" path="res://scenes/rank_page/leaderboard.gd" id="1_4csyh"]
-[ext_resource type="FontFile" uid="uid://dis5kj2s7vfny" path="res://fonts/KOMIKAX_.ttf" id="2_mmcri"]
+[ext_resource type="FontFile" uid="uid://5lqm3siyw530" path="res://fonts/KOMIKAX_.ttf" id="2_mmcri"]
+[ext_resource type="Texture2D" uid="uid://dygfbetks4no" path="res://scenes/Collectable_scenes/Collectables/purdue-university-boilermakers-logo-png-transparent.png" id="3_6p58a"]
+[ext_resource type="Texture2D" uid="uid://d0tielwklerf" path="res://scenes/Collectable_scenes/Collectables/purdue-boilermakers-football-purdue-boilermakers-men-s-basketball-mackey-arena-purdue-pete-university-purdue-boilermakers-women-s-basketball-thumbnail.png" id="4_sto1s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ikh3q"]
 bg_color = Color(0.266667, 0.266667, 0.266667, 1)
@@ -115,5 +117,19 @@ offset_bottom = 590.0
 theme_override_font_sizes/font_size = 25
 text = "5. "
 vertical_alignment = 1
+
+[node name="Sprite2D2" type="Sprite2D" parent="Panel"]
+position = Vector2(182, 331)
+scale = Vector2(0.0986667, 0.084)
+texture = ExtResource("3_6p58a")
+flip_h = true
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+offset_left = 881.0
+offset_top = 211.0
+offset_right = 1123.0
+offset_bottom = 437.0
+texture = ExtResource("4_sto1s")
+expand_mode = 3
 
 [connection signal="pressed" from="Panel/BackButton" to="." method="_on_back_button_pressed"]
