@@ -105,9 +105,9 @@ text = "Close"
 [node name="Refresh" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 839.0
-offset_top = 26.0
+offset_top = 25.0
 offset_right = 976.0
-offset_bottom = 79.0
+offset_bottom = 78.0
 text = "Refresh"
 
 [node name="FriendReqList" type="ColorRect" parent="Panel"]
