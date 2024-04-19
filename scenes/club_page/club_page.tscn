@@ -28,10 +28,10 @@ anchor_left = 0.312
 anchor_top = 0.062
 anchor_right = 0.715
 anchor_bottom = 0.136
-offset_left = -269.424
-offset_top = -17.672
-offset_right = 71.32
-offset_bottom = 82.784
+offset_left = -259.424
+offset_top = -14.672
+offset_right = 81.32
+offset_bottom = 85.784
 grow_horizontal = 2
 theme = ExtResource("1_n6xp0")
 theme_override_colors/font_shadow_color = Color(0.541176, 0.45098, 0, 1)
@@ -245,8 +245,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.056
 anchor_bottom = 0.086
-offset_right = -0.512001
-offset_bottom = 0.271999
+offset_left = 19.0
+offset_top = 19.0
+offset_right = 21.488
+offset_bottom = 19.272
 text = "Close"
 
 [node name="Button" type="Button" parent="."]
